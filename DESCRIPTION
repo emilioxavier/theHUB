@@ -1,0 +1,42 @@
+Package: theHUB
+Type: Package
+Title: the Hub Utility Box (theHUB)
+Description: Collection of Learning Analytics tools to evaluate surveys, student outcomes, and student success.
+Version: 0.1.0
+Depends: R (>= 4.0)
+Imports: 
+    tidyverse,
+    tibble,
+    magrittr,
+    dplyr,
+    purrr,
+    stringr,
+    tidyr,
+    tidyselect,
+    tidytext,
+    ggplot2,
+    cowplot,
+    rlang,
+    sf,
+    zipcodeR,
+    ggwordcloud
+Suggests: 
+    knitr,
+    rmarkdown,
+    mathjaxr
+Authors@R: person(given="Emilio Xavier",
+                  family="Esposito",
+                  role=c("aut", "cre"),
+                  email="emilio@msu.edu",
+                  comment=c(ORCID="0000-0002-6193-0485",
+                            "GitHub: https://github.com/emilioxavier"))
+URL: https://github.com/MSUHub/theHUB/
+BugReports: https://github.com/MSUHub/MSUHub/theHUB/issues/
+License: MIT + file LICENSE
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+RdMacros: mathjaxr

@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+data-raw
+.DS_Store
+README.Rmd
+CONDUCT.md

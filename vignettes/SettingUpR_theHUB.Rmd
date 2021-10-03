@@ -1,0 +1,106 @@
+---
+title: "Setting Up R for `theHUB`"
+author: "Emilio Xavier Esposito, Ph.D."
+date: "`r format(Sys.Date(), '%d/%b/%Y')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Setting Up R for `theHUB`}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+
+```{r setup, echo=FALSE, include=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE, include=FALSE)
+library(knitr)
+```
+
+
+## Setting up R and RStudio
+R and RStudio are open source and freely available applications available for numerous, 
+popular operating systems. Specifically, 
+RStudio is available for Windows 10, macOS 10.13+, Ubuntu 16, Ubuntu 18/Debian 10, 
+Fedora 19/Red Hat 7, Fedora 28/Red Hat 8, Debian 9, OpenSUSE 15. 
+
+
+
+### Installing R
+
+Visit [CRAN](https://cran.r-project.org) and download the installer ("Precompiled 
+binary distributions of the base system and contributed packages") for your 
+operating system. Mac and Windows users should download the version available
+from CRAN. Linux users should check their distribution's package management system
+to see if R is available.
+
+### Installing RStudio
+
+- Download RStudio from the [RStudio server](https://www.rstudio.com/products/rstudio/download/).
+- Double-click on the file and follow the directions for your operating system
+
+
+### Installing Packages
+
+```
+install.packages("devtools", "tidyverse", "lubridate", "readxl", "openxlsx", "GGally", "tidytext", "textdata", "cowplot", "ragg", "ggwordcloud", "ggVennDiagram", "hexbin", "sf", "fuzzyjoin",
+"zipcodeR")
+```
+
+There are several developmental packages that need to be installed from GitHub.
+
+
+fix missing fonts when writing a PDF <https://github.com/thomasp85/ggraph/issues/152> extrafont::font_import() (Restart Rstudio)
+
+extrafont::loadfonts()
+
+### Use `ragg` with knitr
+
+knitr supports png output from ragg by setting `dev = "ragg_png"` in the chunk settings or globally with `knitr::opts_chunk$set(dev = "ragg_png")`.
+
+### Use `ragg` in RStudio
+
+ragg can be used as the graphic back-end to the RStudio device (for RStudio \>= 1.4) by choosing AGG as the backend in the graphics pane in general options (see screenshot)
+
+### Setup `zipcodeR`
+
+```
+library(zipcodeR)
+download_zip_data(force = FALSE)
+```
+
+`install_github("thomasp85/ggfx")`
+
+# https://gadm.org/formats.html
+# https://gadm.org/download_country_v3.html
+# https://www.rspatial.org
+download.file(url="https://biogeo.ucdavis.edu/data/gadm3.6/gpkg/gadm36_USA_gpkg.zip",
+              destfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip")
+unzip(zipfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip",
+      exdir="~/OneDrive - Michigan State University/projects/mapfiles/")
+
+mapfiles.usa <- "~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA.gpkg"
+
+USA_gadm <- st_read(dsn = "gadm36_USA.gpkg", layer = "gadm36_USA_1")
+lonlat_to_state(testPoints, states = USA_gadm, name_col = "NAME_1")
+
+https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_0_sf.rds
+https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_1_sf.rds
+https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_2_sf.rds
+
+
+### Map Shape Files
+To create maps and identify country and subregions (state and county in the US) 
+using location data. 
+
+string with the path and file name of the GADM world
+mapfile. Any mapfile can be used, but for datasets containing geospatial
+location data from anywhere on the planet, it is advantageous to use the
+entire world map. Obtain the mapfile of interest from
+[https://gadm.org](https://gadm.org). The world GADM data is available from
+[https://biogeo.ucdavis.edu/data/gadm3.6/gadm36_gpkg.zip](https://biogeo.ucdavis.edu/data/gadm3.6/gadm36_gpkg.zip).
+Ensure the [GeoPackage format](https://gadm.org/formats.html) is downloaded.
+The compressed complete world database is approximately 1.6 GBs and the
+unzipped file is 3.81 GBs.
+
+### ZIP Code Tabulation Areas 
+https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+https://www.census.gov/cgi-bin/geo/shapefiles/index.php
