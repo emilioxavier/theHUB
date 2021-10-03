@@ -36,7 +36,7 @@ _**Unified Student Success and Outcomes Analysis Reports**_ (_**USOAR**_): _Prov
 ```{r, eval=FALSE}
 # Install from GitHub:
 install.packages("devtools")
-devtools::install_github("emilioxavier/theHUB")
+devtools::install_github("emilioxavier/theHUB ")
 ```
 
 
