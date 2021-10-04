@@ -5,6 +5,8 @@
 #' @param data `tibble` (or `data.frame`) with the column of interest. _**NOTE**_:
 #'   Do **NOT** use counted data.
 #' @param col.oi string with column of interest. Only provide **ONE** column name.
+#' @param groupby string indicating the column to group data by; for when you
+#'   want to **facet** your donut plots.
 #' @param levels.rev logical indicating if the order of the categories should be
 #'   reversed.
 #' @param r.inner numeric value defining the inner radius of the donut; default: 4
@@ -23,7 +25,8 @@
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
-make.donut.data <- function(data, col.oi,
+make.donut.data <- function(data,
+                            col.oi,
                             groupby=NULL,
                             category.order="count",
                             levels.rev=FALSE,
