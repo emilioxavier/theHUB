@@ -30,13 +30,13 @@ Authors@R: person(given="Emilio Xavier",
                   email="emilio@msu.edu",
                   comment=c(ORCID="0000-0002-6193-0485",
                             "GitHub: https://github.com/emilioxavier"))
-URL: https://github.com/MSUHub/theHUB/
-BugReports: https://github.com/MSUHub/MSUHub/theHUB/issues/
+URL: https://github.com/emilioxavier/theHUB/
+BugReports: https://github.com/emilioxavier/theHUB/issues/
 License: MIT + file LICENSE
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 RdMacros: mathjaxr

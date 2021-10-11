@@ -20,12 +20,20 @@ Do \strong{NOT} use counted data.}
 
 \item{col.oi}{string with column of interest. Only provide \strong{ONE} column name.}
 
+\item{groupby}{string indicating the column to group data by; for when you
+want to \strong{facet} your donut plots via \code{\link[ggplot2:facet_wrap]{ggplot2::facet_wrap()}}; see
+\code{\link[=make.donut.plot]{make.donut.plot()}}.}
+
+\item{category.order}{string indicating if you want the data to be ordered by
+\code{"count"} in \emph{\strong{decreasing}} order or by \code{"category"} in alphabetical order;
+default: \code{"count"}.}
+
 \item{levels.rev}{logical indicating if the order of the categories should be
 reversed.}
 
-\item{r.inner}{numeric value defining the inner radius of the donut; default: 4}
+\item{r.inner}{numeric value defining the inner radius of the donut; default: \code{4}}
 
-\item{r.outer}{numeric value defining the outer radius of the donut; default: 6}
+\item{r.outer}{numeric value defining the outer radius of the donut; default: \code{6}}
 }
 \value{
 \code{tibble} with the

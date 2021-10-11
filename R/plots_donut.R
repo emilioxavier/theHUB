@@ -6,11 +6,15 @@
 #'   Do **NOT** use counted data.
 #' @param col.oi string with column of interest. Only provide **ONE** column name.
 #' @param groupby string indicating the column to group data by; for when you
-#'   want to **facet** your donut plots.
+#'   want to **facet** your donut plots via [ggplot2::facet_wrap()]; see
+#'    [make.donut.plot()].
+#' @param category.order string indicating if you want the data to be ordered by
+#'   `"count"` in _**decreasing**_ order or by `"category"` in alphabetical order;
+#'   default: `"count"`.
 #' @param levels.rev logical indicating if the order of the categories should be
 #'   reversed.
-#' @param r.inner numeric value defining the inner radius of the donut; default: 4
-#' @param r.outer numeric value defining the outer radius of the donut; default: 6
+#' @param r.inner numeric value defining the inner radius of the donut; default: `4`
+#' @param r.outer numeric value defining the outer radius of the donut; default: `6`
 #'
 #' @return `tibble` with the
 #' @export
@@ -66,7 +70,8 @@ make.donut.data <- function(data,
     donut.DATA <- dplyr::group_by(donut.DATA, GroupBy)
   }
 
-  donut.DATA <- dplyr::mutate(donut.DATA, Total=sum(Counts),
+  donut.DATA <- dplyr::mutate(donut.DATA,
+                              Total=sum(Counts),
                               Ratios=Counts/Total,
                               Percents=Ratios*100,
                               Labels.pct=paste(round(Percents, digits=0), "%", sep=""),
