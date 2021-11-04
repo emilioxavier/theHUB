@@ -1,0 +1,987 @@
+coll_code,short_name,full_name,line_adr1,tlphn_id,city_name,state_code,zip_code,cntry_code,start_term_code,end_term_code,start_term_seq_id,end_term_seq_id,subj_code,crse_code,number,course
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,AAAS,390,1,AAAS 390
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,AAE,220,2,AAE 220
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,AAE,223,3,AAE 223
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ABM,100,4,ABM 100
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ABM,130,5,ABM 130
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ABM,410,6,ABM 410
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,201,7,ACC 201
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,202,8,ACC 202
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,230,9,ACC 230
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,250,10,ACC 250
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,300,11,ACC 300
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,305,12,ACC 305
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,321,13,ACC 321
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,341,14,ACC 341
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,822,15,ACC 822
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,824,16,ACC 824
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,830,17,ACC 830
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ACC,850,18,ACC 850
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,205,19,ADV 205
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,222,20,ADV 222
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,224,21,ADV 224
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,225,22,ADV 225
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,260,23,ADV 260
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,326,24,ADV 326
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,330,25,ADV 330
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,342,26,ADV 342
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,350,27,ADV 350
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,352,28,ADV 352
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,375,29,ADV 375
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,402,30,ADV 402
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,413,31,ADV 413
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,420,32,ADV 420
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,442,33,ADV 442
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,486,34,ADV 486
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,492,35,ADV 492
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,800,36,ADV 800
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,815,37,ADV 815
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,ADV,825,38,ADV 825
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,AE,151,39,AE 151
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,AESC,291,40,AESC 291
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,AFRE,801,41,AFRE 801
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,AFRE,802,42,AFRE 802
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,AFRE,805,43,AFRE 805
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,AFRE,841,44,AFRE 841
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANP,201,45,ANP 201
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANP,203,46,ANP 203
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANP,206,47,ANP 206
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANP,270,48,ANP 270
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANP,320,49,ANP 320
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANP,321,50,ANP 321
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANP,420,51,ANP 420
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANP,422,52,ANP 422
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANP,834,53,ANP 834
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,101,54,ANS 101
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,110,55,ANS 110
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,110L,56,ANS 110L
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,140,57,ANS 140
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,201,58,ANS 201
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,225,59,ANS 225
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,232,60,ANS 232
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,242,61,ANS 242
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,262,62,ANS 262
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,282,63,ANS 282
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,301,64,ANS 301
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,307,65,ANS 307
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,313,66,ANS 313
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,404,67,ANS 404
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANS,409,68,ANS 409
+22,HUMAN MED,Human Medicine,Fee Hall (East),5173531730,East Lansing,MI,48824,US,FQ50, ,0504,9999,ANTR,350,69,ANTR 350
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ARB,101,70,ARB 101
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,AST,207,71,AST 207
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,AT,202,72,AT 202
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,AT,291,73,AT 291
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ATD,323,74,ATD 323
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ATD,335,75,ATD 335
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,BE,351,76,BE 351
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,BE,449,77,BE 449
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,BE,477,78,BE 477
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,BE,481,79,BE 481
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BLD,121,80,BLD 121
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BLD,204,81,BLD 204
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BLD,213L,82,BLD 213L
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BLD,402,83,BLD 402
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BLD,445,84,BLD 445
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BLD,456,85,BLD 456
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BLD,830,86,BLD 830
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BMB,101,87,BMB 101
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BMB,401,88,BMB 401
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BMB,461,89,BMB 461
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BMB,470,90,BMB 470
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BMB,528,91,BMB 528
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BMB,801,92,BMB 801
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BMB,829,93,BMB 829
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BMB,961,94,BMB 961
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BS,161,95,BS 161
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BS,162,96,BS 162
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BS,171,97,BS 171
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BS,172,98,BS 172
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BS,182H,99,BS 182H
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,BS,192H,100,BS 192H
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,BUS,101,101,BUS 101
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,BUS,291,102,BUS 291
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,BUS,491,103,BUS 491
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,110,104,CAS 110
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,112,105,CAS 112
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,114,106,CAS 114
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,117,107,CAS 117
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,203,108,CAS 203
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,205,109,CAS 205
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,825,110,CAS 825
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,827,111,CAS 827
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,828,112,CAS 828
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,835,113,CAS 835
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,837,114,CAS 837
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,840,115,CAS 840
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CAS,844,116,CAS 844
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,221,117,CE 221
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,273,118,CE 273
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,312,119,CE 312
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,321,120,CE 321
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,371,121,CE 371
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,400,122,CE 400
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,418,123,CE 418
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,490,124,CE 490
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,495,125,CE 495
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CE,838,126,CE 838
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,121,127,CEM 121
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,141,128,CEM 141
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,142,129,CEM 142
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,143,130,CEM 143
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,151,131,CEM 151
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,161,132,CEM 161
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,162,133,CEM 162
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,181H,134,CEM 181H
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,185H,135,CEM 185H
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,251,136,CEM 251
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,252,137,CEM 252
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,255,138,CEM 255
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,351,139,CEM 351
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,356,140,CEM 356
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,383,141,CEM 383
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,483,142,CEM 483
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,850,143,CEM 850
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,883,144,CEM 883
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEM,956,145,CEM 956
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,240,146,CEP 240
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,260,147,CEP 260
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,261,148,CEP 261
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,345,149,CEP 345
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,452,150,CEP 452
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,801A,151,CEP 801A
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,803A,152,CEP 803A
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,814,153,CEP 814
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,816,154,CEP 816
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,818,155,CEP 818
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,820,156,CEP 820
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,822,157,CEP 822
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,843,158,CEP 843
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,844,159,CEP 844
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,912,160,CEP 912
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,930,161,CEP 930
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,932,162,CEP 932
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,933,163,CEP 933
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,960,164,CEP 960
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,CEP,963,165,CEP 963
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHE,201,166,CHE 201
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHE,311,167,CHE 311
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHE,431,168,CHE 431
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHE,432,169,CHE 432
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHE,433,170,CHE 433
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHE,468,171,CHE 468
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHE,481,172,CHE 481
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHS,101,173,CHS 101
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHS,201,174,CHS 201
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,CHS,491,175,CHS 491
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,110,176,CJ 110
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,210,177,CJ 210
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,235,178,CJ 235
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,275,179,CJ 275
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,292,180,CJ 292
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,294,181,CJ 294
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,335,182,CJ 335
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,445,183,CJ 445
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,801,184,CJ 801
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,802,185,CJ 802
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,809,186,CJ 809
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,810,187,CJ 810
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,811,188,CJ 811
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,874,189,CJ 874
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,909,190,CJ 909
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CJ,910,191,CJ 910
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CLS,201,192,CLS 201
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CLS,894,193,CLS 894
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,CLS,896,194,CLS 896
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMP,210,195,CMP 210
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMP,401,196,CMP 401
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMP,415,197,CMP 415
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMP,423,198,CMP 423
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMP,491,199,CMP 491
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMP,828,200,CMP 828
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMSE,201,201,CMSE 201
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMSE,202,202,CMSE 202
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMSE,801,203,CMSE 801
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMSE,820,204,CMSE 820
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMSE,822,205,CMSE 822
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CMSE,890,206,CMSE 890
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,100,207,COM 100
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,225,208,COM 225
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,240,209,COM 240
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,275,210,COM 275
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,280,211,COM 280
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,300,212,COM 300
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,304,213,COM 304
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,325,214,COM 325
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,425,215,COM 425
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,475,216,COM 475
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,803,217,COM 803
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,COM,875,218,COM 875
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSD,203,219,CSD 203
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSD,333,220,CSD 333
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,102,221,CSE 102
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,231,222,CSE 231
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,232,223,CSE 232
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,260,224,CSE 260
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,320,225,CSE 320
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,325,226,CSE 325
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,331,227,CSE 331
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,335,228,CSE 335
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,410,229,CSE 410
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,422,230,CSE 422
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,431,231,CSE 431
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,435,232,CSE 435
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,440,233,CSE 440
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,480,234,CSE 480
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,498,235,CSE 498
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,801B,236,CSE 801B
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,803,237,CSE 803
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,825,238,CSE 825
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,830,239,CSE 830
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,841,240,CSE 841
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,842,241,CSE 842
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSE,891,242,CSE 891
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,105,243,CSS 105
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,120,244,CSS 120
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,124,245,CSS 124
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,126,246,CSS 126
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,143,247,CSS 143
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,202,248,CSS 202
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,202L,249,CSS 202L
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,210,250,CSS 210
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,222,251,CSS 222
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,424,252,CSS 424
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSS,442,253,CSS 442
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,200,254,CSUS 200
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,273,255,CSUS 273
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,300,256,CSUS 300
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,301,257,CSUS 301
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,354,258,CSUS 354
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,430,259,CSUS 430
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,433,260,CSUS 433
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,459,261,CSUS 459
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,800,262,CSUS 800
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,802,263,CSUS 802
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,CSUS,858,264,CSUS 858
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,805,265,EAD 805
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,820,266,EAD 820
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,860,267,EAD 860
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,863,268,EAD 863
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,870,269,EAD 870
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,873,270,EAD 873
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,874,271,EAD 874
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,894,272,EAD 894
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,924,273,EAD 924
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,942,274,EAD 942
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,947,275,EAD 947
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,960,276,EAD 960
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,967,277,EAD 967
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,970,278,EAD 970
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,982A,279,EAD 982A
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,EAD,991A,280,EAD 991A
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,201,281,EC 201
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,202,282,EC 202
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,301,283,EC 301
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,302,284,EC 302
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,340,285,EC 340
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,401,286,EC 401
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,420,287,EC 420
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,498,288,EC 498
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,812A,289,EC 812A
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,813A,290,EC 813A
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,820A,291,EC 820A
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,821A,292,EC 821A
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,850,293,EC 850
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,881,294,EC 881
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,950,295,EC 950
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,EC,999,296,EC 999
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,101,297,ECE 101
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,201,298,ECE 201
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,202,299,ECE 202
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,203,300,ECE 203
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,230,301,ECE 230
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,345,302,ECE 345
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,405,303,ECE 405
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,430,304,ECE 430
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,445,305,ECE 445
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,449,306,ECE 449
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,480,307,ECE 480
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,851,308,ECE 851
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ECE,874,309,ECE 874
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,EEM,255,310,EEM 255
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,EGR,100,311,EGR 100
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,EGR,102,312,EGR 102
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,EGR,160,313,EGR 160
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,EGR,391,314,EGR 391
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,EGR,840,315,EGR 840
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,EGR,891,316,EGR 891
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,EGR,893,317,EGR 893
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,EGR,993,318,EGR 993
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENE,280,319,ENE 280
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENE,421,320,ENE 421
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENE,480,321,ENE 480
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENE,481,322,ENE 481
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENE,483,323,ENE 483
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENE,804,324,ENE 804
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENG,129,325,ENG 129
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENG,142,326,ENG 142
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENG,210,327,ENG 210
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENG,211H,328,ENG 211H
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENG,226,329,ENG 226
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENG,400,330,ENG 400
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENT,205,331,ENT 205
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,ENT,404,332,ENT 404
+22,HUMAN MED,Human Medicine,Fee Hall (East),5173531730,East Lansing,MI,48824,US,FQ50, ,0504,9999,EPI,200,333,EPI 200
+22,HUMAN MED,Human Medicine,Fee Hall (East),5173531730,East Lansing,MI,48824,US,FQ50, ,0504,9999,EPI,810,334,EPI 810
+22,HUMAN MED,Human Medicine,Fee Hall (East),5173531730,East Lansing,MI,48824,US,FQ50, ,0504,9999,EPI,817,335,EPI 817
+22,HUMAN MED,Human Medicine,Fee Hall (East),5173531730,East Lansing,MI,48824,US,FQ50, ,0504,9999,EPI,828,336,EPI 828
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ESHP,190,337,ESHP 190
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ESP,801,338,ESP 801
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,FCM,620,339,FCM 620
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,311,340,FI 311
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,312,341,FI 312
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,320,342,FI 320
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,380,343,FI 380
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,414,344,FI 414
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,451,345,FI 451
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,491,346,FI 491
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,853,347,FI 853
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,854,348,FI 854
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,859,349,FI 859
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,860,350,FI 860
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,862,351,FI 862
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,863,352,FI 863
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,FI,865,353,FI 865
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,FLM,335,354,FLM 335
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,FLM,434,355,FLM 434
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,FLT,845,356,FLT 845
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FOR,101,357,FOR 101
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FOR,204,358,FOR 204
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FOR,222,359,FOR 222
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FOR,335,360,FOR 335
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FOR,340,361,FOR 340
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FOR,340L,362,FOR 340L
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FOR,360,363,FOR 360
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FOR,406,364,FOR 406
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FOR,802,365,FOR 802
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,FRN,101,366,FRN 101
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,FRN,102,367,FRN 102
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,FRN,201,368,FRN 201
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,FRN,330,369,FRN 330
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,FRN,415,370,FRN 415
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FSC,113,371,FSC 113
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FSC,211,372,FSC 211
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FSC,430,373,FSC 430
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FSC,432,374,FSC 432
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FSC,455,375,FSC 455
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FSC,811,376,FSC 811
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FSC,843,377,FSC 843
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FSC,890,378,FSC 890
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FW,181,379,FW 181
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FW,417,380,FW 417
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FW,849,381,FW 849
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FW,891,382,FW 891
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,FW,894,383,FW 894
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,GBL,323,384,GBL 323
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,GBL,385,385,GBL 385
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GD,160,386,GD 160
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GD,200,387,GD 200
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GD,365,388,GD 365
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GD,493,389,GD 493
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,GEO,113,390,GEO 113
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,GEO,203,391,GEO 203
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,GLG,201,392,GLG 201
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,GLG,303,393,GLG 303
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,GLG,411,394,GLG 411
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,GLG,821,395,GLG 821
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,GLG,850,396,GLG 850
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GRM,101,397,GRM 101
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GRM,102,398,GRM 102
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GRM,201,399,GRM 201
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GRM,301,400,GRM 301
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GRM,304,401,GRM 304
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GRM,342,402,GRM 342
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,GSAH,311,403,GSAH 311
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,HA,101,404,HA 101
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,HA,240,405,HA 240
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,HA,252,406,HA 252
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,HA,253,407,HA 253
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,HB,100,408,HB 100
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,HB,105,409,HB 105
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,HB,265,410,HB 265
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,HB,267,411,HB 267
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,HB,382,412,HB 382
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,HCM,807,413,HCM 807
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,HCM,810,414,HCM 810
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,HCM,819,415,HCM 819
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,138,416,HDFS 138
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,145,417,HDFS 145
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,211,418,HDFS 211
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,212,419,HDFS 212
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,225,420,HDFS 225
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,238,421,HDFS 238
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,320,422,HDFS 320
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,345,423,HDFS 345
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,412,424,HDFS 412
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,414,425,HDFS 414
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,444,426,HDFS 444
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,447,427,HDFS 447
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,448,428,HDFS 448
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,490,429,HDFS 490
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,827,430,HDFS 827
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,860,431,HDFS 860
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HDFS,961,432,HDFS 961
+22,HUMAN MED,Human Medicine,Fee Hall (East),5173531730,East Lansing,MI,48824,US,FQ50, ,0504,9999,HM,101,433,HM 101
+22,HUMAN MED,Human Medicine,Fee Hall (East),5173531730,East Lansing,MI,48824,US,FQ50, ,0504,9999,HM,892,434,HM 892
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,HNF,150,435,HNF 150
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,201,436,HRLR 201
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,211,437,HRLR 211
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,314,438,HRLR 314
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,410,439,HRLR 410
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,465,440,HRLR 465
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,809,441,HRLR 809
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,820,442,HRLR 820
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,825,443,HRLR 825
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,832,444,HRLR 832
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRLR,868,445,HRLR 868
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRT,361,446,HRT 361
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRT,403,447,HRT 403
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRT,819,448,HRT 819
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRT,841,449,HRT 841
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,HRT,892,450,HRT 892
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,140,451,HST 140
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,160,452,HST 160
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,202,453,HST 202
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,203,454,HST 203
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,205,455,HST 205
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,212,456,HST 212
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,220,457,HST 220
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,251,458,HST 251
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,304,459,HST 304
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,306,460,HST 306
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,320,461,HST 320
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,371,462,HST 371
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,480,463,HST 480
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,803,464,HST 803
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,HST,990,465,HST 990
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,201,466,IAH 201
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,202,467,IAH 202
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,203,468,IAH 203
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,204,469,IAH 204
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,206,470,IAH 206
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,207,471,IAH 207
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,208,472,IAH 208
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,209,473,IAH 209
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,211A,474,IAH 211A
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,211B,475,IAH 211B
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,211C,476,IAH 211C
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,221A,477,IAH 221A
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,221B,478,IAH 221B
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,221C,479,IAH 221C
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,231A,480,IAH 231A
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,231B,481,IAH 231B
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,231C,482,IAH 231C
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,241A,483,IAH 241A
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,IAH,241B,484,IAH 241B
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,200,485,IBIO 200
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,306,486,IBIO 306
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,341,487,IBIO 341
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,353,488,IBIO 353
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,355,489,IBIO 355
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,355L,490,IBIO 355L
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,384,491,IBIO 384
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,408,492,IBIO 408
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,415,493,IBIO 415
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,445,494,IBIO 445
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,IBIO,830,495,IBIO 830
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,IDES,140,496,IDES 140
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,IDES,150,497,IDES 150
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,IDES,152,498,IDES 152
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,IM,650,499,IM 650
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,IM,652,500,IM 652
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,IM,653,501,IM 653
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,IM,658,502,IM 658
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISB,200,503,ISB 200
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISB,201,504,ISB 201
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISB,201L,505,ISB 201L
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISB,202,506,ISB 202
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISB,204,507,ISB 204
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISB,208L,508,ISB 208L
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISE,401,509,ISE 401
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISP,203A,510,ISP 203A
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISP,203B,511,ISP 203B
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISP,203L,512,ISP 203L
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISP,205,513,ISP 205
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISP,205L,514,ISP 205L
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISP,209,515,ISP 209
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISP,209L,516,ISP 209L
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISP,217,517,ISP 217
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISP,220,518,ISP 220
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,210,519,ISS 210
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,215,520,ISS 215
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,220,521,ISS 220
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,235,522,ISS 235
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,305,523,ISS 305
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,310,524,ISS 310
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,315,525,ISS 315
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,318,526,ISS 318
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,320,527,ISS 320
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,325,528,ISS 325
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,328,529,ISS 328
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,ISS,335,530,ISS 335
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,ITL,101,531,ITL 101
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ITM,209,532,ITM 209
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ITM,881,533,ITM 881
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,ITM,885,534,ITM 885
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,JPN,101,535,JPN 101
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,JPN,201,536,JPN 201
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,108,537,JRN 108
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,200,538,JRN 200
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,203,539,JRN 203
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,206,540,JRN 206
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,218,541,JRN 218
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,265,542,JRN 265
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,300,543,JRN 300
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,306,544,JRN 306
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,317,545,JRN 317
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,325,546,JRN 325
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,JRN,492,547,JRN 492
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,101M,548,KIN 101M
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,103A,549,KIN 103A
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,103D,550,KIN 103D
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,106W,551,KIN 106W
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,109,552,KIN 109
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,121,553,KIN 121
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,125,554,KIN 125
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,126,555,KIN 126
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,173,556,KIN 173
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,216,557,KIN 216
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,250,558,KIN 250
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,251,559,KIN 251
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,310,560,KIN 310
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,330,561,KIN 330
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,355,562,KIN 355
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,360,563,KIN 360
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,400,564,KIN 400
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,443,565,KIN 443
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,492,566,KIN 492
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,853,567,KIN 853
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,855,568,KIN 855
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,KIN,857,569,KIN 857
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,117,570,LB 117
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,118,571,LB 118
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,119,572,LB 119
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,133,573,LB 133
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,144,574,LB 144
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,155,575,LB 155
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,171,576,LB 171
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,171L,577,LB 171L
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,273,578,LB 273
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,290A,579,LB 290A
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,324B,580,LB 324B
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,326A,581,LB 326A
+28,BRIGGS CLG,Lyman Briggs College,Holmes Hall (E&W),5173536480,East Lansing,MI,48824,US,FQ50, ,0504,9999,LB,492,582,LB 492
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LIN,200,583,LIN 200
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LIN,225,584,LIN 225
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LIN,401,585,LIN 401
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LIN,437,586,LIN 437
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LIN,455,587,LIN 455
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LIN,499,588,LIN 499
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LIN,871,589,LIN 871
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LL,251,590,LL 251
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LL,490,591,LL 490
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LLT,346,592,LLT 346
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LLT,809,593,LLT 809
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LLT,821,594,LLT 821
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LLT,841,595,LLT 841
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,LTN,101,596,LTN 101
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MBA,802,597,MBA 802
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MBA,830,598,MBA 830
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MBA,832,599,MBA 832
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,111,600,MC 111
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,201,601,MC 201
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,220,602,MC 220
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,270,603,MC 270
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,280,604,MC 280
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,295,605,MC 295
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,319,606,MC 319
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,320,607,MC 320
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,325,608,MC 325
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,350,609,MC 350
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,370,610,MC 370
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,401,611,MC 401
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,446,612,MC 446
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,459,613,MC 459
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,493,614,MC 493
+24,J MADISON,James Madison College,Case Hall (N&S),5173536750,East Lansing,MI,48824,US,FQ50, ,0504,9999,MC,498,615,MC 498
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,201,616,ME 201
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,222,617,ME 222
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,280,618,ME 280
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,332,619,ME 332
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,361,620,ME 361
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,370,621,ME 370
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,410,622,ME 410
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,412,623,ME 412
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,423,624,ME 423
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,440,625,ME 440
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,444,626,ME 444
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,451,627,ME 451
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,470,628,ME 470
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,477,629,ME 477
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,481,630,ME 481
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,800,631,ME 800
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,812,632,ME 812
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,820,633,ME 820
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,830,634,ME 830
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,835,635,ME 835
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,ME,892,636,ME 892
+22,HUMAN MED,Human Medicine,Fee Hall (East),5173531730,East Lansing,MI,48824,US,FQ50, ,0504,9999,MED,641,637,MED 641
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,315,638,MGT 315
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,325,639,MGT 325
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,409,640,MGT 409
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,411,641,MGT 411
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,412,642,MGT 412
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,475,643,MGT 475
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,801,644,MGT 801
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,804,645,MGT 804
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,810,646,MGT 810
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,814,647,MGT 814
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,817,648,MGT 817
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,833,649,MGT 833
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,850,650,MGT 850
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,873,651,MGT 873
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,881,652,MGT 881
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MGT,999,653,MGT 999
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,101,654,MI 101
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,211,655,MI 211
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,291,656,MI 291
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,302,657,MI 302
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,339,658,MI 339
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,349,659,MI 349
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,360,660,MI 360
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,401,661,MI 401
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,430,662,MI 430
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,442,663,MI 442
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,445,664,MI 445
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,462,665,MI 462
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,480,666,MI 480
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,831,667,MI 831
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,MI,841,668,MI 841
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,250,669,MKT 250
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,300,670,MKT 300
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,302,671,MKT 302
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,313,672,MKT 313
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,317,673,MKT 317
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,327,674,MKT 327
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,415,675,MKT 415
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,805,676,MKT 805
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,806,677,MKT 806
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,807,678,MKT 807
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,819,679,MKT 819
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,820,680,MKT 820
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,861,681,MKT 861
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,864,682,MKT 864
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,867,683,MKT 867
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,890,684,MKT 890
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,MKT,891,685,MKT 891
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,141,686,MMG 141
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,301,687,MMG 301
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,302,688,MMG 302
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,408,689,MMG 408
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,431,690,MMG 431
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,451,691,MMG 451
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,465,692,MMG 465
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,531,693,MMG 531
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,532,694,MMG 532
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MMG,999,695,MMG 999
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,200,696,MSE 200
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,250,697,MSE 250
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,310,698,MSE 310
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,331,699,MSE 331
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,410,700,MSE 410
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,474,701,MSE 474
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,476,702,MSE 476
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,810,703,MSE 810
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,870,704,MSE 870
+16,ENGINERING,Engineering,Engineering Building,5173555113,East Lansing,MI,48824,US,FQ50, ,0504,9999,MSE,876,705,MSE 876
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,101,706,MTH 101
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,102,707,MTH 102
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,103,708,MTH 103
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,103A,709,MTH 103A
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,116,710,MTH 116
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,124,711,MTH 124
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,132,712,MTH 132
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,133,713,MTH 133
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,201,714,MTH 201
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,234,715,MTH 234
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,235,716,MTH 235
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,254H,717,MTH 254H
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,301,718,MTH 301
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,361,719,MTH 361
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,421,720,MTH 421
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,441,721,MTH 441
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,496,722,MTH 496
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTH,994,723,MTH 994
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTHE,926,724,MTHE 926
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,MTHE,954,725,MTHE 954
+30,MUSIC,Music,Music Building,5173535340,East Lansing,MI,48824,US,FQ50, ,0504,9999,MUS,101,726,MUS 101
+30,MUSIC,Music,Music Building,5173535340,East Lansing,MI,48824,US,FQ50, ,0504,9999,MUS,151,727,MUS 151
+30,MUSIC,Music,Music Building,5173535340,East Lansing,MI,48824,US,FQ50, ,0504,9999,MUS,421,728,MUS 421
+30,MUSIC,Music,Music Building,5173535340,East Lansing,MI,48824,US,FQ50, ,0504,9999,MUS,495,729,MUS 495
+30,MUSIC,Music,Music Building,5173535340,East Lansing,MI,48824,US,FQ50, ,0504,9999,MUS,872,730,MUS 872
+30,MUSIC,Music,Music Building,5173535340,East Lansing,MI,48824,US,FQ50, ,0504,9999,MUS,996,731,MUS 996
+30,MUSIC,Music,Music Building,5173535340,East Lansing,MI,48824,US,FQ50, ,0504,9999,MUS,998,732,MUS 998
+30,MUSIC,Music,Music Building,5173535340,East Lansing,MI,48824,US,FQ50, ,0504,9999,MUS,999,733,MUS 999
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,MUSM,485,734,MUSM 485
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,NEU,300,735,NEU 300
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,NEU,301,736,NEU 301
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,NEU,815,737,NEU 815
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,NSC,100,738,NSC 100
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,NSC,495,739,NSC 495
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,OMM,511,740,OMM 511
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,OMM,514,741,OMM 514
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,OST,551,742,OST 551
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,OST,554,743,OST 554
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,OST,579,744,OST 579
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,OST,604,745,OST 604
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,PDC,100,746,PDC 100
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,PDC,992,747,PDC 992
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,PDC,999,748,PDC 999
+34,OSTEO MED,Osteopathic Medicine,Fee Hall (East Wing), ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PED,601,749,PED 601
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHL,101,750,PHL 101
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHL,210,751,PHL 210
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHL,247,752,PHL 247
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHL,344,753,PHL 344
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHL,353,754,PHL 353
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHL,413,755,PHL 413
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,321,756,PHM 321
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,350,757,PHM 350
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,461,758,PHM 461
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,483,759,PHM 483
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,564,760,PHM 564
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,801,761,PHM 801
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,818,762,PHM 818
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,828,763,PHM 828
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,829,764,PHM 829
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,850,765,PHM 850
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,980,766,PHM 980
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHM,982,767,PHM 982
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,183,768,PHY 183
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,183B,769,PHY 183B
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,184,770,PHY 184
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,184B,771,PHY 184B
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,191,772,PHY 191
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,193H,773,PHY 193H
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,221,774,PHY 221
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,231,775,PHY 231
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,231C,776,PHY 231C
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,232,777,PHY 232
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,233B,778,PHY 233B
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,241,779,PHY 241
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,251,780,PHY 251
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,451,781,PHY 451
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,471,782,PHY 471
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,481,783,PHY 481
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PHY,950,784,PHY 950
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,PIM,801,785,PIM 801
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,PIM,812,786,PIM 812
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,PIM,822,787,PIM 822
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,PIM,851,788,PIM 851
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,PIM,852,789,PIM 852
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,PIM,855,790,PIM 855
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,PKG,221,791,PKG 221
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,PKG,315,792,PKG 315
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,PKG,452,793,PKG 452
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLB,105,794,PLB 105
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLB,218,795,PLB 218
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLB,301,796,PLB 301
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLB,424,797,PLB 424
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLB,441,798,PLB 441
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLB,812,799,PLB 812
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLB,843,800,PLB 843
+02,AG NAT RES,Agriculture and Natural Resources,Morrill Hall of Agriculture,5173550232,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLP,105,801,PLP 105
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,100,802,PLS 100
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,140,803,PLS 140
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,160,804,PLS 160
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,200,805,PLS 200
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,304,806,PLS 304
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,310,807,PLS 310
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,320,808,PLS 320
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,322,809,PLS 322
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,354,810,PLS 354
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,363,811,PLS 363
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,392,812,PLS 392
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PLS,422,813,PLS 422
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PPL,801,814,PPL 801
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PPL,805,815,PPL 805
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PPL,807,816,PPL 807
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PR,300,817,PR 300
+10,COMM ARTS,Communication Arts and Sciences,Communication Arts & Sciences Bldg, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PR,310,818,PR 310
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSL,250,819,PSL 250
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSL,310,820,PSL 310
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSL,431,821,PSL 431
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSL,475L,822,PSL 475L
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSL,539,823,PSL 539
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSL,829,824,PSL 829
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSL,950,825,PSL 950
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,101,826,PSY 101
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,200,827,PSY 200
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,209,828,PSY 209
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,235,829,PSY 235
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,236,830,PSY 236
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,238,831,PSY 238
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,280,832,PSY 280
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,292,833,PSY 292
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,295,834,PSY 295
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,301,835,PSY 301
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,320,836,PSY 320
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,339,837,PSY 339
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,395,838,PSY 395
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,409,839,PSY 409
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,491,840,PSY 491
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,815,841,PSY 815
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,838,842,PSY 838
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,853,843,PSY 853
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,881,844,PSY 881
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,882,845,PSY 882
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,889,846,PSY 889
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,PSY,992,847,PSY 992
+06,ResArtHum,Resdntl Coll Arts and Humanities,Snyder Hall,5173550210,East Lansing,MI,48824,US,FQ50, ,0504,9999,RCAH,111,848,RCAH 111
+06,ResArtHum,Resdntl Coll Arts and Humanities,Snyder Hall,5173550210,East Lansing,MI,48824,US,FQ50, ,0504,9999,RCAH,150,849,RCAH 150
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,REL,101,850,REL 101
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,REL,150,851,REL 150
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,REL,185,852,REL 185
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,REL,220,853,REL 220
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,REL,291,854,REL 291
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,REL,320,855,REL 320
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,REL,365,856,REL 365
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,REL,490,857,REL 490
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,SCM,303,858,SCM 303
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,SCM,470,859,SCM 470
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,SCM,833,860,SCM 833
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,SCM,854,861,SCM 854
+08,BUSINESS,Business,Business College Complex,5173558377,East Lansing,MI,48824,US,FQ50, ,0504,9999,SCM,886,862,SCM 886
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SOC,100,863,SOC 100
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SOC,214,864,SOC 214
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SOC,215,865,SOC 215
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SOC,216,866,SOC 216
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SOC,281,867,SOC 281
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SOC,316,868,SOC 316
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SOC,375,869,SOC 375
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SOC,890,870,SOC 890
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,101,871,SPN 101
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,102,872,SPN 102
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,150,873,SPN 150
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,201,874,SPN 201
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,202,875,SPN 202
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,310,876,SPN 310
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,320,877,SPN 320
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,330,878,SPN 330
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,350,879,SPN 350
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,432,880,SPN 432
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,452,881,SPN 452
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,SPN,806,882,SPN 806
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SSC,493,883,SSC 493
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SSC,494,884,SSC 494
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,STA,112,885,STA 112
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,STA,113,886,STA 113
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,STA,201,887,STA 201
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,STA,320,888,STA 320
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,STA,380,889,STA 380
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,STA,491,890,STA 491
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,180,891,STT 180
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,200,892,STT 200
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,231,893,STT 231
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,351,894,STT 351
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,421,895,STT 421
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,430,896,STT 430
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,442,897,STT 442
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,455,898,STT 455
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,464,899,STT 464
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,481,900,STT 481
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,855,901,STT 855
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,867,902,STT 867
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,874,903,STT 874
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,881,904,STT 881
+32,NATURAL SC,Natural Science,Natural Science Building,5173554473,East Lansing,MI,48824,US,FQ50, ,0504,9999,STT,886,905,STT 886
+22,HUMAN MED,Human Medicine,Fee Hall (East),5173531730,East Lansing,MI,48824,US,FQ50, ,0504,9999,SUR,642,906,SUR 642
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,200,907,SW 200
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,310,908,SW 310
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,320,909,SW 320
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,430,910,SW 430
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,810,911,SW 810
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,820,912,SW 820
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,830,913,SW 830
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,832,914,SW 832
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,840,915,SW 840
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,843,916,SW 843
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,844,917,SW 844
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,845,918,SW 845
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,850,919,SW 850
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,865,920,SW 865
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,879,921,SW 879
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,894A,922,SW 894A
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,900,923,SW 900
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,SW,901,924,SW 901
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,100,925,TE 100
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,101,926,TE 101
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,150,927,TE 150
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,201,928,TE 201
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,250,929,TE 250
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,301,930,TE 301
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,302,931,TE 302
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,348,932,TE 348
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,403,933,TE 403
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,404,934,TE 404
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,407,935,TE 407
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,430,936,TE 430
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,448,937,TE 448
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,458,938,TE 458
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,496,939,TE 496
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,501,940,TE 501
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,801,941,TE 801
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,802,942,TE 802
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,808,943,TE 808
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,901,944,TE 901
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,921,945,TE 921
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,931,946,TE 931
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,936,947,TE 936
+14,EDUCATION,Education,Erickson Hall,5173539680,East Lansing,MI,48824,US,FQ50, ,0504,9999,TE,939G,948,TE 939G
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,THR,304,949,THR 304
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,THR,331,950,THR 331
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,THR,421,951,THR 421
+43,UN EDUC,Assoc Prov Undergraduate Education,Hannah Administration Building,5173535380,East Lansing,MI,48824,US,FQ50, ,0504,9999,UGS,100,952,UGS 100
+43,UN EDUC,Assoc Prov Undergraduate Education,Hannah Administration Building,5173535380,East Lansing,MI,48824,US,FQ50, ,0504,9999,UGS,101,953,UGS 101
+43,UN EDUC,Assoc Prov Undergraduate Education,Hannah Administration Building,5173535380,East Lansing,MI,48824,US,FQ50, ,0504,9999,UGS,110,954,UGS 110
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,UP,100,955,UP 100
+38,SOCIAL SCI,Social Science,Berkey Hall,5173556676,East Lansing,MI,48824,US,FQ50, ,0504,9999,UP,878,956,UP 878
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,110,957,VM 110
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,210,958,VM 210
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,337,959,VM 337
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,507,960,VM 507
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,508,961,VM 508
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,509,962,VM 509
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,519,963,VM 519
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,535,964,VM 535
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,536,965,VM 536
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,539,966,VM 539
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,578,967,VM 578
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,579,968,VM 579
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,580,969,VM 580
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,811,970,VM 811
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,812,971,VM 812
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,815,972,VM 815
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,830,973,VM 830
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,831,974,VM 831
+46,VET MED,Veterinary Medicine,Veterinary Medical Center, ,East Lansing,MI,48824,US,FQ50, ,0504,9999,VM,834,975,VM 834
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WRA,0102,976,WRA 0102
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WRA,101,977,WRA 101
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WRA,195H,978,WRA 195H
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WRA,202,979,WRA 202
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WRA,260,980,WRA 260
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WRA,395,981,WRA 395
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WRA,455,982,WRA 455
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WS,102,983,WS 102
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WS,201,984,WS 201
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,WS,304,985,WS 304
+04,ARTS & LET,Arts and Letters,Linton Hall,5173554597,East Lansing,MI,48824,US,FQ50, ,0504,9999,XA,375,986,XA 375
