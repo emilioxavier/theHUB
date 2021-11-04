@@ -36,8 +36,8 @@ relationships between responses and respondents}.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/MSUHub/theHUB/}
-  \item Report bugs at \url{https://github.com/MSUHub/MSUHub/theHUB/issues/}
+  \item \url{https://github.com/emilioxavier/theHUB/}
+  \item Report bugs at \url{https://github.com/emilioxavier/theHUB/issues/}
 }
 
 }
