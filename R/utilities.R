@@ -158,6 +158,79 @@ ConvertToASCII <- function(comment) {
 }
 
 
+#' @title Convert Four-Digit Term Codes
+#' @description Converts four-digit term codes to semester or quarter names with
+#'   four-digit years.
+#' @details Within CampusSolutions the term code is a four digit representation
+#'   of the century (position 1), the two-digit calendar year (positions 2 and 3),
+#'   and the term (position 4). The following is the translation between digits
+#'   and four-digit years and term types.
+#'
+#'   | **Position** | **Information** |
+#'   |:--------:|:-----------:|
+#'   |  1  |  Century Code |
+#'   |     |  (1 = 19xx & 2 = 20xx) |
+#'   |  2 & 3  |  Two-Digit Calendar Year |
+#'   |  4  |  Term Indicator (see below) |
+#'
+#'   The information in the following table is available in the constant
+#'   `term.translation`.
+#'
+#'   | **Term abbreviation** | **Full Term Name** | **Short Term Name** |
+#'   |:-------------------:|:-------------:|:--------------:|
+#'   |   1  | Winter Quarter (WinterQ) |  WQ  |
+#'   |   2  | Spring | SS |
+#'   |   3  | Spring Quarter (SpringQ) | SpQ  |
+#'   |   5  | Summer | SU |
+#'   |   6  | Summer Quarter | SuQ |
+#'   |   8  | Fall   | FS |
+#'   |   9  | Fall Quarter (FallQ) | FQ |
+#'
+#'
+#' @param term.code Four-digit code indicating the semester and year of the term.
+#' @param term.type Indicate if the full or short semester (or quarter) designation
+#'   is returned; default: `"full"`.
+#'
+#' @return string term and four-digit year
+#' @export
+#'
+#' @examples
+#' term.code <- "2208"
+#'
+#' convert.termCode(term.code, term.type="full")
+#' # [1] "Fall 2020"
+#'
+#' convert.termCode(term.code, term.type="short")
+#' # [1] "FS 2020"
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+convert.termCode <- function(term.code, term.type="full") {
+
+  century <- substr(x=term.code, start=1, stop=1)
+  year <- substr(x=term.code, start=2, stop=3)
+  if (century == "1") {
+    year <- paste0("19", year)
+  } else {
+    year <- paste0("20", year)
+  }
+
+  term <- substr(x=termcode, start=4, stop=4)
+  if (tolower(term.type) == "full") {
+    term <- term.translation$full[term.translation$abbrev == term]
+  }
+  if (tolower(term.type) == "short") {
+    term <- term.translation$short[term.translation$abbrev == term]
+  }
+
+  termcode.readable <- paste(term, year, sep=" ")
+
+  return(termcode.readable)
+
+}
+
+
 #' @title Honours Course?
 #'
 #' @description Determine if a course is an honours course based on the course

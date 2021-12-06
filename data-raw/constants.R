@@ -65,3 +65,10 @@ SubjectCourse.codes.FS20 <- readr::read_csv(file="./data-raw/FS20-Subject-Course
   select(-tlphn_id) %>%
   rename("index"="number")
 usethis::use_data(SubjectCourse.codes.FS20, overwrite=TRUE)
+
+## Term-Code Translation Table ----
+term.translation <- tibble::tibble(abbrev=c(1, 2, 3, 5, 6, 8, 9),
+                                   full=c("WinterQ", "Spring", "SpringQ", "Summer", "SummerQ", "Fall", "FallQ"),
+                                   short=c("WQ", "SS", "SpQ", "SU", "SuQ", "FS", "FQ"))
+usethis::use_data(term.translation, overwrite=TRUE)
+
