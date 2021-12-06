@@ -145,12 +145,12 @@ clean.DoB <- function(DoB) {
 #' @examples
 #' comment <- "All day I see class mates and send e-mails.   I miss East Lansing."
 #'
-#' ConvertToASCII(comment=comment)
+#' convert.toASCII(comment=comment)
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
-ConvertToASCII <- function(comment) {
+convert.toASCII <- function(comment) {
 
   comment.clean <- iconv(x=comment, from="latin1", to="ASCII", sub="")
 

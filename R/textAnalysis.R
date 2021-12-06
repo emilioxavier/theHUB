@@ -392,7 +392,7 @@ clean.comment <- function(comment) {
                                        replacement=" ")
 
   ## convert to ASCII ----
-  cleanish <- tolower(ConvertToASCII(cleanish))
+  cleanish <- tolower(convert.toASCII(cleanish))
 
   ## remove 's ----
   cleanish <- gsub(x=cleanish, pattern="\\'s", replacement="") ## contains stop word
@@ -834,7 +834,7 @@ create.search.string <- function(search.terms) {
 # map_int(comment.data$comment.unified, .f=word.count(.))
 
 # survey.data <- select(fs20.general.data, responder.dID, Q.most.challenging.text) %>%
-#   mutate(clean.txt=tolower(ConvertToASCII(Q.most.challenging.text))) %>%
+#   mutate(clean.txt=tolower(convert.toASCII(Q.most.challenging.text))) %>%
 #   filter(!grepl(x=trimws(clean.txt), pattern="none") & !is.na(clean.txt))
 
 
