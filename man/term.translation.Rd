@@ -13,7 +13,7 @@ term.translation
 \description{
 Term-code translation table used to convert four-digit term-code
 into term and four-digit year. The \code{term.translation} constant contains
-the following information.\tabular{ccc}{
+the following information. Used in the function \code{\link[=convert.termCode]{convert.termCode()}}.\tabular{ccc}{
    \strong{Term abbreviation} \tab \strong{Full Term Name} \tab \strong{Short Term Name} \cr
    1 \tab Winter Quarter (WinterQ) \tab WQ \cr
    2 \tab Spring \tab SS \cr

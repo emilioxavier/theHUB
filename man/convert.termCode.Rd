@@ -33,7 +33,7 @@ and four-digit years and term types.\tabular{cc}{
 
 
 The information in the following table is available in the constant
-\code{term.translation}.\tabular{ccc}{
+\link{term.translation}.\tabular{ccc}{
    \strong{Term abbreviation} \tab \strong{Full Term Name} \tab \strong{Short Term Name} \cr
    1 \tab Winter Quarter (WinterQ) \tab WQ \cr
    2 \tab Spring \tab SS \cr

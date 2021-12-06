@@ -139,7 +139,7 @@
 #'
 #' @description Term-code translation table used to convert four-digit term-code
 #'   into term and four-digit year. The `term.translation` constant contains
-#'   the following information.
+#'   the following information. Used in the function [convert.termCode()].
 #'
 #'   | **Term abbreviation** | **Full Term Name** | **Short Term Name** |
 #'   |:-------------------:|:-------------:|:--------------:|

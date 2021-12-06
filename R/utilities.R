@@ -174,7 +174,7 @@ ConvertToASCII <- function(comment) {
 #'   |  4  |  Term Indicator (see below) |
 #'
 #'   The information in the following table is available in the constant
-#'   `term.translation`.
+#'   [term.translation].
 #'
 #'   | **Term abbreviation** | **Full Term Name** | **Short Term Name** |
 #'   |:-------------------:|:-------------:|:--------------:|
