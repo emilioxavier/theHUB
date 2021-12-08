@@ -216,7 +216,7 @@ convert.termCode <- function(term.code, term.type="full") {
     year <- paste0("20", year)
   }
 
-  term <- substr(x=termcode, start=4, stop=4)
+  term <- substr(x=term.code, start=4, stop=4)
   if (tolower(term.type) == "full") {
     term <- term.translation$full[term.translation$abbrev == term]
   }
