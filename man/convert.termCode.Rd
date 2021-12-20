@@ -37,9 +37,9 @@ The information in the following table is available in the constant
    \strong{Term abbreviation} \tab \strong{Full Term Name} \tab \strong{Short Term Name} \cr
    1 \tab Winter Quarter (WinterQ) \tab WQ \cr
    2 \tab Spring \tab SS \cr
-   3 \tab Spring Quarter (SpringQ) \tab SpQ \cr
-   5 \tab Summer \tab SU \cr
-   6 \tab Summer Quarter \tab SuQ \cr
+   3 \tab Spring Quarter (SpringQ) \tab SQ \cr
+   5 \tab Summer \tab US \cr
+   6 \tab Summer Quarter \tab UQ \cr
    8 \tab Fall \tab FS \cr
    9 \tab Fall Quarter (FallQ) \tab FQ \cr
 }

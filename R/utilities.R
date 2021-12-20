@@ -180,9 +180,9 @@ convert.toASCII <- function(comment) {
 #'   |:-------------------:|:-------------:|:--------------:|
 #'   |   1  | Winter Quarter (WinterQ) |  WQ  |
 #'   |   2  | Spring | SS |
-#'   |   3  | Spring Quarter (SpringQ) | SpQ  |
-#'   |   5  | Summer | SU |
-#'   |   6  | Summer Quarter | SuQ |
+#'   |   3  | Spring Quarter (SpringQ) | SQ  |
+#'   |   5  | Summer | US |
+#'   |   6  | Summer Quarter | UQ |
 #'   |   8  | Fall   | FS |
 #'   |   9  | Fall Quarter (FallQ) | FQ |
 #'
