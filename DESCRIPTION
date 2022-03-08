@@ -3,7 +3,7 @@ Type: Package
 Title: the Hub Utility Box (theHUB)
 Description: Collection of Learning Analytics tools to evaluate surveys, student outcomes, and student success.
 Version: 0.1.0
-Depends: R (>= 4.0)
+Depends: R (>= 4.1)
 Imports: 
     tidyverse,
     tibble,
