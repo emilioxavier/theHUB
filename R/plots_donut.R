@@ -149,7 +149,8 @@ make.donut.plot <- function(donut.DATA,
     coord_polar(theta="y") +
     labs(x=NULL, y=NULL, title=NULL) +
     scale_fill_manual(values=colour.palette,
-                      breaks=levels(.data$Categories),
+                      # breaks=levels(.data$Categories),
+                      breaks=levels(donut.DATA$Categories),
                       guide=guide_legend(nrow=3, byrow=TRUE, reverse=TRUE)) +
     xlim(c(0, xlim.max)) +
     guides(fill=guide_legend(title.position="top",  ## place title on top of legend (not needed)
