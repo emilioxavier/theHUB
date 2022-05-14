@@ -37,6 +37,10 @@ make.donut.data <- function(data,
                             r.inner=4,
                             r.outer=6) {
 
+  ## stat versus identity ----
+
+
+  ## how to order the data ----
   category.order <- tolower(category.order)
   if ( (category.order != "count") & (category.order != "category") ) {
     category.order <- "count"
@@ -158,7 +162,7 @@ make.donut.plot <- function(donut.DATA,
                              label.position="bottom",
                              nrow=1)) +
     theme_bw() +
-    theme_cowplot() +
+    cowplot::theme_cowplot() +
     theme(panel.border=element_blank(),
           panel.grid=element_blank(),
           axis.text=element_blank(),
