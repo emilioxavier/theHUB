@@ -131,33 +131,6 @@ clean.DoB <- function(DoB) {
 
 
 
-
-
-#' @title Convert to ASCII
-#' @description Converts non-local characters to ASCII
-#' @details Convert _**latin1**_ encoded characters to ASCII
-#'
-#' @param comment A string of words forming a sentence or phrase.
-#'
-#' @return string of cleaned characters forming words
-#' @export
-#'
-#' @examples
-#' comment <- "All day I see class mates and send e-mails.   I miss East Lansing."
-#'
-#' convert.toASCII(comment=comment)
-#'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
-#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
-#'
-convert.toASCII <- function(comment) {
-
-  comment.clean <- iconv(x=comment, from="latin1", to="ASCII", sub="")
-
-  return(comment.clean)
-}
-
-
 #' @title Convert Four-Digit Term Codes
 #' @description Converts four-digit term codes to semester or quarter names with
 #'   four-digit years.
@@ -208,9 +181,9 @@ convert.toASCII <- function(comment) {
 #'
 convert.termCode <- function(term.code, term.type="full") {
 
-  century <- substr(x=term.code, start=1, stop=1)
+  millennium <- substr(x=term.code, start=1, stop=1)
   year <- substr(x=term.code, start=2, stop=3)
-  if (century == "1") {
+  if (millennium == "1") {
     year <- paste0("19", year)
   } else {
     year <- paste0("20", year)
@@ -231,7 +204,8 @@ convert.termCode <- function(term.code, term.type="full") {
 }
 
 
-#' @title Honours Course?
+
+#' @title Honours (or Honors) Course?
 #'
 #' @description Determine if a course is an honours course based on the course
 #'   code (`crse_code`). The fourth character is an "H". This designation is
