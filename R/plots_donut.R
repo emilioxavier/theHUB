@@ -5,7 +5,7 @@
 #' @param data `tibble` (or `data.frame`) with the column of interest. _**NOTE**_:
 #'   Do **NOT** use counted data.
 #' @param col.oi string with column of interest. Only provide **ONE** column name.
-#' @param groupby string indicating the column to group data by; for when you
+#' @param facetBy string indicating the column to group data by; for when you
 #'   want to **facet** your donut plots via [ggplot2::facet_wrap()]; see
 #'    [make.donut.plot()].
 #' @param category.order string indicating if you want the data to be ordered by
@@ -21,7 +21,7 @@
 #'
 #' @examples
 #' \dontrun{
-#'   donut.DATA <- make.donut.data(data, col.oi, groupby=NULL,
+#'   donut.DATA <- make.donut.data(data, col.oi, facetBy=NULL,
 #'                                 category.order="count", levels.rev=FALSE,
 #'                                 r.inner=4, r.outer=6)
 #' }
@@ -31,7 +31,7 @@
 #'
 make.donut.data <- function(data,
                             col.oi,
-                            groupby=NULL,
+                            facetBy=NULL,
                             category.order="count",
                             levels.rev=FALSE,
                             r.inner=4,
@@ -47,10 +47,10 @@ make.donut.data <- function(data,
   }
 
   ## select the needed columns ----
-  if ( !is.null(groupby) ) {
-    donut.DATA <- dplyr::select(data, {{col.oi}}, {{groupby}}) %>%
-      dplyr::rename("Categories"={{col.oi}}, "GroupBy"={{groupby}}) %>%
-      dplyr::group_by(Categories, GroupBy)
+  if ( !is.null(facetBy) ) {
+    donut.DATA <- dplyr::select(data, {{col.oi}}, {{facetBy}}) %>%
+      dplyr::rename("Categories"={{col.oi}}, "FacetBy"={{facetBy}}) %>%
+      dplyr::group_by(Categories, FacetBy)
   } else {
     donut.DATA <- dplyr::select(data, {{col.oi}}) %>%
       dplyr::rename("Categories"={{col.oi}}) %>%
@@ -62,7 +62,7 @@ make.donut.data <- function(data,
     dplyr::ungroup()
 
   ## arrange data by count OR category ----
-  # if ( is.null(groupby) ) {
+  # if ( is.null(facetBy) ) {
   if ( category.order == "count" ) {
     donut.DATA <- dplyr::arrange(donut.DATA, desc(Counts))
   }
@@ -70,8 +70,8 @@ make.donut.data <- function(data,
     donut.DATA <- dplyr::arrange(donut.DATA, Categories)
   }
   # }
-  if ( !is.null(groupby) ){
-    donut.DATA <- dplyr::group_by(donut.DATA, GroupBy)
+  if ( !is.null(facetBy) ){
+    donut.DATA <- dplyr::group_by(donut.DATA, FacetBy)
   }
 
   donut.DATA <- dplyr::mutate(donut.DATA,
@@ -89,8 +89,8 @@ make.donut.data <- function(data,
                               ymax=cumsum(Ratios),
                               ymin=dplyr::coalesce(lag(ymax), 0))
 
-  if ( !is.null(groupby) ) {
-    donut.DATA <- dplyr::arrange(donut.DATA, GroupBy, ymin)
+  if ( !is.null(facetBy) ) {
+    donut.DATA <- dplyr::arrange(donut.DATA, FacetBy, ymin)
   }
 
   ## set the factor levels ----
@@ -101,6 +101,12 @@ make.donut.data <- function(data,
   } else {
     donut.DATA$Categories <- factor(x=donut.DATA$Categories,
                                     levels=categories)
+  }
+
+  ## adjust the donut rings ----
+  if ( any(colnames(donut.DATA)=="FacetBy") ) {
+
+
   }
 
   ## return donut data ----
@@ -126,7 +132,7 @@ make.donut.data <- function(data,
 #'
 #' @examples
 #' \dontrun{
-#'   donut.DATA <- make.donut.data(data, col.oi, groupby=NULL,
+#'   donut.DATA <- make.donut.data(data, col.oi, facetBy=NULL,
 #'                                 category.order="count", levels.rev=FALSE,
 #'                                 r.inner=4, r.outer=6)
 #'   donut.PLOT <- make.donut.plot(donut.DATA, colour.palette=msu.palette,
@@ -186,7 +192,7 @@ make.donut.plot <- function(donut.DATA,
 
   ## option to make facets ----
   if ( !is.null(facet.nrow) | !is.null(facet.ncol) ) {
-    donut.plot <- donut.plot + facet_wrap(facets=vars(.data$GroupBy),
+    donut.plot <- donut.plot + facet_wrap(facets=vars(.data$FacetBy),
                                           nrow=facet.nrow,
                                           ncol=facet.ncol)
   }
