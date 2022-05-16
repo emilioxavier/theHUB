@@ -1,3 +1,38 @@
+#' @title Convert all Spaces to "Normal" Spaces
+#' @description Converts various type of spaces into "normal" spaces.
+#' @details One of several text cleaning functions. The function replaces various
+#'   types of spaces with ASCII spaces that are breakable. The reason for this
+#'   function is to replace non-breakable space with standard, breakable spaces.
+#'
+#' @param comment A string of words forming a sentence or phrase.
+#'
+#' @return string of cleaned characters forming a sentence or phrase.
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#'   comment <- "All day I see class mates and send e-mails.   I miss East Lansing."
+#'
+#'   convert.spaces(text=comment)
+#' }
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+#' @family "text cleaning"
+#'
+convert.spaces <- function(text) {
+  # see https://stackoverflow.com/questions/31790440/regex-to-replace-no-break-space
+  # found the no-break-space by converting strings to UTF-32 via stringi::stri_enc_toutf32()
+
+  normal.spaces <- stringr::str_replace_all(string=text,
+                                            pattern="\u0020|\u00A0|\u1680|\u180E|\u2000|\u2001|\u2002|\u2003|\u2004|\u2005|\u2006|\u2007|\u2008|\u2009|\u200A|\u200B|\u202F|\u205F|\u3000|\uFEFF",
+                                            replacement=" ")
+
+  return(normal.spaces)
+}
+
+
 #' @title Convert to ASCII
 #' @description Converts non-local characters to ASCII
 #' @details Convert _**latin1**_ encoded characters to ASCII
@@ -40,6 +75,8 @@ convert.toASCII <- function(comment) {
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+#' @family "text cleaning"
 #'
 extract.emails <- function(emails.string, domains="msu.edu") {
 
