@@ -13,6 +13,10 @@
 #'   default: `"count"`.
 #' @param levels.rev logical indicating if the order of the categories should be
 #'   reversed.
+#' @param col.count string with the column containing "counts" for each "category."
+#'   This parameter is _**required**_ when the count (or total) for each row was
+#'   pre-calculated and allows for the creation of donut data when raw data is
+#'   not available and one only has the summarised values.
 #' @param r.inner numeric value defining the inner radius of the donut; default: `4`
 #' @param r.outer numeric value defining the outer radius of the donut; default: `6`
 #'
@@ -32,13 +36,16 @@
 make.donut.data <- function(data,
                             col.oi,
                             facetBy=NULL,
+                            # layerBy=NULL,
                             category.order="count",
                             levels.rev=FALSE,
+                            col.count=NULL,
                             r.inner=4,
                             r.outer=6) {
 
   ## stat versus identity ----
-
+  orig.nRows <- nrow(data)
+  orig.nCats <- data[[col.oi]] |> unique() |> length()
 
   ## how to order the data ----
   category.order <- tolower(category.order)
@@ -56,10 +63,19 @@ make.donut.data <- function(data,
       dplyr::rename("Categories"={{col.oi}}) %>%
       dplyr::group_by(Categories)
   }
+  ## counts already calculated ----
+  if ( !is.null(col.count) ) {
+    donut.DATA <- dplyr::select(data, {{col.oi}}, {{col.count}}) %>%
+      dplyr::rename("Categories"={{col.oi}},
+                    "Counts"={{col.count}}) %>%
+      dplyr::ungroup()
+  }
 
   ## calculate the counts ----
-  donut.DATA <- dplyr::summarise(donut.DATA, Counts=n()) %>%
-    dplyr::ungroup()
+  if ( ( orig.nRows != orig.nCats ) & ( !is.null(col.count) ) ) {
+    donut.DATA <- dplyr::summarise(donut.DATA, Counts=n()) %>%
+      dplyr::ungroup()
+  }
 
   ## arrange data by count OR category ----
   # if ( is.null(facetBy) ) {
@@ -104,10 +120,10 @@ make.donut.data <- function(data,
   }
 
   ## adjust the donut rings ----
-  if ( any(colnames(donut.DATA)=="FacetBy") ) {
-
-
-  }
+  # if ( any(colnames(donut.DATA)=="FacetBy") ) {
+  #
+  #
+  # }
 
   ## return donut data ----
   return(donut.DATA)
