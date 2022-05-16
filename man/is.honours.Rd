@@ -2,7 +2,7 @@
 % Please edit documentation in R/utilities.R
 \name{is.honours}
 \alias{is.honours}
-\title{Honours Course?}
+\title{Honours (or Honors) Course?}
 \usage{
 is.honours(crse_code)
 }
