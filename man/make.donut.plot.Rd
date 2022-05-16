@@ -35,7 +35,7 @@ add the description of making the plot
 }
 \examples{
 \dontrun{
-  donut.DATA <- make.donut.data(data, col.oi, groupby=NULL,
+  donut.DATA <- make.donut.data(data, col.oi, facetBy=NULL,
                                 category.order="count", levels.rev=FALSE,
                                 r.inner=4, r.outer=6)
   donut.PLOT <- make.donut.plot(donut.DATA, colour.palette=msu.palette,

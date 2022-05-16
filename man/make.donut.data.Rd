@@ -7,9 +7,10 @@
 make.donut.data(
   data,
   col.oi,
-  groupby = NULL,
+  facetBy = NULL,
   category.order = "count",
   levels.rev = FALSE,
+  col.count = NULL,
   r.inner = 4,
   r.outer = 6
 )
@@ -20,7 +21,7 @@ Do \strong{NOT} use counted data.}
 
 \item{col.oi}{string with column of interest. Only provide \strong{ONE} column name.}
 
-\item{groupby}{string indicating the column to group data by; for when you
+\item{facetBy}{string indicating the column to group data by; for when you
 want to \strong{facet} your donut plots via \code{\link[ggplot2:facet_wrap]{ggplot2::facet_wrap()}}; see
 \code{\link[=make.donut.plot]{make.donut.plot()}}.}
 
@@ -30,6 +31,11 @@ default: \code{"count"}.}
 
 \item{levels.rev}{logical indicating if the order of the categories should be
 reversed.}
+
+\item{col.count}{string with the column containing "counts" for each "category."
+This parameter is \emph{\strong{required}} when the count (or total) for each row was
+pre-calculated and allows for the creation of donut data when raw data is
+not available and one only has the summarised values.}
 
 \item{r.inner}{numeric value defining the inner radius of the donut; default: \code{4}}
 
@@ -43,7 +49,7 @@ add the description of making the data
 }
 \examples{
 \dontrun{
-  donut.DATA <- make.donut.data(data, col.oi, groupby=NULL,
+  donut.DATA <- make.donut.data(data, col.oi, facetBy=NULL,
                                 category.order="count", levels.rev=FALSE,
                                 r.inner=4, r.outer=6)
 }
