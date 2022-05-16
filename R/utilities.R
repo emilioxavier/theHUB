@@ -1,4 +1,43 @@
+#' @title Make Canonical Name
+#'
+#' @description Often there is a need to construct a name from several different
+#'   components. While a common method to construct these names from the provided
+#'   components in the provided order, it can lead to different names for the
+#'   same thing.
+#'
+#'   If the name for an object is composed from two or
+#'   more columns there is the possibility that the components change order within
+#'   the columns. In some cases the name "yaddy-blah" is the same as "blah-yaddy."
+#'   This function takes the provided components, replaces `NA`s with "Unk",
+#'   orders the components alphabetically and in numerical order, and then
+#'   combines the components with "-"s.
+#'
+#' @param name.vector A string containing the components to comprise the
+#'   canonical name.
+#'
+#' @return string with the canonical name
+#' @export
+#'
+#' @examples
+#' canonical.name(c("yaddy", "yaddy", "blah", "ugh"))
+#'
+#' \dontrun{
+#'   ## the following is how to implement the `canonical.name()` via `dplyr::mutate()`
+#'   mutate(name=canonical.name(c(column.1, column.2)))
+#'
+#' }
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+canonical.name <- function(name.vector) {
 
+  name.vector.clean <- replace_na(name.vector, replace="Unk")
+  name.vector.sorted <- sort(name.vector.clean)
+  name.vector.canonical <- paste(name.vector.sorted, collapse="-")
+
+  return(name.vector.canonical)
+}
 
 
 #' @title Get Operating System Name
