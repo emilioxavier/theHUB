@@ -72,7 +72,7 @@ make.donut.data <- function(data,
   }
 
   ## calculate the counts ----
-  if ( ( orig.nRows != orig.nCats ) & ( !is.null(col.count) ) ) {
+  if ( ( orig.nRows != orig.nCats ) & ( is.null(col.count) ) ) {
     donut.DATA <- dplyr::summarise(donut.DATA, Counts=n()) |>
       dplyr::ungroup()
   }
