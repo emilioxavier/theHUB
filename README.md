@@ -5,6 +5,8 @@
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
+[![Contributor
+Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 <!-- badges: end -->
 
 # theHUB: the Hub Utility Box.
@@ -112,7 +114,7 @@ library(theHUB)
 ## Code of conduct
 
 Please note that this project is released with a [Contributor Code of
-Conduct](https://github.com/emilioxavier/sageparenting/blob/master/CONDUCT.md).
+Conduct](https://github.com/emilioxavier/theHUB/blob/master/CONDUCT.md).
 By participating in this project you agree to abide by its terms.
 
 ## License
