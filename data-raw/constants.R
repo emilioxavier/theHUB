@@ -43,14 +43,68 @@ msu.heatmap.20 <- tibble::tibble(hex=msu.heatmap(22),
 msu.heatmap.100 <- tibble::tibble(hex=msu.heatmap(101),
                                   pct=as.integer(seq(from=0, to=100, by=1)))
 
+usethis::use_data(msu.darkGreen, msu.darkGreenTints, msu.palette,
+                  msu.heatmap.20, msu.heatmap.100,
+                  internal=FALSE, overwrite=TRUE)
+
+
+## University of Wisconsin colour palettes ----
+wisc.badgerRed <- "#da004c"
+wisc.white <- "#ffffff"
+
+wisc.badgerRedTints <- c(
+  "#da004c",
+  "#dd195d",
+  "#e1326f",
+  "#e54c81",
+  "#e86693",
+  "#ec7fa5",
+  "#f099b7",
+  "#f3b2c9",
+  "#f7ccdb",
+  "#fbe5ed"
+)
+
+wisc.secondary <- c(
+  "#a1002f",  ## dark red
+  "#8b0037",  ## deep red (magenta?)
+  "#e6e6e6",  ## grey10
+  "#b3b3b3",  ## grey30
+  "#737373",  ## grey55
+  "#000000"   ## black
+)
+wisc.accent <- c(
+  "#ff8000",  ## orange
+  "#ffbf00",  ## orange-yellow
+  "#e8dfa7",  ## tan
+  "#97b85f",  ## avocado green
+  "#6b9999",  ## blue-grey
+  "#386666"   ## dark teal
+  )
+
+wisc.heatmap <- colorRampPalette(colors=c("#fbe5ed", wisc.badgerRed), bias=1,
+                                space="rgb", interpolate="linear", alpha=FALSE)
+
+wisc.heatmap.20 <- tibble::tibble(hex=wisc.heatmap(22),
+                                 start=c(0, seq(from=1, to=100, by=5), 100),
+                                 stop=c(0, seq(from=5, to=95, by=5), 99, 100))
+
+wisc.heatmap.100 <- tibble::tibble(hex=wisc.heatmap(101),
+                                  pct=as.integer(seq(from=0, to=100, by=1)))
+
+usethis::use_data(wisc.badgerRed, wisc.white,
+                  wisc.badgerRedTints,
+                  wisc.secondary, wisc.accent,
+                  wisc.heatmap.20, wisc.heatmap.100,
+                  internal=FALSE, overwrite=TRUE)
+
+
 ## calculating distance on a globe ----
 deg2rad <- pi/180
 earth.radius.miles <- 3963.17
 earth.radius.km <- 6373
 
-usethis::use_data(msu.darkGreen, msu.darkGreenTints, msu.palette,
-                  msu.heatmap.20, msu.heatmap.100,
-                  deg2rad, earth.radius.miles, earth.radius.km,
+usethis::use_data(deg2rad, earth.radius.miles, earth.radius.km,
                   internal=FALSE, overwrite=TRUE)
 
 ## keywords ----

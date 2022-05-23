@@ -83,58 +83,6 @@
 "earth.radius.km"
 
 
-#' @title MSU Colour Palette
-#'
-#' @description The MSU colour palette to easily construct plots. There are three
-#'   colour palettes based on the colour information found at
-#'   [https://brand.msu.edu/design-visual/index.html#color](https://brand.msu.edu/design-visual/index.html#color).
-#'   All colours within [theHUB] are defined using hex-codes (also known as "web")
-#'   values.
-#'   - msu.darkGreen (Primary Colour) Hex: ["#18453b"](https://www.color-hex.com/color/18453b)
-#'   - msu.darkGreenTints: Ten tints of msu.darkGreen including "#18453b" from
-#'     [https://color-hex.com/color/18453b](https://www.color-hex.com/color/18453b)
-#'   - msu.heatmap.20: Twenty tints of MSU Dark Green to the lightest tint in msu.darkGreenTints
-#'   - msu.heatmap.100: One-hundred tints of MSU Dark Green to the lightest tint in msu.darkGreenTints
-#'     [https://www.color-hex.com/color/18453b](https://www.color-hex.com/color/18453b)
-#'   - msu.palette: The thirteen colours of MSU's color palette
-#'     - msu green ["#18453b"](https://www.color-hex.com/color/18453b)
-#'     - kelly green ["#0db14b"](https://www.color-hex.com/color/0db14b)
-#'     - grey ["#97a2a2"](https://www.color-hex.com/color/97a2a2)
-#'     - orange ["#f08521"](https://www.color-hex.com/color/f08521)
-#'     - teal ["#008183"](https://www.color-hex.com/color/008183)
-#'     - blue-grey ["#909ab7"](https://www.color-hex.com/color/909ab7)
-#'     - dark grey ["#535054"](https://www.color-hex.com/color/535054)
-#'     - yellow-green ["#d1de3f"](https://www.color-hex.com/color/d1de3f)
-#'     - cream ["#e8d9b5"](https://www.color-hex.com/color/e8d9b5)
-#'     - texas-brown ["#c89a58"](https://www.color-hex.com/color/c89a58)
-#'     - split pea soup green ["#94ae4a"](https://www.color-hex.com/color/94ae4a)
-#'     - eggplant ["#6e005f"](https://www.color-hex.com/color/6e005f)
-#'     - sienna ["#cb5a28"](https://www.color-hex.com/color/cb5a28)
-#'
-#' @format A vector with the colours of interest.
-#'
-#' @source MSU's Brand website:
-#'   [https://brand.msu.edu/design-visual/index.html#color](https://brand.msu.edu/design-visual/index.html#color)
-#'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
-#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
-#'
-"msu.darkGreen"
-
-#' @describeIn msu.darkGreen Ten tints of msu.darkGreen including "#18453b"
-"msu.darkGreenTints"
-
-#' @describeIn msu.darkGreen The thirteen colours of MSU's color palette
-"msu.palette"
-
-#' @describeIn msu.darkGreen Twenty tints of MSU Dark Green to the lightest tint in msu.darkGreenTints
-"msu.heatmap.20"
-
-#' @describeIn msu.darkGreen One-hundred tints of MSU Dark Green to the lightest tint in msu.darkGreenTints
-"msu.heatmap.100"
-
-
-
 #' @title Term-Code Translation Table
 #'
 #' @description Term-code translation table used to convert four-digit term-code
