@@ -1,3 +1,40 @@
+#' @title Convert Control Characters to Spaces
+#' @description Converts control characters into physical spaces.
+#' @details One of several text cleaning functions. The function replaces the
+#'   following control characters `\n`, `\r`, `\t`, `\v`, and `\f` (those
+#'   identified by the `[:cntrl:]` regular expression) with a series of three (3)
+#'   physical spaces. While multiple, concurrent and connected control characters
+#'   (`\n\r\t\v\f`) would be replace by three spaces, control characters separated
+#'   by any printable character (defined by `[:print:]`), even spaces, are retained;
+#'   see example.
+#'
+#' @param comment A string of words forming a sentence or phrase.
+#'
+#' @return string of cleaned characters forming a sentence or phrase.
+#' @export
+#'
+#' @examples
+#' comment <- "All day I see class mates and send e-mails.\n\r\t\v\fI miss East Lansing."
+#' clean.cntrl(text=comment)
+#' # [1] "All day I see class mates and send e-mails.   I miss East Lansing."
+#'
+#' comment <- "All day I see class mates and send e-mails.\n  \r  \t  \v\fI miss East Lansing."
+#' clean.cntrl(text=comment)
+#' # [1] "All day I see class mates and send e-mails.                  I miss East Lansing."
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+#' @family "text cleaning"
+#'
+clean.cntrl <- function(text) {
+
+  cntrl.less <- gsub(x=text, pattern="[[:cntrl:]]+", replacement="   ")
+
+  return(cntrl.less)
+}
+
+
 #' @title Convert all Spaces to "Normal" Spaces
 #' @description Converts various type of spaces into "normal" spaces.
 #' @details One of several text cleaning functions. The function replaces various

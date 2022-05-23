@@ -30,6 +30,7 @@ function is to replace non-breakable space with standard, breakable spaces.
 }
 \seealso{
 Other "text cleaning": 
+\code{\link{clean.cntrl}()},
 \code{\link{extract.emails}()}
 }
 \author{

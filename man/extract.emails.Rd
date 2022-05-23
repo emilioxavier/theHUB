@@ -25,6 +25,7 @@ extract.emails(emails.string="emilio.dork@gmail.com 2.that.dork@egr.msu.edu dork
 }
 \seealso{
 Other "text cleaning": 
+\code{\link{clean.cntrl}()},
 \code{\link{convert.spaces}()}
 }
 \author{
