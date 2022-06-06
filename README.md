@@ -9,30 +9,43 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 <!-- badges: end -->
 
-# theHUB: the Hub Utility Box.
+# theHUB: the Haabefuld Utility Box.
 
-***the Hub Utility Box*** (***theHUB***), a collection of analysis tools
-composed of functions, scripts, electronic notebooks, and worked
-examples. *theHUB* is how we will share these tools with the MSU
+***the Haabefuld[1][2] Utility Box*** (***theHUB***), a collection of
+analysis tools composed of functions, scripts, electronic notebooks, and
+worked examples. *theHUB* is how we will share these tools with the MSU
 community to improve the analyses of student outcomes, student success,
 and survey responses. A standard set of processes and methods along with
 a defined lexicon enables reproducibility, reduces the time needed to
 complete analysis-based projects, and allows the quick addition of new
 methods while encouraging data exploration. Our desire is for theHUB’s
 functionality to grow over time, and for others at MSU to contribute new
-features and methods for the MSU community. Developed and implemented in
-R – an open-source application with a robust community (on campus and
-around the world) – *theHUB* removes the need for a software license
-while providing access to a myriad of statistical analysis and graphing
-options. *theHUB’s* documentation allows anyone to use and understand
-the tools. Initially, *theHUB* will contain three Learning Analytics
-v2.0 projects: the survey analysis package presented at the 2021 Spring
-Conference, *Survey Connections*, along with the *in Semester Analysis
-Aiding/Assisting Students*, and *Unified Student Success and Outcomes
-Analysis Reports* packages; each package is briefly described below. We
-expect *theHUB* to grow as we add new, yet to be conceived, ideas and
-analysis methods from the literature, our conversations with others
-around campus, and conferences and seminars.
+features and methods for the MSU community.
+
+Developed and implemented in R – an open-source application with a
+robust community (on campus and around the world) – *theHUB* removes the
+need for a software license while providing access to a myriad of
+statistical analysis and graphing options. *theHUB’s* documentation
+allows anyone to use and understand the tools. Initially, *theHUB* will
+contain three Learning Analytics v2.0 projects: the survey analysis
+package presented at the 2021 Spring Conference, *Survey Connections*,
+along with the *in Semester Analysis Aiding/Assisting Students*, and
+*Unified Student Success and Outcomes Analysis Reports* packages; each
+package is briefly described below. We expect *theHUB* to grow as we add
+new, yet to be conceived, ideas and analysis methods from the
+literature, our conversations with others around campus, and conferences
+and seminars.
+
+***Advanced Candidate Evaluation*** (***ACE***): *Analyze and summarize
+evaluations of candidates for positions.* A standardized interview
+candidate evaluation instrument containing a [collection of
+questions](ADD%20LINK) that can be augmented to include
+position-specific questions. The result is a set of [bespoke
+reports](ADD%20LINK); an individual report for each candidate along with
+a comparative executive summary comparing the candidates. The option to
+include a breakdown of the evaluators’ MAUs and job titles is being
+developed. *NB: All comments are confidential and the search committee
+never has access to the original Qualtrics data.*
 
 ***Survey Connections***: *Analyze survey responses to gain a better
 understanding of the relationships between responses and respondents.*
@@ -120,3 +133,14 @@ By participating in this project you agree to abide by its terms.
 ## License
 
 MIT © [Emilio Xavier Esposito](https://github.com/emilioxavier/)
+
+[1] The word haabefuld is Danish for hopeful. The **aa** is really an
+**å**, and thus, haabefuld is really håbefuld. The use of **aa** makes
+typing ([Emilio](https://github.com/emilioxavier/) can never remember
+the correct ASCII code for the å) and web searches easier.
+
+[2] The Haabefuld Utility Box was originally *the Hub Utility Box*,
+thus, *theHUB* for short. The original name – a [recursive
+backronym](https://en.wikipedia.org/wiki/Recursive_acronym) – pays
+homage to The Hub for Innovation in Learning and Technology where this
+package’s development was started.
