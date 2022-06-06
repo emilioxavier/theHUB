@@ -56,7 +56,9 @@ package provides workflows for cleaning survey data and performing
 Likert and Likert-like, multi-response, and comment (text) analyses. The
 package’s goal is to easily allow the discovery of relationships between
 responses and the creation of cohorts for further exploration and
-analysis.
+analysis. See the [2021 Spring Conference
+presentation](https://docs.google.com/presentation/d/1kI-_SY6qyqd-CCKQ6RmEf9qXgcdR5FnVqP4W5dXtajE/edit?usp=sharing)
+demonstrating these abilities.
 
 ***in Semester Analysis Aiding/Assisting Students*** (***iSAAS***):
 *Using a student’s in-semester performance and course participation data
@@ -121,7 +123,7 @@ library(theHUB)
 
 -   Contact [Emilio](https://github.com/emilioxavier/) at
     <emilio@msu.edu> OR <emilio.esposito@gmail.com>
--   Submit an [issue via
+-   Submit a [request or issue via
     GitHub](https://github.com/emilioxavier/theHUB/issues/)
 
 ## Code of conduct
@@ -134,13 +136,16 @@ By participating in this project you agree to abide by its terms.
 
 MIT © [Emilio Xavier Esposito](https://github.com/emilioxavier/)
 
+## Footnotes
+
 [1] The word haabefuld is Danish for hopeful. The **aa** is really an
 **å**, and thus, haabefuld is really håbefuld. The use of **aa** makes
 typing ([Emilio](https://github.com/emilioxavier/) can never remember
 the correct ASCII code for the å) and web searches easier.
 
 [2] The Haabefuld Utility Box was originally *the Hub Utility Box*,
-thus, *theHUB* for short. The original name – a [recursive
-backronym](https://en.wikipedia.org/wiki/Recursive_acronym) – pays
-homage to The Hub for Innovation in Learning and Technology where this
-package’s development was started.
+*theHUB* for short. The original name – a [recursive
+backronym](https://en.wikipedia.org/wiki/Recursive_acronym) – was a way
+to include The Hub for Innovation in Learning and Technology where this
+package’s development was started. Now, *theHUB* is used to pay homage
+to the Hub.
