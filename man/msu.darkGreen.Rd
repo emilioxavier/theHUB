@@ -22,6 +22,7 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 \source{
 MSU's Brand website:
 \url{https://brand.msu.edu/design-visual/index.html#color}
+\url{https://cal.msu.edu/about/the-marketing-communications-office/colors/}
 }
 \usage{
 msu.darkGreen

@@ -40,9 +40,12 @@ wisc.heatmap.20
 wisc.heatmap.100
 }
 \description{
-The University of Wisconsin colour palette to easily construct plots. There are three
-colour palettes based on the colour information found at
-\url{https://brand.wisc.edu/print/colors/}.
+The University of Wisconsin colour palette to easily construct plots.
+There are three colour palettes based on the colour information found at
+\url{https://brand.wisc.edu/print/colors/}. The University of
+Wisconsin colour palette is available in CMYK and was converted to Hex using
+\url{https://colordesigner.io/convert/cmyktohex}.
+
 All colours within \link{theHUB} are defined using hex-codes (also known as "web")
 values.
 \itemize{

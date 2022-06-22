@@ -31,6 +31,7 @@
 #'
 #' @source MSU's Brand website:
 #'   [https://brand.msu.edu/design-visual/index.html#color](https://brand.msu.edu/design-visual/index.html#color)
+#'   [https://cal.msu.edu/about/the-marketing-communications-office/colors/](https://cal.msu.edu/about/the-marketing-communications-office/colors/)
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -52,9 +53,12 @@
 
 #' @title University of Wisconsin Colour Palette
 #'
-#' @description The University of Wisconsin colour palette to easily construct plots. There are three
-#'   colour palettes based on the colour information found at
-#'   [https://brand.wisc.edu/print/colors/](https://brand.wisc.edu/print/colors/).
+#' @description The University of Wisconsin colour palette to easily construct plots.
+#'   There are three colour palettes based on the colour information found at
+#'   [https://brand.wisc.edu/print/colors/](https://brand.wisc.edu/print/colors/). The University of
+#'   Wisconsin colour palette is available in CMYK and was converted to Hex using
+#'   [https://colordesigner.io/convert/cmyktohex](https://colordesigner.io/convert/cmyktohex).
+#'
 #'   All colours within [theHUB] are defined using hex-codes (also known as "web")
 #'   values.
 #'   - wisc.badgerRed (Badger/Cardinal Red; Primary Colour) Hex: ["#da004c"](https://www.color-hex.com/color/da004c)
@@ -103,6 +107,3 @@
 
 #' @describeIn wisc.badgerRed One-hundred tints of Twenty tints of the University of Wisconsin Badger Red to the lightest tint in wisc.badgerRedTints
 "wisc.heatmap.100"
-
-
-
