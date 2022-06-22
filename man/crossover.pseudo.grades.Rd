@@ -7,10 +7,12 @@
 crossover.pseudo.grades(grades, crossover.point = "random")
 }
 \arguments{
-\item{crossover.point}{}
+\item{grades}{data.frame with the pseudo-grades}
+
+\item{crossover.point}{integer indicating the assignment crossover point}
 }
 \value{
-
+data.frame with the crossovered (or is it crossed-over) grades
 }
 \description{
 add the description of making the data

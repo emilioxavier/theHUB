@@ -115,6 +115,7 @@ word.count <- function(comment) {
 #' @importFrom tidyselect ends_with
 #'
 #' @export
+#' @importFrom dplyr filter mutate select
 #'
 #' @examples
 #' \dontrun{
@@ -213,6 +214,7 @@ comment.summary <- function(data, comment.col) {
 #'   for each provided area. Each _area_ column has a `TRUE` or `FALSE` for
 #'   each row indicating if the comment had a _keyword_ present in the comment.
 #' @export
+#' @importFrom dplyr mutate pull
 #'
 #' @examples
 #' \dontrun{
@@ -364,6 +366,8 @@ unified.terms <- function(comment, clean=TRUE) {
 #'   function as often is done via [dplyr::mutate()]
 #'
 #' @export
+#' @importFrom stringr str_replace_all
+#'
 #' @return vector of comments where predetermined terms are cleaned.
 #'   _**NOTE**_: Some cleaned terms are returned in camel case.
 #'   For example, "e-mail" is returned as "eMail" and "face to face" and
@@ -596,6 +600,9 @@ clean.comment <- function(comment) {
 #'
 #' @return `tibble` with the data to construct a heatmap
 #' @export
+#' @importFrom dplyr full_join mutate
+#' @importFrom tibble as_tibble add_column
+#' @importFrom tidyr pivot_longer
 #'
 #' @examples
 #' \dontrun{
@@ -710,7 +717,7 @@ get.bigrams.oi <- function(data, col.oi, search.terms) {
 #' @param string.oi vector of strings to search.
 #' @param search.terms vector of strings to use as the query (aka "pattern") string.
 #'
-#' @return
+#' @return string with the terms related to the query
 #'
 #' @examples
 #' \dontrun{

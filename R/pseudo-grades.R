@@ -13,6 +13,7 @@
 #'
 #' @return `tibble` with the input parameters for make.pseudo.grades
 #' @export
+#' @importFrom tibble tibble
 #'
 #' @examples
 #' assignment.params <- make.assignment.params(n.students=5,
@@ -50,13 +51,15 @@ make.assignment.params <- function(n.students, n.assignments, max.points) {
 #' @description Constructs pseudo-grades based on the assignment parameters
 #'   constructed by [make.assignment.params()]. Each row is a _unique student_
 #'   with scores for requested number of assignments. The pseudo-grades are
-#'   assigned using the [base::rbinom()] function.
+#'   assigned using the [stats::rbinom()] function.
 #'
 #' @param assignment.params tibble of grade distributions constructed by
 #'   [make.assignment.params()].
 #'
 #' @return `tibble` with the pseudo-grades
 #' @export
+#' @importFrom dplyr mutate
+#' @importFrom tibble as_tibble
 #'
 #' @examples
 #' set.seed(13)
@@ -116,11 +119,12 @@ make.pseudo.grades <- function(assignment.params) {
 #'
 #' @description add the description of making the data
 #'
-#' @param grades
-#' @param crossover.point
+#' @param grades data.frame with the pseudo-grades
+#' @param crossover.point integer indicating the assignment crossover point
 #'
-#' @return
+#' @return data.frame with the crossovered (or is it crossed-over) grades
 #' @export
+#' @importFrom dplyr mutate
 #'
 #' @examples
 #' \dontrun{

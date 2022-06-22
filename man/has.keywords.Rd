@@ -26,7 +26,9 @@ have each keyword in the \emph{keyword} column and the corresponding area in the
 }
 \details{
 Convert the \link{keywords} to a \code{tibble} with a row for each \emph{area} using
-the following command.\preformatted{keywords
+the following command.
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{keywords
  A tibble: 206 x 2
   keyword    area
   <chr>      <chr>
@@ -44,7 +46,7 @@ keywords.tb
   <chr>         <chr>
 1 acadSupport   adviser|advising|advisor
 2 assessment    assignment|...
-}
+}\if{html}{\out{</div>}}
 }
 \examples{
 \dontrun{

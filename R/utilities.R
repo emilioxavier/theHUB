@@ -17,6 +17,7 @@
 #'
 #' @return string with the canonical name
 #' @export
+#' @importFrom tidyr replace_na
 #'
 #' @examples
 #' canonical.name(c("yaddy", "yaddy", "blah", "ugh"))
@@ -32,7 +33,7 @@
 #'
 canonical.name <- function(name.vector) {
 
-  name.vector.clean <- replace_na(name.vector, replace="Unk")
+  name.vector.clean <- tidyr::replace_na(name.vector, replace="Unk")
   name.vector.sorted <- sort(name.vector.clean)
   name.vector.canonical <- paste(name.vector.sorted, collapse="-")
 
@@ -105,7 +106,7 @@ clean.OSversion <- function(Version.number) {
 #'
 #' @param YoB string with date of birth-like data information
 #'
-#' @return
+#' @return integer with the determined year of birth
 #' @export
 #'
 #' @examples
@@ -143,10 +144,17 @@ clean.YoB <- function(YoB) {
 
 #' @title Clean Date of Birth
 #'
-#' @param DoB string with date of birth-like data information
+#' @description This function uses the [lubridate::as_date()] function to determine
+#'   the date of birth by trying
+#'   - Month - Day - Year
+#'   - Year - Month - Day
+#'   - Day - Month - Year
 #'
-#' @return
+#' @param DoB string with date of birth-like data information.
+#'
+#' @return date with determined date of birth
 #' @export
+#' @importFrom lubridate as_date
 #'
 #' @examples
 #' clean.DoB("03301995")
@@ -406,7 +414,7 @@ make.crsesect <- function(course, sctn_code) {
 #' @param bin.names vector of bin names. _**NEEDS**_ to be the same
 #'   length as `bins`
 #'
-#' @return
+#' @return string with interval values
 #' @export
 #'
 #' @examples

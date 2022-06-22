@@ -17,7 +17,7 @@ make.pseudo.grades(assignment.params)
 Constructs pseudo-grades based on the assignment parameters
 constructed by \code{\link[=make.assignment.params]{make.assignment.params()}}. Each row is a \emph{unique student}
 with scores for requested number of assignments. The pseudo-grades are
-assigned using the \code{\link[base:rbinom]{base::rbinom()}} function.
+assigned using the \code{\link[stats:Binomial]{stats::rbinom()}} function.
 }
 \examples{
 set.seed(13)

@@ -12,7 +12,7 @@ get.unique.terms(string.oi, search.terms)
 \item{search.terms}{vector of strings to use as the query (aka "pattern") string.}
 }
 \value{
-
+string with the terms related to the query
 }
 \description{
 Using the provided search terms, identify the phrases containing

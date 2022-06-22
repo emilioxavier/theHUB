@@ -15,7 +15,7 @@ make.bins(x, bins, bin.names)
 length as \code{bins}}
 }
 \value{
-
+string with interval values
 }
 \description{
 Bin and name a collection of values.

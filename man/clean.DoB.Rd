@@ -7,13 +7,19 @@
 clean.DoB(DoB)
 }
 \arguments{
-\item{DoB}{string with date of birth-like data information}
+\item{DoB}{string with date of birth-like data information.}
 }
 \value{
-
+date with determined date of birth
 }
 \description{
-Clean Date of Birth
+This function uses the \code{\link[lubridate:as_date]{lubridate::as_date()}} function to determine
+the date of birth by trying
+\itemize{
+\item Month - Day - Year
+\item Year - Month - Day
+\item Day - Month - Year
+}
 }
 \examples{
 clean.DoB("03301995")

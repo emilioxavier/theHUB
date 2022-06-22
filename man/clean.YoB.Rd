@@ -10,7 +10,7 @@ clean.YoB(YoB)
 \item{YoB}{string with date of birth-like data information}
 }
 \value{
-
+integer with the determined year of birth
 }
 \description{
 Clean Year of Birth
