@@ -199,3 +199,74 @@ compare.dataset <- function(data) {
        Overlap.Ratios=ratio.mat)
 }
 
+
+#' @title Make Fingerprints
+#'
+#' @description Construct fingerprints for a collection of samples from the provided
+#'   integer and float values.
+#'
+#' @param data data.frame or tibble containing raw data to convert into fingerprints
+#' @param id.col string indicating the identifying column
+#' @param cols.oi vector of integers or strings indicting the columns of interest
+#'
+#' @return tibble of fingerprints with integer (count) or float values
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#'   library(tidyverse)
+#'   where2eat <- tibble::tibble(what=c("BBQ", "Burgers", "Pizza"), loc=c(1,2,3), size=c(4,2,6), cost=c(10,9,8))
+#'   make.fps(data=where2eat, id.col="what", cols.oi=c("loc", "size", "cost"))
+#' }
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+make.fps <- function(data, id.col, cols.oi) {
+
+  fps <- tidyr::pivot_longer(data, cols=cols.oi, names_to="name", values_to="value") |>
+    arrange(name, value) |>
+    dplyr::mutate(bit=TRUE,
+                  col.name=paste(name, value, sep="_")) |>
+    tidyr::pivot_wider(id_cols={id.col}, names_from=col.name, values_from=value, values_fill=0)
+
+  return(blah.fps)
+}
+
+
+#' @title Convert Integer Fingerprints into Binary Representation
+#'
+#' @description Convert integer fingerprints into binary (logical) representation.
+#'
+#' @param data data.frame or tibble with fingerprint values
+#' @param id.col string indicating the identifying column
+#'
+#' @return tibble of fingerprints with logical (binary) values
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#'   library(tidyverse)
+#'   where2eat <- tibble::tibble(what=c("BBQ", "Burgers", "Pizza"), loc=c(1,2,3), size=c(4,2,6), cost=c(10,9,8))
+#'   make.fps(data=where2eat, id.col="what", cols.oi=c("loc", "size", "cost")) |>
+#'     convert.fps2binary()
+#' }
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+convert.fps2binary <- function(data, id.col) {
+  fps.tf <- mutate(data, across(where(is.numeric), ~as.logical(.x)))
+
+  return(fps.tf)
+}
+
+
+#
+
+
+
+
+
