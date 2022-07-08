@@ -39,9 +39,9 @@ globe using latitude-longitude values.
 }
 \section{Functions}{
 \itemize{
-\item \code{earth.radius.miles}: | Earth's Radius
+\item \code{earth.radius.miles}: Earth's Radius
 
-\item \code{earth.radius.km}: | Earth's Radius
+\item \code{earth.radius.km}: Earth's Radius
 }}
 
 \author{

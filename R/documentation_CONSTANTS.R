@@ -76,10 +76,10 @@
 #'
 "deg2rad"
 
-#' @describeIn deg2rad | Earth's Radius
+#' @describeIn deg2rad Earth's Radius
 "earth.radius.miles"
 
-#' @describeIn deg2rad | Earth's Radius
+#' @describeIn deg2rad Earth's Radius
 "earth.radius.km"
 
 
