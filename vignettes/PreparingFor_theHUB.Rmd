@@ -1,12 +1,12 @@
 ---
-title: "Setting Up R for `theHUB`"
+title: "Preparing for `theHUB`"
 author: "Emilio Xavier Esposito, Ph.D."
 date: "`r format(Sys.Date(), '%d/%b/%Y')`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Setting Up R for `theHUB`}
+  %\VignetteIndexEntry{Preparing for `theHUB`}
   %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
 ---
 
 
@@ -16,21 +16,17 @@ library(knitr)
 ```
 
 
+**the Haabefuld[^1],[^2] Utility Box**_ (_**theHUB**_) was developed and designed on a Mac. theHUB _should_ work on a Windows system, but R requires a different set of applications for [macOS](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html) versus [Windows](https://cran.r-project.org/bin/windows/base/rw-FAQ.html). Please let [Emilio](https://github.com/emilioxavier/) know if you have any trouble and he will help you out.
+
+
 ## Setting up R and RStudio
-R and RStudio are open source and freely available applications available for numerous, 
-popular operating systems. Specifically, 
-RStudio is available for Windows 10, macOS 10.13+, Ubuntu 16, Ubuntu 18/Debian 10, 
-Fedora 19/Red Hat 7, Fedora 28/Red Hat 8, Debian 9, OpenSUSE 15. 
+R and RStudio are open source and freely available applications available for numerous, popular operating systems. Specifically, RStudio is available for Windows 10, macOS 10.13+, Ubuntu 16, Ubuntu 18/Debian 10, Fedora 19/Red Hat 7, Fedora 28/Red Hat 8, Debian 9, OpenSUSE 15. 
 
 
 
 ### Installing R
 
-Visit [CRAN](https://cran.r-project.org) and download the installer ("Precompiled 
-binary distributions of the base system and contributed packages") for your 
-operating system. Mac and Windows users should download the version available
-from CRAN. Linux users should check their distribution's package management system
-to see if R is available.
+Visit [CRAN](https://cran.r-project.org) and download the installer ("Precompiled binary distributions of the base system and contributed packages") for your operating system. Mac and Windows users should download the version available from CRAN. Linux users should check their distribution's package management system to see if R is available.
 
 ### Installing RStudio
 
@@ -104,3 +100,17 @@ unzipped file is 3.81 GBs.
 ### ZIP Code Tabulation Areas 
 https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
 https://www.census.gov/cgi-bin/geo/shapefiles/index.php
+
+
+## Microsoft Visual Studio Code
+
+With the [sunsetting of GitHub's Atom](https://github.blog/2022-06-08-sunsetting-atom/) the I find [Microsoft Visual Studio Code](https://code.visualstudio.com/) to be an _**excellent**_ text editor. Yes. I use, kinda like, and endorse using Microsoft Visual Studio Code. (Younger me is so disappointed.)
+
+It has a lot of great R-related features including "syntax highlighting, R language service based on code analysis, interacting with R terminals, viewing data, plots, workspace variables, help pages, managing packages, and working with R Markdown documents" via [REditorSupport](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)," is awesome for viewing (and sometime editing) CSV files (and other delimited files) with [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), and has an [Atom teletype](https://teletype.atom.io)-like feature called [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare). Download Microsoft Visual Studio Code [here](https://code.visualstudio.com/Download).
+
+
+
+## Footnotes
+
+[^1]: The word haabefuld is Danish for hopeful. The **aa** is really an **å**, and thus, haabefuld is really håbefuld. The use of **aa** makes typing ([Emilio](https://github.com/emilioxavier/) can never remember the correct ASCII code for the å) and web searches easier.
+[^2]: The Haabefuld Utility Box was originally _the Hub Utility Box_, _theHUB_ for short. The original name -- a [recursive backronym](https://en.wikipedia.org/wiki/Recursive_acronym) -- was a way to include The Hub for Innovation in Learning and Technology where this package's development was started. Now, _theHUB_ is used to pay homage to the Hub.
