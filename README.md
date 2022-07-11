@@ -36,13 +36,15 @@ new, yet to be conceived, ideas and analysis methods from the
 literature, our conversations with others around campus, and conferences
 and seminars.
 
-***Advanced Candidate Evaluation*** (***ACE***): *Analyze and summarize
-evaluations of candidates for positions.* A standardized interview
-candidate evaluation instrument containing a [collection of
-questions](ADD%20LINK) that can be augmented to include
-position-specific questions. The result is a set of [bespoke
-reports](ADD%20LINK); an individual report for each candidate along with
-a comparative executive summary comparing the candidates. The option to
+***[Advanced Candidate
+Evaluation](articles/AdvancedCandidateEvaluation.html)*** (***ACE***):
+*Analyze and summarize evaluations of candidates for positions.* A
+standardized interview candidate evaluation instrument containing a
+[collection of
+questions](articles/AdvancedCandidateEvaluation_questions.html) that can
+be augmented to include position-specific questions. The result is a set
+of bespoke reports; an individual report for each candidate along with a
+comparative executive summary comparing the candidates. The option to
 include a breakdown of the evaluators’ MAUs and job titles is being
 developed. *NB: All comments are confidential and the search committee
 never has access to the original Qualtrics data.*
