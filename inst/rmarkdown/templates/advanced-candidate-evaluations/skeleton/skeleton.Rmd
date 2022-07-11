@@ -1,0 +1,32 @@
+---
+title: "Search for the TITLE UNIT"
+author: Office for the Associate Provost of Enrollment Management and Academic Strategic
+  Planning
+date: "`r format(Sys.time(), '%d/%b/%Y')`"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+  word_document:
+    toc: yes
+always_allow_html: yes
+subtitle: Summary of NAME Evaluations
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+<!-- https://stackoverflow.com/questions/26112432/including-r-scripts-in-r-packages -->
+
+
+## Adding an RMarkdown Template
+
+This file is what a user will see when they select your template. Make sure that you update the fields in the yaml header. In particular you will want to update the `output` field to whatever format your template requires.
+
+This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
+
+Finally, be sure to remove this message!

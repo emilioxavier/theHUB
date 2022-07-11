@@ -1,0 +1,201 @@
+---
+title: "Advanced Candidate Evaluation - Questions"
+author: "Emilio Xavier Esposito, Ph.D."
+date: "`r format(Sys.Date(), '%d/%b/%Y')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Advanced Candidate Evaluation - Questions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo=FALSE,
+	message=FALSE,
+	warning=FALSE)
+```
+
+## About the Questions
+
+We believe the base Advanced Candidate Evaluation (ACE) questions provide a solid initial set of inquiries about each candidate. You are free to add to or change these questions to fit better the position you are interviewing for. The survey has three areas:
+
+- Meeting the Candidate
+- The Candidate's Presentation
+- Questions about the Candidate
+
+Authentication via an MSU NetID is required for all responses to ensure one response for each candidate from each person. ACE retains the last submitted entry for each candidate-evaluator (sometimes referred to as a respondent) pair. We cannot stress enough the importance we place on privacy related to individuals' responses. The workflow for analyzing submitted evaluations was designed to ensure that the ACE coordinator, administrator, and search committee members (chair included) do not need to explore the original, identifying data.
+
+The respondent selects the candidates they want to submit comments about and the survey cycles (loops) through the selected candidates. 
+
+### Important things to remember
+
+- The _**italicized and bold**_ text are automatically populated from the defined terms in the Embedded Data.
+- The survey allows responses from individuals that did not meet with the candidate or attend/watch the candidate's presentation. It is possible that the respondent reviewed the applicant's package and wants to submit comments.
+
+
+### Introduction Page
+
+Dear Colleague  
+Thank you for participating in the search for the next _**Position Title**_ of _**Unit Name**_.  
+   
+This brief evaluation will help the search committee understand your view and impression of the candidates.  
+   
+The evaluation is open until _**Survey Close Time**_ on _**Survey Close Date**_.  
+   
+All the best  
+_**Committee Chair Name**_ on behalf of the _**Position Title**_ Search Committee  
+   
+Data Confidentiality and Destruction Statement: Data collected from this survey will reside in Qualtrics and MSU Sharepoint. We will only present and share data in a summarized form. At the conclusion of the search for a new _**Position Title**_, we will delete the survey data within Qualtrics no later than _**Survey Data Deletion Date**_. No one from the search committee has access to the raw Qualtrics data.  
+   
+ 
+### Authentication Page
+
+Next, you will authenticate with your MSU email address. We require you to authenticate so we can find duplicate responses. We will retain your last set of responses. Please feel free to contact emilio@msu if you want us to combine multiple responses for a single candidate.
+
+
+### About the Respondent Questions
+
+Starting from the top of the following list of positions, please select the position that best fits your current role and completes the statement, \"I am a ______.\"
+
+- Office of _**Unit Name**_ staff member
+- Support staff (not part of the _**Unit Name**_)
+- University, College, or Department Administrator
+- Faculty member
+- Academic staff
+- Undergraduate student 
+- Graduate student
+
+
+I envision working with the  _**Position Title**_ of _**Unit Name**_ ______.
+
+- Closely 
+- On several overlapping projects
+- Occasionally
+- Not at all
+
+
+### Select the Candidates You are Providing Comments About
+
+Please select all the  _**Position Title**_ of _**Unit Name**_ candidates you are providing comments for
+
+- _**Candidate 1**_
+- _**Candidate 2**_
+- _**Candidate 3**_
+
+
+### Evaluating the Candidate
+
+The following set of questions is for _**Candidate Name**_.
+
+> NOTE: The survey will cycle (loop) through all the selected candidates. If only one candidate is selected, only one set of questions will be presented. 
+
+#### Meeting with the Candidate
+
+Did you meet with _**Candidate Name**_?
+
+- Yes, individually.
+- Yes, as part of a group.
+- No.
+
+
+> NOTE: The following two questions are only displayed if the respondent indicates they meet with the candidate individually _OR_ as part of a group.
+
+Did _**Candidate Name**_ adequately respond to your questions or those from the group?
+
+- Yes
+- No
+
+Please explain.
+
+> Text box for comments.
+
+
+#### The Candidate's Presentation
+
+Did you attend or watch the _**Candidate Name**_'s presentation?
+
+- Yes
+- No
+
+> NOTE: The following questions are only displayed if the respondent indicates they attended/watched the candidate's presentation.
+
+Did _**Candidate Name**_’s presentation address the topic assigned by the search committee?
+
+- Yes
+- No
+- Unsure/Maybe
+
+
+During the _**Candidate Name**_’s presentation, did they address the following?
+
+> NOTE: These are example questions to provide a starting point. We encourage you to modify these questions as you see fit for your search.
+
+| Question | Yes | No | Maybe |
+|:---------------------------------------|:--:|:--:|:--:|
+| Provide a quick overview of how your career path uniquely prepared you for this position.  |  |  |  |
+| What is your leadership style and philosophy? |  |  |  |
+| What is your vision for the future of ______ on a B1G campus? |  |  |  |
+| Discuss the importance of ______.  |  |  |  |
+
+
+Did _**Candidate Name**_ adequately respond to questions from the audience?
+
+- Yes
+- No
+
+Please explain.
+
+> Text box for comments.
+
+
+#### Questions about the Candidate
+
+Does the _**Candidate Name**_ demonstrate/possess the experience and knowledge necessary to fulfill the requirements of the _**Position Title**_ per the job description?
+
+- Yes
+- No
+
+Please explain.
+
+> Text box for comments.
+
+***
+
+What areas of Strength or Challenge do you recognize _**Candidate Name**_ possessing?
+
+> Text box for comments.
+
+***
+
+Do you recommend _**Candidate Name**_ for the position of _**Position Title**_?
+
+- Yes
+- No
+
+***
+
+Please use a score to indicate your overall evaluation of _**Candidate Name**_.
+
+- 1 (Unacceptable)
+- 2
+- 3
+- 4
+- 5 (Outstanding)
+
+***
+
+Please feel free to provide additional comments.
+
+> Text box for comments.
+
+### Provide Comments on Another Candidate
+
+Thank you for your comments on _**Candidate Name**_. Would you like to provide comments for another _**Position Title**_ candidate?
+
+- Yes
+- No
+
+### End of Survey Thank You Page
+
+Thank you again for your input!
