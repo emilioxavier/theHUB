@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit README.Rmd. -->
+<!-- README.md is generated from README.Rmd. Please edit README.Rmd and knit. -->
 <!-- badges: start -->
 
 [![Project Status: Active - The project has reached a stable, usable
@@ -11,7 +11,7 @@ Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](c
 
 # theHUB: the Haabefuld Utility Box.
 
-***the Haabefuld[1][2] Utility Box*** (***theHUB***), a collection of
+***the Haabefuld[1],[2] Utility Box*** (***theHUB***), a collection of
 analysis tools composed of functions, scripts, electronic notebooks, and
 worked examples. *theHUB* is how we will share these tools with the MSU
 community to improve the analyses of student outcomes, student success,
@@ -60,47 +60,8 @@ analysis. See the [2021 Spring Conference
 presentation](https://docs.google.com/presentation/d/1kI-_SY6qyqd-CCKQ6RmEf9qXgcdR5FnVqP4W5dXtajE/edit?usp=sharing)
 demonstrating these abilities.
 
-***in Semester Analysis Aiding/Assisting Students*** (***iSAAS***):
-*Using a student’s in-semester performance and course participation data
-provides educators a method to identify those needing academic support.*
-Identifying the area(s) within a course that a student needs assistance
-during the semester significantly improves the student’s chance of a
-favorable outcome. Currently, educators identify the area(s) of needed
-improvement via MSU’s Enhancing Academic Success Early (EASE) reports.
-Automating the identification of students during the semester using
-gradebook data allows educators and academic units to provide students
-with the required resources to improve their course standing, thus
-leading to better student outcomes and success. However, we understand
-that constructing detailed EASE reports can be time-consuming,
-especially for educators asked to do more with fewer resources. *iSAAS*
-builds on the ideas and goals of the current EASE reporting system and
-is an automated system to construct detailed reports using D2L course
-gradebook data, reducing educator load. In addition, the automated
-nature of iSAAS allows educators to provide earlier and more frequent
-reports to the student. Initially, *iSAAS* will focus on
-large-enrollment, first and second-year gateway courses.
-
-***Unified Student Success and Outcomes Analysis Reports***
-(***USOAR***): *Provide academic units with unit-level learning
-analytics reports while allowing them to explore student success
-analysis specific to their needs and interests.* Academic units (College
-or Department) have a collection of student-centric analyses they
-perform to understand their students, the student’s success and
-outcomes, and evaluate the unit’s academic endeavours. One expects
-overlaps between the units’ analyses, yet the breadth and depth of the
-analysis likely differ, creating an analytics gap. The analytics gap
-turns into an analytics haves and have-nots situation because few units
-on campus have full-time analytics groups. The analysis-chasm between
-units will continue to expand without a resource to provide student
-success and outcomes analysis. A centralized resource will also reduce
-the significant logistical burden for units by leveraging their
-collective knowledge into a common analytics framework that benefits all
-academic units. A unified learning analytics platform allows new
-analytics methods to quickly propagate to the MSU community while
-reducing the analytics gap for those without dedicated student success
-and outcomes analysis groups. The *USOAR* system is based on the belief
-in an egalitarian analytics ecosystem where everyone (students and
-academic units) benefits.
+<!-- _**in Semester Analysis Aiding/Assisting Students**_ (_**iSAAS**_): _Using a student’s in-semester performance and course participation data provides educators a method to identify those needing academic support._ Identifying the area(s) within a course that a student needs assistance during the semester significantly improves the student’s chance of a favorable outcome. Currently, educators identify the area(s) of needed improvement via MSU’s Enhancing Academic Success Early (EASE) reports. Automating the identification of students during the semester using gradebook data allows educators and academic units to provide students with the required resources to improve their course standing, thus leading to better student outcomes and success. However, we understand that constructing detailed EASE reports can be time-consuming, especially for educators asked to do more with fewer resources. _iSAAS_ builds on the ideas and goals of the current EASE reporting system and is an automated system to construct detailed reports using D2L course gradebook data, reducing educator load. In addition, the automated nature of iSAAS allows educators to provide earlier and more frequent reports to the student. Initially, _iSAAS_ will focus on large-enrollment, first and second-year gateway courses. -->
+<!-- _**Unified Student Success and Outcomes Analysis Reports**_ (_**USOAR**_): _Provide academic units with unit-level learning analytics reports while allowing them to explore student success analysis specific to their needs and interests._ Academic units (College or Department) have a collection of student-centric analyses they perform to understand their students, the student’s success and outcomes, and evaluate the unit’s academic endeavours. One expects overlaps between the units’ analyses, yet the breadth and depth of the analysis likely differ, creating an analytics gap. The analytics gap turns into an analytics haves and have-nots situation because few units on campus have full-time analytics groups. The analysis-chasm between units will continue to expand without a resource to provide student success and outcomes analysis. A centralized resource will also reduce the significant logistical burden for units by leveraging their collective knowledge into a common analytics framework that benefits all academic units. A unified learning analytics platform allows new analytics methods to quickly propagate to the MSU community while reducing the analytics gap for those without dedicated student success and outcomes analysis groups. The _USOAR_ system is based on the belief in an egalitarian analytics ecosystem where everyone (students and academic units) benefits. -->
 
 ## Installing `theHUB`
 
