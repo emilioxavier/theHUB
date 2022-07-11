@@ -30,7 +30,8 @@ Authors@R: person(given="Emilio Xavier",
                   email="emilio@msu.edu",
                   comment=c(ORCID="0000-0002-6193-0485",
                             "GitHub: https://github.com/emilioxavier"))
-URL: https://github.com/emilioxavier/theHUB/
+URL: https://github.com/emilioxavier/theHUB/,
+    https://emilioxavier.github.io/theHUB/
 BugReports: https://github.com/emilioxavier/theHUB/issues/
 License: MIT + file LICENSE
 VignetteBuilder: 

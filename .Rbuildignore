@@ -6,3 +6,7 @@ data-raw
 .DS_Store
 README.Rmd
 CONDUCT.md
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
