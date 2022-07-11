@@ -26,13 +26,15 @@ Developed and implemented in R – an open-source application with a
 robust community (on campus and around the world) – *theHUB* removes the
 need for a software license while providing access to a myriad of
 statistical analysis and graphing options. *theHUB’s* documentation
-allows anyone to use and understand the tools. Initially, *theHUB* will
+allows anyone to use and understand the tools. Initially, *theHUB* would
 contain three Learning Analytics v2.0 projects: the survey analysis
 package presented at the 2021 Spring Conference, *Survey Connections*,
-along with the *in Semester Analysis Aiding/Assisting Students*, and
-*Unified Student Success and Outcomes Analysis Reports* packages; each
-package is briefly described below. We expect *theHUB* to grow as we add
-new, yet to be conceived, ideas and analysis methods from the
+along with the *in Semester Analysis Aiding/Assisting Students* and
+*Unified Student Success and Outcomes Analysis Reports* applications.
+Currently, the *in Semester Analysis Aiding/Assisting Students* and
+*Unified Student Success and Outcomes Analysis Reports* applications are
+on hiatus due to a pivot in *theHUB*’s focus. We expect *theHUB* to grow
+as we add new, yet to be conceived, ideas and analysis methods from the
 literature, our conversations with others around campus, and conferences
 and seminars.
 
