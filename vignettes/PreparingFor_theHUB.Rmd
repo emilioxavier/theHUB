@@ -1,10 +1,10 @@
 ---
-title: "Preparing for `theHUB`"
+title: "Preparing for theHUB"
 author: "Emilio Xavier Esposito, Ph.D."
 date: "`r format(Sys.Date(), '%d/%b/%Y')`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Preparing for `theHUB`}
+  %\VignetteIndexEntry{Preparing for theHUB}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

@@ -1,12 +1,12 @@
 ---
-title: "Advanced Candidate Evaluation - Setup"
+title: "Advanced Candidate Evaluation: Setup"
 author: "Emilio Xavier Esposito, Ph.D."
 date: "`r format(Sys.Date(), '%d/%b/%Y')`"
 output: rmarkdown::html_vignette
 resource_files:
   - images_ACE/*.png
 vignette: >
-  %\VignetteIndexEntry{Advanced Candidate Evaluation - Setup}
+  %\VignetteIndexEntry{Advanced Candidate Evaluation: Setup}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
