@@ -1,7 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.httr-oauth$
-vignettes
 data-raw
 .DS_Store
 README.Rmd
