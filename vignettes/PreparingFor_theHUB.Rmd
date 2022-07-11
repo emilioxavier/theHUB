@@ -15,8 +15,12 @@ knitr::opts_chunk$set(message=FALSE, warning=FALSE, include=FALSE)
 library(knitr)
 ```
 
+# We are looking for Windows 10 and 11 beta testers!!!
+
+---
 
 **the Haabefuld[^1],[^2] Utility Box**_ (_**theHUB**_) was developed and designed on a Mac. theHUB _should_ work on a Windows system, but R requires a different set of applications for [macOS](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html) versus [Windows](https://cran.r-project.org/bin/windows/base/rw-FAQ.html). Please let [Emilio](https://github.com/emilioxavier/) know if you have any trouble and he will help you out.
+
 
 
 ## Setting up R and RStudio
@@ -37,7 +41,7 @@ Visit [CRAN](https://cran.r-project.org) and download the installer ("Precompile
 ### Installing Packages
 
 ```
-install.packages("devtools", "tidyverse", "lubridate", "readxl", "openxlsx", "GGally", "tidytext", "textdata", "cowplot", "ragg", "ggwordcloud", "ggVennDiagram", "hexbin", "sf", "fuzzyjoin",
+install.packages("devtools", "tidyverse", "lubridate", "readxl", "openxlsx", "GGally", "tidytext", "textdata", "cowplot", "ggtext", "ragg", "ggwordcloud", "ggVennDiagram", "hexbin", "sf", "fuzzyjoin",
 "zipcodeR")
 ```
 
@@ -51,6 +55,7 @@ extrafont::loadfonts()
 ### Use `ragg` with knitr
 
 knitr supports png output from ragg by setting `dev = "ragg_png"` in the chunk settings or globally with `knitr::opts_chunk$set(dev = "ragg_png")`.
+<!-- `install_github("thomasp85/ggfx")` -->
 
 ### Use `ragg` in RStudio
 
@@ -63,27 +68,63 @@ library(zipcodeR)
 download_zip_data(force = FALSE)
 ```
 
-`install_github("thomasp85/ggfx")`
 
-# https://gadm.org/formats.html
-# https://gadm.org/download_country_v3.html
-# https://www.rspatial.org
-download.file(url="https://biogeo.ucdavis.edu/data/gadm3.6/gpkg/gadm36_USA_gpkg.zip",
-              destfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip")
-unzip(zipfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip",
-      exdir="~/OneDrive - Michigan State University/projects/mapfiles/")
+<!-- https://gadm.org/formats.html -->
+<!-- https://gadm.org/download_country_v3.html -->
+<!-- https://www.rspatial.org -->
+<!-- download.file(url="https://biogeo.ucdavis.edu/data/gadm3.6/gpkg/gadm36_USA_gpkg.zip", -->
+              <!-- destfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip") -->
+<!-- unzip(zipfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip", -->
+      <!-- exdir="~/OneDrive - Michigan State University/projects/mapfiles/") -->
 
-mapfiles.usa <- "~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA.gpkg"
+<!-- mapfiles.usa <- "~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA.gpkg" -->
 
-USA_gadm <- st_read(dsn = "gadm36_USA.gpkg", layer = "gadm36_USA_1")
-lonlat_to_state(testPoints, states = USA_gadm, name_col = "NAME_1")
+<!-- USA_gadm <- st_read(dsn = "gadm36_USA.gpkg", layer = "gadm36_USA_1") -->
+<!-- lonlat_to_state(testPoints, states = USA_gadm, name_col = "NAME_1") -->
 
-https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_0_sf.rds
-https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_1_sf.rds
-https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_2_sf.rds
+<!-- https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_0_sf.rds -->
+<!-- https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_1_sf.rds -->
+<!-- https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_2_sf.rds -->
 
 
-### Map Shape Files
+## OS Functions
+There are two ways to install via [Homebrew](https://brew.sh/) and [MacPorts](https://www.macports.org/). According to various websites it is possible to have both Homebrew and MacPorts installed without any problems.
+
+**Installing Homebrew** is straight forward
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+**Installing MacPorts** is a bit more involved and [specific install scripts are available for each macOS version](https://www.macports.org/install.php). After installing MacPorts, run the following from the macOS Terminal.
+```
+
+```
+
+
+
+### `wget`
+
+`wget` is a command line function to download website files. It is needed to download historical datasets and map shapefile from their respective websites.
+
+#### macOS
+
+[wget via Homebrew](https://formulae.brew.sh/formula/wget#default)
+```
+brew install wget
+```
+
+[wget via MacPorts](https://ports.macports.org/port/wget/)
+```
+sudo port install wget
+```
+
+
+#### Windows 10 & 11
+
+
+
+
+## Map Shape Files
 To create maps and identify country and subregions (state and county in the US) 
 using location data. 
 
