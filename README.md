@@ -39,11 +39,11 @@ literature, our conversations with others around campus, and conferences
 and seminars.
 
 ***[Advanced Candidate
-Evaluation](vignettes/AdvancedCandidateEvaluation.html)*** (***ACE***):
+Evaluation](articles/AdvancedCandidateEvaluation.html)*** (***ACE***):
 *Analyze and summarize evaluations of candidates for positions.* A
 standardized interview candidate evaluation instrument containing a
 [collection of
-questions](vignettes/AdvancedCandidateEvaluation_questions.html) that
+questions](articles/AdvancedCandidateEvaluation_questions.html) that
 can be augmented to include position-specific questions. The result is a
 set of bespoke reports; an individual report for each candidate along
 with a comparative executive summary comparing the candidates. The
