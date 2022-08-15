@@ -7,7 +7,6 @@ Depends: R (>= 4.1)
 Imports: 
     tidyverse,
     tibble,
-    magrittr,
     dplyr,
     purrr,
     stringr,
