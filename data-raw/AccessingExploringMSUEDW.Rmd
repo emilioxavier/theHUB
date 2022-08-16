@@ -22,7 +22,25 @@ The following
  - Visit [https://dbeaver.io](https://dbeaver.io) and click the "Download" button.
  - Install dBeaver. Please visit [https://dbeaver.io/download/](https://dbeaver.io/download/) for more information.
 
+dbeaver setup
 
+select "Oracle" SQL database
+
+set host as: ebsprd390d.ais.msu.edu
+
+set database: MSUEDW.EBSP.MSU.EDU
+
+set port: 1521
+
+authentication: "oracle database native"
+
+username: your netid
+
+password: password from dataservices
+
+click "save password"
+
+click save
 
 
  
