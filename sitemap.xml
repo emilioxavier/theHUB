@@ -100,10 +100,16 @@
     <loc>https://emilioxavier.github.io/theHUB/reference/crossover.pseudo.grades.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/dataset.summary.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/deg2rad.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/extract.emails.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/extract.unique.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/filename-times.html</loc>
@@ -119,6 +125,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/is.BLANK.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/is.honours.html</loc>
