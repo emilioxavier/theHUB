@@ -251,6 +251,37 @@ convert.termCode <- function(term.code, term.type="full") {
 }
 
 
+#' @title Is String Blanks?
+#'
+#' @description Determine which strings within a vector of strings is either
+#'   a string with no characters or a string comprised entirely of blanks.
+#'   This function uses [stringr::str_detect()] and the regular expression
+#'   `"^[[:space:]]*$"` to determine if the string contains no characters or
+#'   all blanks.
+#'
+#' @param string or vector of strings to evaluate.
+#'
+#' @return logical
+#' @export
+#'
+#' @examples
+#' string <- c("", " ", "  ", "   ", " abc", "abc ", " abc ")
+#' is.BLANK(string=string)
+#' # [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+is.BLANK <- function(string) {
+
+  blank.TF <- stringr::str_detect(string=string,
+                                  pattern="^[[:space:]]*$") |>
+    dplyr::coalesce(FALSE)
+
+  return(blank.TF)
+
+}
+
 
 #' @title Honours (or Honors) Course?
 #'
