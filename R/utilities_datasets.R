@@ -28,7 +28,7 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
   n.cols <- ncol(dataset)
 
   ## construct empty tibble to populate ----
-  CoI.report.df <- matrix(data=NA, nrow=size, ncol=n.cols) |>
+  CoI.report.df <- matrix(data=NA, nrow=(size+1), ncol=n.cols) |>
     as.data.frame()
   colnames(CoI.report.df) <- colnames(dataset)
   CoI.report <- as_tibble(CoI.report.df)
@@ -49,9 +49,11 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 
     ##_ what if there are not enough examples ----
     if (n.missing == 0) {
-      CoI.examples <- sample(x=CoI.data.unique, size=size)
+      CoI.examples <- c(n.examples,
+                        sample(x=CoI.data.unique, size=size))
     } else {
-      CoI.examples <- c(sample(x=CoI.data.unique, size=n.examples),
+      CoI.examples <- c(n.examples,
+                        sample(x=CoI.data.unique, size=n.examples),
                         rep_len(x=NA, length.out=n.missing))
     }
 
@@ -85,6 +87,7 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 #'   previous versions of the file!!**_
 #' @param n.examples integer value indicating the number examples to return. Passed
 #'   to `size` of [theHUB::extract.unique()].
+#' @param overwriteXLS logical to overwrite existing Excel workbook; default is `FALSE`
 #'
 #' @return tibble of column names, types, and examples
 #' @export
@@ -97,7 +100,13 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
-dataset.summary <- function(dataset, ExcelFileName, n.examples=4) {
+dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=FALSE) {
+
+  ## check for exisiting Excel file ----
+  file.exists.tf <- file.exists(ExcelFileName)
+  if (file.exists(ExcelFileName) & (overwriteXLS==FALSE)) {
+    stop("Provided Excel workbook already exists!")
+  }
 
   ## basic information ----
   ds.colNames <- colnames(dataset)
@@ -137,7 +146,7 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4) {
 
   ## create and apply example names ----
   example.names <- paste("example.", seq_len(length.out=n.examples), sep="")
-  colnames(ds.examples) <- example.names
+  colnames(ds.examples) <- c("n.unique", example.names)
   ds.examples <- as_tibble(ds.examples)
 
   ## create dataset for export ----
@@ -148,7 +157,7 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4) {
   ## write out to Excel ----
   WriteXLS::WriteXLS(x=Admiss.examples,
                      ExcelFileName=ExcelFileName,
-                     FreezeRow=1, FreezeCol=7)
+                     FreezeRow=1, FreezeCol=8)
 
   ## return examples ----
   return(Admiss.examples)
