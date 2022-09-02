@@ -67,6 +67,72 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 }
 
 
+#' @title Find Duplicate Columns
+#'
+#' @description Identifies and returns duplicate columns. The resulting data.frame
+#'   includes the following:#'
+#'   - column.name: column name
+#'   - duplicate: logical indicating if the column is duplicate. FYI: only duplicate
+#'   columns are returned
+#'   - duplicate.colName: duplicate columns
+#'
+#'  _**Not a publicly available function at this time.**_
+#'
+#' @param data `tibble` or `data.frame` of interest
+#'
+#' @return data.frame with the above information
+#'
+#' @examples
+#' data <- tibble(first.name=c("Alice", "Bob", "Carl", "Debbie"),
+#'                   last.name=c("Masters", "Roberts", "Roberts", "Smith"),
+#'                   pref.name=c("Alice", "Bob", "Carl", "Debbie"),
+#'                   role=c("data", "data", "coding", "data"),
+#'                   job=c("data", "data", "coding", "data"),
+#'                   expert=c("data", "data", "coding", "data"),
+#'                   building=c("Chemistry", "Biochemistry", "Chemistry", "Statistics"))
+#' find.duplicate.cols(data=data)
+#' #  column.name duplicate.tf    duplicate.colNames
+#' #1  first.name         TRUE first.name, pref.name
+#' #2   pref.name         TRUE first.name, pref.name
+#' #3        role         TRUE     role, job, expert
+#' #4         job         TRUE     role, job, expert
+#' #5      expert         TRUE     role, job, expert
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+find.duplicate.cols <- function(data) {
+
+  ## construct the md5 hashes ----
+  data.md5 <- sapply(data, digest::digest)
+
+  ## determine the pairwise duplicates ----
+  pairwise.dup <- purrr::map2(data.md5, data.md5,
+                              ~which(data.md5 == .x & data.md5 == .y))
+
+  ## retain only columns with duplicates ----
+  data.pairs <- pairwise.dup[sapply(pairwise.dup, length) > 1]
+
+  ## construct the summary ----
+  ## i am not really sure how it works, but the transpose |> as_tibble |> transpose |> as.data.frame
+  ## results in a data.frame with the duplicate column names as a string in a
+  ## single column
+  data.pairs.summary <- sapply(data.pairs, names) |>
+    t() |>
+    tibble::as_tibble() |>
+    t() |>
+    as.data.frame() |>
+    rownames_to_column(var="column.name") |>
+    mutate(duplicate.tf=TRUE) |>
+    rename("duplicate.colNames"="V1") |>
+    select(column.name, duplicate.tf, duplicate.colNames)
+
+  ## return results ----
+  return(data.pairs.summary)
+
+}
+
+
 #' @title Dataset Summary
 #'
 #' @description When working with new datasets it is helpful to know what type
@@ -102,7 +168,7 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 #'
 dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=FALSE) {
 
-  ## check for exisiting Excel file ----
+  ## check for existing Excel file ----
   file.exists.tf <- file.exists(ExcelFileName)
   if (file.exists(ExcelFileName) & (overwriteXLS==FALSE)) {
     stop("Provided Excel workbook already exists!")
@@ -111,6 +177,9 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ## basic information ----
   ds.colNames <- colnames(dataset)
   n.rows <- nrow(dataset)
+
+  ## find duplicate columns ----
+  ds.duplicate.cols <- find.duplicate.cols(data=dataset)
 
   ## determine column types ----
   ds.colTypes <- dplyr::summarise_all(dataset, class) |>
@@ -150,17 +219,23 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ds.examples <- as_tibble(ds.examples)
 
   ## create dataset for export ----
-  Admiss.examples <- dplyr::bind_cols(ds.colTypes, ds.examples) |>
+  ds.summary <- dplyr::bind_cols(ds.colTypes, ds.examples) |>
     tibble::add_column(colname.new=NA,
                        coltype.new=NA)
 
+  ## add in duplicate column information ----
+  ds.summary <- dplyr::left_join(x=ds.summary, y=ds.duplicate.cols,
+                                 by=c("column.name")) |>
+    select(column.name:n.unique, duplicate.tf, duplicate.colNames, example.1:coltype.new)
+
   ## write out to Excel ----
-  WriteXLS::WriteXLS(x=Admiss.examples,
+  WriteXLS::WriteXLS(x=ds.summary,
                      ExcelFileName=ExcelFileName,
-                     FreezeRow=1, FreezeCol=8)
+                     FreezeRow=1, FreezeCol=9)
 
   ## return examples ----
-  return(Admiss.examples)
+  return(ds.summary)
 
 }
+
 
