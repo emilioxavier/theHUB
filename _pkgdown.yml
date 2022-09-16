@@ -11,9 +11,9 @@ navbar:
      text: PAGroup
      menu:
      - text: Guidelines & Policies
-       href: articles/PAG_GuidelinesAndPolicies.html
+       href: articles/web_only/PAG_GuidelinesAndPolicies.html
      - text: How I Like to be Mentored
-       href: articles/PAG_HowILikeToBeMentored.html
+       href: articles/web_only/PAG_HowILikeToBeMentored.html
     articles:
      text: Articles
      menu:

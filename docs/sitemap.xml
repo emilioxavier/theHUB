@@ -25,6 +25,12 @@
     <loc>https://emilioxavier.github.io/theHUB/articles/index.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GuidelinesAndPolicies.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_HowILikeToBeMentored.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/authors.html</loc>
   </url>
   <url>
@@ -100,13 +106,22 @@
     <loc>https://emilioxavier.github.io/theHUB/reference/crossover.pseudo.grades.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/dataset.summary.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/deg2rad.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/extract.emails.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/extract.unique.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/filename-times.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/find.duplicate.cols.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/get.bigrams.oi.html</loc>
@@ -119,6 +134,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/is.BLANK.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/is.honours.html</loc>
