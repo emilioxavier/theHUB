@@ -7,9 +7,10 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
 [![Contributor
 Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/theHUB)](https://cran.r-project.org/package=theHUB)
 <!-- badges: end -->
 
-# theHUB: the Haabefuld Utility Box.
+# theHUB: the Haabefuld Utility Box. <a href="https://theHopefulBox.com"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
 ***the Haabefuld[1],[2] Utility Box*** (***theHUB***), a collection of
 analysis tools composed of functions, scripts, electronic notebooks, and
@@ -39,11 +40,11 @@ literature, our conversations with others around campus, and conferences
 and seminars.
 
 ***[Advanced Candidate
-Evaluation](articles/AdvancedCandidateEvaluation.html)*** (***ACE***):
+Evaluation](vignettes/AdvancedCandidateEvaluation.html)*** (***ACE***):
 *Analyze and summarize evaluations of candidates for positions.* A
 standardized interview candidate evaluation instrument containing a
 [collection of
-questions](articles/AdvancedCandidateEvaluation_questions.html) that
+questions](vignettes/AdvancedCandidateEvaluation_questions.html) that
 can be augmented to include position-specific questions. The result is a
 set of bespoke reports; an individual report for each candidate along
 with a comparative executive summary comparing the candidates. The

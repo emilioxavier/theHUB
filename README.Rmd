@@ -15,10 +15,12 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md) 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/theHUB)](https://cran.r-project.org/package=theHUB)
 <!-- badges: end -->
 
 
-# theHUB: the Haabefuld Utility Box.
+# theHUB: the Haabefuld Utility Box. <a href="https://theHopefulBox.com"><img src="man/figures/logo.png" align="right" height="139" /></a>
+
 
 _**the Haabefuld[^1],[^2] Utility Box**_ (_**theHUB**_), a collection of analysis tools composed of functions, scripts, electronic notebooks, and worked examples. _theHUB_ is how we will share these tools with the MSU community to improve the analyses of student outcomes, student success, and survey responses. A standard set of processes and methods along with a defined lexicon enables reproducibility, reduces the time needed to complete analysis-based projects, and allows the quick addition of new methods while encouraging data exploration. Our desire is for theHUB’s functionality to grow over time, and for others at MSU to contribute new features and methods for the MSU community. 
 
