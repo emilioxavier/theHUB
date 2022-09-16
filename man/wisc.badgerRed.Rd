@@ -87,8 +87,8 @@ values.
 \item \code{wisc.heatmap.20}: Twenty tints of Twenty tints of the University of Wisconsin Badger Red to the lightest tint in wisc.badgerRedTints
 
 \item \code{wisc.heatmap.100}: One-hundred tints of Twenty tints of the University of Wisconsin Badger Red to the lightest tint in wisc.badgerRedTints
-}}
 
+}}
 \author{
 Emilio Xavier Esposito \email{emilio@msu.edu}
 (\url{https://github.com/emilioxavier})

@@ -1,0 +1,83 @@
+---
+title: "PAG: Guidelines & Policies"
+date: "`r format(Sys.Date(), '%d/%b/%Y')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PAG: Guidelines & Policies}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+We want you to feel valued and respected while you work in the Predictive Analytics Group; sometimes called PAG. This document (the Predictive Analytics Group Guidelines & Polices) outlines and describes the reason we have these guidelines. We share our guidelines with all groups we work with to ensure they understand our expectations. 
+
+## Group Structure
+We strive for an egalitarian and flat management structure. We only use first or preferred names or nickname approved by you. No titles. No last names. Decisions are made after discussions and everyone, that wants to, provides input, and based on what is best for the group. Our structure is different from what you will likely experience elsewhere, but we believe your experiences, skills, and knowledge are what matter. The goal with all of our guidelines is to remove the power dynamic and give junior members an equal voice and status.
+
+## Projects
+Within each project, members will have defined roles. This allows each person to focus on a specific aspect of the project and will be assigned to ensure members are learning and growing different skills. Every project has three distinct areas: design and development, documentation, and implementation. The person leading the design and development leads the project, yet there is an additional member responsible for documentation and implementation. All members are responsible for a project’s success and completion. We expect project members to work together and hold each other accountable. We also expect members to engage with others – either PAG member or others at the university – when they have a question or need help.
+
+## Presenting Your Work
+Leading a project also means you are the face of the project. You are the one presenting to leadership and the project’s stakeholders.
+
+## Sharing Our Work
+We do excellent and impactful work that others will see and want to adopt. Our field relies on the reproducibility of our work and documentation to explain what was done and why. While a project might start as a one-off, it will likely turn into a routine analysis or prediction. Creating easy to understand scripts and detailed documentation aids the transition from the single occurrence to repeatable product. We will work in groups to ensure all projects are documented and the scripts work for multiple group members.
+
+## Collaboration via Code, Data, & Documentation
+Your closest collaborator is you in six-months. Ways to help “future you” are easy to understand file and folder names, adding documentation and functions to [the Hopeful Utility Box](https://theHopefulBox.com), heavily commented code, and detailed descriptions of actions and outcomes within scripts. 
+
+## Comments and Critiques
+We constantly evaluate our work and the work of others. It is imperative that all comments are constructive, supportive, and help the author(s) improve their work. Remember to critique the ideas and work, not the individual. 
+
+## Truth to Power
+You are encouraged and expected to speak “truth to power” when discussing and debating policies, your work, and how your work influences and shapes policies. It is unacceptable for someone to take and misrepresent your work. Please let someone in the group know if you believe this is happening.
+
+## Asking Questions and for Help
+There is no shame in saying, “I don’t know.” Feel free to say these three words at any time. This phrase starts the learning process and developing a deeper understanding.
+
+## Work Environment
+The work performed by the Predictive Analytics Group (PAG) lends itself to being asynchronous and remote. We rely heavily on shared folders within MSU One Drive, text-based communication (via email or Microsoft Teams), two meetings a week, and co-work sessions. 
+
+## Work Schedule
+Being an asynchronous and remote group means we understand and embrace those with unique schedules. We will work with everyone’s needs and requirements. We also fully understand that life is an ever-changing series of events. Do you work best late at night? Awesome. Get your best work done between 5 and 8 in the morning? Great. All we ask is you take care of yourself, are productive, and be present at meetings. 
+
+_**While we will work diligently to ensure projects are completed in a timely fashion, there are the rare occasions when we are required to work outside our expected work hours. We will try to indicate when this is likely to happen as early as possible.**_
+
+## Career Advancement
+We want everyone that joins the PAG to have as many opportunities available to them as they want. There will be opportunities to present your work at meetings with leadership and campus working groups and at campus, regional, and national meetings.
+
+We hope that everyone that joins the group stays forever. We also know this is impossible. At an institution like MSU – and in a field such as predictive analytics – there are many excellent opportunities outside of our group. It will be sad to see someone leave for a new and better experience for them, but we will fully support them. We see it as a compliment when a PAG member leaves for a new opportunity.
+
+## Continued Education
+Constantly learning is a hallmark of our field. The discovery of new methods and the application of established methods from other fields is common. We support everyone’s desire to attend seminars across campus, take classes, and attend workshops. All we ask is you share what you learn with the group. 
+
+## Times When We Communicate
+We understand that everyone is productive at different hours of the day. Please understand that an immediate response to your query might not be possible. Letting us know your preferred working times (see Work Schedule above) helps us understand when you are communicating.
+
+## Preferred Communication Method/Mode
+To support our asynchronous and remote work style, it is important to have clear lines of communication. Email is the official communications method for project related information and meetings invitations. Typically, other communication takes place via the Teams messaging system. We understand a messaging application such as Teams might not be your ideal way of communicating with group members. We completely understand. Please let us know if you don’t like using messaging systems and we will communicate via another methods. Please understand that due to the nature of our work we need to use the communication tools provided by MSU. This means MSU email accounts and Teams. 
+
+## Communication Methods/Modes
+We are constrained by the tools provided by MSU. This means Microsoft email and Teams. Project reports and formal communications with stakeholders should be performed via emails as it typically provides an easy-to-follow trail. Informal discussions with groups members and in-meeting discussions (during a video discussion) should use Teams. When it comes to intra-group discussions, the choice is between group members. Please let us know your preferred communication method.
+
+## Sometimes Email is Required (and Mandatory)
+Due to the various communication methods/modes, we often receive requests from group members and other units across campus in various modes. It is not uncommon to receive a request via a messaging system (e.g., Teams, Slack, SMS, Messages to name a few). Because messaging systems are in-the-moment and often contain numerous topics, searching for specific topics can be difficult. When you receive a request for a number, dataset, where to find information, via a messaging system:
+
+ 1. Copy the question/request into an email 
+ 1. Write your response
+ 1. Send the email
+
+## Time Off
+We acknowledge taking time off from work is hard and sometimes feels impossible. We encourage and support taking time away from work. Everyone needs a break. Take them. Everyone will work with you to ensure you get the time you need away from work. We strongly encourage everyone to step away from work on the weekends and during the holidays. We do not expect you to check or respond to any communications on the weekends or holidays.
+
+## Meetings
+Due to the distributed nature of our work, meetings to discuss projects along with their success and hurdles are necessary. Currently, we meet as a group twice a week on Tuesday and Thursday at 3p for 60 minutes. Sometimes these meetings run long, up to 90 minutes due to technical discussions. The main reason for the longer meetings is our struggle to resolve data access issues, the meetings will focus more on the research projects. A goal of future meetings is to have a formal agenda and schedule where group members present their research projects, interesting methods, and evaluations of articles.
+
+### Meeting Scheduling Rules
+ + Meetings need to be scheduled with a minimum of 24-hours advanced notice.
+ + Meetings are only scheduled for Tuesday, Wednesday, or Thursday unless those attending the meeting agree to holding the meeting on Monday or Friday.
+ + Meeting can start at 10a and must finish by 4:30p.
+ + Meetings run times are 75% of the scheduled duration. Thus, a meeting scheduled for 60 minutes will last 45 minutes. The remaining time allows participants to regroup and prepare (if another meeting follows) for their next meeting.
+ + Meeting times will respect, to the best of our ability, the time zones of all group members. This might mean that meeting fall outside the time span noted above. We will determine a solution when needed.
+
+We request that all participants of meetings be fully present. We also understand this is difficult given everyone’s responsibilities. During online meetings we request you be on camera though we understand if you need to step away from time to time. 
+

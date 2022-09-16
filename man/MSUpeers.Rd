@@ -103,8 +103,8 @@ The WMU peer instititions:
 \section{Functions}{
 \itemize{
 \item \code{WMUpeers}: Western Michigan Peer Institutions dataset
-}}
 
+}}
 \author{
 Emilio Xavier Esposito \email{emilio@msu.edu}
 (\url{https://github.com/emilioxavier})

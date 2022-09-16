@@ -75,8 +75,8 @@ values.
 \item \code{msu.heatmap.20}: Twenty tints of MSU Dark Green to the lightest tint in msu.darkGreenTints
 
 \item \code{msu.heatmap.100}: One-hundred tints of MSU Dark Green to the lightest tint in msu.darkGreenTints
-}}
 
+}}
 \author{
 Emilio Xavier Esposito \email{emilio@msu.edu}
 (\url{https://github.com/emilioxavier})

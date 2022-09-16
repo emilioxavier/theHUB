@@ -42,8 +42,8 @@ globe using latitude-longitude values.
 \item \code{earth.radius.miles}: Earth's Radius
 
 \item \code{earth.radius.km}: Earth's Radius
-}}
 
+}}
 \author{
 Emilio Xavier Esposito \email{emilio@msu.edu}
 (\url{https://github.com/emilioxavier})

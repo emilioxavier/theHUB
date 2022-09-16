@@ -1,6 +1,5 @@
 ---
 title: "PAG: Software"
-author: "Emilio Xavier Esposito, Ph.D."
 date: "`r format(Sys.Date(), '%d/%b/%Y')`"
 output: rmarkdown::html_vignette
 vignette: >
