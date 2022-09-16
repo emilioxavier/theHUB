@@ -1,4 +1,17 @@
 url: https://emilioxavier.github.io/theHUB/
 template:
   bootstrap: 5
+  bootswatch: spacelab
+navbar:
+  structure:
+    left:  [intro, reference, PAGroup, articles, news]
+    right: [search, github]
+  components:
+    articles:
+     text: PAGroup
+     menu:
+     - text: Guidelines & Policies
+       href: articles/PAG_GuidelinesAndPolicies.html
+     - text: Title A2
+       href: articles/PAG_HowILikeToBeMentored.html
 
