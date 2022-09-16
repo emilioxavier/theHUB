@@ -5,13 +5,16 @@ template:
 navbar:
   structure:
     left:  [intro, reference, PAGroup, articles, news]
-    right: [search, github]
+    right: [search, github, twitter]
   components:
-    articles:
+    PAGroup:
      text: PAGroup
      menu:
      - text: Guidelines & Policies
        href: articles/PAG_GuidelinesAndPolicies.html
      - text: How I Like to be Mentored
        href: articles/PAG_HowILikeToBeMentored.html
-
+    twitter:
+      icon: fa-twitter
+      href: http://twitter.com/exesposito
+      aria-label: Twitter
