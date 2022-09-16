@@ -14,6 +14,16 @@ navbar:
        href: articles/PAG_GuidelinesAndPolicies.html
      - text: How I Like to be Mentored
        href: articles/PAG_HowILikeToBeMentored.html
+    articles:
+     text: Articles
+     menu:
+     - text: Advanced Candidate Evaluation (ACE)
+     - text: ACE - Overview
+       href: articles/AdvancedCandidateEvaluation.html
+     - text: ACE - Base Questions
+       href: articles/AdvancedCandidateEvaluation_questions.html
+     - text: ACE - Setup
+       href: articles/AdvancedCandidateEvaluation_setup.html
     twitter:
       icon: fa-twitter
       href: http://twitter.com/exesposito
