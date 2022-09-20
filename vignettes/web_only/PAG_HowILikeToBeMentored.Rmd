@@ -1,6 +1,6 @@
 ---
 title: "PAG: How I like to be Mentored"
-date: "`r format(Sys.Date(), '%d/%b/%Y')`"
+date: "Updated 16/Sep/2022"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: How I like to be Mentored}
