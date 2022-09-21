@@ -10,6 +10,8 @@ navbar:
     PAGroup:
      text: PAGroup
      menu:
+     - text: About
+       href: articles/web_only/PAG_About.html
      - text: Guidelines & Policies
        href: articles/web_only/PAG_GuidelinesAndPolicies.html
      - text: How I Like to be Mentored

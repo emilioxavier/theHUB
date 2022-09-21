@@ -1,0 +1,40 @@
+---
+title: "PAG: About"
+date: "Updated 20/Sep/2022"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PAG: About}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Welcome to the official webpages of the unofficial Predictive Analytics Group (PAG)! We work within the [Associate Provost Office of Enrollment and Academic Strategic Planning](https://esp.msu.edu) at [Michigan State University](https://www.msu.edu). 
+
+Our work is at the intersection of potential and current students' data to ask and answer questions about potential students' behaviors and outcomes. Using our combined expertise in economics, analytics, and predictive modelling, we provide a unique perspective on student-centric quandaries. Currently, we are studying economic mobility and gaining a deeper understanding of applicants.
+
+We believe in creating and fostering a supportive and inclusive environment for our members to thrive and advance their career. To support our efforts, we developed and adopted an evolving collection of [Guidelines & Policies](PAG_GuidelinesAndPolicies.Rmd) and [prompts about how each of us likes to be mentored](PAG_HowILikeToBeMentored.Rmd).
+
+While we focus on answering questions related to enrollment, we know an implied mission is assisting in the development of those that want to do similar work. To this end, we hold twice-a-week group meetings where we discuss
+
+ - Relevant research articles
+ - Application of function-specific applications
+ - Examples of new (to us) coding methods
+ - Our research success and setbacks
+
+We invite and welcome those outside of our group to join our meetings. 
+
+
+
+### Current Members
+
+We believe a small group with a diverse collection of viewpoints and experiences is the optimal way to approach many types of research questions. 
+
+**Steven R Miller**: Steve is an Assistant Professor in the [Department of Agricultural, Food, and Resource Economics](https://www.canr.msu.edu/afre/index) in the [College of Agriculture & Natural Resources](https://www.canr.msu.edu/) and specializes in applied economic methods for forecasting and impact analysis. Steve is also the Director of the [Center for Economic Analysis](https://www.canr.msu.edu/cea/).
+
+
+**Emilio Xavier Esposito**: Emilio is an Academic Specialist in the [Associate Provost Office of Enrollment and Academic Strategic Planning](https://esp.msu.edu) and explores novel ways student data relates to various outcomes. Emilio's background in early stage drug discovery, specifically computational chemistry and biochemistry. Emilio is also an Editor for the [Journal of Molecular Graphics and Modelling](https://www.sciencedirect.com/journal/journal-of-molecular-graphics-and-modelling).
+
+
+**Seth Walker**: Seth is a Graduate Student in the [Department of Economics](https://econ.msu.edu/) in the [College of Social Science](https://socialscience.msu.edu/) working towards a Ph.D. in xxxx. Seth is exploring the impact of the [Spartan Advantage program](https://finaid.msu.edu/spad.asp). Seth earned dual Bachelors degrees from [James Madison University](https://www.jmu.edu) in Quantitative Economics & Mathematics and Music Performance.
+
+

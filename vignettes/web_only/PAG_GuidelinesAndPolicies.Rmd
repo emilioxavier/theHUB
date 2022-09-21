@@ -1,6 +1,6 @@
 ---
 title: "PAG: Guidelines & Policies"
-date: "`r format(Sys.Date(), '%d/%b/%Y')`"
+date: "Updated 20/Sep/2022"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Guidelines & Policies}
@@ -8,7 +8,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-We want you to feel valued and respected while you work in the Predictive Analytics Group; sometimes called PAG. This document (the Predictive Analytics Group Guidelines & Polices) outlines and describes the reason we have these guidelines. We share our guidelines with all groups we work with to ensure they understand our expectations. 
+We want you to feel valued and respected while you work in the Predictive Analytics Group; sometimes called PAG. This document (the Predictive Analytics Group Guidelines & Polices) outlines and describes the reason we have these guidelines. These guidelines are designed to protect the all members of our group, but most importantly, the most vulnerable, commonly, junior members. We share our guidelines with all groups we work with to ensure they understand our expectations. 
 
 ## Group Structure
 We strive for an egalitarian and flat management structure. We only use first or preferred names or nickname approved by you. No titles. No last names. Decisions are made after discussions and everyone, that wants to, provides input, and based on what is best for the group. Our structure is different from what you will likely experience elsewhere, but we believe your experiences, skills, and knowledge are what matter. The goal with all of our guidelines is to remove the power dynamic and give junior members an equal voice and status.
