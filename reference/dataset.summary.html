@@ -98,7 +98,13 @@ The goal is to reduce the logistical burden of the user.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">dataset.summary</span><span class="op">(</span><span class="va">dataset</span>, <span class="va">ExcelFileName</span>, n.examples <span class="op">=</span> <span class="fl">4</span>, overwriteXLS <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">dataset.summary</span><span class="op">(</span></span>
+<span>  <span class="va">dataset</span>,</span>
+<span>  <span class="va">ExcelFileName</span>,</span>
+<span>  n.examples <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>  overwriteXLS <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  group.same.cols <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -120,6 +126,11 @@ to <code>size</code> of <code><a href="extract.unique.html">extract.unique()</a>
 
 <dt>overwriteXLS</dt>
 <dd><p>logical to overwrite existing Excel workbook; default is <code>FALSE</code></p></dd>
+
+
+<dt>group.same.cols</dt>
+<dd><p>logical indicating if the columns should be grouped by
+those with the same information.</p></dd>
 
 </dl></div>
     <div class="section level2">
