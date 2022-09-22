@@ -16,6 +16,8 @@ navbar:
        href: articles/web_only/PAG_GuidelinesAndPolicies.html
      - text: How I Like to be Mentored
        href: articles/web_only/PAG_HowILikeToBeMentored.html
+     - text: Onboarding
+       href: articles/web_only/PAG_Onboarding.html
     articles:
      text: Articles
      menu:
