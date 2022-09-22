@@ -4,7 +4,13 @@
 \alias{dataset.summary}
 \title{Dataset Summary}
 \usage{
-dataset.summary(dataset, ExcelFileName, n.examples = 4, overwriteXLS = FALSE)
+dataset.summary(
+  dataset,
+  ExcelFileName,
+  n.examples = 4,
+  overwriteXLS = FALSE,
+  group.same.cols = TRUE
+)
 }
 \arguments{
 \item{dataset}{\code{tibble} or \code{data.frame} of interest}
@@ -17,6 +23,9 @@ previous versions of the file!!}}}
 to \code{size} of \code{\link[=extract.unique]{extract.unique()}}.}
 
 \item{overwriteXLS}{logical to overwrite existing Excel workbook; default is \code{FALSE}}
+
+\item{group.same.cols}{logical indicating if the columns should be grouped by
+those with the same information.}
 }
 \value{
 tibble of column names, types, and examples

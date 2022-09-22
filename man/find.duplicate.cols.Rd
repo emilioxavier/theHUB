@@ -4,10 +4,12 @@
 \alias{find.duplicate.cols}
 \title{Find Duplicate Columns}
 \usage{
-find.duplicate.cols(data)
+find.duplicate.cols(data, data.md5s)
 }
 \arguments{
 \item{data}{\code{tibble} or \code{data.frame} of interest}
+
+\item{data.md5s}{the calculated md5 hashes}
 }
 \value{
 data.frame with the above information

@@ -79,6 +79,7 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 #'  _**Not a publicly available function at this time.**_
 #'
 #' @param data `tibble` or `data.frame` of interest
+#' @param data.md5s the calculated md5 hashes
 #'
 #' @return data.frame with the above information
 #'
@@ -101,14 +102,11 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
-find.duplicate.cols <- function(data) {
-
-  ## construct the md5 hashes ----
-  data.md5 <- sapply(data, digest::digest)
+find.duplicate.cols <- function(data, data.md5s) {
 
   ## determine the pairwise duplicates ----
-  pairwise.dup <- purrr::map2(data.md5, data.md5,
-                              ~which(data.md5 == .x & data.md5 == .y))
+  pairwise.dup <- purrr::map2(data.md5s, data.md5s,
+                              ~which(data.md5s == .x & data.md5s == .y))
 
   ## retain only columns with duplicates ----
   data.pairs <- pairwise.dup[sapply(pairwise.dup, length) > 1]
@@ -122,10 +120,10 @@ find.duplicate.cols <- function(data) {
     tibble::as_tibble() |>
     t() |>
     as.data.frame() |>
-    rownames_to_column(var="column.name") |>
-    mutate(duplicate.tf=TRUE) |>
-    rename("duplicate.colNames"="V1") |>
-    select(column.name, duplicate.tf, duplicate.colNames)
+    tibble::rownames_to_column(var="column.name") |>
+    dplyr::mutate(duplicate.tf=TRUE) |>
+    dplyr::rename("duplicate.colNames"="V1") |>
+    dplyr::select(column.name, duplicate.tf, duplicate.colNames)
 
   ## return results ----
   return(data.pairs.summary)
@@ -154,6 +152,8 @@ find.duplicate.cols <- function(data) {
 #' @param n.examples integer value indicating the number examples to return. Passed
 #'   to `size` of [theHUB::extract.unique()].
 #' @param overwriteXLS logical to overwrite existing Excel workbook; default is `FALSE`
+#' @param group.same.cols logical indicating if the columns should be grouped by
+#'   those with the same information.
 #'
 #' @return tibble of column names, types, and examples
 #' @export
@@ -166,7 +166,7 @@ find.duplicate.cols <- function(data) {
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
-dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=FALSE) {
+dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=FALSE, group.same.cols=TRUE) {
 
   ## check for existing Excel file ----
   file.exists.tf <- file.exists(ExcelFileName)
@@ -178,19 +178,27 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ds.colNames <- colnames(dataset)
   n.rows <- nrow(dataset)
 
+  ## construct the md5 hashes ----
+  dataset.md5s <- sapply(dataset, digest::digest)
+
   ## find duplicate columns ----
-  ds.duplicate.cols <- find.duplicate.cols(data=dataset)
+  ds.duplicate.cols <- find.duplicate.cols(data=dataset, data.md5s=dataset.md5s)
 
   ## determine column types ----
   ds.colTypes <- dplyr::summarise_all(dataset, class) |>
     t() |>
     as.data.frame() |>
     tibble::rownames_to_column(var="column.name") |>
+    dplyr::mutate(col.idx=row_number()) |>
     dplyr::rename("colType.1"="V1",
                   "colType.2"="V2") |>
     dplyr::mutate(colType.diff=case_when(colType.1!=colType.2~"CHECK",
-                                         TRUE~"")) |>
-    tibble::as_tibble()
+                                         TRUE~""),
+                  col.idx=row_number() ) |>
+    tibble::as_tibble() |>
+    tibble::add_column(md5.hash=dataset.md5s) |>
+    dplyr::select(column.name, col.idx,
+                  colType.1, colType.2, colType.diff, md5.hash)
 
   ## is blank? ----
   cell.blank.tf <- purrr::map_dfc(dataset, is.BLANK)
@@ -228,10 +236,15 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
                                  by=c("column.name")) |>
     select(column.name:n.unique, duplicate.tf, duplicate.colNames, example.1:coltype.new)
 
+  ## sort on md5s ----
+  if (group.same.cols == TRUE) {
+    ds.summary <- arrange(ds.summary, md5.hash, col.idx)
+  }
+
   ## write out to Excel ----
   WriteXLS::WriteXLS(x=ds.summary,
                      ExcelFileName=ExcelFileName,
-                     FreezeRow=1, FreezeCol=9)
+                     FreezeRow=1, FreezeCol=11)
 
   ## return examples ----
   return(ds.summary)
