@@ -8,7 +8,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Onboarding is the Predictive Analytics Group's (PAG) opportunity for the new group member(s) to meet and learn about the entire group and for the group to meet and learn about the new group member. The purpose of this document is to ensure all aspects of the onboarding process are fulfilled. A lot of the ideas and concepts are from Emilio's onboarding with the Hub for Innovation in Teaching and Technology and were developed by Ashley Braman [LinkedIn](https://www.linkedin.com/in/ashley-braman-b448bb92/) and Sarah Gretter [LinkedIn](https://www.linkedin.com/in/sarahgretter/).
+Onboarding is the Predictive Analytics Group's (PAG) opportunity for the new group member(s) to meet and learn about the entire group and for the group to meet and learn about the new group member. The purpose of this document is to ensure all aspects of the onboarding process are fulfilled. A lot of the ideas and concepts are from Emilio's onboarding with the [Hub for Innovation in Teaching and Technology](https://twitter.com/MSUHub) and were developed by [Ashley Braman](https://www.linkedin.com/in/ashley-braman-b448bb92/) and [Sarah Gretter](https://www.linkedin.com/in/sarahgretter/).
 
 ## The Weeks Before
  - Inform the PAG members, EASP with similar functions, and EASP leadership
