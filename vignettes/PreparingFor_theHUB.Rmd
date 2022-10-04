@@ -123,18 +123,8 @@ The following
 
 
 ## Map Shape Files
-To create maps and identify country and subregions (state and county in the US) 
-using location data. 
+Check out our documentation on [Downloading and Installing Shape Files]()
 
-string with the path and file name of the GADM world
-mapfile. Any mapfile can be used, but for datasets containing geospatial
-location data from anywhere on the planet, it is advantageous to use the
-entire world map. Obtain the mapfile of interest from
-[https://gadm.org](https://gadm.org). The world GADM data is available from
-[https://biogeo.ucdavis.edu/data/gadm3.6/gadm36_gpkg.zip](https://biogeo.ucdavis.edu/data/gadm3.6/gadm36_gpkg.zip).
-Ensure the [GeoPackage format](https://gadm.org/formats.html) is downloaded.
-The compressed complete world database is approximately 1.6 GBs and the
-unzipped file is 3.81 GBs.
 
 ### ZIP Code Tabulation Areas 
 https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
