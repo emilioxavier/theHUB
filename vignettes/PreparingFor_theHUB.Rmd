@@ -14,7 +14,7 @@ knitr::opts_chunk$set(message=FALSE, warning=FALSE, include=FALSE)
 library(knitr)
 ```
 
-# We are looking for Windows 10 and 11 beta testers!!!
+# We are looking for Windows 10 and 11 beta testers!!! 
 
 ---
 
