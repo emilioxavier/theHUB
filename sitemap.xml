@@ -64,6 +64,9 @@
     <loc>https://emilioxavier.github.io/theHUB/reference/canonical.name.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/clean.DATE.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/clean.DoB.html</loc>
   </url>
   <url>
@@ -86,6 +89,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/compare.dataset.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/convert.YN2TF.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/convert.fps2binary.html</loc>
