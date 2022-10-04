@@ -1,6 +1,6 @@
 ---
 title: "PAG: Software"
-date: "`r format(Sys.Date(), '%d/%b/%Y')`"
+date: "Updated `r format(Sys.Date(), '%d/%b/%Y')`"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Software}
@@ -67,23 +67,6 @@ library(zipcodeR)
 download_zip_data(force = FALSE)
 ```
 
-
-<!-- https://gadm.org/formats.html -->
-<!-- https://gadm.org/download_country_v3.html -->
-<!-- https://www.rspatial.org -->
-<!-- download.file(url="https://biogeo.ucdavis.edu/data/gadm3.6/gpkg/gadm36_USA_gpkg.zip", -->
-              <!-- destfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip") -->
-<!-- unzip(zipfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip", -->
-      <!-- exdir="~/OneDrive - Michigan State University/projects/mapfiles/") -->
-
-<!-- mapfiles.usa <- "~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA.gpkg" -->
-
-<!-- USA_gadm <- st_read(dsn = "gadm36_USA.gpkg", layer = "gadm36_USA_1") -->
-<!-- lonlat_to_state(testPoints, states = USA_gadm, name_col = "NAME_1") -->
-
-<!-- https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_0_sf.rds -->
-<!-- https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_1_sf.rds -->
-<!-- https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_2_sf.rds -->
 
 
 ## OS Functions

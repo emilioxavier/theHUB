@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">theHUB</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.6</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,8 +48,10 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-pagroup">PAGroup</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-pagroup">
+    <a class="dropdown-item" href="../articles/web_only/PAG_About.html">About</a>
     <a class="dropdown-item" href="../articles/web_only/PAG_GuidelinesAndPolicies.html">Guidelines &amp; Policies</a>
     <a class="dropdown-item" href="../articles/web_only/PAG_HowILikeToBeMentored.html">How I Like to be Mentored</a>
+    <a class="dropdown-item" href="../articles/web_only/PAG_Onboarding.html">Onboarding</a>
   </div>
 </li>
 <li class="active nav-item dropdown">
@@ -59,6 +61,8 @@
     <a class="dropdown-item" href="../articles/AdvancedCandidateEvaluation.html">ACE - Overview</a>
     <a class="dropdown-item" href="../articles/AdvancedCandidateEvaluation_questions.html">ACE - Base Questions</a>
     <a class="dropdown-item" href="../articles/AdvancedCandidateEvaluation_setup.html">ACE - Setup</a>
+    <h6 class="dropdown-header" data-toc-skip>GeoCoding</h6>
+    <a class="dropdown-item" href="../articles/GeoCoding_DownloadShapeFiles.html">Downloading Shape Files</a>
   </div>
 </li>
 <li class="nav-item">
@@ -95,9 +99,10 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.svg" class="logo" alt=""><h1>Advanced Candidate Evaluation: Questions</h1>
-                        <h4 data-toc-skip class="author">Emilio Xavier Esposito, Ph.D.</h4>
+                        <h4 data-toc-skip class="author">Emilio Xavier
+Esposito, Ph.D.</h4>
             
-            <h4 data-toc-skip class="date">16/Sep/2022</h4>
+            <h4 data-toc-skip class="date">04/Oct/2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/emilioxavier/theHUB/blob/HEAD/vignettes/AdvancedCandidateEvaluation_questions.Rmd" class="external-link"><code>vignettes/AdvancedCandidateEvaluation_questions.Rmd</code></a></small>
       <div class="d-none name"><code>AdvancedCandidateEvaluation_questions.Rmd</code></div>
@@ -108,51 +113,85 @@
 <div class="section level2">
 <h2 id="about-the-questions">About the Questions<a class="anchor" aria-label="anchor" href="#about-the-questions"></a>
 </h2>
-<p>We believe the base Advanced Candidate Evaluation (ACE) questions provide a solid initial set of inquiries about each candidate. You are free to add to or change these questions to fit better the position you are interviewing for. The survey has three areas:</p>
+<p>We believe the base Advanced Candidate Evaluation (ACE) questions
+provide a solid initial set of inquiries about each candidate. You are
+free to add to or change these questions to fit better the position you
+are interviewing for. The survey has three areas:</p>
 <ul>
 <li>Meeting the Candidate</li>
 <li>The Candidate’s Presentation</li>
 <li>Questions about the Candidate</li>
 </ul>
-<p>Authentication via an MSU NetID is required for all responses to ensure one response for each candidate from each person. ACE retains the last submitted entry for each candidate-evaluator (sometimes referred to as a respondent) pair. We cannot stress enough the importance we place on privacy related to individuals’ responses. The workflow for analyzing submitted evaluations was designed to ensure that the ACE coordinator, administrator, and search committee members (chair included) do not need to explore the original, identifying data.</p>
-<p>The respondent selects the candidates they want to submit comments about and the survey cycles (loops) through the selected candidates.</p>
+<p>Authentication via an MSU NetID is required for all responses to
+ensure one response for each candidate from each person. ACE retains the
+last submitted entry for each candidate-evaluator (sometimes referred to
+as a respondent) pair. We cannot stress enough the importance we place
+on privacy related to individuals’ responses. The workflow for analyzing
+submitted evaluations was designed to ensure that the ACE coordinator,
+administrator, and search committee members (chair included) do not need
+to explore the original, identifying data.</p>
+<p>The respondent selects the candidates they want to submit comments
+about and the survey cycles (loops) through the selected candidates.</p>
 <div class="section level3">
 <h3 id="important-things-to-remember">Important things to remember<a class="anchor" aria-label="anchor" href="#important-things-to-remember"></a>
 </h3>
 <ul>
-<li>The <em><strong>italicized and bold</strong></em> text are automatically populated from the defined terms in the Embedded Data.</li>
-<li>The survey allows responses from individuals that did not meet with the candidate or attend/watch the candidate’s presentation. It is possible that the respondent reviewed the applicant’s package and wants to submit comments.</li>
+<li>The <em><strong>italicized and bold</strong></em> text are
+automatically populated from the defined terms in the Embedded
+Data.</li>
+<li>The survey allows responses from individuals that did not meet with
+the candidate or attend/watch the candidate’s presentation. It is
+possible that the respondent reviewed the applicant’s package and wants
+to submit comments.</li>
 </ul>
 </div>
 <div class="section level3">
 <h3 id="introduction-page">Introduction Page<a class="anchor" aria-label="anchor" href="#introduction-page"></a>
 </h3>
 <p>Dear Colleague<br>
-Thank you for participating in the search for the next <em><strong>Position Title</strong></em> of <em><strong>Unit Name</strong></em>.</p>
-<p>This brief evaluation will help the search committee understand your view and impression of the candidates.</p>
-<p>The evaluation is open until <em><strong>Survey Close Time</strong></em> on <em><strong>Survey Close Date</strong></em>.</p>
-<p>All the best<br><em><strong>Committee Chair Name</strong></em> on behalf of the <em><strong>Position Title</strong></em> Search Committee</p>
-<p>Data Confidentiality and Destruction Statement: Data collected from this survey will reside in Qualtrics and MSU Sharepoint. We will only present and share data in a summarized form. At the conclusion of the search for a new <em><strong>Position Title</strong></em>, we will delete the survey data within Qualtrics no later than <em><strong>Survey Data Deletion Date</strong></em>. No one from the search committee has access to the raw Qualtrics data.</p>
+Thank you for participating in the search for the next
+<em><strong>Position Title</strong></em> of <em><strong>Unit
+Name</strong></em>.</p>
+<p>This brief evaluation will help the search committee understand your
+view and impression of the candidates.</p>
+<p>The evaluation is open until <em><strong>Survey Close
+Time</strong></em> on <em><strong>Survey Close Date</strong></em>.</p>
+<p>All the best<br><em><strong>Committee Chair Name</strong></em> on behalf of the
+<em><strong>Position Title</strong></em> Search Committee</p>
+<p>Data Confidentiality and Destruction Statement: Data collected from
+this survey will reside in Qualtrics and MSU Sharepoint. We will only
+present and share data in a summarized form. At the conclusion of the
+search for a new <em><strong>Position Title</strong></em>, we will
+delete the survey data within Qualtrics no later than <em><strong>Survey
+Data Deletion Date</strong></em>. No one from the search committee has
+access to the raw Qualtrics data.</p>
 </div>
 <div class="section level3">
 <h3 id="authentication-page">Authentication Page<a class="anchor" aria-label="anchor" href="#authentication-page"></a>
 </h3>
-<p>Next, you will authenticate with your MSU email address. We require you to authenticate so we can find duplicate responses. We will retain your last set of responses. Please feel free to contact <a href="mailto:emilio@msu" class="email">emilio@msu</a> if you want us to combine multiple responses for a single candidate.</p>
+<p>Next, you will authenticate with your MSU email address. We require
+you to authenticate so we can find duplicate responses. We will retain
+your last set of responses. Please feel free to contact <a href="mailto:emilio@msu" class="email">emilio@msu</a> if you want us to
+combine multiple responses for a single candidate.</p>
 </div>
 <div class="section level3">
 <h3 id="about-the-respondent-questions">About the Respondent Questions<a class="anchor" aria-label="anchor" href="#about-the-respondent-questions"></a>
 </h3>
-<p>Starting from the top of the following list of positions, please select the position that best fits your current role and completes the statement, "I am a ______."</p>
+<p>Starting from the top of the following list of positions, please
+select the position that best fits your current role and completes the
+statement, "I am a ______."</p>
 <ul>
 <li>Office of <em><strong>Unit Name</strong></em> staff member</li>
-<li>Support staff (not part of the <em><strong>Unit Name</strong></em>)</li>
+<li>Support staff (not part of the <em><strong>Unit
+Name</strong></em>)</li>
 <li>University, College, or Department Administrator</li>
 <li>Faculty member</li>
 <li>Academic staff</li>
 <li>Undergraduate student</li>
 <li>Graduate student</li>
 </ul>
-<p>I envision working with the <em><strong>Position Title</strong></em> of <em><strong>Unit Name</strong></em> ______.</p>
+<p>I envision working with the <em><strong>Position Title</strong></em>
+of <em><strong>Unit Name</strong></em> ______.</p>
 <ul>
 <li>Closely</li>
 <li>On several overlapping projects</li>
@@ -163,7 +202,9 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 <div class="section level3">
 <h3 id="select-the-candidates-you-are-providing-comments-about">Select the Candidates You are Providing Comments About<a class="anchor" aria-label="anchor" href="#select-the-candidates-you-are-providing-comments-about"></a>
 </h3>
-<p>Please select all the <em><strong>Position Title</strong></em> of <em><strong>Unit Name</strong></em> candidates you are providing comments for</p>
+<p>Please select all the <em><strong>Position Title</strong></em> of
+<em><strong>Unit Name</strong></em> candidates you are providing
+comments for</p>
 <ul>
 <li><em><strong>Candidate 1</strong></em></li>
 <li><em><strong>Candidate 2</strong></em></li>
@@ -173,9 +214,12 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 <div class="section level3">
 <h3 id="evaluating-the-candidate">Evaluating the Candidate<a class="anchor" aria-label="anchor" href="#evaluating-the-candidate"></a>
 </h3>
-<p>The following set of questions is for <em><strong>Candidate Name</strong></em>.</p>
+<p>The following set of questions is for <em><strong>Candidate
+Name</strong></em>.</p>
 <blockquote>
-<p>NOTE: The survey will cycle (loop) through all the selected candidates. If only one candidate is selected, only one set of questions will be presented.</p>
+<p>NOTE: The survey will cycle (loop) through all the selected
+candidates. If only one candidate is selected, only one set of questions
+will be presented.</p>
 </blockquote>
 <div class="section level4">
 <h4 id="meeting-with-the-candidate">Meeting with the Candidate<a class="anchor" aria-label="anchor" href="#meeting-with-the-candidate"></a>
@@ -187,9 +231,12 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 <li>No.</li>
 </ul>
 <blockquote>
-<p>NOTE: The following two questions are only displayed if the respondent indicates they meet with the candidate individually <em>OR</em> as part of a group.</p>
+<p>NOTE: The following two questions are only displayed if the
+respondent indicates they meet with the candidate individually
+<em>OR</em> as part of a group.</p>
 </blockquote>
-<p>Did <em><strong>Candidate Name</strong></em> adequately respond to your questions or those from the group?</p>
+<p>Did <em><strong>Candidate Name</strong></em> adequately respond to
+your questions or those from the group?</p>
 <ul>
 <li>Yes</li>
 <li>No</li>
@@ -202,23 +249,29 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 <div class="section level4">
 <h4 id="the-candidates-presentation">The Candidate’s Presentation<a class="anchor" aria-label="anchor" href="#the-candidates-presentation"></a>
 </h4>
-<p>Did you attend or watch the <em><strong>Candidate Name</strong></em>’s presentation?</p>
+<p>Did you attend or watch the <em><strong>Candidate
+Name</strong></em>’s presentation?</p>
 <ul>
 <li>Yes</li>
 <li>No</li>
 </ul>
 <blockquote>
-<p>NOTE: The following questions are only displayed if the respondent indicates they attended/watched the candidate’s presentation.</p>
+<p>NOTE: The following questions are only displayed if the respondent
+indicates they attended/watched the candidate’s presentation.</p>
 </blockquote>
-<p>Did <em><strong>Candidate Name</strong></em>’s presentation address the topic assigned by the search committee?</p>
+<p>Did <em><strong>Candidate Name</strong></em>’s presentation address
+the topic assigned by the search committee?</p>
 <ul>
 <li>Yes</li>
 <li>No</li>
 <li>Unsure/Maybe</li>
 </ul>
-<p>During the <em><strong>Candidate Name</strong></em>’s presentation, did they address the following?</p>
+<p>During the <em><strong>Candidate Name</strong></em>’s presentation,
+did they address the following?</p>
 <blockquote>
-<p>NOTE: These are example questions to provide a starting point. We encourage you to modify these questions as you see fit for your search.</p>
+<p>NOTE: These are example questions to provide a starting point. We
+encourage you to modify these questions as you see fit for your
+search.</p>
 </blockquote>
 <table class="table">
 <colgroup>
@@ -235,7 +288,8 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">Provide a quick overview of how your career path uniquely prepared you for this position.</td>
+<td align="left">Provide a quick overview of how your career path
+uniquely prepared you for this position.</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -247,7 +301,8 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td align="left">What is your vision for the future of ______ on a B1G campus?</td>
+<td align="left">What is your vision for the future of ______ on a B1G
+campus?</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -260,7 +315,8 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 </tr>
 </tbody>
 </table>
-<p>Did <em><strong>Candidate Name</strong></em> adequately respond to questions from the audience?</p>
+<p>Did <em><strong>Candidate Name</strong></em> adequately respond to
+questions from the audience?</p>
 <ul>
 <li>Yes</li>
 <li>No</li>
@@ -273,7 +329,10 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 <div class="section level4">
 <h4 id="questions-about-the-candidate">Questions about the Candidate<a class="anchor" aria-label="anchor" href="#questions-about-the-candidate"></a>
 </h4>
-<p>Does the <em><strong>Candidate Name</strong></em> demonstrate/possess the experience and knowledge necessary to fulfill the requirements of the <em><strong>Position Title</strong></em> per the job description?</p>
+<p>Does the <em><strong>Candidate Name</strong></em> demonstrate/possess
+the experience and knowledge necessary to fulfill the requirements of
+the <em><strong>Position Title</strong></em> per the job
+description?</p>
 <ul>
 <li>Yes</li>
 <li>No</li>
@@ -283,18 +342,21 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 <p>Text box for comments.</p>
 </blockquote>
 <hr>
-<p>What areas of Strength or Challenge do you recognize <em><strong>Candidate Name</strong></em> possessing?</p>
+<p>What areas of Strength or Challenge do you recognize
+<em><strong>Candidate Name</strong></em> possessing?</p>
 <blockquote>
 <p>Text box for comments.</p>
 </blockquote>
 <hr>
-<p>Do you recommend <em><strong>Candidate Name</strong></em> for the position of <em><strong>Position Title</strong></em>?</p>
+<p>Do you recommend <em><strong>Candidate Name</strong></em> for the
+position of <em><strong>Position Title</strong></em>?</p>
 <ul>
 <li>Yes</li>
 <li>No</li>
 </ul>
 <hr>
-<p>Please use a score to indicate your overall evaluation of <em><strong>Candidate Name</strong></em>.</p>
+<p>Please use a score to indicate your overall evaluation of
+<em><strong>Candidate Name</strong></em>.</p>
 <ul>
 <li>1 (Unacceptable)</li>
 <li>2</li>
@@ -312,7 +374,9 @@ Thank you for participating in the search for the next <em><strong>Position Titl
 <div class="section level3">
 <h3 id="provide-comments-on-another-candidate">Provide Comments on Another Candidate<a class="anchor" aria-label="anchor" href="#provide-comments-on-another-candidate"></a>
 </h3>
-<p>Thank you for your comments on <em><strong>Candidate Name</strong></em>. Would you like to provide comments for another <em><strong>Position Title</strong></em> candidate?</p>
+<p>Thank you for your comments on <em><strong>Candidate
+Name</strong></em>. Would you like to provide comments for another
+<em><strong>Position Title</strong></em> candidate?</p>
 <ul>
 <li>Yes</li>
 <li>No</li>
