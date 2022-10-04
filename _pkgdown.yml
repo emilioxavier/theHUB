@@ -28,6 +28,9 @@ navbar:
        href: articles/AdvancedCandidateEvaluation_questions.html
      - text: ACE - Setup
        href: articles/AdvancedCandidateEvaluation_setup.html
+     - text: GeoCoding
+     - text: Downloading Shape Files
+       href: articles/GeoCoding_DownloadShapeFiles.html
     twitter:
       icon: fa-twitter
       href: http://twitter.com/exesposito
