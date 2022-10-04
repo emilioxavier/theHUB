@@ -1,9 +1,9 @@
 ---
 title: "PAG: Onboarding"
-date: "Updated 22/Sep/2022"
+date: "Updated 04/Oct/2022"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{PAG: About}
+  %\VignetteIndexEntry{PAG: Onboarding}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
