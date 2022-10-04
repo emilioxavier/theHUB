@@ -108,6 +108,7 @@ clean.OSversion <- function(Version.number) {
 #'
 #' @return integer with the determined year of birth
 #' @export
+#' @importFrom lubridate as_date parse_date_time
 #'
 #' @examples
 #' clean.YoB("1969")
@@ -144,7 +145,7 @@ clean.YoB <- function(YoB) {
 
 #' @title Clean Date of Birth
 #'
-#' @description This function uses the [lubridate::as_date()] function to determine
+#' @description This function uses the [lubridate::parse_date_time()] function to determine
 #'   the date of birth by trying
 #'   - Month - Day - Year
 #'   - Year - Month - Day
@@ -154,7 +155,7 @@ clean.YoB <- function(YoB) {
 #'
 #' @return date with determined date of birth
 #' @export
-#' @importFrom lubridate as_date
+#' @importFrom lubridate as_date parse_date_time
 #'
 #' @examples
 #' clean.DoB("03301995")
@@ -176,6 +177,128 @@ clean.DoB <- function(DoB) {
   return(DoB.cleaned)
 }
 
+
+#' @title Clean Date
+#'
+#' @description This function expands [theHUB::clean.DoB()] function and uses the
+#'   [lubridate::parse_date_time()] function to determine the provided date by trying
+#'   - Month - Day - Year
+#'   - Year - Month - Day
+#'   - Day - Month - Year
+#'   - Month - Year
+#'   - Year -Month
+#'
+#' The function determines if the provided date contains month-day-year or month-
+#' year information.
+#'
+#' **This function is currently not available. Need to add a logical parameter.**
+#' A date with a year five-years before the current year or later
+#' is reduced by 100-years. For example, if the resulting year is 2020 (this
+#' description was written in 2022) the returned date has a year of 1920.
+#'
+#' @param dates string with date of birth-like data information.
+#'
+#' @return date
+#' @export
+#' @importFrom lubridate parse_date_time year dyears
+#' @importFrom stringr str_count
+#'
+#' @examples
+#' clean.DATE("03301995")
+#' # "1995-03-30"
+#'
+#' clean.DATE("03/30/1995")
+#' # "1995-03-30"
+#'
+#' clean.DATE("03/1995")
+#' # "1995-03-30"
+#'
+#' clean.DATE("031995")
+#' # "1995-03-30"
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+clean.DATE <- function(dates) {
+
+  ## number of punctuation ----
+  n.punct <- stringr::str_count(string=dates, pattern="[[:punct:]]")
+  n.char <- nchar(dates)
+
+  ## get indices ----
+  mdy.idc <- which( (n.punct == 2L) | (n.punct == 0L) )
+  my.idc <- which( (n.punct == 1L) | (n.char == 6L) )
+
+  ## convert the dates into date-time format ----
+  dates.clean <- suppressWarnings(lubridate::parse_date_time(x=dates, c("mdy", "ymd", "dmy")))
+  my.date.clean <- suppressWarnings(lubridate::parse_date_time(x=dates[my.idc], c("my", "ym")))
+  dates.clean[my.idc] <- my.date.clean
+
+  ## adjust future years to the past ----
+  # curr.YEAR <- as.integer(format(Sys.Date(), "%Y")) - 5L
+  # dates.YEAR <- lubridate::year(dates.clean)
+  # dates.oi.TF <- dates.YEAR >= curr.YEAR
+  # dates.oi.idc <- which(dates.oi.TF)
+  # dates.clean[dates.oi.idc] <- dates.clean[dates.oi.idc] - lubridate::dyears(x=100)
+
+  ## return the dates ----
+  return(dates.clean)
+
+}
+
+
+#' @title Convert Yes-No indicators to TRUE-FALSE
+#'
+#' @description Often True-False data is returned as a vector of Ys and Ns or 1s
+#'   and 0s. These vectors often contain blanks or `NA`s that cannot, and should
+#'   not, be converted into Falses. This function converts
+#'
+#'   - "Y" -->> `TRUE`
+#'   - "N" -->> `FALSE`
+#'   - "Yes" -->> `TRUE`
+#'   - "No" -->> `FALSE`
+#'   - "1" -->> `TRUE`
+#'   - "0" -->> `FALSE`
+#'   - 1 -->> `TRUE`
+#'   - 0 -->> `FALSE`
+#'
+#'   and leave blanks and `NA`s in the vector.
+#'
+#' @param YN.string string with "Yes", "No" indicators such as "Y", "N",
+#'   "yes", "no", "1", or "0"
+#'
+#' @return logical vector
+#' @export
+#'
+#' @examples
+#' YN.string <- c("Y", "N", "1", "0", "yes", "no", NA, NA)
+#' # [1]  TRUE FALSE  TRUE FALSE    NA    NA
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+convert.YN2TF <- function(YN.string) {
+
+  YN.string <- toupper(YN.string)
+
+  ## basic vector information ----
+  vector.len <- length(YN.string)
+  TF.vector <- rep_len(NA, length.out=vector.len)
+
+  ## convert characters to TRUE/FALSE ----
+  TF.vector[YN.string == "Y"]   <- TRUE
+  TF.vector[YN.string == "YES"] <- TRUE
+  TF.vector[YN.string == "1"]   <- TRUE
+  TF.vector[YN.string == 1]   <- TRUE
+  TF.vector[YN.string == "N"]   <- FALSE
+  TF.vector[YN.string == "NO"]  <- FALSE
+  TF.vector[YN.string == "0"]   <- FALSE
+  TF.vector[YN.string == 0]   <- FALSE
+
+  ## return TRUE/FALSE vector ----
+  return(TF.vector)
+
+}
 
 
 #' @title Convert Four-Digit Term Codes
