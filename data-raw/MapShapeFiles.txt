@@ -1,0 +1,31 @@
+# https://gadm.org/formats.html
+# https://gadm.org/download_country_v3.html
+# https://www.rspatial.org
+download.file(url="https://biogeo.ucdavis.edu/data/gadm3.6/gpkg/gadm36_USA_gpkg.zip",
+              destfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip")
+unzip(zipfile="~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA_gpkg.zip",
+      exdir="~/OneDrive - Michigan State University/projects/mapfiles/")
+
+mapfiles.usa <- "~/OneDrive - Michigan State University/projects/mapfiles/gadm36_USA.gpkg"
+
+USA_gadm <- st_read(dsn = "gadm36_USA.gpkg", layer = "gadm36_USA_1")
+lonlat_to_state(testPoints, states = USA_gadm, name_col = "NAME_1")
+
+https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_0_sf.rds
+https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_1_sf.rds
+https://biogeo.ucdavis.edu/data/gadm3.6/Rsf/gadm36_USA_2_sf.rds
+
+
+### Map Shape Files
+To create maps and identify country and subregions (state and county in the US)
+using location data.
+
+string with the path and file name of the GADM world
+mapfile. Any mapfile can be used, but for datasets containing geospatial
+location data from anywhere on the planet, it is advantageous to use the
+entire world map. Obtain the mapfile of interest from
+[https://gadm.org](https://gadm.org). The world GADM data is available from
+[https://biogeo.ucdavis.edu/data/gadm3.6/gadm36_gpkg.zip](https://biogeo.ucdavis.edu/data/gadm3.6/gadm36_gpkg.zip).
+Ensure the [GeoPackage format](https://gadm.org/formats.html) is downloaded.
+The compressed complete world database is approximately 1.6 GBs and the
+unzipped file is 3.81 GBs.
