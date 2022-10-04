@@ -24,6 +24,8 @@ not, be converted into Falses. This function converts
 \item "No" -->> \code{FALSE}
 \item "1" -->> \code{TRUE}
 \item "0" -->> \code{FALSE}
+\item 1 -->> \code{TRUE}
+\item 0 -->> \code{FALSE}
 }
 
 and leave blanks and \code{NA}s in the vector.
