@@ -60,8 +60,8 @@ Our Group Meeting schedule is loose. Each meeting starts with a quick "stand-up"
 
 ### Group Meeting Topics
 
-  - 04/Oct/2022: How to compare Census Tract counts to Lat-Lon counts; Introduction to GitHub :octocat:
-  - 06/Oct/2022: Cleaning :shower: SLATE data (Emilio)
+  - 04/Oct/2022: How to compare Census Tract counts to Lat-Lon counts; Introduction to GitHub
+  - 06/Oct/2022: Cleaning SLATE data (Emilio)
   - 11/Oct/2022:
   - 13/Oct/2022: (Steve)
   - 18/Oct/2022: 
@@ -75,7 +75,7 @@ Our Group Meeting schedule is loose. Each meeting starts with a quick "stand-up"
   - 15/Nov/2022:
   - 17/Nov/2022: (Seth)
   - 22/Nov/2022:
-  - 24/Nov/2022: :fallen_leaf: :maple_leaf: Thanksgiving! No meeting
+  - 24/Nov/2022: Thanksgiving! No meeting
   - 29/Nov/2022: (Social)
   - 01/Dec/2022: (Emilio)
   - 06/Dec/2022: 
