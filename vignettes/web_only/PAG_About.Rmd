@@ -15,6 +15,20 @@ Our work is at the intersection of potential and current students' data to ask a
 We believe in creating and fostering a supportive and inclusive environment for our members to thrive and advance their career. To support our efforts, we developed and adopted an evolving collection of [Guidelines & Policies](PAG_GuidelinesAndPolicies.Rmd) and [prompts about how each of us likes to be mentored](PAG_HowILikeToBeMentored.Rmd).
 
 
+## Current Members
+
+We believe a small group with a diverse collection of viewpoints and experiences is the optimal way to approach many types of research questions. 
+
+**Seth Tanner Walker**: Seth is a Graduate Student in the [Department of Economics](https://econ.msu.edu/) in the [College of Social Science](https://socialscience.msu.edu/) working towards a Ph.D. in xxxx. Seth is exploring the impact of the [Spartan Advantage program](https://finaid.msu.edu/spad.asp). Seth earned dual Bachelors degrees from [James Madison University](https://www.jmu.edu) in Quantitative Economics & Mathematics and Music Performance. [ [LinkedIn]() | [Website]() | [Social]() ]
+
+
+**Steven R Miller**: Steve is an Assistant Professor in the [Department of Agricultural, Food, and Resource Economics](https://www.canr.msu.edu/afre/index) in the [College of Agriculture & Natural Resources](https://www.canr.msu.edu/) and specializes in applied economic methods for forecasting and impact analysis. Steve is also the Director of the [Center for Economic Analysis](https://www.canr.msu.edu/cea/). [ [LinkedIn](https://www.linkedin.com/in/steven-miller-3b5a546) | [Website]() | [Social]() ]
+
+
+**Emilio Xavier Esposito**: Emilio is an Academic Specialist in the [Associate Provost Office of Enrollment and Academic Strategic Planning](https://esp.msu.edu) and explores novel ways student data relates to various outcomes. Emilio's background in early stage drug discovery, specifically computational chemistry and biochemistry. Emilio is also an Editor for the [Journal of Molecular Graphics and Modelling](https://www.sciencedirect.com/journal/journal-of-molecular-graphics-and-modelling). [ [LinkedIn](https://www.linkedin.com/in/emilioxavieresposito) | [Website](http://www.exeResearch.com) | [Twitter](https://twitter.com/exesposito) ]
+
+
+
 ## Group Meetings
 While we focus on answering questions related to enrollment, we know an implied mission is assisting in the development of those that want to do similar work. To this end, we hold twice-a-week group meetings where we discuss
 
@@ -34,8 +48,6 @@ Our Group Meeting schedule is loose. Each meeting starts with a quick "stand-up"
   - one thing causing grief
   - one victory
 
-The Tuesday "General" meetings are a catch-all for coding demonstrations, help solving research and coding conundrums, guest speakers, and administrative and management discussions. Thursday meetings are an opportunity for each group member (see schedule below) to present an aspect of their project. The fourth Thursday of each month allows the group to meet in-person for beverages and snacks if they can easily make it to -- or near -- campus. We also have the option to cancel the fourth Thursday meeting and make this decision during the fourth Tuesday meeting.
-
 | Week of the Month | Tuesday | Thursday |
 |:-----------------:|:-------:|:--------:|
 | 1st               | General | Emilio   |
@@ -43,17 +55,32 @@ The Tuesday "General" meetings are a catch-all for coding demonstrations, help s
 | 3rd               | General | Seth     |
 | 4th               | General | Social   |
 
+  - The **Tuesday "General" meetings** are a catch-all for coding demonstrations, help solving research and coding conundrums, guest speakers, and administrative and management discussions. 
+  - The **Thursday meetings** are an opportunity for each group member (see schedule below) to present an aspect of their project. The fourth Thursday of each month allows the group to meet in-person for beverages and snacks if they can easily make it to -- or near -- campus. We also have the option to cancel the fourth Thursday meeting and make this decision during the fourth Tuesday meeting.
 
-## Current Members
+### Group Meeting Topics
 
-We believe a small group with a diverse collection of viewpoints and experiences is the optimal way to approach many types of research questions. 
-
-**Seth Tanner Walker**: Seth is a Graduate Student in the [Department of Economics](https://econ.msu.edu/) in the [College of Social Science](https://socialscience.msu.edu/) working towards a Ph.D. in xxxx. Seth is exploring the impact of the [Spartan Advantage program](https://finaid.msu.edu/spad.asp). Seth earned dual Bachelors degrees from [James Madison University](https://www.jmu.edu) in Quantitative Economics & Mathematics and Music Performance. [ [LinkedIn]() | [Website]() | [Social]() ]
-
-
-**Steven R Miller**: Steve is an Assistant Professor in the [Department of Agricultural, Food, and Resource Economics](https://www.canr.msu.edu/afre/index) in the [College of Agriculture & Natural Resources](https://www.canr.msu.edu/) and specializes in applied economic methods for forecasting and impact analysis. Steve is also the Director of the [Center for Economic Analysis](https://www.canr.msu.edu/cea/). [ [LinkedIn](https://www.linkedin.com/in/steven-miller-3b5a546) | [Website]() | [Social]() ]
-
-
-**Emilio Xavier Esposito**: Emilio is an Academic Specialist in the [Associate Provost Office of Enrollment and Academic Strategic Planning](https://esp.msu.edu) and explores novel ways student data relates to various outcomes. Emilio's background in early stage drug discovery, specifically computational chemistry and biochemistry. Emilio is also an Editor for the [Journal of Molecular Graphics and Modelling](https://www.sciencedirect.com/journal/journal-of-molecular-graphics-and-modelling). [ [LinkedIn](https://www.linkedin.com/in/emilioxavieresposito) | [Website](http://www.exeResearch.com) | [Twitter](https://twitter.com/exesposito) ]
+  - 04/Oct/2022: How to compare Census Tract counts to Lat-Lon counts; Introduction to GitHub :octocat:
+  - 06/Oct/2022: Cleaning :shower: SLATE data (Emilio)
+  - 11/Oct/2022:
+  - 13/Oct/2022: (Steve)
+  - 18/Oct/2022: 
+  - 20/Oct/2022: (Seth)
+  - 25/Oct/2022: 
+  - 27/Oct/2022: (Social)
+  - 01/Nov/2022:
+  - 03/Nov/2022: (Emilio)
+  - 08/Nov/2022:
+  - 10/Nov/2022: (Steve)
+  - 15/Nov/2022:
+  - 17/Nov/2022: (Seth)
+  - 22/Nov/2022:
+  - 24/Nov/2022: :fallen_leaf: :maple_leaf: Thanksgiving! No meeting
+  - 29/Nov/2022: (Social)
+  - 01/Dec/2022: (Emilio)
+  - 06/Dec/2022: 
+  - 08/Dec/2022: (Steve)
+  - 13/Dec/2022: 
+  - 15/Dec/2022: (Seth)
 
 
