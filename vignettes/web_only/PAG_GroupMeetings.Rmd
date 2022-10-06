@@ -1,0 +1,64 @@
+---
+title: "PAG: Group Meetings"
+date: "Updated 06/Oct/2022"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PAG: Group Meetings}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+While we focus on answering questions related to enrollment, we know an implied mission is assisting in the development of those that want to do similar work. To this end, we hold twice-a-week group meetings where we discuss
+
+ - Relevant research articles
+ - Application of function-specific applications
+ - Examples of new (to us) coding methods
+ - Our research success and setbacks
+
+We invite and welcome those outside of our group to join our meetings. Please contact [Emilio](mailto:emilio@msu.edu?subject=I%20want%20to%20attend%20PAG%20group%20meetings!) for the Zoom link.
+
+
+## Group Meeting Schedule
+
+Group Meeting are on Tuesdays and Thursdays and we start at 3p and end between 4p and 4:30p. Our Group Meeting schedule is loose. Each meeting starts with a quick "stand-up" where everyone gets five minutes to briefly say...
+
+  - what they are working on
+  - one thing causing grief
+  - one victory
+
+| Week of the Month | Tuesday | Thursday |
+|:-----------------:|:-------:|:--------:|
+| 1st               | General | Emilio   |
+| 2nd               | General | Steve    |
+| 3rd               | General | Seth     |
+| 4th               | General | Social   |
+
+  - The **Tuesday "General" meetings** are a catch-all for coding demonstrations, help solving research and coding conundrums, guest speakers, and administrative and management discussions. 
+  - The **Thursday meetings** are an opportunity for each group member (see schedule below) to present an aspect of their project. The fourth Thursday of each month allows the group to meet in-person for beverages and snacks if they can easily make it to -- or near -- campus. We also have the option to cancel the fourth Thursday meeting and make this decision during the fourth Tuesday meeting.
+
+## Group Meeting Topics
+
+  - 04/Oct/2022: How to compare Census Tract counts to Lat-Lon counts; Introduction to GitHub
+  - 06/Oct/2022: Cleaning SLATE data (Emilio)
+  - 11/Oct/2022:
+  - 13/Oct/2022: (Steve)
+  - 18/Oct/2022: 
+  - 20/Oct/2022: (Seth)
+  - 25/Oct/2022: 
+  - 27/Oct/2022: (Social)
+  - 01/Nov/2022:
+  - 03/Nov/2022: (Emilio)
+  - 08/Nov/2022:
+  - 10/Nov/2022: (Steve)
+  - 15/Nov/2022:
+  - 17/Nov/2022: (Seth)
+  - 22/Nov/2022:
+  - 24/Nov/2022: Thanksgiving! No meeting
+  - 29/Nov/2022: (Social)
+  - 01/Dec/2022: (Emilio)
+  - 06/Dec/2022: 
+  - 08/Dec/2022: (Steve)
+  - 13/Dec/2022: 
+  - 15/Dec/2022: (Seth)
+
+
