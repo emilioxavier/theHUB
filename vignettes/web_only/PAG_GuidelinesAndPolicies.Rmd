@@ -1,6 +1,6 @@
 ---
 title: "PAG: Guidelines & Policies"
-date: "Updated 20/Sep/2022"
+date: "Updated 10/Oct/2022"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Guidelines & Policies}
@@ -12,6 +12,9 @@ We want you to feel valued and respected while you work in the Predictive Analyt
 
 ## Group Structure
 We strive for an egalitarian and flat management structure. We only use first or preferred names or nickname approved by you. No titles. No last names. Decisions are made after discussions and everyone, that wants to, provides input, and based on what is best for the group. Our structure is different from what you will likely experience elsewhere, but we believe your experiences, skills, and knowledge are what matter. The goal with all of our guidelines is to remove the power dynamic and give junior members an equal voice and status.
+
+## Culture of Gratitude
+We work with a lot of people outside of [Enrollment Management](https://esp.msu.edu) and often ask them for help that adds to their daily workload. The least we can do is say "thank you" for your time. Please send a "thank you" email after your meeting or a request has been fulfilled. _NB_: I know this section appears odd. When I joined [Michigan State University (MSU)](https://msu.edu) I was told to never expect a "thank you" from anyone. This was extremely troubling to me ([Emilio](https://www.linkedin.com/in/emilioxavieresposito)) and something I wanted to change. The [Hub for Innovation in Teaching and Technology](https://twitter.com/MSUHub), my original group at MSU, worked tirelessly to ensure everyone on campus knew they were appreciated. While I know I cannot change an institution the size of MSU, I knew I could attempt to change the culture around me.
 
 ## Projects
 Within each project, members will have defined roles. This allows each person to focus on a specific aspect of the project and will be assigned to ensure members are learning and growing different skills. Every project has three distinct areas: design and development, documentation, and implementation. The person leading the design and development leads the project, yet there is an additional member responsible for documentation and implementation. All members are responsible for a project’s success and completion. We expect project members to work together and hold each other accountable. We also expect members to engage with others – either PAG member or others at the university – when they have a question or need help.
@@ -76,6 +79,7 @@ Due to the distributed nature of our work, meetings to discuss projects along wi
  + Meetings need to be scheduled with a minimum of 24-hours advanced notice.
  + Meetings are only scheduled for Tuesday, Wednesday, or Thursday unless those attending the meeting agree to holding the meeting on Monday or Friday.
  + Meeting can start at 10a and must finish by 4:30p.
+ + No meetings over lunch.
  + Meetings run times are 75% of the scheduled duration. Thus, a meeting scheduled for 60 minutes will last 45 minutes. The remaining time allows participants to regroup and prepare (if another meeting follows) for their next meeting.
  + Meeting times will respect, to the best of our ability, the time zones of all group members. This might mean that meeting fall outside the time span noted above. We will determine a solution when needed.
 
