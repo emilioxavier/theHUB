@@ -40,7 +40,7 @@ Group Meeting are on Tuesdays and Thursdays and we start at 3p and end between 4
 
   - 04/Oct/2022: How to compare Census Tract counts to Lat-Lon counts; Introduction to GitHub
   - 06/Oct/2022: Cleaning SLATE data (Emilio)
-  - 11/Oct/2022:
+  - 11/Oct/2022: Installing and Using GitHub
   - 13/Oct/2022: (Steve)
   - 18/Oct/2022: 
   - 20/Oct/2022: (Seth)
