@@ -1,8 +1,8 @@
 Package: theHUB
 Type: Package
 Title: the Haabefuld (Hopeful) Utility Box (theHUB)
-Description: Collection of analytics tools to evaluate surveys, student outcomes, and student success.
-Version: 0.2.4
+Description: The analytics utility box of the Predictive Analytics Group to aid the evaluation of student-related data and surveys.
+Version: 0.2.6
 Depends: R (>= 4.1)
 Imports: 
     tidyverse,

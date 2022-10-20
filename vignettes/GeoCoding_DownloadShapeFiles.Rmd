@@ -1,0 +1,60 @@
+---
+title: "GeoCoding: Downloading Shape Files"
+date: "Updated 04/Oct/2022"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{GeoCoding: Downloading Shape Files}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r setup, echo=FALSE, include=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE, include=FALSE)
+library(knitr)
+```
+
+
+The ability to create [chloropleth maps](https://en.wikipedia.org/wiki/Choropleth_map) relies on shape files containing the boundary information for the regions of interest. The shape files have various levels of detail ranging from continents to US Census Tracts. When constructing chloropleth maps in `R` the shape file is used to create the border of individual regions. Often, the regions are shaded to reflect various information contained within the data. 
+
+Map construction relies on shape files containing the geographic boundaries of geographical landmasses (continents), countries, and subregions (commonly referred to as shires, states, provinces, counties, and postal and zip codes to name a few popular subregions). Shape files are available from different organizations in various formats. 
+
+We use the term _shape file_ to refer to a collection of data defining the "_shape_" of regions and subregions. When possible, downloading and using the "[geopackage format](https://www.geopackage.org/)" is preferred and will make life easier.
+
+> The "geopackage" [format](https://www.geopackage.org/) is the a very good general spatial data file format (for vector data). It is based on the [SpatiaLite](https://www.gaia-gis.it/gaia-sins/) format, and can be read by software using [GDAL/OGR](http://www.osgeo.org/gdal_ogr), including [`R`](https://www.r-project.org/) (with the [sf](https://r-spatial.github.io/sf/) package), [QGIS](https://qgis.org/) and ArcGIS. 
+
+
+## World Data 
+[GADM](https://gadm.org/index.html) provides [maps](https://gadm.org/maps.html) and [spatial data](https://gadm.org/data.html) for all countries and their sub-divisions. While they suggest downloading individual countries due to file sizes, it is advisable to download the entire dataset. The current, version of GADM's world spatial data is 4.1 (though there are [older versions available](https://gadm.org/old_versions.html)), and it delimits 400,276 administrative areas.
+
+ - Go to the GADM "entire world download" webpage [https://gadm.org/download_world.html](https://gadm.org/download_world.html)
+ - Click the link for the "[single database](https://geodata.ucdavis.edu/gadm/gadm4.1/gadm_410-gpkg.zip) in the [GeoPackage format](https://gadm.org/formats.html)." _NB_: The compressed complete world database is approximately 1.47 GBs and the unzipped file is approximately 2.76 GBs.
+
+
+## Zip Code Data
+The [ZIP Code Tabulation Areas (ZCTAs)](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/zctas.html) contains the ZIP code boundaries for 2021. 
+
+Go to the [2021 TIGER/Line Shapefiles](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html) webpage and click the [Web Interface](https://www.census.gov/cgi-bin/geo/shapefiles/index.php) link under the **Download** heading. Set the year to "2021", select the "ZIP Code Tabulation Areas" option, and click "Submit" to download the 2021 ZIP Code shape file. Alternatively, [click this link](https://www2.census.gov/geo/tiger/TIGER2021/ZCTA520/tl_2021_us_zcta520.zip) to directly download the zipped ZCTA file (approximately 572 MBs). The expanded directory is approximately 827 MBs.
+
+
+## US Census Cartographic Boundary Files
+The [US Census Cartographic Boundary Files](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html) contain American Indian Area Geographies, Census Block Groups, Census Tracts, Congressional Districts: 116th Congress, Consolidated Cities, Counties, Counties within Congressional Districts: 116th Congress, County Subdivisions, Divisions, Estates, Metropolitan and Micropolitan Statistical Areas and Related Statistical Areas, Places, Regions, School Districts, State Legislative Districts, States, Subbarrios, and the United States Outline. Download _the entire boundary dataset_ in a [single collection](https://www2.census.gov/geo/tiger/GENZ2021/shp/cb_2021_us_all_500k.zip). The boundary data is at the 1:500,000 (national; not sure of the units) and the zipped file is approximately 333 MBs, and contains individual zipped files.
+
+
+## Storing and Using the Shape Files
+Due to the stability of the data contained within the shape files, I created a `mapfiles` folder within my OneDrive folder to easily store the files and access them from `R`.
+
+ - Create the `mapfiles` directory on OneDrive; _e.g._, `~/OneDrive/projects/mapfiles` You will notice the `mapfiles` directory is within a `projects` directory. Because all my analyses projects are stored within `projects`, it made the most sense to store the mapfiles within the `projects` directory.
+ - Move (drag-and-drop) the compressed (zipped) map data into you `mapfiles` directory.
+ - Unzip the `gadm_410-gpkg.zip`, `cb_2021_us_all_500k.zip`, and `tl_2021_us_zcta520.zip` files.
+
+When making maps within `R`, create variables containing the path to each shape file. For example
+
+```R
+  mapfile.world <- "~/OneDrive/projects/mapfiles/gadm_410.gpkg"
+  mapfile.zipcodes <- "~/OneDrive/projects/mapfiles/tl_2021_us_zcta520/tl_2021_us_zcta520.shp"
+```  
+
+Because of their size, the maps can take some time to load, and if stored within the `RData` file, will significantly increase the size of the file and increase the write and read time of your `RData` files.
+
+

@@ -1,0 +1,44 @@
+---
+title: "PAG: Onboarding"
+date: "Updated 04/Oct/2022"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PAG: Onboarding}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Onboarding is the Predictive Analytics Group's (PAG) opportunity for the new group member(s) to meet and learn about the entire group and for the group to meet and learn about the new group member. The purpose of this document is to ensure all aspects of the onboarding process are fulfilled. A lot of the ideas and concepts are from Emilio's onboarding with the [Hub for Innovation in Teaching and Technology](https://twitter.com/MSUHub) and were developed by [Ashley Braman](https://www.linkedin.com/in/ashley-braman-b448bb92/) and [Sarah Gretter](https://www.linkedin.com/in/sarahgretter/).
+
+## The Weeks Before
+ - Inform the PAG members, EASP with similar functions, and EASP leadership
+ - Arrange meeting with April Stellard regarding HR paperwork and benefits
+ - Assist with getting [MSU NetID](https://netid.msu.edu/)
+ - Send "[How I Like to be Mentored](PAG_HowILikeToBeMentored.Rmd)" worksheet
+ - Ensure One-On-Ones are scheduled or arranged
+ - Ensure computer was ordered and get arrival date
+ - Identify a "buddy" for the new member
+ - Buy items for new member's start-day swag bag/welcome basket (MSU t-shirt/hoodie/fleece?, water bottle/thermal mug, MSU & local stickers pack; $25 gift card to local coffee shops?)
+ - Send start-day swag bag/welcome basket to new member
+
+## The Day Before
+ - Ensure new member is added to all required meetings
+
+## The First Day
+ - Morning introductions
+ - Group lunch
+ - Add new member to PAG's shared MSU OneDrive folder and [the Hopeful Utility Box](https://theHopefulBox.com) [GitHub](https://github.com/emilioxavier/theHUB) project
+
+## The First Week
+ - Daily check-ins to ensure all their questions are being answered
+
+## The Last Day of the First Week
+ - Formally assign the buddy
+ - End of week check-in
+
+## Beginning of Second, Third, & Fourth Week
+ - Check-in with the buddy
+ - Check-in with new member
+
+## End of Month
+ - Check-in with new member to answer question and address concerns

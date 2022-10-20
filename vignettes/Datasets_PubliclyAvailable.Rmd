@@ -1,0 +1,285 @@
+---
+title: "Public Datasets"
+date: "Updated 22/Sep/2022"
+output: html_document
+vignette: >
+  %\VignetteIndexEntry{PAG: About}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+## The Datasets
+
+
+
+### NCES Public & Private K-12 Schools and Post-Seconary Institutions (_Added 21/Feb/2022_)
+
+#### School Locations & Geoassignments
+
+NCES relies on information about school location to help construct school-based 
+surveys, support program administration, identify associations with other types 
+of geographic entities, and to help investigate the social and spatial context 
+of education. EDGE creates and assigns address geocodes (estimated latitude/latitude 
+values) and other geographic indicators to public schools, public local education 
+agencies, private schools, and postsecondary schools. The geographic data are 
+provided as shapefiles, and basic attribute data are available as Excel and SAS 
+tables. These data are also directly accessible as GIS 
+[web services](https://nces.ed.gov/transfer.asp?location=data-nces.opendata.arcgis.com/search?groupIds=455147561fd3416daa180395fb4e9237).
+
+#### Public Schools & School Districts
+
+Geocodes for public schools and school district administrative offices are based 
+on data reported in the NCES Common Core of Data (CCD), an annual collection of 
+administrative data about enrollment, staffing, and program participation for 
+schools, local education agencies (LEAs), and state education agencies (SEAs). 
+SEAs report these data to the U.S. Department of Education in a series of file 
+submissions throughout the year. Additional information about the CCD collection 
+and data resources for public schools are available at 
+[https://nces.ed.gov/ccd/ccddata.asp](https://nces.ed.gov/ccd/ccddata.asp).
+
+#### Private Schools
+
+Geocodes for private schools are based on data collected by the NCES Private 
+School Survey (PSS). The PSS is a biennial collection of private elementary and 
+secondary schools that provides data related to enrollment, staffing, type of 
+program, and other basic administrative features. Additional information about 
+the PSS collection and data resources for private schools are available at 
+[https://nces.ed.gov/surveys/pss/index.asp](https://nces.ed.gov/surveys/pss/index.asp).
+
+
+#### Postsecondary Schools
+
+Geocodes for postsecondary schools are based on data collected by the NCES 
+Integrated Postsecondary Education Data System (IPEDS), an annual survey of 
+institutional characteristics about colleges and universities. Additional 
+information about the IPEDS collection and data resources for postsecondary 
+schools are available at [https://nces.ed.gov/ipeds/](https://nces.ed.gov/ipeds/).
+
+**Information**:
+
+ - [School Locations & Geoassignments](https://nces.ed.gov/programs/edge/Geographic/SchoolLocations)
+ - 2015-2016 to 2020-2021 data is available
+ - Private schools and Postsecondary institutions are only available for school 
+   years starting with an odd value; 2015-2016, 2017-2018, and 2019-2022
+ - Added: 21/Feb/2022
+ - Download shell script and data files (SASv7 datafiles, CSV, and READMEs) in `DATA_NCES-highschools`
+
+
+### Opportunity Atlas (_Added 24/Feb/2022_)
+
+In a collaboration with Raj Chetty and Nathan Hendren from Harvard University and
+John Friedman from Brown University, we constructed the Opportunity Atlas, a
+comprehensive Census tract-level dataset of children’s outcomes in adulthood
+using data covering nearly the entire U.S. population. For each tract, we estimate
+children’s outcomes in adulthood such as earnings distributions and incarceration
+rates by parental income, race, and gender. These estimates allow us to trace the
+roots of outcomes such as poverty and incarceration to the neighborhoods in which
+children grew up.
+
+To build the Atlas, we use de-identified data from the 2000 and 2010 decennial
+Censuses linked to data from Federal income tax returns and the 2005-2015 American
+Community Surveys (ACS) to obtain information on income, parental characteristics,
+children's neighborhoods, and other variables. We focus on children born between
+1978-1983, including those born in the U.S. and authorized childhood immigrants.
+Our data include the characteristics of 20 million children, approximately 94% of
+all children born during the time period.
+
+
+**Information**:
+
+ - [Opportunity Atlas Home](https://www.census.gov/programs-surveys/ces/data/analysis-visualization-tools/opportunity-atlas.html)
+ - [Data Files](https://www.census.gov/programs-surveys/ces/data/public-use-data/opportunity-atlas-data-tables.html)
+ - Added: 24/Feb/2022
+ - Download shell script, data files (Stata and CSV), and the READMEs are
+   in `DATA_OpportunityAtlas`
+
+
+### Landscape by College Board (_Added 03/Mar/2022_)
+
+The College Board Landscape data is for the students that apply to MSU
+
+We will continue to review and refine the information included in Landscape based 
+on research and feedback from colleges. Here’s what's included for the 2019–2020 application year:
+
+#### General data about a high school.
+
+ - **Locale**: This measure is based on the high school location, and relies on 
+ the National Center for Education Statistics (NCES) system of classifying
+ geographic areas into four categories: City, Suburban, Town, and Rural.
+ - **Senior class size**: Three-year average of the senior class size of the 
+ applicant's high school (Common Core of Data and Private School Survey, NCES).
+ - **Percent of students eligible for free and reduced-price lunch**: Three-year 
+ average of percentage of students eligible for free and reduced-price lunch at 
+ the applicant's high school (Common Core of Data, NCES). Available for public 
+ high schools only.
+ - **Average SAT scores at colleges attended**: Average of first-year student SAT 
+ scores at four-year colleges attended by the three most recent cohorts of 
+ college-bound seniors from the applicant's high school who took any College 
+ Board assessments  aggregate College Board and National Student Clearinghouse data). 
+ Average SAT scores are calculated using data from the Integrated Postsecondary 
+ Education Data System (IPEDS, NCES).
+ - **AP participation and performance**: Number of seniors taking AP courses; 
+ average number of AP Exams taken per student; average AP score; number of unique 
+ exams administered.
+
+#### Test score comparisons.
+
+The test score in Landscape is based on the scores that students choose to send 
+to colleges. Colleges choose which student-submitted test score to display in 
+Landscape. The College Board concords ACT scores to SAT scores using published 
+concordance tables (.pdf/294 KB). The applicant's test score is presented alongside 
+the 25th, 50th, and 75th percentile of SAT scores at the high school, based on a 
+three-year average of the high school's SAT scores. For more details on the data, 
+visit [professionals.collegeboard.org/landscape](https://professionals.collegeboard.org/landscape).
+
+#### High school and neighborhood information, relative to national or state averages.
+
+Admissions officers asked us to capture six key indicators about applicants' communities 
+and high schools. Research has shown these six indicators are related to students' 
+educational opportunities and outcomes.
+
+These indicators are provided at the neighborhood level, which is defined by a 
+student's census tract, and at the high school level, which is defined by the 
+census tracts of college-bound seniors at a high school.
+
+Applicants from the same census tract share the same neighborhood data and 
+indicators; applicants from the same high school share the same high school 
+data and indicators. The indicators are:
+
+ - **College attendance**: The predicted probability that a student from the 
+ neighborhood/high school enrolls in a 4-year college (aggregate College Board 
+ and National Student Clearinghouse data)
+ - **Household structure**: Neighborhood/high school information about the number 
+ of married or coupled families, single-parent families, and children living under 
+ the poverty line (American Community Survey)
+ - **Median family income**: Median family income among those in the 
+ neighborhood/high school (American Community Survey)
+ - **Housing stability**: Neighborhood/high school information about vacancy 
+ rates, rental vs. home ownership, and mobility/housing turnover (American Community Survey)
+ - **Education levels**: Information about the typical educational attainment in 
+ the neighborhood/high school (American Community Survey)
+ - **Crime**: The predicted probability of being a victim of a crime in the 
+ neighborhood or neighborhoods represented by the students attending the high 
+ school. Data provided by Location, Inc. For more information, please visit 
+ [www.LocationInc.com/data](www.LocationInc.com/data).
+
+These 6 indicators are averaged and presented on a 1–100 scale to provide a 
+Neighborhood Average and High School Average. A higher value on the 1–100 scale 
+indicates a higher level of challenge related to educational opportunities and 
+outcomes.
+
+For more detailed information on the data and methodology in Landscape, please 
+click here (.pdf/278 KB) or visit our [Professionals site](https://professionals.collegeboard.org/landscape).
+
+**Information**:
+
+ - [Landscape Home](https://pages.collegeboard.org/landscape)
+ - Added: 03/Mar/2022
+ - Provided by Danielle Owen (Office of Admissions)
+ - Excel workbooks (2015-2021 provied by Danielle Owen) and reference documentation are
+   in `DATA_CollegeBoard`
+
+
+
+### PLACES: Census Tract Data (GIS Friendly Format), 2021 release (_Added 03/Mar/2022_)
+
+> Metadata Updated: December 3, 2021
+
+This dataset contains model-based census tract level estimates for the PLACES 2021 
+release in GIS-friendly format. PLACES is the expansion of the original 500 Cities 
+project and covers the entire United States—50 states and the District of Columbia 
+(DC)—at county, place, census tract, and ZIP Code Tabulation Area (ZCTA) levels. 
+It represents a first-of-its kind effort to release information uniformly on this 
+large scale for local areas at 4 geographic levels. Estimates were provided by the 
+Centers for Disease Control and Prevention (CDC), Division of Population Health, 
+Epidemiology and Surveillance Branch. PLACES was funded by the Robert Wood Johnson 
+Foundation (RWJF) in conjunction with the CDC Foundation. Data sources used to 
+generate these model-based estimates include Behavioral Risk Factor Surveillance 
+System (BRFSS) 2019 or 2018 data, Census Bureau 2010 population estimates, and 
+American Community Survey (ACS) 2015–2019 or 2014–2018 estimates. The 2021 release 
+uses 2019 BRFSS data for 22 measures and 2018 BRFSS data for 7 measures (all teeth 
+lost, dental visits, mammograms, cervical cancer screening, colorectal cancer 
+screening, core preventive services among older adults, and sleeping less than 
+7 hours a night). Seven measures are based on the 2018 BRFSS data because the 
+relevant questions are only asked every other year in the BRFSS. These data can 
+be joined with the census tract 2015 boundary file in a GIS system to produce 
+maps for 29 measures at the census tract level. An ArcGIS Online feature service 
+is also available for users to make maps online or to add data to desktop GIS 
+software. [https://cdcarcgis.maps.arcgis.com/home/item.html?id=3b7221d4e47740cab9235b839fa55cd7](https://cdcarcgis.maps.arcgis.com/home/item.html?id=3b7221d4e47740cab9235b839fa55cd7)
+
+https://datadrivendetroit.org/blog/2021/09/16/2020-census-tract-changes/
+
+
+**Information**:
+
+ - [PLACES Home](https://catalog.data.gov/dataset/places-census-tract-data-gis-friendly-format-2020-release-fb1ec)
+ - Added: 03/Mar/2022
+ - CSV file in `DATA_Census`
+
+
+
+### CDC/ATSDR SVI Data (_Added 17/Mar/2022_)
+
+
+
+#### What is Social Vulnerability?
+
+Every community must prepare for and respond to hazardous events, whether a natural disaster like a tornado or a disease outbreak, or an anthropogenic event such as a harmful chemical spill. The degree to which a community exhibits certain social conditions, including high poverty, low percentage of vehicle access, or crowded households, may affect that community’s ability to prevent human suffering and financial loss in the event of disaster. These factors describe a community’s social vulnerability.
+
+#### What is CDC Social Vulnerability Index?
+
+ATSDR’s Geospatial Research, Analysis & Services Program (GRASP) created Centers for Disease Control and Prevention Social Vulnerability Index (CDC SVI or simply SVI, hereafter) to help public health officials and emergency response planners identify and map the communities that will most likely need support before, during, and after a hazardous event.
+
+SVI indicates the relative vulnerability of every U.S. Census tract. Census tracts are subdivisions of counties for which the Census collects statistical data. SVI ranks the tracts on 15 social factors, including unemployment, minority status, and disability, and further groups them into four related themes. Thus, each tract receives a ranking for each Census variable and for each of the four themes, as well as an overall ranking.
+
+In addition to tract-level rankings, SVI 2010, 2014, 2016, and 2018 also have corresponding rankings at the county level. Notes below that describe “tract” methods also refer to county methods.
+
+#### How can CDC SVI help communities be better prepared for hazardous events?
+
+SVI provides specific socially and spatially relevant information to help public health officials and local planners better prepare communities to respond to emergency events such as severe weather, floods, disease outbreaks, or chemical exposure.
+
+#### CDC SVI can be used to:
+
+ - Allocate emergency preparedness funding by community need.
+ - Estimate the type and amount of needed supplies such as food, water, medicine, and bedding.
+ - Decide how many emergency personnel are required to assist people.
+ - Identify areas in need of emergency shelters.
+ - Create a plan to evacuate people, accounting for those who have special needs, such as those without vehicles, the elderly, or people who do not speak English well.
+ - Identify communities that will need continued support to recover following an emergency or natural disaster.
+
+**Information**:
+
+ - [Download site](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html)
+ - [2018 documentation](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html)
+ - Our suggested citation for use of the database: Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program. CDC/ATSDR Social Vulnerability Index [Insert 2018, 2016, 2014, 2010, or 2000] Database [Insert US or State]. https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html. Accessed on [Insert date].
+
+### IPEDS
+
+
+<!-- https://www.usnews.com/education/best-high-schools -->
+
+## Appendix
+
+### Census Tract Description
+
+
+Field Name
+	
+
+Field Description
+
+STATE
+	
+
+Two-digit state FIPS code
+
+COUNTY
+	
+
+Three-digit county FIPS code
+
+TRACT
+	
+
+The census tract number consists of six digits with an implied decimal between the fourth and fifth digits corresponding to the basic census tract number but with leading zeroes and trailing zeroes for census tracts without a suffix.

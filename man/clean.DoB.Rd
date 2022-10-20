@@ -13,7 +13,7 @@ clean.DoB(DoB)
 date with determined date of birth
 }
 \description{
-This function uses the \code{\link[lubridate:as_date]{lubridate::as_date()}} function to determine
+This function uses the \code{\link[lubridate:parse_date_time]{lubridate::parse_date_time()}} function to determine
 the date of birth by trying
 \itemize{
 \item Month - Day - Year

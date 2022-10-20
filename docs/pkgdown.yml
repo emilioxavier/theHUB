@@ -1,14 +1,18 @@
-pandoc: 2.14.0.3
+pandoc: 2.19.2
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   AdvancedCandidateEvaluation: AdvancedCandidateEvaluation.html
   AdvancedCandidateEvaluation_questions: AdvancedCandidateEvaluation_questions.html
   AdvancedCandidateEvaluation_setup: AdvancedCandidateEvaluation_setup.html
+  Datasets_PubliclyAvailable: Datasets_PubliclyAvailable.html
+  GeoCoding_DownloadShapeFiles: GeoCoding_DownloadShapeFiles.html
   PreparingFor_theHUB: PreparingFor_theHUB.html
+  PAG_About: web_only/PAG_About.html
   PAG_GuidelinesAndPolicies: web_only/PAG_GuidelinesAndPolicies.html
   PAG_HowILikeToBeMentored: web_only/PAG_HowILikeToBeMentored.html
-last_built: 2022-09-16T18:27Z
+  PAG_Onboarding: web_only/PAG_Onboarding.html
+last_built: 2022-10-04T21:45Z
 urls:
   reference: https://emilioxavier.github.io/theHUB/reference
   article: https://emilioxavier.github.io/theHUB/articles

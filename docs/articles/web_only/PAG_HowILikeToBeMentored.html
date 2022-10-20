@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../../index.html">theHUB</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.6</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,8 +48,10 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-pagroup">PAGroup</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-pagroup">
+    <a class="dropdown-item" href="../../articles/web_only/PAG_About.html">About</a>
     <a class="dropdown-item" href="../../articles/web_only/PAG_GuidelinesAndPolicies.html">Guidelines &amp; Policies</a>
     <a class="dropdown-item" href="../../articles/web_only/PAG_HowILikeToBeMentored.html">How I Like to be Mentored</a>
+    <a class="dropdown-item" href="../../articles/web_only/PAG_Onboarding.html">Onboarding</a>
   </div>
 </li>
 <li class="nav-item dropdown">
@@ -59,6 +61,8 @@
     <a class="dropdown-item" href="../../articles/AdvancedCandidateEvaluation.html">ACE - Overview</a>
     <a class="dropdown-item" href="../../articles/AdvancedCandidateEvaluation_questions.html">ACE - Base Questions</a>
     <a class="dropdown-item" href="../../articles/AdvancedCandidateEvaluation_setup.html">ACE - Setup</a>
+    <h6 class="dropdown-header" data-toc-skip>GeoCoding</h6>
+    <a class="dropdown-item" href="../../articles/GeoCoding_DownloadShapeFiles.html">Downloading Shape Files</a>
   </div>
 </li>
 <li class="nav-item">
@@ -96,7 +100,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../../logo.svg" class="logo" alt=""><h1>PAG: How I like to be Mentored</h1>
             
-            <h4 data-toc-skip class="date">16/Sep/2022</h4>
+            <h4 data-toc-skip class="date">Updated 16/Sep/2022</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/emilioxavier/theHUB/blob/HEAD/vignettes/web_only/PAG_HowILikeToBeMentored.Rmd" class="external-link"><code>vignettes/web_only/PAG_HowILikeToBeMentored.Rmd</code></a></small>
       <div class="d-none name"><code>PAG_HowILikeToBeMentored.Rmd</code></div>
@@ -104,30 +108,44 @@
 
     
     
-<p>The “How I like to be Mentored” activity is available on <a href="https://docs.google.com/document/d/1c4TzA8BWM9aRkDHFImyc8k9MbcgktBl0odh-wIpUXS0/edit?usp=sharing" class="external-link">Google Docs</a> for you to download (preferably as a Word document) and complete.</p>
+<p>The “How I like to be Mentored” activity is available on <a href="https://docs.google.com/document/d/1c4TzA8BWM9aRkDHFImyc8k9MbcgktBl0odh-wIpUXS0/edit?usp=sharing" class="external-link">Google
+Docs</a> for you to download (preferably as a Word document) and
+complete.</p>
 <ul>
 <li>I want our working relationship to be…</li>
 <li>I expect a mentor to help me with…</li>
 <li>My top five priorities in life are…</li>
 <li>I expect that this experience will affect my career goals by…</li>
-<li>I want to learn <em><strong>[these specific skills, soft and technical]</strong></em> from you, and here is why…</li>
+<li>I want to learn <em><strong>[these specific skills, soft and
+technical]</strong></em> from you, and here is why…</li>
 <li>I can help you learn more about…</li>
 <li>My top three strengths are…</li>
 <li>The three things I struggle the most with are…</li>
-<li>I like to work in <em><strong>[this type of working environment]</strong></em>, and this is why…</li>
-<li>I prefer to have management meetings during the (select all that apply: <em><strong>morning | after lunch | afternoon</strong></em>)</li>
-<li>I prefer to have group/technical meetings during the (select all that apply: <em><strong>morning | after lunch | afternoon</strong></em>)</li>
-<li>I prefer to perform office-related tasks during the (select all that apply: <em><strong>early morning | mid-morning | late morning | after lunch | afternoon | evening | night</strong></em>)</li>
-<li>I prefer to work on projects during the (select all that apply: <em><strong>early morning | mid-morning | late morning | after lunch | afternoon | evening | night</strong></em>)</li>
+<li>I like to work in <em><strong>[this type of working
+environment]</strong></em>, and this is why…</li>
+<li>I prefer to have management meetings during the (select all that
+apply: <em><strong>morning | after lunch | afternoon</strong></em>)</li>
+<li>I prefer to have group/technical meetings during the (select all
+that apply: <em><strong>morning | after lunch |
+afternoon</strong></em>)</li>
+<li>I prefer to perform office-related tasks during the (select all that
+apply: <em><strong>early morning | mid-morning | late morning | after
+lunch | afternoon | evening | night</strong></em>)</li>
+<li>I prefer to work on projects during the (select all that apply:
+<em><strong>early morning | mid-morning | late morning | after lunch |
+afternoon | evening | night</strong></em>)</li>
 <li>My preferred communication mode is…</li>
 <li>When I need technical help, I usually…</li>
 <li>When I need emotional help, I usually…</li>
 <li>When I am angry, I usually…</li>
 <li>When I am stressed, I usually…</li>
 <li>When approaching me about a concern, I want you to…</li>
-<li>The best way to approach me with a concern regarding my work is…</li>
-<li>The best way to approach me with a concern regarding my actions is…</li>
-<li>I tend to approach others with a concern in the following manner…</li>
+<li>The best way to approach me with a concern regarding my work
+is…</li>
+<li>The best way to approach me with a concern regarding my actions
+is…</li>
+<li>I tend to approach others with a concern in the following
+manner…</li>
 <li>Anything else I think is important to share:</li>
 </ul>
 <div class="section level4">
@@ -136,9 +154,11 @@
 <ul>
 <li>Obtained from: <a href="https://current.org/wp-content/uploads/2021/06/How-I-Like-to-be-supervised.pdf" class="external-link">https://current.org/wp-content/uploads/2021/06/How-I-Like-to-be-supervised.pdf</a>
 </li>
-<li>Originally created by: <a href="https://www.northwestern.edu/inclusion/index.html" class="external-link">Campus Inclusion and Community, Northwestern University</a>
+<li>Originally created by: <a href="https://www.northwestern.edu/inclusion/index.html" class="external-link">Campus
+Inclusion and Community, Northwestern University</a>
 </li>
-<li>Expanded by <a href="https://github.com/emilioxavier" class="external-link">Emilio Xavier Esposito</a>
+<li>Expanded by <a href="https://github.com/emilioxavier" class="external-link">Emilio Xavier
+Esposito</a>
 </li>
 </ul>
 </div>
