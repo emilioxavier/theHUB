@@ -84,7 +84,7 @@ combinations.t.test <- function(data,
     group.idc <- seq_len(num.groups)
     num.groups.pretty <- formatC(group.idc, format="d", width=max.group.nchar, flag="0")
     names.groups <- paste0("group", num.groups.pretty)
-    message("No group names provided thus group names created")
+    message("No group names provided, thus, group names created")
   }
 
   ##_ construct output data.frame -----
