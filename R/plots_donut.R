@@ -55,27 +55,33 @@ make.donut.data <- function(data,
 
   ## select the needed columns ----
   if ( !is.null(facetBy) ) {
-    donut.DATA <- dplyr::select(data, {{col.oi}}, {{facetBy}}) |>
-      dplyr::rename("Categories"={{col.oi}}, "FacetBy"={{facetBy}}) |>
+    donut.DATA <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{col.count}}) |>
+      dplyr::rename("Categories"={{col.oi}},
+                    "FacetBy"={{facetBy}},
+                    "Counts"={{col.count}}) |>
       dplyr::group_by(Categories, FacetBy)
   } else {
     donut.DATA <- dplyr::select(data, {{col.oi}}) |>
       dplyr::rename("Categories"={{col.oi}}) |>
-      dplyr::group_by(Categories)
+      dplyr::group_by(Categories) |>
+      tibble::add_column("FacetBy"=NA)
   }
-  ## counts already calculated ----
+
+  ## add the counts ----
+  ##_ counts already calculated ----
   if ( !is.null(col.count) ) {
-    donut.DATA <- dplyr::select(data, {{col.oi}}, {{col.count}}) |>
+    donut.COUNTS <- dplyr::select(data, {{col.oi}}, {{col.count}}) |>
       dplyr::rename("Categories"={{col.oi}},
                     "Counts"={{col.count}}) |>
       dplyr::ungroup()
   }
-
-  ## calculate the counts ----
+  ##_ calculate the counts ----
   if ( ( orig.nRows != orig.nCats ) & ( is.null(col.count) ) ) {
-    donut.DATA <- dplyr::summarise(donut.DATA, Counts=n()) |>
+    donut.COUNTS <- dplyr::summarise(donut.DATA, Counts=n()) |>
       dplyr::ungroup()
   }
+  donut.DATA <- dplyr::left_join(x=donut.DATA, y=donut.COUNTS) |>
+    select(Categories, FacetBy, Counts)
 
   ## arrange data by count OR category ----
   # if ( is.null(facetBy) ) {
