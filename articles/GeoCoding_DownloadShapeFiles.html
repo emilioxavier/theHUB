@@ -109,47 +109,105 @@
 
     
     
-<p>The ability to create <a href="https://en.wikipedia.org/wiki/Choropleth_map" class="external-link">chloropleth maps</a> relies on shape files containing the boundary information for the regions of interest. The shape files have various levels of detail ranging from continents to US Census Tracts. When constructing chloropleth maps in <code>R</code> the shape file is used to create the border of individual regions. Often, the regions are shaded to reflect various information contained within the data.</p>
-<p>Map construction relies on shape files containing the geographic boundaries of geographical landmasses (continents), countries, and subregions (commonly referred to as shires, states, provinces, counties, and postal and zip codes to name a few popular subregions). Shape files are available from different organizations in various formats.</p>
-<p>We use the term <em>shape file</em> to refer to a collection of data defining the “<em>shape</em>” of regions and subregions. When possible, downloading and using the “<a href="https://www.geopackage.org/" class="external-link">geopackage format</a>” is preferred and will make life easier.</p>
+<p>The ability to create <a href="https://en.wikipedia.org/wiki/Choropleth_map" class="external-link">chloropleth maps</a>
+relies on shape files containing the boundary information for the
+regions of interest. The shape files have various levels of detail
+ranging from continents to US Census Tracts. When constructing
+chloropleth maps in <code>R</code> the shape file is used to create the
+border of individual regions. Often, the regions are shaded to reflect
+various information contained within the data.</p>
+<p>Map construction relies on shape files containing the geographic
+boundaries of geographical landmasses (continents), countries, and
+subregions (commonly referred to as shires, states, provinces, counties,
+and postal and zip codes to name a few popular subregions). Shape files
+are available from different organizations in various formats.</p>
+<p>We use the term <em>shape file</em> to refer to a collection of data
+defining the “<em>shape</em>” of regions and subregions. When possible,
+downloading and using the “<a href="https://www.geopackage.org/" class="external-link">geopackage format</a>” is preferred
+and will make life easier.</p>
 <blockquote>
-<p>The “geopackage” <a href="https://www.geopackage.org/" class="external-link">format</a> is the a very good general spatial data file format (for vector data). It is based on the <a href="https://www.gaia-gis.it/gaia-sins/" class="external-link">SpatiaLite</a> format, and can be read by software using <a href="http://www.osgeo.org/gdal_ogr" class="external-link">GDAL/OGR</a>, including <a href="https://www.r-project.org/" class="external-link"><code>R</code></a> (with the <a href="https://r-spatial.github.io/sf/" class="external-link">sf</a> package), <a href="https://qgis.org/" class="external-link">QGIS</a> and ArcGIS.</p>
+<p>The “geopackage” <a href="https://www.geopackage.org/" class="external-link">format</a> is
+the a very good general spatial data file format (for vector data). It
+is based on the <a href="https://www.gaia-gis.it/gaia-sins/" class="external-link">SpatiaLite</a> format, and can
+be read by software using <a href="http://www.osgeo.org/gdal_ogr" class="external-link">GDAL/OGR</a>, including <a href="https://www.r-project.org/" class="external-link"><code>R</code></a> (with the <a href="https://r-spatial.github.io/sf/" class="external-link">sf</a> package), <a href="https://qgis.org/" class="external-link">QGIS</a> and ArcGIS.</p>
 </blockquote>
 <div class="section level2">
 <h2 id="world-data">World Data<a class="anchor" aria-label="anchor" href="#world-data"></a>
 </h2>
-<p><a href="https://gadm.org/index.html" class="external-link">GADM</a> provides <a href="https://gadm.org/maps.html" class="external-link">maps</a> and <a href="https://gadm.org/data.html" class="external-link">spatial data</a> for all countries and their sub-divisions. While they suggest downloading individual countries due to file sizes, it is advisable to download the entire dataset. The current, version of GADM’s world spatial data is 4.1 (though there are <a href="https://gadm.org/old_versions.html" class="external-link">older versions available</a>), and it delimits 400,276 administrative areas.</p>
+<p><a href="https://gadm.org/index.html" class="external-link">GADM</a> provides <a href="https://gadm.org/maps.html" class="external-link">maps</a> and <a href="https://gadm.org/data.html" class="external-link">spatial data</a> for all countries and
+their sub-divisions. While they suggest downloading individual countries
+due to file sizes, it is advisable to download the entire dataset. The
+current, version of GADM’s world spatial data is 4.1 (though there are
+<a href="https://gadm.org/old_versions.html" class="external-link">older versions
+available</a>), and it delimits 400,276 administrative areas.</p>
 <ul>
 <li>Go to the GADM “entire world download” webpage <a href="https://gadm.org/download_world.html" class="external-link">https://gadm.org/download_world.html</a>
 </li>
-<li>Click the link for the “<a href="https://geodata.ucdavis.edu/gadm/gadm4.1/gadm_410-gpkg.zip" class="external-link">single database</a> in the <a href="https://gadm.org/formats.html" class="external-link">GeoPackage format</a>.” <em>NB</em>: The compressed complete world database is approximately 1.47 GBs and the unzipped file is approximately 2.76 GBs.</li>
+<li>Click the link for the “<a href="https://geodata.ucdavis.edu/gadm/gadm4.1/gadm_410-gpkg.zip" class="external-link">single
+database</a> in the <a href="https://gadm.org/formats.html" class="external-link">GeoPackage
+format</a>.” <em>NB</em>: The compressed complete world database is
+approximately 1.47 GBs and the unzipped file is approximately 2.76
+GBs.</li>
 </ul>
 </div>
 <div class="section level2">
 <h2 id="zip-code-data">Zip Code Data<a class="anchor" aria-label="anchor" href="#zip-code-data"></a>
 </h2>
-<p>The <a href="https://www.census.gov/programs-surveys/geography/guidance/geo-areas/zctas.html" class="external-link">ZIP Code Tabulation Areas (ZCTAs)</a> contains the ZIP code boundaries for 2021.</p>
-<p>Go to the <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" class="external-link">2021 TIGER/Line Shapefiles</a> webpage and click the <a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php" class="external-link">Web Interface</a> link under the <strong>Download</strong> heading. Set the year to “2021”, select the “ZIP Code Tabulation Areas” option, and click “Submit” to download the 2021 ZIP Code shape file. Alternatively, <a href="https://www2.census.gov/geo/tiger/TIGER2021/ZCTA520/tl_2021_us_zcta520.zip" class="external-link">click this link</a> to directly download the zipped ZCTA file (approximately 572 MBs). The expanded directory is approximately 827 MBs.</p>
+<p>The <a href="https://www.census.gov/programs-surveys/geography/guidance/geo-areas/zctas.html" class="external-link">ZIP
+Code Tabulation Areas (ZCTAs)</a> contains the ZIP code boundaries for
+2021.</p>
+<p>Go to the <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" class="external-link">2021
+TIGER/Line Shapefiles</a> webpage and click the <a href="https://www.census.gov/cgi-bin/geo/shapefiles/index.php" class="external-link">Web
+Interface</a> link under the <strong>Download</strong> heading. Set the
+year to “2021”, select the “ZIP Code Tabulation Areas” option, and click
+“Submit” to download the 2021 ZIP Code shape file. Alternatively, <a href="https://www2.census.gov/geo/tiger/TIGER2021/ZCTA520/tl_2021_us_zcta520.zip" class="external-link">click
+this link</a> to directly download the zipped ZCTA file (approximately
+572 MBs). The expanded directory is approximately 827 MBs.</p>
 </div>
 <div class="section level2">
 <h2 id="us-census-cartographic-boundary-files">US Census Cartographic Boundary Files<a class="anchor" aria-label="anchor" href="#us-census-cartographic-boundary-files"></a>
 </h2>
-<p>The <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html" class="external-link">US Census Cartographic Boundary Files</a> contain American Indian Area Geographies, Census Block Groups, Census Tracts, Congressional Districts: 116th Congress, Consolidated Cities, Counties, Counties within Congressional Districts: 116th Congress, County Subdivisions, Divisions, Estates, Metropolitan and Micropolitan Statistical Areas and Related Statistical Areas, Places, Regions, School Districts, State Legislative Districts, States, Subbarrios, and the United States Outline. Download <em>the entire boundary dataset</em> in a <a href="https://www2.census.gov/geo/tiger/GENZ2021/shp/cb_2021_us_all_500k.zip" class="external-link">single collection</a>. The boundary data is at the 1:500,000 (national; not sure of the units) and the zipped file is approximately 333 MBs, and contains individual zipped files.</p>
+<p>The <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html" class="external-link">US
+Census Cartographic Boundary Files</a> contain American Indian Area
+Geographies, Census Block Groups, Census Tracts, Congressional
+Districts: 116th Congress, Consolidated Cities, Counties, Counties
+within Congressional Districts: 116th Congress, County Subdivisions,
+Divisions, Estates, Metropolitan and Micropolitan Statistical Areas and
+Related Statistical Areas, Places, Regions, School Districts, State
+Legislative Districts, States, Subbarrios, and the United States
+Outline. Download <em>the entire boundary dataset</em> in a <a href="https://www2.census.gov/geo/tiger/GENZ2021/shp/cb_2021_us_all_500k.zip" class="external-link">single
+collection</a>. The boundary data is at the 1:500,000 (national; not
+sure of the units) and the zipped file is approximately 333 MBs, and
+contains individual zipped files.</p>
 </div>
 <div class="section level2">
 <h2 id="storing-and-using-the-shape-files">Storing and Using the Shape Files<a class="anchor" aria-label="anchor" href="#storing-and-using-the-shape-files"></a>
 </h2>
-<p>Due to the stability of the data contained within the shape files, I created a <code>mapfiles</code> folder within my OneDrive folder to easily store the files and access them from <code>R</code>.</p>
+<p>Due to the stability of the data contained within the shape files, I
+created a <code>mapfiles</code> folder within my OneDrive folder to
+easily store the files and access them from <code>R</code>.</p>
 <ul>
-<li>Create the <code>mapfiles</code> directory on OneDrive; <em>e.g.</em>, <code>~/OneDrive/projects/mapfiles</code> You will notice the <code>mapfiles</code> directory is within a <code>projects</code> directory. Because all my analyses projects are stored within <code>projects</code>, it made the most sense to store the mapfiles within the <code>projects</code> directory.</li>
-<li>Move (drag-and-drop) the compressed (zipped) map data into you <code>mapfiles</code> directory.</li>
-<li>Unzip the <code>gadm_410-gpkg.zip</code>, <code>cb_2021_us_all_500k.zip</code>, and <code>tl_2021_us_zcta520.zip</code> files.</li>
+<li>Create the <code>mapfiles</code> directory on OneDrive;
+<em>e.g.</em>, <code>~/OneDrive/projects/mapfiles</code> You will notice
+the <code>mapfiles</code> directory is within a <code>projects</code>
+directory. Because all my analyses projects are stored within
+<code>projects</code>, it made the most sense to store the mapfiles
+within the <code>projects</code> directory.</li>
+<li>Move (drag-and-drop) the compressed (zipped) map data into you
+<code>mapfiles</code> directory.</li>
+<li>Unzip the <code>gadm_410-gpkg.zip</code>,
+<code>cb_2021_us_all_500k.zip</code>, and
+<code>tl_2021_us_zcta520.zip</code> files.</li>
 </ul>
-<p>When making maps within <code>R</code>, create variables containing the path to each shape file. For example</p>
+<p>When making maps within <code>R</code>, create variables containing
+the path to each shape file. For example</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span>  <span class="va">mapfile.world</span> <span class="op">&lt;-</span> <span class="st">"~/OneDrive/projects/mapfiles/gadm_410.gpkg"</span></span>
 <span>  <span class="va">mapfile.zipcodes</span> <span class="op">&lt;-</span> <span class="st">"~/OneDrive/projects/mapfiles/tl_2021_us_zcta520/tl_2021_us_zcta520.shp"</span></span></code></pre></div>
-<p>Because of their size, the maps can take some time to load, and if stored within the <code>RData</code> file, will significantly increase the size of the file and increase the write and read time of your <code>RData</code> files.</p>
+<p>Because of their size, the maps can take some time to load, and if
+stored within the <code>RData</code> file, will significantly increase
+the size of the file and increase the write and read time of your
+<code>RData</code> files.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
