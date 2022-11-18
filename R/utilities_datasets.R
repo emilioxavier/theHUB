@@ -189,16 +189,30 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
     t() |>
     as.data.frame() |>
     tibble::rownames_to_column(var="column.name") |>
-    dplyr::mutate(col.idx=row_number()) |>
-    dplyr::rename("colType.1"="V1",
-                  "colType.2"="V2") |>
-    dplyr::mutate(colType.diff=case_when(colType.1!=colType.2~"CHECK",
-                                         TRUE~""),
-                  col.idx=row_number() ) |>
-    tibble::as_tibble() |>
-    tibble::add_column(md5.hash=dataset.md5s) |>
-    dplyr::select(column.name, col.idx,
-                  colType.1, colType.2, colType.diff, md5.hash)
+    dplyr::mutate(col.idx=row_number())
+
+  colName.V2.TF <- any(grepl(x=colnames(ds.colTypes), pattern="V2"))
+  if ( colName.V2.TF==TRUE ) {
+    ds.colTypes <- dplyr::rename(ds.colTypes,
+                                 "colType.1"="V1",
+                                 "colType.2"="V2") |>
+      dplyr::mutate(colType.diff=case_when(colType.1!=colType.2~"CHECK",
+                                           TRUE~""),
+                    col.idx=row_number() ) |>
+      tibble::as_tibble() |>
+      tibble::add_column(md5.hash=dataset.md5s) |>
+      dplyr::select(column.name, col.idx,
+                    colType.1, colType.2, colType.diff, md5.hash)
+
+  } else {
+    ds.colTypes <- dplyr::rename(ds.colTypes,
+                                 "colType.1"="V1") |>
+      dplyr::mutate(col.idx=row_number()) |>
+      tibble::as_tibble() |>
+      tibble::add_column(md5.hash=dataset.md5s) |>
+      dplyr::select(column.name, col.idx,
+                    colType.1, md5.hash)
+  }
 
   ## is blank? ----
   cell.blank.tf <- purrr::map_dfc(dataset, is.BLANK)
