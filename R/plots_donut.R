@@ -36,7 +36,7 @@
 make.donut.data <- function(data,
                             col.oi,
                             facetBy=NULL,
-                            # layerBy=NULL,
+                            layerBy=NULL,
                             category.order="count",
                             levels.rev=FALSE,
                             col.count=NULL,
@@ -54,18 +54,54 @@ make.donut.data <- function(data,
   }
 
   ## select the needed columns ----
-  if ( !is.null(facetBy) ) {
-    donut.DATA <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{col.count}}) |>
-      dplyr::rename("Categories"={{col.oi}},
-                    "FacetBy"={{facetBy}},
-                    "Counts"={{col.count}}) |>
-      dplyr::group_by(Categories, FacetBy)
-  } else {
-    donut.DATA <- dplyr::select(data, {{col.oi}}) |>
-      dplyr::rename("Categories"={{col.oi}}) |>
-      dplyr::group_by(Categories) |>
-      tibble::add_column("FacetBy"=NA)
+  if ( !is.null(col.oi) ) {
+    donut.DATA <- dplyr::rename(data, "Categories"={{col.oi}})
   }
+
+  if ( !is.null(facetBy) ) {
+    donut.DATA <- dplyr::rename(data, "FacetBy"={{facetBy}})
+  }
+
+  if ( !is.null(layerBy) ) {
+    donut.DATA <- dplyr::rename(data, "LayerBy"={{layerBy}})
+  }
+
+  if ( !is.null(col.count) ) {
+    donut.DATA <- dplyr::rename(data, "Counts"={{col.count}})
+  }
+
+  # if ( is.null(facetBy) & is.null(layerBy)) {
+  #   donut.DATA <- dplyr::select(data, {{col.oi}}) |>
+  #     dplyr::rename("Categories"={{col.oi}}) |>
+  #     tibble::add_column("FacetBy"=NA,
+  #                        "LayerBy"=NA) |>
+  #     dplyr::ungroup()
+  # }
+  # if ( !is.null(facetBy) ) {
+  #   donut.DATA <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{col.count}}) |>
+  #     dplyr::rename("Categories"={{col.oi}},
+  #                   "FacetBy"={{facetBy}},
+  #                   "Counts"={{col.count}}) |>
+  #     dplyr::group_by(Categories, FacetBy)
+  # }
+  # if ( !is.null(facetBy) & !is.null(layerBy)) {
+  #   donut.DATA <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{layerBy}}, {{col.count}}) |>
+  #     dplyr::rename("Categories"={{col.oi}},
+  #                   "FacetBy"={{facetBy}},
+  #                   "LayerBy"={{layerBy}},
+  #                   "Counts"={{col.count}}) |>
+  #     dplyr::group_by(Categories) |>
+  #     tibble::add_column("FacetBy"=NA)
+  # }
+  # if ( !is.null(col.count) ) {
+  #   donut.DATA <- dplyr::select(data, {{col.count}}) |>
+  #     dplyr::rename("Categories"={{col.oi}},
+  #                   "FacetBy"={{facetBy}},
+  #                   "LayerBy"={{layerBy}},
+  #                   "Counts"={{col.count}}) |>
+  #     dplyr::group_by(Categories) |>
+  #     tibble::add_column("FacetBy"=NA)
+  # }
 
   ## add the counts ----
   ##_ counts already calculated ----
@@ -124,6 +160,8 @@ make.donut.data <- function(data,
     donut.DATA$Categories <- factor(x=donut.DATA$Categories,
                                     levels=categories)
   }
+
+  ## remove FacetBy columns that are NA ----
 
   ## adjust the donut rings ----
   # if ( any(colnames(donut.DATA)=="FacetBy") ) {

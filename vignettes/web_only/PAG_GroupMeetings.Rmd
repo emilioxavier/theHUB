@@ -41,16 +41,16 @@ Group Meeting are on Tuesdays and Thursdays and we start at 3p and end between 4
   - 04/Oct/2022: How to compare Census Tract counts to Lat-Lon counts; Introduction to GitHub
   - 06/Oct/2022: Cleaning SLATE data (Emilio)
   - 11/Oct/2022: Installing and Using GitHub
-  - 13/Oct/2022: (Steve)
-  - 18/Oct/2022: 
-  - 20/Oct/2022: (Seth)
-  - 25/Oct/2022: 
+  - 13/Oct/2022: Overview of the the [US Census'](https://www.census.gov/) [Geocoder](https://geocoding.geo.census.gov/geocoder/) (Steve)
+  - 18/Oct/2022: Co-work session
+  - 20/Oct/2022: Demonstration of kNN and Random Forest modelling in R (Seth)
+  - 25/Oct/2022: Co-work session
   - 27/Oct/2022: (Social)
-  - 01/Nov/2022:
-  - 03/Nov/2022: (Emilio)
-  - 08/Nov/2022:
-  - 10/Nov/2022: (Steve)
-  - 15/Nov/2022:
+  - 01/Nov/2022: Co-work session
+  - 03/Nov/2022: Co-work session
+  - 08/Nov/2022: Co-work session
+  - 10/Nov/2022: Using Google for Geocoding (Steve)
+  - 15/Nov/2022: Co-work session
   - 17/Nov/2022: (Seth)
   - 22/Nov/2022:
   - 24/Nov/2022: Thanksgiving! No meeting
