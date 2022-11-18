@@ -1,6 +1,6 @@
 ---
 title: "PAG: Guidelines & Policies"
-date: "Updated 10/Oct/2022"
+date: "Updated 17/Nov/2022"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Guidelines & Policies}
@@ -37,7 +37,7 @@ We constantly evaluate our work and the work of others. It is imperative that al
 You are encouraged and expected to speak “truth to power” when discussing and debating policies, your work, and how your work influences and shapes policies. It is unacceptable for someone to take and misrepresent your work. Please let someone in the group know if you believe this is happening.
 
 ## Asking Questions and for Help
-There is no shame in saying, “I don’t know.” Feel free to say these three words at any time. This phrase starts the learning process and developing a deeper understanding.
+There is no shame in saying, “I don’t know.” Feel free to say these three words at any time. This phrase starts the learning process and developing a deeper understanding. We also ask questions (a lot of questions) because we want to learn more and we want you to learn more. The questions are not coming from a place of malice.
 
 ## Work Environment
 The work performed by the Predictive Analytics Group (PAG) lends itself to being asynchronous and remote. We rely heavily on shared folders within MSU One Drive, text-based communication (via email or Microsoft Teams), two meetings a week, and co-work sessions. 
