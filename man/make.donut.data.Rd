@@ -8,6 +8,7 @@ make.donut.data(
   data,
   col.oi,
   facetBy = NULL,
+  layerBy = NULL,
   category.order = "count",
   levels.rev = FALSE,
   col.count = NULL,

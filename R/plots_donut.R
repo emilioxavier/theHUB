@@ -113,11 +113,19 @@ make.donut.data <- function(data,
   }
   ##_ calculate the counts ----
   if ( ( orig.nRows != orig.nCats ) & ( is.null(col.count) ) ) {
-    donut.COUNTS <- dplyr::summarise(donut.DATA, Counts=n()) |>
+    donut.COUNTS <- dplyr::group_by(donut.DATA, Categories) |>
+      dplyr::summarise(Counts=n()) |>
       dplyr::ungroup()
   }
-  donut.DATA <- dplyr::left_join(x=donut.DATA, y=donut.COUNTS) |>
-    select(Categories, FacetBy, Counts)
+  if ( !is.null(facetBy) ) {
+    donut.DATA <- dplyr::left_join(x=donut.DATA, y=donut.COUNTS) |>
+      select(Categories, FacetBy, Counts) |>
+      distinct()
+  } else {
+    donut.DATA <- dplyr::left_join(x=donut.DATA, y=donut.COUNTS) |>
+      select(Categories, Counts) |>
+      distinct()
+  }
 
   ## arrange data by count OR category ----
   # if ( is.null(facetBy) ) {
