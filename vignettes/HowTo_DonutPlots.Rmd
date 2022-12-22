@@ -1,0 +1,60 @@
+---
+title: "How To: Creating Donut Plots"
+date: "Updated 20/Dec/2022"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How To: Creating Donut Plots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r setup, echo=FALSE, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(knitr)
+```
+
+Donut[^1] plots (also known as ring plots) are an efficient way to display data that represents proportions of things within a dataset.
+
+[^1]: You can also spell donut as doughnut. Those unfamiliar with these tasty concoctions, see the [Wikipedia entry](https://en.wikipedia.org/wiki/Doughnut) or visit your nearest [donut shop](). If you live in East Lansing, I highly recommend [Groovy Donuts](https://www.groovydonuts.com/)!
+
+
+## Constructing the Donut Plot Data
+
+Using the [mpg dataset](https://ggplot2.tidyverse.org/reference/mpg.html) from [ggplot2](https://ggplot2.tidyverse.org/), we will explore the construction of the donut `data.frame`. 
+
+
+The `class` column will be used for facets.
+
+```{r constructDataFrame}
+
+library(tidyverse)
+library(theHUB)
+
+
+data <- mpg; col.oi="cyl"; facetBy="class"; layerBy=NULL; category.order="count"; col.count=NULL; r.inner=4; r.outer=6
+
+make.donut.data(data=mpg, col.oi="cyl", facetBy="class")
+
+
+```
+
+
+
+## Donut Plot
+
+
+
+## A Donut Plot with Layers
+
+
+
+## Faceted Donut Plots
+
+
+
+## Faceted Donut Plots with Layers
+

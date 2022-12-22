@@ -47,6 +47,63 @@ make.donut.data <- function(data,
   orig.nRows <- nrow(data)
   orig.nCats <- data[[col.oi]] |> unique() |> length()
 
+  ## extract needed data and rename ----
+  donut.RAW <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{layerBy}}) |>
+    dplyr::rename("Categories"={{col.oi}},
+                  "FacetBy"={{facetBy}},
+                  "LayerBy"={{layerBy}})
+
+  ## check for each type of column ----
+  colNames.RAW <- colnames(donut.RAW)
+  Categories.TF <- "Categories" %in% colNames.RAW
+  FacetBy.TF <- "FacetBy" %in% colNames.RAW
+  LayerBy.TF <- "LayerBy" %in% colNames.RAW
+
+  colNames.oi <- c(colNames.RAW[c("Categories", "FacetBy", "LayerBy") %in% colNames.RAW])
+
+  dplyr::select(donut.RAW, colNames.oi)
+  group_by(donut.RAW, Categories, FacetBy) |>
+    tally()
+
+
+  dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
+    dplyr::summarise(Count=n())
+
+
+
+  if (orig.nRows != orig.nCats) {
+
+    donut.COUNTS
+
+    dplyr::tally(donut.RAW[[colNames.oi]])
+
+
+    donut.RAW <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{layerBy}}) |>
+      dplyr::rename("Categories"={{col.oi}},
+                    "FacetBy"={{facetBy}},
+                    "LayerBy"={{layerBy}}) |>
+      dplyr::group_by(Categories) |>
+      dplyr::summarise(Counts=n())
+      dplyr::ungroup()
+
+  }
+
+  ## add the counts ----
+  ##_ counts already calculated ----
+  if ( !is.null(col.count) ) {
+    donut.COUNTS <- dplyr::select(data, {{col.oi}}, {{col.count}}) |>
+      dplyr::rename("Categories"={{col.oi}},
+                    "Counts"={{col.count}}) |>
+      dplyr::ungroup()
+  }
+  ##_ calculate the counts ----
+  if ( ( orig.nRows != orig.nCats ) & ( is.null(col.count) ) ) {
+    donut.COUNTS <- dplyr::group_by(data, Categories) |>
+      dplyr::summarise(Counts=n()) |>
+      dplyr::ungroup()
+  }
+
+
   ## how to order the data ----
   category.order <- tolower(category.order)
   if ( (category.order != "count") & (category.order != "category") ) {
@@ -54,20 +111,21 @@ make.donut.data <- function(data,
   }
 
   ## select the needed columns ----
+  donut.DATA <- data
   if ( !is.null(col.oi) ) {
-    donut.DATA <- dplyr::rename(data, "Categories"={{col.oi}})
+    donut.DATA <- dplyr::rename(donut.DATA, "Categories"={{col.oi}})
   }
 
   if ( !is.null(facetBy) ) {
-    donut.DATA <- dplyr::rename(data, "FacetBy"={{facetBy}})
+    donut.DATA <- dplyr::rename(donut.DATA, "FacetBy"={{facetBy}})
   }
 
   if ( !is.null(layerBy) ) {
-    donut.DATA <- dplyr::rename(data, "LayerBy"={{layerBy}})
+    donut.DATA <- dplyr::rename(donut.DATA, "LayerBy"={{layerBy}})
   }
 
   if ( !is.null(col.count) ) {
-    donut.DATA <- dplyr::rename(data, "Counts"={{col.count}})
+    donut.DATA <- dplyr::rename(donut.DATA, "Counts"={{col.count}})
   }
 
   # if ( is.null(facetBy) & is.null(layerBy)) {
@@ -104,19 +162,19 @@ make.donut.data <- function(data,
   # }
 
   ## add the counts ----
-  ##_ counts already calculated ----
-  if ( !is.null(col.count) ) {
-    donut.COUNTS <- dplyr::select(data, {{col.oi}}, {{col.count}}) |>
-      dplyr::rename("Categories"={{col.oi}},
-                    "Counts"={{col.count}}) |>
-      dplyr::ungroup()
-  }
-  ##_ calculate the counts ----
-  if ( ( orig.nRows != orig.nCats ) & ( is.null(col.count) ) ) {
-    donut.COUNTS <- dplyr::group_by(donut.DATA, Categories) |>
-      dplyr::summarise(Counts=n()) |>
-      dplyr::ungroup()
-  }
+  # ##_ counts already calculated ----
+  # if ( !is.null(col.count) ) {
+  #   donut.COUNTS <- dplyr::select(data, {{col.oi}}, {{col.count}}) |>
+  #     dplyr::rename("Categories"={{col.oi}},
+  #                   "Counts"={{col.count}}) |>
+  #     dplyr::ungroup()
+  # }
+  # ##_ calculate the counts ----
+  # if ( ( orig.nRows != orig.nCats ) & ( is.null(col.count) ) ) {
+  #   donut.COUNTS <- dplyr::group_by(data, Categories) |>
+  #     dplyr::summarise(Counts=n()) |>
+  #     dplyr::ungroup()
+  # }
   if ( !is.null(facetBy) ) {
     donut.DATA <- dplyr::left_join(x=donut.DATA, y=donut.COUNTS) |>
       select(Categories, FacetBy, Counts) |>
