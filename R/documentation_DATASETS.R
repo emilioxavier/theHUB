@@ -20,6 +20,8 @@
 #'   - CITY: City
 #'   - STABBR: State
 #'   - ZIP: Zip code
+#'   - LAT: Latitude coordinate
+#'   - LON: Longitude coordinate
 #'   - index: Index to aid reordering
 #'   - colour.primary: Institution's primary colour
 #'   - colour.secondary: Institution's secondary colour
