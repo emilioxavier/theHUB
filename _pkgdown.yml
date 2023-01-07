@@ -2,6 +2,17 @@ url: https://emilioxavier.github.io/theHUB/
 template:
   bootstrap: 5
   bootswatch: spacelab
+  includes:
+    in_header: |
+       <!-- Google tag (gtag.js) -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRET16KK5J"></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'G-BRET16KK5J');
+       </script>
 navbar:
   structure:
     left:  [intro, reference, PAGroup, articles, news]
@@ -33,6 +44,11 @@ navbar:
      - text: GeoCoding
      - text: Downloading Shape Files
        href: articles/GeoCoding_DownloadShapeFiles.html
+     - text: MSUEDW
+     - text: R-SQL Setup
+       href: articles/web_only/EDW_R-SQLsetup.html
+    news:
+     text: News
     twitter:
       icon: fa-twitter
       href: http://twitter.com/exesposito
