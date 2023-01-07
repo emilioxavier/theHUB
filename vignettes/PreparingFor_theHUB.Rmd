@@ -20,6 +20,8 @@ library(knitr)
 
 **the Haabefuld[^1],[^2] Utility Box**_ (_**theHUB**_) was developed and designed on a Mac. theHUB _should_ work on a Windows system, but R requires a different set of applications for [macOS](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html) versus [Windows](https://cran.r-project.org/bin/windows/base/rw-FAQ.html). Please let [Emilio](https://github.com/emilioxavier/) know if you have any trouble and he will help you out.
 
+[^1]: The word haabefuld is Danish for hopeful. The **aa** is really an **å**, and thus, haabefuld is really håbefuld. The use of **aa** makes typing ([Emilio](https://github.com/emilioxavier/) can never remember the correct ASCII code for the å) and web searches easier.
+[^2]: The Haabefuld Utility Box was originally _the Hub Utility Box_, _theHUB_ for short. The original name -- a [recursive backronym](https://en.wikipedia.org/wiki/Recursive_acronym) -- was a way to include The Hub for Innovation in Learning and Technology where this package's development was started. Now, _theHUB_ is used to pay homage to the Hub.
 
 
 ## Setting up R and RStudio
@@ -107,19 +109,61 @@ sudo port install wget
 ## Compliers
 
 
-## Java
+## Download and Install the Oracle Database JDBC driver and Companion Jars Downloads
+
+Visit the [Oracle Database JDBC driver and Companion Jars Downloads](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) page and download the [Zipped JDBC driver (ojdbc11.jar) and Companion Jars ](https://download.oracle.com/otn-pub/otn_software/jdbc/218/ojdbc11-full.tar.gz) file.
+
+The following instructions are for installation on macOS (version 11 or newer). Similar steps should work on Linux and Windows.
+
+
+### Command Line Install
+
+Within your `home` directory (aka folder) create a `software` directory. Move the `ojdbc11-full.tar.gz` file into the `software` and unzip the file. The easiest way to accomplish this is via the macOS Terminal. When downloading the `ojdbc11-full.tar.gz` file you were likely given the option where to save it. Please save it to the `Downloads` directory.
+
+```
+emilio@iMac ~ % mkdir -p software
+emilio@iMac ~ % cd software
+emilio@iMac software % tar zxvf ~/Downloads/ojdbc11-full.tar.gz
+emilio@iMac software % cd ojdbc11-full
+emilio@iMac ojdbc11-full % ls
+Javadoc-Readmes    ojdbc.policy      ojdbc11dms_g.jar   osdt_cert.jar    ucp11.jar
+LICENSE.txt        ojdbc11.jar       ons.jar            osdt_core.jar    xdb.jar
+README.txt         ojdbc11_g.jar     oraclepki.jar      rsi.jar          xmlparserv2.jar
+dms.jar            ojdbc11dms.jar    orai18n.jar        simplefan.jar    xmlparserv2_sans_jaxp_services.jar
+```
+
+### Install Via the File Viewer
+
+Open a macOS finder window and ensure you are in your `home` directory.
+
+  - Create a folder called “software”
+  - Copy (or move) the `ojdbc11-full.tar.gz` file to the `software` folder
+  - Double click the `ojdbc11-full.tar.gz` file to unzip the file
+
+
+### Location of the OJDBC Jar File
+
+The location (aka complete path) of the `ojdbc11.jar` file is needed to set the `classPath` variable for the `RJDBC::JDBC()` function within the `R` script below. For my installation, the `classPath` is `/Users/emilio/software/ojdbc11-full/ojdbc11.jar`
 
 
 ## dBeaver
-[dBeaver](https://dbeaver.io) is a "free multi-platform [macOS, Windows, Linux, there is even an Eclipse plugin] database tool for developers, database administrators, analysts and all people who need to work with databases" that "supports all popular databases: MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc."
+[dBeaver Community](https://dbeaver.io) is a 
 
-The following
+> "free multi-platform [macOS, Windows, Linux, there is even an Eclipse plugin] database tool for developers, database administrators, analysts and all people who need to work with databases" that "supports all popular databases: MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc."
+
+## Download & Install
 
  - Visit [https://dbeaver.io](https://dbeaver.io) and click the "Download" button.
- - Install dBeaver. Please visit [https://dbeaver.io/download/](https://dbeaver.io/download/) for more information.
+ - Install dBeaver following the instructions at [https://dbeaver.io/download/](https://dbeaver.io/download/). For macOS users, in addition to the standard dmg files there are [Brew Cask](https://formulae.brew.sh/cask/dbeaver-community) and [MacPorts](https://ports.macports.org/port/dbeaver-community/summary/).
+
+Please see our [document for setting up dBeaver to access the MSUEDW]().
 
 
+## Microsoft Visual Studio Code
 
+With the [sunsetting of GitHub's Atom](https://github.blog/2022-06-08-sunsetting-atom/) the I find [Microsoft Visual Studio Code](https://code.visualstudio.com/) to be an _**excellent**_ text editor. Yes. I use, kinda like, and endorse using Microsoft Visual Studio Code. (Younger me is so disappointed.)
+
+It has a lot of great R-related features including "syntax highlighting, R language service based on code analysis, interacting with R terminals, viewing data, plots, workspace variables, help pages, managing packages, and working with R Markdown documents" via [REditorSupport](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)," is awesome for viewing (and sometime editing) CSV files (and other delimited files) with [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), and has an [Atom teletype](https://teletype.atom.io)-like feature called [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare). Download Microsoft Visual Studio Code [here](https://code.visualstudio.com/Download).
 
 
 ## Map Shape Files
@@ -131,15 +175,4 @@ https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file
 https://www.census.gov/cgi-bin/geo/shapefiles/index.php
 
 
-## Microsoft Visual Studio Code
 
-With the [sunsetting of GitHub's Atom](https://github.blog/2022-06-08-sunsetting-atom/) the I find [Microsoft Visual Studio Code](https://code.visualstudio.com/) to be an _**excellent**_ text editor. Yes. I use, kinda like, and endorse using Microsoft Visual Studio Code. (Younger me is so disappointed.)
-
-It has a lot of great R-related features including "syntax highlighting, R language service based on code analysis, interacting with R terminals, viewing data, plots, workspace variables, help pages, managing packages, and working with R Markdown documents" via [REditorSupport](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)," is awesome for viewing (and sometime editing) CSV files (and other delimited files) with [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), and has an [Atom teletype](https://teletype.atom.io)-like feature called [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare). Download Microsoft Visual Studio Code [here](https://code.visualstudio.com/Download).
-
-
-
-## Footnotes
-
-[^1]: The word haabefuld is Danish for hopeful. The **aa** is really an **å**, and thus, haabefuld is really håbefuld. The use of **aa** makes typing ([Emilio](https://github.com/emilioxavier/) can never remember the correct ASCII code for the å) and web searches easier.
-[^2]: The Haabefuld Utility Box was originally _the Hub Utility Box_, _theHUB_ for short. The original name -- a [recursive backronym](https://en.wikipedia.org/wiki/Recursive_acronym) -- was a way to include The Hub for Innovation in Learning and Technology where this package's development was started. Now, _theHUB_ is used to pay homage to the Hub.
