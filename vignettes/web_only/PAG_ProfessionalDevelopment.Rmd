@@ -1,0 +1,10 @@
+---
+title: "PAG: Professional Development"
+date: "Updated 05/Jan/2023"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PAG: Professional Development}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
