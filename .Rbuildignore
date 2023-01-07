@@ -9,3 +9,7 @@ CONDUCT.md
 ^docs$
 ^pkgdown$
 ^\.github$
+R/utilities_currency.R
+vignettes/HowTo_DonutPlots.R
+vignettes/HowTo_DonutPlots.Rmd
+
