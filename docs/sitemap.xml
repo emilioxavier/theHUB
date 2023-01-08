@@ -31,7 +31,16 @@
     <loc>https://emilioxavier.github.io/theHUB/articles/index.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/EDW_R-SQLsetup.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/EDW_dBeaver.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_About.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GroupMeetings.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GuidelinesAndPolicies.html</loc>
@@ -41,6 +50,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_Onboarding.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_ProfessionalDevelopment.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/authors.html</loc>
@@ -89,6 +101,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/clean.comment.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/combinations.t.test.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/comment.summary.html</loc>
@@ -224,6 +239,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/unified.terms.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/values.t.test.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.html</loc>
