@@ -49,6 +49,7 @@ navbar:
        href: articles/web_only/EDW_R-SQLsetup.html
     news:
      text: News
+     href: news/index.html
     twitter:
       icon: fa-twitter
       href: http://twitter.com/exesposito
