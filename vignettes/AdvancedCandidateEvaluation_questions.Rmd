@@ -1,7 +1,7 @@
 ---
 title: "Advanced Candidate Evaluation: Questions"
 author: "Emilio Xavier Esposito, Ph.D."
-date: "`r format(Sys.Date(), '%d/%b/%Y')`"
+date: "Updated 11/Jul/2022"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Advanced Candidate Evaluation: Questions}
