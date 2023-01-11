@@ -3,7 +3,7 @@ title: "Software"
 date: "Updated `r format(Sys.Date(), '%d/%b/%Y')`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{PAG: Software}
+  %\VignetteIndexEntry{Software}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
