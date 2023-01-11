@@ -1,0 +1,65 @@
+---
+title: "EDW: SQL Snippets Library"
+date: "Updated 09/Jan/2023"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{EDW: SQL Snippets Library}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+
+## Table/View Naming Convention
+
+
+## Term (aka Semesters) Designations
+
+
+## Common Tables/Views of Interest
+
+|  Table/View  | Description |
+|--------------|-------------|
+| siscs.r_admissapp_rv | xxxx |
+| siscs.r_extorg_r | xxxx |
+| SISCS.S_ACAD_PLAN_CAF_V | xxxx |
+
+
+
+### Courses for a Specific Semester
+
+
+```sql
+select *
+ from siscs.?????????
+ where ADMIT_TERM >= 2178
+```
+
+
+### Applicants Since a Specific Semester
+
+
+```sql
+select *
+ from siscs.r_admissapp_rv
+ where ADMIT_TERM >= 2178
+```
+
+
+### External Institutions
+
+
+```sql
+select *
+ from siscs.r_extorg_r
+```
+
+
+### Gather Academic Delivery Methods
+
+
+```sql
+select * 
+  from SISCS.S_ACAD_PLAN_CAF_V 
+  where SCC_CAF_ATTRIB_NM = 'MSU_SR_DELIVERY_MTHD' or SCC_CAF_ATTRIB_NM = 'MSU_SR_THIRD_PARTY'
+```
