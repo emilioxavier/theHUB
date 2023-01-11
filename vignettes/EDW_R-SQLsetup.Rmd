@@ -1,6 +1,6 @@
 ---
 title: "EDW: R-SQL Setup"
-date: "Updated 06/Jan/2023"
+date: "Updated 09/Jan/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{EDW: R-SQL Setup}
@@ -30,7 +30,7 @@ The following instructions are for installation on macOS (version 11 or newer). 
 
 Within your `home` directory (aka folder) create a `software` directory. Move the `ojdbc11-full.tar.gz` file into the `software` and unzip the file. The easiest way to accomplish this is via the macOS Terminal. When downloading the `ojdbc11-full.tar.gz` file you were likely given the option where to save it. Please save it to the `Downloads` directory.
 
-```
+```shell
 emilio@iMac ~ % mkdir -p software
 emilio@iMac ~ % cd software
 emilio@iMac software % tar zxvf ~/Downloads/ojdbc11-full.tar.gz
@@ -77,7 +77,7 @@ The [`keyring::key_set()`](https://r-lib.github.io/keyring/reference/key_get.htm
 
 Open **RStudio** and enter the following command in the **Console**. The following function stores your password in secure keyring of your operating system. Securely storing you password allows you to automate data pulls and script actions without including a password in the script. 
 
-```
+```r
 keyring::key_set(service="MSUEDW", username="USERNAME")
 ```
 
@@ -95,7 +95,7 @@ Exploring the entry, you can see the service name (`MSUEDW`), account name (`USE
 
 You can also retrieve the password using the `keyring::key_get()` command in the **RStudio Console**:
 
-```
+```r
 keyring::key_get("MSUEDW","USERNAME")
 [1] "12345678910"
 ```
@@ -110,7 +110,7 @@ The following describes the components of the `R` script used to interact with a
 
 The first line of the `R` file instructs Java to clean up after itself and use a maximum amount of user specified memory (aka RAM).
 
-```
+```r
 options(java.parameters = c("-XX:+UseConcMarkSweepGC", "-Xmx8192m"))
 ```
 
@@ -124,7 +124,7 @@ Typically, we set the only the maximum memory heap size and set it at a value of
 
 Next, we load the packages needed to query the SQL server and filter and merge the results.
 
-```
+```r
 library(DBI)
 library(rJava)
 library(RJDBC)
@@ -137,7 +137,7 @@ library(tidyverse)
 
 Create the JDBC connection drive using the `classPath` determined above. 
 
-```
+```r
 jdbcDriver <- RJDBC::JDBC(driverClass="oracle.jdbc.OracleDriver", 
                           classPath="/Users/emilio/software/ojdbc11-full/ojdbc11.jar")
 ```
@@ -147,7 +147,7 @@ jdbcDriver <- RJDBC::JDBC(driverClass="oracle.jdbc.OracleDriver",
 
 Create connection details for MSUEDW (details are found in the `tnsnames.ora` file). Remember to replace `"USERNAME"` with your username in _**both**_ places. Also, the general connection format is included along with MSUEDW specific function.
 
-```
+```r
 # Connection format is:
 # DBI::dbConnect(jdbcDriver, 
 #                "jdbc:oracle:thin:@//database.hostname.com:port/service_name_or_sid", 
@@ -163,7 +163,7 @@ MSUEDW.jdbc <- DBI::dbConnect(jdbcDriver,
 
 Construct the SQL query to be passed to the SQL server. The query can be basic or complex. This example is very basic and selects the first 10 lines from the `siscs.c_class_tbl_v` table (view). We gave the variable a very general name (`sql.query`), but using a more specific name is advisable when making multiple data pulls. For example, a possible name for this query is `sql.ClassTable` where the `sql` indicates the variable contains an SQL query and `ClassTable` indicate the query is to pull class table data.
 
-```
+```r
 sql.query <- "select *
  from siscs.c_class_tbl_v
  where rownum <= 10"
@@ -173,7 +173,7 @@ sql.query <- "select *
 
 These two command sends the SQL query to the indicated SQL server (`dbSendQuery()`) and then fetches (aka downloads) the data (`dbFetch()`). The `query.data` variable contains the data resulting from your SQL query. Potentially better variable names include `ClassTable.results` and `ClassTable.data`, respectively. 
 
-```
+```r
 query.results <- dbSendQuery(MSUEDW.jdbc, sql.query)
 query.data <- dbFetch(query.results)
 ```
@@ -182,7 +182,7 @@ query.data <- dbFetch(query.results)
 
 Only save the data while excluding the `query.results`. It is prudent to retain the `sql.query` because it is possible that when reopening the data file, you do not have access to the original `R` script used to pull the data. This is common if you pull the data for a colleague or _vice versa_. Additionally, saving the `query.results` will cause errors when reading in the data file if the `DBI` package is not loaded. 
 
-```
+```r
 save(list=c("sql.query", "query.data"),
      file="SQL_data.RData")
 ```
@@ -192,8 +192,7 @@ save(list=c("sql.query", "query.data"),
 
 Remember to clean up when done by closing the database connection.
 
-```
-## close connection ----
+```r
 DBI::dbDisconnect(MSUEDW.jdbc)
 ```
 
