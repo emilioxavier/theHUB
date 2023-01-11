@@ -1,6 +1,6 @@
 ---
 title: "EDW: R-SQL Setup"
-date: "Updated 09/Jan/2023"
+date: "Updated 11/Jan/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{EDW: R-SQL Setup}
@@ -8,7 +8,11 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+**_FERPA Disclaimer Statement_**
 
+> **IMPORTANT NOTE**: You are solely responsible for the maintenance of the confidentiality of this information as established in the Family Educational Rights and Privacy Act (FERPA) and Michigan State University Guidelines Governing Privacy and Release of Student Records.
+
+***
 
 ## Accessing MSUEDW Data using `R`
 
