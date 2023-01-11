@@ -66,7 +66,7 @@ The following packages are needed to access the MSUEDW SQL server. They only nee
 
 Open **RStudio** and enter the following command in the **Console**.
 
-```
+```r
 install.packages("DBI", "rJava", "RJDBC", "keyring", "tidyverse")
 ```
 
