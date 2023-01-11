@@ -9,7 +9,7 @@ vignette: >
 ---
 
 
-```{r setup, echo=FALSE, include=FALSE}
+```{r setup, echo=FALSE, eval=FALSE, include=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -29,7 +29,7 @@ Using the [mpg dataset](https://ggplot2.tidyverse.org/reference/mpg.html) from [
 
 The `class` column will be used for facets.
 
-```{r constructDataFrame}
+```{r constructDataFrame, eval=FALSE, include=FALSE}
 
 library(tidyverse)
 library(theHUB)
