@@ -14,12 +14,12 @@ vignette: >
 
 ### [The History of the Data Economy](https://www.significancemagazine.com/business/714-the-history-of-the-data-economy)
 
-The History of the Data Economy is a four part series from [Significance Magazine](https://www.significancemagazine.com/business/714-the-history-of-the-data-economy) and provides a good overview of how data became an important part of today's world, how it used, and a possbile future.
+The "History of the Data Economy" is a four part series from [Significance Magazine](https://www.significancemagazine.com/business/714-the-history-of-the-data-economy) and provides a good overview of how data became an important part of today's world, how it used, and a possbile future.
 
-  - Part I: The birth of customer insight by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01504)
-  - Part II: Analytics arrives by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01547)
-  - Part III: The new kings and queens of data by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01567)
-  - Part IV: The future by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01586)
+  - "Part I: The birth of customer insight" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01504)
+  - "Part II: Analytics arrives" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01547)
+  - "Part III: The new kings and queens of data" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01567)
+  - "Part IV: The future" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01586)
 
 
 ## Books
@@ -30,7 +30,7 @@ The History of the Data Economy is a four part series from [Significance Magazin
 
 ### About Data & Modelling
 
-  - Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy” by Cathy O’Neil [Bookshop](https://bookshop.org/p/books/weapons-of-math-destruction-how-big-data-increases-inequality-and-threatens-democracy-cathy-o-neil/11438502?ean=9780553418835) |  [Amazon](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418831/ref=sr_1_1?crid=2747LPMETBAPD) | [Apple Books](https://books.apple.com/us/book/weapons-of-math-destruction-how-big-data-increases/id1605146240)
-  - Big Data: Does Size Matter? by Timandra Harkness [Bookshop]() | [Amazon]() | [Apple Books]()
+  - _Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy_ by Cathy O’Neil [Bookshop](https://bookshop.org/p/books/weapons-of-math-destruction-how-big-data-increases-inequality-and-threatens-democracy-cathy-o-neil/11438502?ean=9780553418835) |  [Amazon](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418831/ref=sr_1_1?crid=2747LPMETBAPD) | [Apple Books](https://books.apple.com/us/book/weapons-of-math-destruction-how-big-data-increases/id1605146240)
+  - _Big Data: Does Size Matter?_ by Timandra Harkness [Bookshop]() | [Amazon]() | [Apple Books]()
 
 
