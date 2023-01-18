@@ -1,6 +1,6 @@
 ---
 title: "PAG: Group Meetings"
-date: "Updated 06/Oct/2022"
+date: "Updated 18/Jan/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Group Meetings}
@@ -34,9 +34,28 @@ Group Meeting are on Tuesdays and Thursdays and we start at 3p and end between 4
 | 4th               | General | Social   |
 
   - The **Tuesday "General" meetings** are a catch-all for coding demonstrations, help solving research and coding conundrums, guest speakers, and administrative and management discussions. 
-  - The **Thursday meetings** are an opportunity for each group member (see schedule below) to present an aspect of their project. The fourth Thursday of each month allows the group to meet in-person for beverages and snacks if they can easily make it to -- or near -- campus. We also have the option to cancel the fourth Thursday meeting and make this decision during the fourth Tuesday meeting.
+  - The **Thursday meetings** are an opportunity for each group member (see schedule below) to present an aspect of their project.
+  - We meet in person for book club discussion and these meetings take the place of a predetermined Thursday meeting. More information to come.
+  
+  <!-- The fourth Thursday of each month allows the group to meet in-person for beverages and snacks if they can easily make it to -- or near -- campus. We also have the option to cancel the fourth Thursday meeting and make this decision during the fourth Tuesday meeting. -->
 
 ## Group Meeting Topics
+
+### Spring/2023 Meetings
+
+  - 12/Jan/2023 (Thursday): Welcome back! Introduction to Asana.
+  - 17/Jan/2023 (Tuesday):  Paper work, plans for the coming semester, and official start of the book club (see below).
+  - 19/Jan/2023 (Thursday): Reading day
+  - 24/Jan/2023 (Tuesday):  Introduction to the HPCC (Thank you Seth!)
+  - 26/Jan/2023 (Thursday): (Re)Introduction to GitHub and [theHUB](https://theHopefulBox.com). The basics of writing R functions: 1. Make it work, 2. Make it clear, 3. Make it fast-ish. 
+  - 31/Jan/2023 (Tuesday):  Cleaning up last year's code and making it reproducible.
+  - 02/Feb/2023 (Thursday): First book club meeting! Meet at [Blue Owl Coffee in East Lansing](https://www.blueowlcoffee.net), [Google Map](https://goo.gl/maps/CVkykGhSUkkofDXs5).
+
+#### Book Club
+
+We are reading _Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy_ by Cathy O’Neil ([Bookshop](https://bookshop.org/p/books/weapons-of-math-destruction-how-big-data-increases-inequality-and-threatens-democracy-cathy-o-neil/11438502?ean=9780553418835) |  [Amazon](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418831/ref=sr_1_1?crid=2747LPMETBAPD) | [Apple Books](https://books.apple.com/us/book/weapons-of-math-destruction-how-big-data-increases/id1605146240)) to better understand how the data, analysis, and models we create impacts others.
+
+### Fall/2022 Meetings
 
   - 04/Oct/2022: How to compare Census Tract counts to Lat-Lon counts; Introduction to GitHub
   - 06/Oct/2022: Cleaning SLATE data (Emilio)
