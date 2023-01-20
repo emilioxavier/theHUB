@@ -47,7 +47,7 @@ navbar:
      - text: Downloading Shape Files
        href: articles/GeoCoding_DownloadShapeFiles.html
      - text: MSUEDW
-     - text: Setup dBeaver for MSUEDW
+     - text: dBeaver Setup
        href: articles/EDW_dBeaverSetup.html
      - text: R-SQL Setup
        href: articles/EDW_R-SQLsetup.html
