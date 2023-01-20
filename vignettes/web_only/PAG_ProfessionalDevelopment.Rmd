@@ -1,6 +1,6 @@
 ---
 title: "PAG: Professional Development"
-date: "Updated 18/Jan/2023"
+date: "Updated 20/Jan/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Professional Development}
@@ -8,29 +8,83 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+> I used to joke that my friend Jeff would attend every professional development course offered even if he took it last month. Today, you could say the same thing about me. Continuously learning about yourself and your field allows you to grow in new and different ways and ensures that you are always in the know. Thank you, Jeff.
+
+We see professional development as the combination of an individual's growth and learning new aspects of our field. While we attempt to balance these two areas, we know that an individual's professional development is unique and based on their immediate and long term goals. 
+
+The following are a collection of articles and books that we have read and helped inform our view of our work. They are organized based on the areas of **Professional Development**, **About Data & Modelling**, and **Writing Code**. 
 
 
-## Articles
+## Professional Development (aka one's self)
 
-### [The History of the Data Economy](https://www.significancemagazine.com/business/714-the-history-of-the-data-economy)
+  <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
+  
+  - _Joy, Inc.: How We Built a Workplace People Love_ by Richard Sheridan 
+  [Bookshop](https://bookshop.org/p/books/joy-inc-how-we-built-a-workplace-people-love-richard-sheridan/7677689?ean=9781591847120) | 
+  [Amazon](https://www.amazon.com/Joy-Inc-Built-Workplace-People/dp/1591847125) | 
+  [Apple Books](https://books.apple.com/us/book/joy-inc/id666415806)
+  - _Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days_ by Jake Knapp with John Zeratsky & Braden Kowitz
+  [Bookshop](https://bookshop.org/p/books/sprint-how-to-solve-big-problems-and-test-new-ideas-in-just-five-days-jake-knapp/6762101?ean=9781501121746) | 
+  [Amazon](https://www.amazon.com/Sprint-Solve-Problems-Test-Ideas/dp/150112174X) | 
+  [Apple Books](https://books.apple.com/us/book/sprint/id1013998819)
+  - _Make Time: How to Focus on What Matters Every Day_ by Jake Knapp & John Zeratsky
+  [Bookshop](https://bookshop.org/p/books/make-time-how-to-focus-on-what-matters-every-day-jake-knapp/12094196?ean=9780525572428) | 
+  [Amazon](https://www.amazon.com/Make-Time-Focus-Matters-Every/dp/0525572422) | 
+  [Apple Books](https://books.apple.com/us/book/make-time-how-to-focus-on-what-matters-every-day/id1598168334)
+  
+  <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
 
-The "History of the Data Economy" is a four part series from [Significance Magazine](https://www.significancemagazine.com/business/714-the-history-of-the-data-economy) and provides a good overview of how data became an important part of today's world, how it used, and a possbile future.
+## About Data & Modelling
 
-  - "Part I: The birth of customer insight" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01504)
-  - "Part II: Analytics arrives" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01547)
-  - "Part III: The new kings and queens of data" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01567)
-  - "Part IV: The future" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01586)
+  <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
+  
+  - [The History of the Data Economy](https://www.significancemagazine.com/business/714-the-history-of-the-data-economy): The "History of the Data Economy" is a four part series from [Significance Magazine](https://www.significancemagazine.com/business/714-the-history-of-the-data-economy) and [Impact]() and provides a good overview of how data became an important part of today's world, how it used, and possible future implementations.
+    - "Part I: The birth of customer insight" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01504)
+    - "Part II: Analytics arrives" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01547)
+    - "Part III: The new kings and queens of data" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01567)
+    - "Part IV: The future" by Timandra Harkness [DOI](https://doi.org/10.1111/1740-9713.01586)
+  - _Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy_ by Cathy O’Neil
+  [Bookshop](https://bookshop.org/p/books/weapons-of-math-destruction-how-big-data-increases-inequality-and-threatens-democracy-cathy-o-neil/11438502?ean=9780553418835) | 
+  [Amazon](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418831) | 
+  [Apple Books](https://books.apple.com/us/book/weapons-of-math-destruction-how-big-data-increases/id1605146240)
+  - _Invisible Women: Data Bias in a World Designed for Men_ by Caroline Criado Perez
+  [Bookshop](https://bookshop.org/p/books/invisible-women-data-bias-in-a-world-designed-for-men-caroline-criado-perez/15136602?ean=9781419735219) | 
+  [Amazon](https://www.amazon.com/Invisible-Women-Data-World-Designed/dp/1419735217) | 
+  [Apple Books](https://books.apple.com/us/book/invisible-women/id1450370544)
+  - _Big Data: Does Size Matter?_ by Timandra Harkness (ebook only)
+  [Bloomsbury](https://www.bloomsbury.com/us/big-data-9781472920065/) | 
+  [Amazon](https://www.amazon.com/Big-Data-Matter-Bloomsbury-Sigma-ebook/dp/B01AS2XZ2Y) | 
+  [Apple Books](https://books.apple.com/us/book/big-data/id1487479079)
+  - _The Address Book_ by Deirdre Mask 
+  [Bookshop](https://bookshop.org/p/books/the-address-book-what-street-addresses-reveal-about-identity-race-wealth-and-power-deirdre-mask/14632668?ean=9781250134790) | 
+  [Amazon](https://www.amazon.com/Address-Book-Street-Addresses-Identity/dp/125013479X) | 
+  [Apple Books](https://books.apple.com/us/book/the-address-book/id1468904681)
+  - _Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us about Who We Really Are_ by Seth Stephens-Davidowitz 
+  [Bookshop](https://bookshop.org/p/books/everybody-lies-big-data-new-data-and-what-the-internet-can-tell-us-about-who-we-really-are-seth-stephens-davidowitz/6435920?ean=9780062390868) | 
+  [Amazon](https://www.amazon.com/Everybody-Lies-Internet-About-Really/dp/0062390864) | 
+  [Apple Books](https://books.apple.com/us/book/everybody-lies/id1073526949)
+  
+  <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
 
 
-## Books
+## Writing Code
 
-
-### Professional Development (aka one's self)
-
-
-### About Data & Modelling
-
-  - _Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy_ by Cathy O’Neil [Bookshop](https://bookshop.org/p/books/weapons-of-math-destruction-how-big-data-increases-inequality-and-threatens-democracy-cathy-o-neil/11438502?ean=9780553418835) |  [Amazon](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418831/ref=sr_1_1?crid=2747LPMETBAPD) | [Apple Books](https://books.apple.com/us/book/weapons-of-math-destruction-how-big-data-increases/id1605146240)
-  - _Big Data: Does Size Matter?_ by Timandra Harkness [Bookshop]() | [Amazon]() | [Apple Books]()
-
+  <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
+  
+  - _The Missing README: A Guide for the New Software Engineer_ by Chris Riccomini and Dmitriy Ryaboy 
+  **buy this book from** [no starch press](https://nostarch.com/missing-readme) **where you get the option to buy the ebook (PDF, Mobi, and ePub) OR the print book with the FREE ebook!** | 
+  [Bookshop](https://bookshop.org/p/books/the-missing-readme-a-guide-for-the-new-software-engineer-dmitriy-ryaboy/16628153?ean=9781718501836) | 
+  [Amazon](https://www.amazon.com/Missing-README-Guide-Software-Engineer/dp/1718501838) | 
+  [Apple Books](https://books.apple.com/us/book/the-missing-readme/id1555615457)
+  - _Kill It with Fire: Manage Aging Computer Systems (and Future Proof Modern Ones)_ by Marianne Bellotti 
+  **buy this book from** [no starch press](https://nostarch.com/kill-it-fire) **where you get the option to buy the ebook (PDF, Mobi, and ePub) OR the print book with the FREE ebook!** | 
+  [Bookshop](https://bookshop.org/p/books/kill-it-with-fire-manage-aging-computer-systems-and-future-proof-modern-ones-marianne-bellotti/14958406?ean=9781718501188) | 
+  [Amazon](https://www.amazon.com/Kill-Fire-Manage-Computer-Systems/dp/1718501188) | 
+  [Apple Books](https://books.apple.com/us/book/kill-it-with-fire/id1523220539)
+  - _97 Things Every Programmer Should Know: Collective Wisdom from the Experts_ edited by Kevlin Henne 
+  [O'Reilly](https://www.oreilly.com/library/view/97-things-every/9780596809515/)
+  [Bookshop](https://bookshop.org/p/books/97-things-every-programmer-should-know-collective-wisdom-from-the-experts-kevlin-henney/8169456?ean=9780596809485) | 
+  [Amazon](https://www.amazon.com/Things-Every-Programmer-Should-Know-ebook/dp/B0039OVIAK) 
+  
+  <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
 
