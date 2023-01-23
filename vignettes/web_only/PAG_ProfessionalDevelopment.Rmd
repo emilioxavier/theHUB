@@ -12,10 +12,10 @@ vignette: >
 
 We see professional development as the combination of an individual's growth and learning new aspects of our field. While we attempt to balance these two areas, we know that an individual's professional development is unique and based on their immediate and long term goals. 
 
-The following are a collection of articles and books that we have read and helped inform our view of our work. They are organized based on the areas of **Professional Development**, **About Data & Modelling**, and **Writing Code**. 
+The following are a collection of articles and books that we have read and helped inform our view of our work. They are organized based on the areas of [**Professional Development**](#ProfDev), [**About Data & Modelling**](#DataModelling), and [**Writing Code**](#WritingCode). 
 
 
-## Professional Development (aka one's self)
+## Professional Development (aka one's self) {#ProfDev}
 
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
   
@@ -34,7 +34,8 @@ The following are a collection of articles and books that we have read and helpe
   
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
 
-## About Data & Modelling
+
+## About Data & Modelling {#DataModelling}
 
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
   
@@ -67,7 +68,7 @@ The following are a collection of articles and books that we have read and helpe
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
 
 
-## Writing Code
+## Writing Code {#WritingCode}
 
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
   
