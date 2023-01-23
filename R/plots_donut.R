@@ -4,19 +4,35 @@
 #'
 #' @param data `tibble` (or `data.frame`) with the column of interest. _**NOTE**_:
 #'   Do **NOT** use counted data.
-#' @param col.oi string with column of interest. Only provide **ONE** column name.
+#' @param category string with column of interest containing the categories to
+#'   comprise the donut (_aka_ ring). Only provide **ONE** column name.
 #' @param facetBy string indicating the column to group data by; for when you
 #'   want to **facet** your donut plots via [ggplot2::facet_wrap()]; see
 #'    [make.donut.plot()].
+#' @param layer.order string indicating the order of the layers. There are four
+#'   options:
+#'
+#'   * `ascend` where the inner ring (donut) has the smallest value and the outer
+#'   donut has the greatest value
+#'   * `descend` where the inner donut as the largest value and the outer ring
+#'   has the smallest value
+#'   * `alphabetical` where the rings are ordered alphabetically starting from
+#'   the inner ring
+#'   * `user defined` where the user provides the order of the donuts starting
+#'   from inner ring. Only layers included in the vector (_e.g._, `c("4", "r", "f")`)
+#'   are included in the resulting data.
+#'
+#'   For `alphabetical`, `ascend`, and `descend` only the first _**two**_ characters
+#'   are needed.
 #' @param category.order string indicating if you want the data to be ordered by
 #'   `"count"` in _**decreasing**_ order or by `"category"` in alphabetical order;
 #'   default: `"count"`.
 #' @param levels.rev logical indicating if the order of the categories should be
 #'   reversed.
-#' @param col.count string with the column containing "counts" for each "category."
-#'   This parameter is _**required**_ when the count (or total) for each row was
-#'   pre-calculated and allows for the creation of donut data when raw data is
-#'   not available and one only has the summarised values.
+#  @param category.count string with the column containing "counts" for each "category."
+#    This parameter is _**required**_ when the count (or total) for each row was
+#    pre-calculated and allows for the creation of donut data when raw data is
+#    not available and one only has the summarised values.
 #' @param r.inner numeric value defining the inner radius of the donut; default: `4`
 #' @param r.outer numeric value defining the outer radius of the donut; default: `6`
 #'
@@ -25,7 +41,7 @@
 #'
 #' @examples
 #' \dontrun{
-#'   donut.DATA <- make.donut.data(data, col.oi, facetBy=NULL,
+#'   donut.DATA <- make.donut.data(data, category, facetBy=NULL,
 #'                                 category.order="count", levels.rev=FALSE,
 #'                                 r.inner=4, r.outer=6)
 #' }
@@ -34,75 +50,85 @@
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.donut.data <- function(data,
-                            col.oi,
+                            category,
                             facetBy=NULL,
                             layerBy=NULL,
+                            layer.order="descend",
                             category.order="count",
                             levels.rev=FALSE,
-                            col.count=NULL,
+                            category.count=NULL,
                             r.inner=4,
                             r.outer=6) {
 
-  ## stat versus identity ----
-  orig.nRows <- nrow(data)
-  orig.nCats <- data[[col.oi]] |> unique() |> length()
+  ## sanity check ----
+  layer.order.orig <- layer.order
+  ##_ if layer.order is set... ----
+  if ( !is.null(layerBy) & (length(layer.order) == 1) ) {
+    warning.message <- paste0("The provided layer.order of ", layer.order.orig, " was not `alphabetical`, `ascend`, or `descend` and was set to `descend`.")
+    if ( nchar(layer.order) < 2 ) { layer.order <- "descend" }
+    warning(warning.message,
+            immediate.=TRUE)
+  }
 
   ## extract needed data and rename ----
-  donut.RAW <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{layerBy}}) |>
-    dplyr::rename("Categories"={{col.oi}},
+  donut.RAW <- dplyr::select(data, {{category}}, {{facetBy}}, {{layerBy}}) |>
+    dplyr::rename("Categories"={{category}},
                   "FacetBy"={{facetBy}},
                   "LayerBy"={{layerBy}})
 
+  ## number of facets ----
+  if ( !is.null(facetBy) ) {
+    n.facets <- unique(donut.RAW$FacetBy) |> length()
+  }
+
+  ## number of layers ----
+  if ( !is.null(layerBy) ) {
+    n.layers <- unique(donut.RAW$LayerBy) |> length()
+    ##_ layer summary ----
+    if ( n.layers > 1 ) {
+      layer.summary <- dplyr::group_by(donut.RAW, LayerBy) |>
+        dplyr::summarise(n=n())
+      ##_ layer order ----
+      layer.order.n <- length(layer.order)
+      ##__ if only one layer is provided ----
+      if ( layer.order.n == 1 ) {
+        layer.order.mod <- substr(x=layer.order, start=1, stop=2)
+        ##___ two characters provided ----
+        if ( layer.order.mod == "as" ) { layer.order.type <- "ascend" }
+        if ( layer.order.mod == "de" ) { layer.order.type <- "descend" }
+        if ( layer.order.mod == "al" ) { layer.order.type <- "alphabetical" }
+      }
+      ##__ if multiple layers are provided ----
+      if ( layer.order.n > 1 ) { layer.order.type <- "user" }
+      ##__ re-order the layer.summary tibble ----
+      if (layer.order.type == "ascend") { layer.summary <- arrange(layer.summary, n) }
+      if (layer.order.type == "descend") { layer.summary <- arrange(layer.summary, desc(n)) }
+      if (layer.order.type == "alphabetical") { layer.summary <- arrange(layer.summary, LayerBy) }
+      if (layer.order.type == "user") {
+        layer.order.tb <- tibble::tibble(LayerBy=layer.order)
+        layer.summary <- left_join(x=layer.order.tb, y=layer.summary, by="LayerBy")
+      }
+      ##_ layer widths ----
+      layer.width <- (r.outer - r.inner)/n.layers
+      layer.breaks <- seq(from=r.inner, to=r.outer, by=layer.width)
+      layer.inner <- layer.breaks[-c(n.layers+1)]
+      layer.outer <- layer.breaks[-1]
+      layer.summary <- tibble::add_column(layer.summary,
+                                          xmin=layer.inner,
+                                          xmax=layer.outer)
+    }
+  }
+
   ## check for each type of column ----
   colNames.RAW <- colnames(donut.RAW)
-  Categories.TF <- "Categories" %in% colNames.RAW
-  FacetBy.TF <- "FacetBy" %in% colNames.RAW
-  LayerBy.TF <- "LayerBy" %in% colNames.RAW
 
+  ## determine columns of interest ----
   colNames.oi <- c(colNames.RAW[c("Categories", "FacetBy", "LayerBy") %in% colNames.RAW])
 
-  dplyr::select(donut.RAW, colNames.oi)
-  group_by(donut.RAW, Categories, FacetBy) |>
-    tally()
-
-
-  dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
-    dplyr::summarise(Count=n())
-
-
-
-  if (orig.nRows != orig.nCats) {
-
-    donut.COUNTS
-
-    dplyr::tally(donut.RAW[[colNames.oi]])
-
-
-    donut.RAW <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{layerBy}}) |>
-      dplyr::rename("Categories"={{col.oi}},
-                    "FacetBy"={{facetBy}},
-                    "LayerBy"={{layerBy}}) |>
-      dplyr::group_by(Categories) |>
-      dplyr::summarise(Counts=n())
-      dplyr::ungroup()
-
-  }
-
-  ## add the counts ----
-  ##_ counts already calculated ----
-  if ( !is.null(col.count) ) {
-    donut.COUNTS <- dplyr::select(data, {{col.oi}}, {{col.count}}) |>
-      dplyr::rename("Categories"={{col.oi}},
-                    "Counts"={{col.count}}) |>
-      dplyr::ungroup()
-  }
-  ##_ calculate the counts ----
-  if ( ( orig.nRows != orig.nCats ) & ( is.null(col.count) ) ) {
-    donut.COUNTS <- dplyr::group_by(data, Categories) |>
-      dplyr::summarise(Counts=n()) |>
-      dplyr::ungroup()
-  }
-
+  ## calculate the counts for each category, facet, and layer ----
+  donut.COUNTS <- dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
+    dplyr::tally(name="Counts") |>
+    dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
 
   ## how to order the data ----
   category.order <- tolower(category.order)
@@ -110,95 +136,19 @@ make.donut.data <- function(data,
     category.order <- "count"
   }
 
-  ## select the needed columns ----
-  donut.DATA <- data
-  if ( !is.null(col.oi) ) {
-    donut.DATA <- dplyr::rename(donut.DATA, "Categories"={{col.oi}})
-  }
-
-  if ( !is.null(facetBy) ) {
-    donut.DATA <- dplyr::rename(donut.DATA, "FacetBy"={{facetBy}})
-  }
-
-  if ( !is.null(layerBy) ) {
-    donut.DATA <- dplyr::rename(donut.DATA, "LayerBy"={{layerBy}})
-  }
-
-  if ( !is.null(col.count) ) {
-    donut.DATA <- dplyr::rename(donut.DATA, "Counts"={{col.count}})
-  }
-
-  # if ( is.null(facetBy) & is.null(layerBy)) {
-  #   donut.DATA <- dplyr::select(data, {{col.oi}}) |>
-  #     dplyr::rename("Categories"={{col.oi}}) |>
-  #     tibble::add_column("FacetBy"=NA,
-  #                        "LayerBy"=NA) |>
-  #     dplyr::ungroup()
-  # }
-  # if ( !is.null(facetBy) ) {
-  #   donut.DATA <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{col.count}}) |>
-  #     dplyr::rename("Categories"={{col.oi}},
-  #                   "FacetBy"={{facetBy}},
-  #                   "Counts"={{col.count}}) |>
-  #     dplyr::group_by(Categories, FacetBy)
-  # }
-  # if ( !is.null(facetBy) & !is.null(layerBy)) {
-  #   donut.DATA <- dplyr::select(data, {{col.oi}}, {{facetBy}}, {{layerBy}}, {{col.count}}) |>
-  #     dplyr::rename("Categories"={{col.oi}},
-  #                   "FacetBy"={{facetBy}},
-  #                   "LayerBy"={{layerBy}},
-  #                   "Counts"={{col.count}}) |>
-  #     dplyr::group_by(Categories) |>
-  #     tibble::add_column("FacetBy"=NA)
-  # }
-  # if ( !is.null(col.count) ) {
-  #   donut.DATA <- dplyr::select(data, {{col.count}}) |>
-  #     dplyr::rename("Categories"={{col.oi}},
-  #                   "FacetBy"={{facetBy}},
-  #                   "LayerBy"={{layerBy}},
-  #                   "Counts"={{col.count}}) |>
-  #     dplyr::group_by(Categories) |>
-  #     tibble::add_column("FacetBy"=NA)
-  # }
-
-  ## add the counts ----
-  # ##_ counts already calculated ----
-  # if ( !is.null(col.count) ) {
-  #   donut.COUNTS <- dplyr::select(data, {{col.oi}}, {{col.count}}) |>
-  #     dplyr::rename("Categories"={{col.oi}},
-  #                   "Counts"={{col.count}}) |>
-  #     dplyr::ungroup()
-  # }
-  # ##_ calculate the counts ----
-  # if ( ( orig.nRows != orig.nCats ) & ( is.null(col.count) ) ) {
-  #   donut.COUNTS <- dplyr::group_by(data, Categories) |>
-  #     dplyr::summarise(Counts=n()) |>
-  #     dplyr::ungroup()
-  # }
-  if ( !is.null(facetBy) ) {
-    donut.DATA <- dplyr::left_join(x=donut.DATA, y=donut.COUNTS) |>
-      select(Categories, FacetBy, Counts) |>
-      distinct()
-  } else {
-    donut.DATA <- dplyr::left_join(x=donut.DATA, y=donut.COUNTS) |>
-      select(Categories, Counts) |>
-      distinct()
-  }
 
   ## arrange data by count OR category ----
-  # if ( is.null(facetBy) ) {
   if ( category.order == "count" ) {
-    donut.DATA <- dplyr::arrange(donut.DATA, desc(Counts))
+    donut.COUNTS <- dplyr::arrange(donut.COUNTS, desc(Counts))
   }
   if ( category.order == "category" ) {
-    donut.DATA <- dplyr::arrange(donut.DATA, Categories)
+    donut.COUNTS <- dplyr::arrange(donut.COUNTS, Categories)
   }
+  # if ( !is.null(facetBy) ){
+  #   donut.COUNTS <- dplyr::group_by(donut.COUNTS, FacetBy)
   # }
-  if ( !is.null(facetBy) ){
-    donut.DATA <- dplyr::group_by(donut.DATA, FacetBy)
-  }
 
-  donut.DATA <- dplyr::mutate(donut.DATA,
+  donut.DATA <- dplyr::mutate(donut.COUNTS,
                               Total=sum(Counts),
                               Ratios=Counts/Total,
                               Percents=Ratios*100,
@@ -217,6 +167,11 @@ make.donut.data <- function(data,
     donut.DATA <- dplyr::arrange(donut.DATA, FacetBy, ymin)
   }
 
+  if ( !is.null(layerBy) ) {
+    donut.DATA <- dplyr::left_join(x=dplyr::select(donut.DATA, -xmin, -xmax), y=layer.summary,
+                                   by="LayerBy")
+  }
+
   ## set the factor levels ----
   categories <- unique(donut.DATA$Categories)
   if (levels.rev == TRUE) {
@@ -227,18 +182,10 @@ make.donut.data <- function(data,
                                     levels=categories)
   }
 
-  ## remove FacetBy columns that are NA ----
-
-  ## adjust the donut rings ----
-  # if ( any(colnames(donut.DATA)=="FacetBy") ) {
-  #
-  #
-  # }
 
   ## return donut data ----
   return(donut.DATA)
 }
-
 
 
 #' @title Construct Donut Plot
@@ -258,7 +205,7 @@ make.donut.data <- function(data,
 #'
 #' @examples
 #' \dontrun{
-#'   donut.DATA <- make.donut.data(data, col.oi, facetBy=NULL,
+#'   donut.DATA <- make.donut.data(data, category, facetBy=NULL,
 #'                                 category.order="count", levels.rev=FALSE,
 #'                                 r.inner=4, r.outer=6)
 #'   donut.PLOT <- make.donut.plot(donut.DATA, colour.palette=msu.palette,
@@ -278,6 +225,8 @@ make.donut.plot <- function(donut.DATA,
 
   ## determine the xlimit maximum ----
   xlim.max <- max(donut.DATA$xmax)
+
+  colNames.oi <- colnames(donut.DATA)
 
   ## build the donut plot ----
   donut.plot <- ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
@@ -317,7 +266,7 @@ make.donut.plot <- function(donut.DATA,
   }
 
   ## option to make facets ----
-  if ( !is.null(facet.nrow) | !is.null(facet.ncol) ) {
+  if ( !is.null(facet.nrow) | !is.null(facet.ncol) & ("FacetBy" %in% colNames.oi) ) {
     donut.plot <- donut.plot + facet_wrap(facets=vars(.data$FacetBy),
                                           nrow=facet.nrow,
                                           ncol=facet.ncol)
