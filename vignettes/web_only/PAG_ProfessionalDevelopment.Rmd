@@ -1,6 +1,6 @@
 ---
 title: "PAG: Professional Development"
-date: "Updated 20/Jan/2023"
+date: "Updated 27/Jan/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Professional Development}
@@ -12,10 +12,21 @@ vignette: >
 
 We see professional development as the combination of an individual's growth and learning new aspects of our field. While we attempt to balance these two areas, we know that an individual's professional development is unique and based on their immediate and long term goals. 
 
+## Mentoring
+
+Often, people view mentoring as something that stops after graduate school or their Postdoc(s) or is only required of new employees or students. Depending on their experience with their mentor(s), the concept of a mentor can range from really good to really bad. 
+
+Within PAG, we believe mentoring is a life long endeavour and is the learning of new ideas and methods, counselling and consultation on how to navigate various aspects of their careers, and to gain a different perspective on shared experiences between those in the relationship. To be explicit, _**we expect that the mentor and mentee monicker will transition between those in the mentorship relationship**_. 
+
+The mentorship relationship is a safe place for both parties to ask questions, voice concerns, and be open and honest. Working from the perspective of "If I tell you the truth while being kind, can we be still be friends?" to help foster a compassionate, supportive, and trusting relationship. All mentorship meetings will take place outside of either individual's office.
+
+To help understand how we work and process experiences as an individual and how you best recieve constructive criticisms, we strongly encourage you to complete the "How I like to be Mentored" activity (available on [Google Docs](https://docs.google.com/document/d/1c4TzA8BWM9aRkDHFImyc8k9MbcgktBl0odh-wIpUXS0/edit?usp=sharing)) for you to download (preferably as a Word document) and complete. To start the mentorship relationship it is ideal if these documents are shared and discussed.
+
+## Resources
+
 The following are a collection of articles and books that we have read and helped inform our view of our work. They are organized based on the areas of [**Professional Development**](#ProfDev), [**About Data & Modelling**](#DataModelling), and [**Writing Code**](#WritingCode). 
 
-
-## Professional Development (aka one's self) {#ProfDev}
+### Professional Development (aka one's self) {#ProfDev}
 
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
   
@@ -35,7 +46,7 @@ The following are a collection of articles and books that we have read and helpe
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
 
 
-## About Data & Modelling {#DataModelling}
+### About Data & Modelling {#DataModelling}
 
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
   
@@ -68,22 +79,38 @@ The following are a collection of articles and books that we have read and helpe
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
 
 
-## Writing Code {#WritingCode}
+### Writing Code {#WritingCode}
 
   <!-- - __ by xxx [Bookshop]() | [Amazon]() | [Apple Books]() -->
   
+#### Learning to Code
+  
+  - _A First Course in Statistical Programming with R 3rd Edition_ by W. John Braun & Duncan J. Murdoch 
+  [Bookshop](https://bookshop.org/p/books/a-first-course-in-statistical-programming-with-r-w-john-braun/6553244?ean=9781108995146) | 
+  [Amazon](https://www.amazon.com/First-Course-Statistical-Programming/dp/1108995144/) | 
+  [Apple Books 1^st^ Edition](https://books.apple.com/us/book/a-first-course-in-statistical-programming-with-r/id882730444) | 
+  [Apple Books 2^nd^ Edition](https://books.apple.com/us/book/a-first-course-in-statistical-programming-with-r/id1135205860) 
+  - _Learn to Program 3rd Edition_ by Chris Pine 
+  [Bookshop](https://bookshop.org/p/books/learn-to-program-chris-pine/16164972?ean=9781680508178) | 
+  [Amazon](https://www.amazon.com/Learn-Program-Chris-Pine/dp/1680508172/) | 
+  [Apple Books](https://books.apple.com/us/book/learn-to-program/id1590005813)
+  The book uses Ruby to teach the basics of coding. If you want an additional challenge, translating it to the coding language of interest is possible.
+
+  
+#### Coding Philosophy
+  
   - _The Missing README: A Guide for the New Software Engineer_ by Chris Riccomini and Dmitriy Ryaboy 
-  **buy this book from** [no starch press](https://nostarch.com/missing-readme) **where you get the option to buy the ebook (PDF, Mobi, and ePub) OR the print book with the FREE ebook!** | 
+  **buy this book from** [no starch press](https://nostarch.com/missing-readme) **where you have the option to buy the ebook (PDF, Mobi, and ePub) OR the print book with the FREE ebook!** | 
   [Bookshop](https://bookshop.org/p/books/the-missing-readme-a-guide-for-the-new-software-engineer-dmitriy-ryaboy/16628153?ean=9781718501836) | 
   [Amazon](https://www.amazon.com/Missing-README-Guide-Software-Engineer/dp/1718501838) | 
   [Apple Books](https://books.apple.com/us/book/the-missing-readme/id1555615457)
   - _Kill It with Fire: Manage Aging Computer Systems (and Future Proof Modern Ones)_ by Marianne Bellotti 
-  **buy this book from** [no starch press](https://nostarch.com/kill-it-fire) **where you get the option to buy the ebook (PDF, Mobi, and ePub) OR the print book with the FREE ebook!** | 
+  **buy this book from** [no starch press](https://nostarch.com/kill-it-fire) **where you have the option to buy the ebook (PDF, Mobi, and ePub) OR the print book with the FREE ebook!** | 
   [Bookshop](https://bookshop.org/p/books/kill-it-with-fire-manage-aging-computer-systems-and-future-proof-modern-ones-marianne-bellotti/14958406?ean=9781718501188) | 
   [Amazon](https://www.amazon.com/Kill-Fire-Manage-Computer-Systems/dp/1718501188) | 
   [Apple Books](https://books.apple.com/us/book/kill-it-with-fire/id1523220539)
   - _97 Things Every Programmer Should Know: Collective Wisdom from the Experts_ edited by Kevlin Henne 
-  [O'Reilly](https://www.oreilly.com/library/view/97-things-every/9780596809515/)
+  [O'Reilly](https://www.oreilly.com/library/view/97-things-every/9780596809515/) |
   [Bookshop](https://bookshop.org/p/books/97-things-every-programmer-should-know-collective-wisdom-from-the-experts-kevlin-henney/8169456?ean=9780596809485) | 
   [Amazon](https://www.amazon.com/Things-Every-Programmer-Should-Know-ebook/dp/B0039OVIAK) 
   
