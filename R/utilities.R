@@ -247,6 +247,107 @@ clean.DATE <- function(dates) {
 }
 
 
+
+
+.Machine$integer.max
+
+.Machine$double.digits
+
+
+ID <- "100000000"
+ID <- "000001111"
+
+IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
+
+ID.convert <- function(ID, deID.value=12345) {
+
+  ## gather information ----
+  ID.nchar <- nchar(ID)
+
+  ## convert character to numeric ----
+  ID.num <- as.numeric(ID)
+
+  ## add de-identifying value ----
+  ID.num <- ID.num + deID.value
+
+  ## convert to character ----
+  # ID.char <- as.character(ID.num)
+  ID.char <- stringr::str_pad(string=ID.num, width=ID.nchar, pad="0")
+
+  ## return to user ----
+  return(ID.char)
+}
+
+
+#' @title Create Collection of Random IDs
+#'
+#' @description Given a collection of IDs, create random IDs from a large pool
+#'   of potential IDs. The
+#'
+#' @param ID string with ID or collection of IDs
+#'
+#' @return string vector
+#' @export
+#'
+#' @examples
+#' IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
+#'
+#' set.seed(13)
+#' ID.random(ID=IDs)
+#' [1] "66253" "68228" "23889" "44599" "35845" "41519" "26556"
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#' @author Seth Walker \email{walker893@@msu.edu}
+#'   ([https://github.com/walker893](https://github.com/walker893))
+#'
+ID.random <- function(ID, ID.type="mixed") {
+
+  ## number of IDs ----
+  n.IDs <- length(ID)
+
+  ## create pool of potential random IDs ----
+  maxSample.n <- n.IDs * 1000
+  maxSample.log10 <- log10(maxSample.n)
+  maxInteger <- .Machine$integer.max
+  maxInteger.log10 <- log10(maxInteger)
+  max.diff <- floor(maxInteger.log10 - maxSample.log10)
+
+  if ( max.diff > 4 ) {
+    maxSample.n <- n.IDs * 1000
+  } else {
+    maxSample.n <- n.IDs * 10^max.diff
+  }
+  maxSample.nchar <- max(maxSample.n) |>
+    nchar()
+
+  if ( ID.type == "letters") { random.options <- c(letters, LETTERS) }
+  if ( ID.type == "mixed") { random.options <- c(letters, LETTERS, 0:9) }
+
+  ## create ID pool of mixed values ----
+  if ( ID.type == "mixed") {
+    random.IDs.vector <- rep_len(x=NA, length.out=maxSample.n)
+    for ( curr.ID in 1:maxSample.n) {
+      random.IDs.vector[curr.ID] <- sample(x=random.options, size=20, replace=TRUE) |> paste0(collapse="")
+    }
+    dup.TF <- duplicated(random.IDs.vector)
+    if ( any(dup.TF) ) {
+      random.IDs.vector <- random.IDs.vector[!dup.TF]
+    }
+  }
+
+
+
+
+  ## select random IDs ----
+  random.IDs <- sample(x=1:maxSample.n, size=n.IDs, replace=FALSE) |>
+    stringr::str_pad(width=maxSample.nchar, pad="0")
+
+  ## return to user ----
+  return(random.IDs)
+}
+
+
 #' @title Convert Yes-No indicators to TRUE-FALSE
 #'
 #' @description Often True-False data is returned as a vector of Ys and Ns or 1s
