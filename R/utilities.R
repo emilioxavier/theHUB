@@ -249,16 +249,34 @@ clean.DATE <- function(dates) {
 
 
 
-.Machine$integer.max
-
-.Machine$double.digits
-
-
-ID <- "100000000"
-ID <- "000001111"
-
-IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
-
+#' @title Convert Collection of Numerical IDs
+#'
+#' @description Given a collection of numerical IDs, systematically change their
+#'   values by a user defined value. _**This method is inferior to the
+#'   [theHUB::ID.random()] method. No judgement.**_
+#'
+#' @param ID string with ID or collection of IDs
+#' @param deID.value numeric value, preferably an integer, to add to the
+#'   numeric ID; default: `12345`. Values are converted from string to numeric
+#'   (real) back to string to avoid the `.Machine$integer.max` (`2,147,483,647`)
+#'   problem.
+#'
+#' @importFrom stringr str_pad
+#' @return string vector
+#' @export
+#'
+#' @examples
+#' IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
+#' ID.convert(ID=IDs, deID.value=12345)
+#' [1] "1234512345" "24690"      NA           "24690"      "13579.56"   NA           "00023456"
+#' Warning message:
+#' In ID.convert(ID = IDs, deID.value = 12345) : NAs introduced by coercion
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#' @author Seth Walker \email{walker893@@msu.edu}
+#'   ([https://github.com/walker893](https://github.com/walker893))
+#'
 ID.convert <- function(ID, deID.value=12345) {
 
   ## gather information ----
@@ -268,7 +286,7 @@ ID.convert <- function(ID, deID.value=12345) {
   ID.num <- as.numeric(ID)
 
   ## add de-identifying value ----
-  ID.num <- ID.num + deID.value
+  ID.num <- (ID.num + deID.value)
 
   ## convert to character ----
   # ID.char <- as.character(ID.num)
@@ -282,10 +300,21 @@ ID.convert <- function(ID, deID.value=12345) {
 #' @title Create Collection of Random IDs
 #'
 #' @description Given a collection of IDs, create random IDs from a large pool
-#'   of potential IDs. The
+#'   of potential IDs. The function can create random IDs comprised of number,
+#'   letters, or both letters-and-numbers referred to as mixed for short.
+#'
+#'   Random IDs comprised of numbers include leading zeros (_e.g._, `0013`).
+#'
+#'   Random IDs comprised of letters and letters-and-numbers (aka mixed) are
+#'   20 characters long and contain a mixture of upper and lower case letters.
 #'
 #' @param ID string with ID or collection of IDs
+#' @param ID.type string indicating the type of random IDs to generate; default:
+#'   `mixed`. Three options are available. 1. `numbers`, 2. `letters`, and 3.
+#'   `mixed` (aka, letters-and-numbers). In all instances, random IDs with letters
+#'   contain a mixture of upper and lower case letters.
 #'
+#' @importFrom stringr str_pad
 #' @return string vector
 #' @export
 #'
@@ -293,8 +322,18 @@ ID.convert <- function(ID, deID.value=12345) {
 #' IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
 #'
 #' set.seed(13)
-#' ID.random(ID=IDs)
-#' [1] "66253" "68228" "23889" "44599" "35845" "41519" "26556"
+#' ID.random(ID=IDs, ID.type="numbers")
+#' [1] "4870" "5706" "0717" "0944" "5989" "5592" "0960"
+#'
+#' ID.random(ID=IDs, ID.type="letters")
+#' [1] "XWEvKQIsaCtOebfTOQLT" "uGUyOZBtcXwgRNbiBChq" "TTmJCbNheHsUQsDnTQni"
+#' "oRunjWsEvOlsaHFwqVUk" "eBnpYgroTrWIygAeYoBw" "HlUVBpkyMDGOowcXaMhX"
+#' "UIdWmaXZXTqjMzJRczxs"
+#'
+#' ID.random(ID=IDs, ID.type="mixed")
+#' [1] "HL0WXSdG8sf5jFIJXbuz" "fUGVPSvRYS7l5LvsEjmH" "t3GCKf3JkZDgb2kuq6Be"
+#' "NXC9vLfKTV7tqwS3ss7F" "AywRolRrH4Myl5zvXCjA" "H0DLeZ7AGQp8RGDhLSoV"
+#' "vVTaHCI0rxVlJ3AU9wrK"
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -325,23 +364,25 @@ ID.random <- function(ID, ID.type="mixed") {
   if ( ID.type == "mixed") { random.options <- c(letters, LETTERS, 0:9) }
 
   ## create ID pool of mixed values ----
-  if ( ID.type == "mixed") {
-    random.IDs.vector <- rep_len(x=NA, length.out=maxSample.n)
+  if ( (ID.type == "mixed") || (ID.type == "letters") ) {
+    random.IDs.pool <- rep_len(x=NA, length.out=maxSample.n)
     for ( curr.ID in 1:maxSample.n) {
-      random.IDs.vector[curr.ID] <- sample(x=random.options, size=20, replace=TRUE) |> paste0(collapse="")
+      random.IDs.pool[curr.ID] <- sample(x=random.options, size=20, replace=TRUE) |> paste0(collapse="")
     }
     dup.TF <- duplicated(random.IDs.vector)
     if ( any(dup.TF) ) {
-      random.IDs.vector <- random.IDs.vector[!dup.TF]
+      random.IDs.pool <- random.IDs.vector[!dup.TF]
     }
   }
 
-
-
+  ## create ID pool of numbers ----
+  if ( (ID.type == "numbers") ) {
+    random.IDs.pool <- sample(x=1:maxSample.n, size=n.IDs, replace=FALSE) |>
+      stringr::str_pad(width=maxSample.nchar, pad="0")
+  }
 
   ## select random IDs ----
-  random.IDs <- sample(x=1:maxSample.n, size=n.IDs, replace=FALSE) |>
-    stringr::str_pad(width=maxSample.nchar, pad="0")
+  random.IDs <- sample(x=random.IDs.pool, size=n.IDs, replace=FALSE)
 
   ## return to user ----
   return(random.IDs)
