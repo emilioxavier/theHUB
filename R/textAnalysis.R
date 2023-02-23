@@ -195,7 +195,7 @@ comment.summary <- function(data, comment.col) {
 #'   3 advisor    acadSupport
 #'   4 assignment assessment
 #'
-#'   keywords.tb <- dplyr::group_by(keywords, area) %>%
+#'   keywords.tb <- dplyr::group_by(keywords, area) |>
 #'     dplyr::summarise(query=paste(keyword, collapse="|"))
 #'
 #'   keywords.tb
@@ -219,7 +219,7 @@ comment.summary <- function(data, comment.col) {
 #' @examples
 #' \dontrun{
 #' library(dplyr)
-#' keywords.tb <- group_by(keywords, area) %>%
+#' keywords.tb <- group_by(keywords, area) |>
 #'     summarise(query=paste(keyword, collapse="|"))
 #'
 #' fs20.comments <- has.keywords(data=fs20.comments,
@@ -795,13 +795,13 @@ create.search.string <- function(search.terms) {
 #
 # ## construct the keywords table ----
 # keywords <- readr::read_csv(file="./data-raw/keywords_areas.csv", trim_ws=FALSE)
-# keywords.tb <- group_by(keywords, area) %>% summarise(query=paste(keyword, collapse="|"))
+# keywords.tb <- group_by(keywords, area) |> summarise(query=paste(keyword, collapse="|"))
 #
 #
 # ## construct dataset for testing ----
-# comment.general <- select(fs20.general.data, responder.dID, Q.most.challenging.text) %>%
+# comment.general <- select(fs20.general.data, responder.dID, Q.most.challenging.text) |>
 #   rename(comment=Q.most.challenging.text)
-# comment.course <- select(fs20.course.data, responder.dID, Q.overall.text) %>%
+# comment.course <- select(fs20.course.data, responder.dID, Q.overall.text) |>
 #   rename(comment=Q.overall.text)
 # comment.data <- bind_rows(comment.general, comment.course)
 #
@@ -818,7 +818,7 @@ create.search.string <- function(search.terms) {
 # comment.data <- filter(comment.data.summary, comment.present)
 #
 # ##_ make some plots ----
-# plot.data <- select(comment.data, starts_with("n")) %>% pivot_longer(cols=c("n.words", "n.areas"), names_to="names", values_to="count")
+# plot.data <- select(comment.data, starts_with("n")) |> pivot_longer(cols=c("n.words", "n.areas"), names_to="names", values_to="count")
 #
 # areaVSwords.bin2d <- ggplot(data=comment.data, aes(x=n.words, y=factor(n.areas), fill=..count..)) +
 #   stat_bin2d(aes(fill = after_stat(count)), binwidth = c(5,1)) +
@@ -840,15 +840,15 @@ create.search.string <- function(search.terms) {
 
 # map_int(comment.data$comment.unified, .f=word.count(.))
 
-# survey.data <- select(fs20.general.data, responder.dID, Q.most.challenging.text) %>%
-#   mutate(clean.txt=tolower(convert.toASCII(Q.most.challenging.text))) %>%
+# survey.data <- select(fs20.general.data, responder.dID, Q.most.challenging.text) |>
+#   mutate(clean.txt=tolower(convert.toASCII(Q.most.challenging.text))) |>
 #   filter(!grepl(x=trimws(clean.txt), pattern="none") & !is.na(clean.txt))
 
 
 
 ## print stop words ----
-# stop_words.df <- arrange(stop_words, word) %>%
-#   distinct(word, .keep_all=TRUE) %>%
+# stop_words.df <- arrange(stop_words, word) |>
+#   distinct(word, .keep_all=TRUE) |>
 #   as.data.frame()
 # sink(file="stopwords.txt", split=TRUE)
 # stop_words.df[1:500, ]
@@ -860,13 +860,13 @@ create.search.string <- function(search.terms) {
 
 
 ## term frequency ----
-# blah.singles <- unnest_tokens(comment.data, output=word, input=comment.uniStem) %>%
-#   count(word) %>%
+# blah.singles <- unnest_tokens(comment.data, output=word, input=comment.uniStem) |>
+#   count(word) |>
 #   arrange(word)
 #
-# blah.singles.count.all.print <- filter(blah.singles, n>=5) %>%
-#   arrange(word) %>%
-#   select(word, n) %>%
+# blah.singles.count.all.print <- filter(blah.singles, n>=5) |>
+#   arrange(word) |>
+#   select(word, n) |>
 #   as.data.frame()
 #
 # sink(file="comment_1grams-uniStem_counts.txt", split=TRUE)
@@ -881,21 +881,21 @@ create.search.string <- function(search.terms) {
 #                                        token="ngrams", format="text", n=2,
 #                                        to_lower=TRUE, drop=TRUE, collapse=NULL)
 #
-# blah.2grams.united <- tidyr::separate(blah.2grams, col="gram.n2", c("word1", "word2"), sep=" ") %>%
+# blah.2grams.united <- tidyr::separate(blah.2grams, col="gram.n2", c("word1", "word2"), sep=" ") |>
 #   # filter(!word1 %in% stop_words$word,
-#   #        !word2 %in% stop_words$word) %>%
-#   tidyr::unite(multiGram, word1, word2, sep=" ") %>%
-#   select(responder.dID, multiGram) %>%
-#   add_column(n.words=2) %>%
+#   #        !word2 %in% stop_words$word) |>
+#   tidyr::unite(multiGram, word1, word2, sep=" ") |>
+#   select(responder.dID, multiGram) |>
+#   add_column(n.words=2) |>
 #   filter(multiGram != paste(rep_len("NA", length.out=2), collapse=" "))
 #
-# blah.2grams.count.all <- blah.2grams.united %>%
-#   count(multiGram, sort=TRUE) %>%
+# blah.2grams.count.all <- blah.2grams.united |>
+#   count(multiGram, sort=TRUE) |>
 #   add_column(n.words=2)
 #
-# blah.2grams.count.all.print <- filter(blah.2grams.count.all, n>=5) %>%
-#   arrange(multiGram) %>%
-#   select(multiGram, n) %>%
+# blah.2grams.count.all.print <- filter(blah.2grams.count.all, n>=5) |>
+#   arrange(multiGram) |>
+#   select(multiGram, n) |>
 #   as.data.frame()
 #
 # sink(file="comment_2grams-uniStem_counts.txt", split=TRUE)
@@ -914,21 +914,21 @@ create.search.string <- function(search.terms) {
 #                                        token="ngrams", format="text", n=3,
 #                                        to_lower=TRUE, drop=TRUE, collapse=NULL)
 #
-# blah.3grams.united <- tidyr::separate(blah.3grams, col="gram.n3", c("word1", "word2", "word3"), sep=" ") %>%
+# blah.3grams.united <- tidyr::separate(blah.3grams, col="gram.n3", c("word1", "word2", "word3"), sep=" ") |>
 #   # filter(!word1 %in% stop_words$word,
-#   #        !word2 %in% stop_words$word) %>%
-#   tidyr::unite(multiGram, word1, word2, word3, sep=" ") %>%
-#   select(responder.dID, multiGram) %>%
-#   add_column(n.words=3) %>%
+#   #        !word2 %in% stop_words$word) |>
+#   tidyr::unite(multiGram, word1, word2, word3, sep=" ") |>
+#   select(responder.dID, multiGram) |>
+#   add_column(n.words=3) |>
 #   filter(multiGram != paste(rep_len("NA", length.out=3), collapse=" "))
 #
-# blah.3grams.count.all <- blah.3grams.united %>%
-#   count(multiGram, sort=TRUE) %>%
+# blah.3grams.count.all <- blah.3grams.united |>
+#   count(multiGram, sort=TRUE) |>
 #   add_column(n.words=3)
 #
-# blah.3grams.count.all.print <- filter(blah.3grams.count.all, n>=5) %>%
-#   arrange(multiGram) %>%
-#   select(multiGram, n) %>%
+# blah.3grams.count.all.print <- filter(blah.3grams.count.all, n>=5) |>
+#   arrange(multiGram) |>
+#   select(multiGram, n) |>
 #   as.data.frame()
 #
 # sink(file="comment_3grams-uniStem_counts.txt", split=TRUE)
@@ -938,23 +938,23 @@ create.search.string <- function(search.terms) {
 # sink()
 # system("enscript -4rG -p comment_3grams-uniStem_counts.ps -c comment_3grams-uniStem_counts.txt")
 #
-# comments.ngram.2 <- unnest_tokens(tbl=comment.data, output=ngram.2, input=comment, token="ngrams", n=2) %>%
-#   filter(!is.na(ngram.2)) %>%
-#   separate(col=ngram.2, into=c("word.1", "word.2"), sep=" ", remove=FALSE) %>%
-#   # filter(!word.1 %in% stop_words$word) %>%
-#   # filter(!word.2 %in% stop_words$word) %>%
-#   count(ngram.2, sort=TRUE) %>%
+# comments.ngram.2 <- unnest_tokens(tbl=comment.data, output=ngram.2, input=comment, token="ngrams", n=2) |>
+#   filter(!is.na(ngram.2)) |>
+#   separate(col=ngram.2, into=c("word.1", "word.2"), sep=" ", remove=FALSE) |>
+#   # filter(!word.1 %in% stop_words$word) |>
+#   # filter(!word.2 %in% stop_words$word) |>
+#   count(ngram.2, sort=TRUE) |>
 #   filter(n>=10)
 # # enscript -3rG --line-numbers -p JCIM_2grams_counts.ps -c JCIM_2grams_counts.txt
 #
-# unnest_tokens(tbl=comment.data, output=ngram.3, input=comment, token="ngrams", n=3) %>%
-#   filter(!is.na(ngram.3)) %>%
-#   separate(col=ngram.3, into=c("word.1", "word.2", "word.3"), sep=" ", remove=FALSE) %>%
-#   # filter(!word.1 %in% stop_words$word) %>%
-#   # filter(!word.2 %in% stop_words$word) %>%
-#   count(ngram.3, sort=TRUE) %>%
+# unnest_tokens(tbl=comment.data, output=ngram.3, input=comment, token="ngrams", n=3) |>
+#   filter(!is.na(ngram.3)) |>
+#   separate(col=ngram.3, into=c("word.1", "word.2", "word.3"), sep=" ", remove=FALSE) |>
+#   # filter(!word.1 %in% stop_words$word) |>
+#   # filter(!word.2 %in% stop_words$word) |>
+#   count(ngram.3, sort=TRUE) |>
 #   filter(n>=10)
-#   # pull(n) %>% table()
+#   # pull(n) |> table()
 
 
 
@@ -975,7 +975,7 @@ create.search.string <- function(search.terms) {
 # heatmap.text <- colorRampPalette(colors=c("black", "white"), bias = 1, space="rgb", interpolate="linear", alpha=FALSE)
 # heatmap.text.100 <- tibble::tibble(hex=heatmap.text(101),
 #                                    pct=seq(from=0, to=100, by=1))
-# keyword.plot.data <- left_join(keyword.plot.data, heatmap.text.100, by=c("pct.int"="pct")) %>%
+# keyword.plot.data <- left_join(keyword.plot.data, heatmap.text.100, by=c("pct.int"="pct")) |>
 #   mutate(area.x=gsub(pattern=".tf", replacement="", x=area.x),
 #          area.y=gsub(pattern=".tf", replacement="", x=area.y))
 #
@@ -1015,14 +1015,14 @@ create.search.string <- function(search.terms) {
 #                                        token="ngrams", format="text", n=2,
 #                                        to_lower=TRUE, drop=TRUE, collapse=NULL)
 #
-# blah.2grams.counts <- tidyr::separate(blah.2grams, col="gram.n2", c("word1", "word2"), sep=" ") %>%
-#   filter(!word1 %in% stop_words$word) %>%
-#   filter(!word2 %in% stop_words$word) %>%
-#   count(word1, word2, sort=TRUE) %>%
+# blah.2grams.counts <- tidyr::separate(blah.2grams, col="gram.n2", c("word1", "word2"), sep=" ") |>
+#   filter(!word1 %in% stop_words$word) |>
+#   filter(!word2 %in% stop_words$word) |>
+#   count(word1, word2, sort=TRUE) |>
 #   filter(!is.na(word1) | !is.na(word2))
 #
-# blah.2gram.graph <- blah.2grams.counts %>%
-#   filter(n >= 5) %>%
+# blah.2gram.graph <- blah.2grams.counts |>
+#   filter(n >= 5) |>
 #   graph_from_data_frame()
 #
 # # ggraph(blah.2gram.graph, layout="fr") +
