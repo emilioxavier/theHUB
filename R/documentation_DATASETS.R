@@ -84,3 +84,23 @@
 
 #' @describeIn MSUpeers Western Michigan Peer Institutions dataset
 "WMUpeers"
+
+
+#' @title Country and Currency Dataset
+#'
+#' @description The 249 International Organization for Standardization (ISO)
+#'   recognized countries and the currencies they use.
+#'
+#' @format A tibble of countries and their associated currency.
+#'
+#' @source Data sources:
+#'   - List of countries (via `ISOcodes::ISO_3166_1`) from ISOcodes ([CRAN](https://cran.r-project.org/web/packages/ISOcodes/))
+#'   - List of currencies (via `priceR::currencies()`) from priceR ([CRAN](https://cran.r-project.org/package=priceR) & [GitHub](https://github.com/stevecondylios/priceR))
+#'   - Wikipedia's [List of circulating currencies](https://en.wikipedia.org/wiki/List_of_circulating_currencies)
+#'   - Individual currency [Wikipedia](https://en.wikipedia.org/) pages (too many to list)
+#'   - Individaul country [Wikipedia](https://en.wikipedia.org/) pages (also, too many to list)
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+"country.currency"
