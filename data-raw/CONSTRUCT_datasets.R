@@ -25,7 +25,8 @@ left_join(y=PostSecondary.2020.2021, by="UNITID") |>
 
 ## country and currency dataset ----
 country.currency <- readxl::read_excel(path="./data-raw/SLATE-ISO-countryMatches.xlsx",
-                                       sheet="country.DATA")
+                                       sheet="country.DATA") |>
+  filter(!is.na(Alpha_2))
 
 
 ## save datasets ----
