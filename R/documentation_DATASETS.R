@@ -88,7 +88,7 @@
 
 #' @title Country and Currency Dataset
 #'
-#' @description The 249 International Organization for Standardization (ISO)
+#' @description The 257 International Organization for Standardization (ISO)
 #'   recognized countries and the currencies they use.
 #'
 #' @format A tibble of countries and their associated currency.
