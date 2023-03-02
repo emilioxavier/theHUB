@@ -1,0 +1,106 @@
+---
+title: "Dataset: Country and Currency Dataset"
+date: "Updated 02/Mar/2023"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Dataset: Country and Currency Dataset}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, echo=FALSE, eval=FALSE, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(knitr)
+```
+
+
+## Country and Currency Dataset
+
+The Country and Currency Dataset was constructed to help the [Predictive Analytics Group](https://thehopefulbox.com/articles/web_only/PAG_About.html) (PAG) explore the impact of currency exchange rates on applicants. The [Office of Admissions](https://admissions.msu.edu/) at [Michigan State University](https://msu.edu) (MSU) uses [slate](https://technolutions.com/solutions/slate) for applicants management. Unfortunately, the country names within slate do not match the [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166) standard names. (_NB_: This is a standard and common problem across a multitude of organizations and applications.) To remedy this inconsistency, the following process was performed; code provided below.
+
+ - Determine the unique countries within the slate data.
+ - Extract the ISO 3166 information from `ISOcodes::ISO_3166_1`.
+ - Extract the currency name and code from `priceR::currencies()`.
+   - Extract the country two-letter code from the currency code.
+ - Merge the ISO 3166 information and the currency information using the two-letter code.
+ - Merge the `ISOcodes::ISO_3166_1` countries with the slate country using the **Name** column.
+ - Export merged information to an Excel workbook.
+ - Within Excel, reorder data based on the **Name** column.
+   - Instances where the slate name does not match the ISO 3166 name are easily recognizable because there are no **Alpha_2**, **Alpha_3**, **Numeric**, and **Name** entries, move the two slate cells (**Name.SLATE** and **SLATE.tf**) to the appropriate ISO 3166 row.
+   - Wikipedia was used to determine currency used in the countries without a noted currency. See [Data Sources](#DataSources).
+ - Read in the updated Excel workbook as a tibble.
+
+The 257 International Organization for Standardization (ISO) recognized countries and the currencies they use.
+
+
+## Construction of the Country and Currency Dataset
+The following are the commands used to construct the Country and Currency Dataset broken into individual steps. The editing within the Excel workbook is not included. 
+```{r loadPackages, eval=FALSE, include=TRUE}
+library(theHUB)
+library(ISOcodes)
+library(priceR)
+```
+
+
+### Extract Country Names Information
+```{r ExtractCountry, eval=FALSE, include=TRUE}
+country.iso <- as_tibble(ISOcodes::ISO_3166_1) |>
+  mutate(Name.ISO=Name)
+```
+
+### Extract Country and Currency Information
+```{r ExtractCurrency, eval=FALSE, include=TRUE}
+country.currencies <- priceR::currencies() |>
+  as_tibble() |>
+  separate(col="code", into=c("Alpha_2", "currency.DROP"), remove=FALSE, sep="[[:alpha:]]{1}$") |>
+  select(-currency.DROP) |>
+  rename("currency"="description",
+         "currency.code"="code")
+```
+
+### Merge All the Information 
+```{r MergeEverything, eval=FALSE, include=TRUE}
+country.DATA <- full_join(x=country.iso, y=country.currencies, by="Alpha_2") |>
+  full_join(y=SLATE.country.names, by="Name")
+```
+
+
+### Write to Excel workbook
+```{r WriteXLSX, eval=FALSE, include=TRUE}
+WriteXLS::WriteXLS(x="country.DATA",
+                   ExcelFileName="CountryISO-slate_matches.xlsx",
+                   FreezeRow=1)
+```
+
+
+## The Dataset
+
+```{r loadPackages2, include=FALSE}
+library(tidyverse)
+library(kableExtra)
+```
+
+
+```{r theDataset, echo=FALSE}
+country.currency.DISPLAY <- select(theHUB::country.currency, -Common_name, -contains("SLATE")) |>
+  mutate(across(where(is.character), ~replace_na(.x, "")))
+col.names <- c("Alpha 2", "Alpha 3", "Numeric", "Name", "Official Name", "Name (ISO)", "Currency", "Currency Code")
+
+kableExtra::kbl(country.currency.DISPLAY, booktabs=TRUE, caption=NULL, col.names=col.names) |> 
+  kableExtra::kable_styling(latex_options="striped")
+
+
+```
+
+
+## Data Sources {#DataSources}
+ - List of countries (via `ISOcodes::ISO_3166_1`) from ISOcodes ([CRAN](https://cran.r-project.org/web/packages/ISOcodes/))
+ - List of currencies (via `priceR::currencies()`) from priceR ([CRAN](https://cran.r-project.org/package=priceR) & [GitHub](https://github.com/stevecondylios/priceR))
+ - Wikipedia's [List of circulating currencies](https://en.wikipedia.org/wiki/List_of_circulating_currencies)
+ - Individual currency [Wikipedia](https://en.wikipedia.org/) pages (too many to list)
+ - Individual country [Wikipedia](https://en.wikipedia.org/) pages (also, too many to list)
+
+
