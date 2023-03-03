@@ -24,9 +24,10 @@ left_join(y=PostSecondary.2020.2021, by="UNITID") |>
   select(INSTNM:ZIP, LAT, LON, everything())
 
 ## country and currency dataset ----
-country.currency <- readxl::read_excel(path="./data-raw/SLATE-ISO-countryMatches.xlsx",
+country.currency <- readxl::read_excel(path="./data-raw/datasets_CountryAndCurrency_spring2023.xlsx",
                                        sheet="country.DATA") |>
-  filter(!is.na(Alpha_2))
+  filter(!is.na(Alpha_2)) |>
+  select(Alpha_2:Name, Name.SLATE, Official_name:currency.code)
 
 
 ## save datasets ----
