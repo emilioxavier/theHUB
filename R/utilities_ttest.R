@@ -75,6 +75,12 @@ combinations.t.test <- function(data,
                                 conf.level=0.99,
                                 na.rm=TRUE) {
 
+  ## is data a tibble? ----
+  tibble.tf <- tibble::is_tibble(data)
+  if ( tibble.tf ) {
+    data <- as.list(data)
+  }
+
   ##_ get group names -----
   names.groups <- names(data)
   ##__ if group names not provided, create -----
@@ -133,6 +139,15 @@ combinations.t.test <- function(data,
                                                            paired=paired,
                                                            conf.level=conf.level,
                                                            na.rm=na.rm)
+  }
+
+  ## remove column and rows of NAs ----
+  df.results <- df.results[-c((num.df.results.rows-2):num.df.results.rows), -1]
+
+  ## convert results to tibble if started as tibble ----
+  if ( tibble.tf ) {
+    df.results <- rownames_to_column(df.results, var="t.test.param")
+    df.results <- tibble::as_tibble(df.results)
   }
 
   ##_ return the results -----
