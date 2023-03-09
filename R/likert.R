@@ -208,7 +208,9 @@ make.likert.heatmap.data <- function(data, QoI, Qcompared, value.range) {
 #' @export
 #'
 #' @importFrom rlang .data
-#' @importFrom ggplot2 ggplot aes geom_bar labs geom_text after_stat position_stack stat_count
+#' @importFrom dplyr case_when
+#' @importFrom ggplot2 ggplot aes geom_bar labs geom_text after_stat position_stack
+#' @importFrom ggplot2 stat_count col_geom
 #' @importFrom cowplot theme_nothing
 #'
 #' @examples
@@ -295,8 +297,11 @@ likert.barplot <- function(data, QoI, value.range) {
 #' @export
 #'
 #' @importFrom rlang .data
-#' @importFrom ggplot2 ggplot aes geom_bar labs geom_text after_stat position_stack stat_count
-#' @importFrom cowplot theme_nothing
+#' @importFrom ggplot2 ggplot aes geom_bar labs geom_text after_stat position_stack
+#' @importFrom ggplot2 stat_count scale_fill_manual guide_legend coord_flip
+#' @importFrom ggplot2 guides
+#' @importFrom grid unit
+#' @importFrom cowplot theme_nothing theme_cowplot
 #'
 #' @examples
 #' \dontrun{
@@ -389,7 +394,8 @@ likert.barplot.stacked <- function(data,
 #' @export
 #'
 #' @importFrom rlang .data
-#' @importFrom ggplot2 ggplot aes geom_raster scale_fill_gradientn geom_label scale_x_reverse labs
+#' @importFrom ggplot2 ggplot aes geom_raster scale_fill_gradientn geom_label
+#' @importFrom ggplot2 scale_x_reverse labs scale_fill_identity
 #' @importFrom cowplot theme_nothing
 #'
 #' @examples
