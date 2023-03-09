@@ -750,7 +750,7 @@ get.unique.terms <- function(string.oi, search.terms) {
 #' @title Construct the Search String
 #'
 #' @description Construct the search string (aka "pattern") based on provided
-#'   search terms. The [get.unique.terms()] and [get.all.nodes()] functions use this
+#'   search terms. The [get.unique.terms()] and [get.bigrams.oi()] functions use this
 #'   function. The function is a simple wrapper for the [paste()] function that
 #'   surrounds each search term with `\\b` and separates multiple terms with
 #'   pipes `|`.

@@ -63,7 +63,7 @@ values.t.test <- function(x, y, alternative="two.sided", paired=FALSE, conf.leve
 #' @export
 #'
 #' @examples
-#' \dontrun {
+#' \dontrun{
 #'   values.ls <- list(a=1:3, b=1:5, c=1:10, d=1:20, e=letters[1:20])
 #'   values.tb <- tibble::tibble(a=1:10, b=11:20, c=21:30, d=31:40, e=letters[1:10])
 #'   combinations.t.test(values.ls)
