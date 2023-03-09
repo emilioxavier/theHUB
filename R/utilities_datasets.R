@@ -158,6 +158,8 @@ find.duplicate.cols <- function(data, data.md5s) {
 #' @return tibble of column names, types, and examples
 #' @export
 #'
+#' @importFrom dplyr row_number case_when select arrange
+#'
 #' @examples
 #' dataset.summary(dataset=ds.orig,
 #'                 ExcelFileName="ds_Column-names-and-data-types-and-examples.xlsx",
@@ -201,8 +203,8 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
                     col.idx=row_number() ) |>
       tibble::as_tibble() |>
       tibble::add_column(md5.hash=dataset.md5s) |>
-      dplyr::select(column.name, col.idx,
-                    colType.1, colType.2, colType.diff, md5.hash)
+      select(column.name, col.idx,
+             colType.1, colType.2, colType.diff, md5.hash)
 
   } else {
     ds.colTypes <- dplyr::rename(ds.colTypes,
@@ -210,8 +212,8 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
       dplyr::mutate(col.idx=row_number()) |>
       tibble::as_tibble() |>
       tibble::add_column(md5.hash=dataset.md5s) |>
-      dplyr::select(column.name, col.idx,
-                    colType.1, md5.hash)
+      select(column.name, col.idx,
+             colType.1, md5.hash)
   }
 
   ## is blank? ----
@@ -238,7 +240,7 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ## create and apply example names ----
   example.names <- paste("example.", seq_len(length.out=n.examples), sep="")
   colnames(ds.examples) <- c("n.unique", example.names)
-  ds.examples <- as_tibble(ds.examples)
+  ds.examples <- tibble::as_tibble(ds.examples)
 
   ## create dataset for export ----
   ds.summary <- dplyr::bind_cols(ds.colTypes, ds.examples) |>
