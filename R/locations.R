@@ -22,7 +22,7 @@
 #' point1 <- c(42.331177, -83.046023)  ## Detroit, Michigan
 #' point2 <- c(42.737652, -84.483788)  ## East Lansing, Michigan
 #'
-#' LatLonDistances(point1, point2, distance.units="miles")
+#' LatLonDistances(point1[1], point1[2], point2[1], point2[2], distance.units="miles")
 #' # 78.48957
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
@@ -32,13 +32,13 @@
 LatLonDistances <- function(lat1, long1, lat2, long2, distance.units="miles") {
 
   ## earth's radius | miles or km? ----
-  earth.radius <- earth.radius.miles
+  earth.radius <- theHUB::earth.radius.miles
   if ( tolower(distance.units) == "km" ) {
-    earth.radius <- earth.radius.km
+    earth.radius <- theHUB::earth.radius.km
   }
 
-  ## convert degrees to radians ----
-  ##  deg2rad = pi/180
+  ## convert degrees to radian ----
+  # deg2rad <- pi/180
   lat1 <- lat1 * deg2rad
   lat2 <- lat2 * deg2rad
   long1 <- long1 * deg2rad
