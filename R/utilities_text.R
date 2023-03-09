@@ -8,7 +8,7 @@
 #'   by any printable character (defined by `[:print:]`), even spaces, are retained;
 #'   see example.
 #'
-#' @param comment A string of words forming a sentence or phrase.
+#' @param text A string of words forming a sentence or phrase.
 #'
 #' @return string of cleaned characters forming a sentence or phrase.
 #' @export
@@ -41,7 +41,7 @@ clean.cntrl <- function(text) {
 #'   types of spaces with ASCII spaces that are breakable. The reason for this
 #'   function is to replace non-breakable space with standard, breakable spaces.
 #'
-#' @param comment A string of words forming a sentence or phrase.
+#' @param text A string of words forming a sentence or phrase.
 #'
 #' @return string of cleaned characters forming a sentence or phrase.
 #' @export

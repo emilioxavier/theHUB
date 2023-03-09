@@ -206,6 +206,7 @@ make.likert.heatmap.data <- function(data, QoI, Qcompared, value.range) {
 #'   Use the [convert.fromto()] function to convert text responses to integers.
 #'   _**Note**_: Ensure the integers are positive and non-zero.
 #' @param QoI string with the Question of Interest (the rows)
+#' @param value.range range of possible Likert values
 #'
 #' @return ggplot2 graphics object
 #' @export
@@ -392,6 +393,7 @@ likert.barplot.stacked <- function(data,
 #'   _**Note**_: Ensure the integers are positive and non-zero.
 #' @param QoI string with the Question of Interest (the rows)
 #' @param Qcompared string with the Question being Compared to (the columns)
+#' @param value.range range of possible Likert values
 #'
 #' @return ggplot2 graphics object
 #' @export

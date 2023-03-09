@@ -93,6 +93,9 @@
 #'
 "wisc.badgerRed"
 
+#' @describeIn wisc.badgerRed corresponding colour to wisc.badgerRed
+"wisc.white"
+
 #' @describeIn wisc.badgerRed Ten tints of wisc.badgerRed including "#da004c"
 "wisc.badgerRedTints"
 
