@@ -11,7 +11,7 @@ gtag('config', 'UA-143011948-3'); </script></head><body>
     
     <a class="navbar-brand me-2" href="../index.html">theHUB</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,19 +137,7 @@ sample; default: <code>FALSE</code></p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span>  <span class="va">values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>a<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, b<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, c<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, d<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">20</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu">combinations.t.test</span><span class="op">(</span><span class="va">values</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           a         b          c            d</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> a_t      NA -1.095445  -3.130495    -5.888973</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> a_df     NA  5.882353   10.49223      20.0253</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> a_pvalue NA 0.3161334 0.01010081 9.202471e-06</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> b_t      NA      &lt;NA&gt;   -2.10042           -5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> b_df     NA      &lt;NA&gt;   12.87624     22.63235</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> b_pvalue NA      &lt;NA&gt; 0.05596949 4.874029e-05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> c_t      NA      &lt;NA&gt;       &lt;NA&gt;    -3.061862</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> c_df     NA      &lt;NA&gt;       &lt;NA&gt;     27.93618</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> c_pvalue NA      &lt;NA&gt;       &lt;NA&gt;  0.004824659</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> d_t      NA      &lt;NA&gt;       &lt;NA&gt;         &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> d_df     NA      &lt;NA&gt;       &lt;NA&gt;         &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> d_pvalue NA      &lt;NA&gt;       &lt;NA&gt;         &lt;NA&gt;</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in is_tibble(data):</span> could not find function "is_tibble"</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
