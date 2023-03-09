@@ -660,6 +660,8 @@ keywords.plot.data <- function(keywords.similarities) {
 #'   phrases connected to the provided `search.terms` (aka keyword(s)).
 #' @export
 #'
+#' @importFrom stringr str_detect
+#'
 #' @examples
 #' \dontrun{
 #' popular.DATA <- get.bigrams.oi(data=bigrams.n3,
@@ -718,6 +720,8 @@ get.bigrams.oi <- function(data, col.oi, search.terms) {
 #' @param search.terms vector of strings to use as the query (aka "pattern") string.
 #'
 #' @return string with the terms related to the query
+#'
+#' @importFrom stringr str_detect
 #'
 #' @examples
 #' \dontrun{
