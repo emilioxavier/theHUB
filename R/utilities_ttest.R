@@ -1,5 +1,3 @@
-
-
 #' @title t-test Values
 #' @description Calculate t-test and Return Key Values
 #' @details Calculate t-test and return the key values.
@@ -59,6 +57,8 @@ values.t.test <- function(x, y, alternative="two.sided", paired=FALSE, conf.leve
 #' @param na.rm `logical` indicating if `NA` values are removed; default: `TRUE`
 #'
 #' @return A `data.frame` with the `t-value`, degrees of freedom (`df`), and `p-value`.
+#'
+#' @importFrom utils combn
 #'
 #' @export
 #'
