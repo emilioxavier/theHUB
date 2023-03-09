@@ -161,9 +161,11 @@ find.duplicate.cols <- function(data, data.md5s) {
 #' @importFrom dplyr row_number case_when select arrange
 #'
 #' @examples
+#' \dontrun{
 #' dataset.summary(dataset=ds.orig,
 #'                 ExcelFileName="ds_Column-names-and-data-types-and-examples.xlsx",
 #'                 n.examples=4)
+#' }
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
