@@ -60,6 +60,7 @@ make.assignment.params <- function(n.students, n.assignments, max.points) {
 #' @export
 #' @importFrom dplyr mutate
 #' @importFrom tibble as_tibble
+#' @importFrom stats rbinom
 #'
 #' @examples
 #' set.seed(13)
