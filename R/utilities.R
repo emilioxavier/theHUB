@@ -268,9 +268,9 @@ clean.DATE <- function(dates) {
 #' @examples
 #' IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
 #' ID.convert(ID=IDs, deID.value=12345)
-#' [1] "1234512345" "24690"      NA           "24690"      "13579.56"   NA           "00023456"
-#' Warning message:
-#' In ID.convert(ID = IDs, deID.value = 12345) : NAs introduced by coercion
+#' # [1] "1234512345" "24690"      NA           "24690"      "13579.56"   NA           "00023456"
+#' # Warning message:
+#' # In ID.convert(ID = IDs, deID.value = 12345) : NAs introduced by coercion
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -323,17 +323,17 @@ ID.convert <- function(ID, deID.value=12345) {
 #'
 #' set.seed(13)
 #' ID.random(ID=IDs, ID.type="numbers")
-#' [1] "4870" "5706" "0717" "0944" "5989" "5592" "0960"
+#' # [1] "4870" "5706" "0717" "0944" "5989" "5592" "0960"
 #'
 #' ID.random(ID=IDs, ID.type="letters")
-#' [1] "XWEvKQIsaCtOebfTOQLT" "uGUyOZBtcXwgRNbiBChq" "TTmJCbNheHsUQsDnTQni"
-#' "oRunjWsEvOlsaHFwqVUk" "eBnpYgroTrWIygAeYoBw" "HlUVBpkyMDGOowcXaMhX"
-#' "UIdWmaXZXTqjMzJRczxs"
+#' # [1] "XWEvKQIsaCtOebfTOQLT" "uGUyOZBtcXwgRNbiBChq" "TTmJCbNheHsUQsDnTQni"
+#' # "oRunjWsEvOlsaHFwqVUk" "eBnpYgroTrWIygAeYoBw" "HlUVBpkyMDGOowcXaMhX"
+#' # "UIdWmaXZXTqjMzJRczxs"
 #'
 #' ID.random(ID=IDs, ID.type="mixed")
-#' [1] "HL0WXSdG8sf5jFIJXbuz" "fUGVPSvRYS7l5LvsEjmH" "t3GCKf3JkZDgb2kuq6Be"
-#' "NXC9vLfKTV7tqwS3ss7F" "AywRolRrH4Myl5zvXCjA" "H0DLeZ7AGQp8RGDhLSoV"
-#' "vVTaHCI0rxVlJ3AU9wrK"
+#' # [1] "HL0WXSdG8sf5jFIJXbuz" "fUGVPSvRYS7l5LvsEjmH" "t3GCKf3JkZDgb2kuq6Be"
+#' # "NXC9vLfKTV7tqwS3ss7F" "AywRolRrH4Myl5zvXCjA" "H0DLeZ7AGQp8RGDhLSoV"
+#' # "vVTaHCI0rxVlJ3AU9wrK"
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -369,9 +369,9 @@ ID.random <- function(ID, ID.type="mixed") {
     for ( curr.ID in 1:maxSample.n) {
       random.IDs.pool[curr.ID] <- sample(x=random.options, size=20, replace=TRUE) |> paste0(collapse="")
     }
-    dup.TF <- duplicated(random.IDs.vector)
+    dup.TF <- duplicated(random.IDs.pool)
     if ( any(dup.TF) ) {
-      random.IDs.pool <- random.IDs.vector[!dup.TF]
+      random.IDs.pool <- random.IDs.pool[!dup.TF]
     }
   }
 
