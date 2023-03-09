@@ -39,6 +39,9 @@
 #' @return `tibble` with the
 #' @export
 #'
+#' @importFrom tidyselect all_of
+#' @importFrom dplyr arrange desc lag
+#'
 #' @examples
 #' \dontrun{
 #'   donut.DATA <- make.donut.data(data, category, facetBy=NULL,
@@ -64,10 +67,23 @@ make.donut.data <- function(data,
   layer.order.orig <- layer.order
   ##_ if layer.order is set... ----
   if ( !is.null(layerBy) & (length(layer.order) == 1) ) {
-    warning.message <- paste0("The provided layer.order of ", layer.order.orig, " was not `alphabetical`, `ascend`, or `descend` and was set to `descend`.")
+    warning.message <- paste0("The provided layer.order of ", layer.order.orig,
+                              " was not `alphabetical`, `ascend`, or `descend` and was set to `descend`.")
     if ( nchar(layer.order) < 2 ) { layer.order <- "descend" }
     warning(warning.message,
             immediate.=TRUE)
+  }
+
+  if ( !is.null(category.count) ) {
+    donut.RAW <- dplyr::select(data, {{category}}, {{facetBy}}, {{layerBy}}, {{category.count}}) |>
+      dplyr::rename("Categories"={{category}},
+                    "FacetBy"={{facetBy}},
+                    "LayerBy"={{layerBy}},
+                    "Counts"={{category.count}})
+
+    donut.COUNTS <- dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
+      dplyr::tally(Counts, name="Counts") |>
+      dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
   }
 
   ## extract needed data and rename ----
@@ -201,6 +217,11 @@ make.donut.data <- function(data,
 #' @param facet.ncol numeric [ggplot2::facet_wrap()] columns; default: `NULL`
 #'
 #' @return ggplot2 graphic object
+#'
+#' @importFrom ggplot2 geom_rect coord_polar scale_fill_manual vars
+#' @importFrom ggplot2 guide_legend xlim guides theme_bw facet_wrap
+#' @importFrom grid unit
+#'
 #' @export
 #'
 #' @examples
