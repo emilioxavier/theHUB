@@ -210,7 +210,7 @@ make.likert.heatmap.data <- function(data, QoI, Qcompared, value.range) {
 #' @importFrom rlang .data
 #' @importFrom dplyr case_when
 #' @importFrom ggplot2 ggplot aes geom_bar labs geom_text after_stat position_stack
-#' @importFrom ggplot2 stat_count col_geom
+#' @importFrom ggplot2 stat_count geom_col
 #' @importFrom cowplot theme_nothing
 #'
 #' @examples
