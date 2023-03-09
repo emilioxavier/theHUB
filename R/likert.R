@@ -75,7 +75,9 @@ convert.fromto <- function(responses, fromto.tb, from, to) {
 #' @importFrom rlang .data
 #' @importFrom tibble tibble
 #' @importFrom dplyr left_join group_by summarise ungroup mutate select n
-#' @importFrom tidyr pivot_longer pivot_wider separate
+#' @importFrom dplyr case_when rename bind_rows arrange
+#' @importFrom tidyr pivot_longer pivot_wider separate complete
+#' @importFrom tidyselect everything
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -145,7 +147,8 @@ make.likert.barplot.data <- function(data, likert2int.tb) {
 #'
 #' @importFrom rlang .data
 #' @importFrom dplyr left_join group_by summarise ungroup mutate select n
-#' @importFrom tidyr pivot_longer pivot_wider separate
+#' @importFrom dplyr case_when rename
+#' @importFrom tidyr pivot_longer pivot_wider separate expand
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
