@@ -247,6 +247,62 @@ clean.DATE <- function(dates) {
 }
 
 
+#' @title Phrase/Integer Conversion
+#'
+#' @description Convert a collection of characters to another set of characters.
+#'
+#' @details The function was initially designed to convert Likert responses to
+#'   integers, but it was quickly realized that it could easily be used for a
+#'   multitude of sins against data. The function relies on a user provided
+#'   `tibble` or `data.frame` with two columns; one with the characters to be
+#'   converted and the characters to be converted to.
+#'
+#'   The function is designed to work with [dplyr::mutate()] allowing multiple
+#'   conversions in a single command.
+#'
+#'   _**Note**_: Ideally, the integers are positive and non-zero.
+#'
+#' @param responses column to be converted; _e.g._, `Q1`
+#' @param fromto.tb `tibble` (or `data.frame`) with the matched convertee and
+#'   converted pairs; see the example below.
+#' @param from column in the `fromto.tb` containing the characters to be converted
+#' @param to column in the `fromto.tb` containing the characters being converted to
+#'
+#' @return a vector of converted characters/phrases
+#' @export
+#'
+#' @examples
+#' set.seed(13)
+#' phrase2int.tb <- tibble::tibble(phrase=c("hated it!", "meh", "loved it!"),
+#'                                 integer=c(-1, 0, 1))
+#' responses.words <- sample(x=c("hated it!", "meh", "loved it!"), size=5, replace=TRUE)
+#' responses.integers <- sample(x=c(-1, 0, 1), size=5, replace=TRUE)
+#'
+#' convert.fromto(responses=responses.words,
+#'                fromto.tb=phrase2int.tb,
+#'                from="phrase", to="integer")
+#' # [1]  1 -1  0 -1  0
+#'
+#' convert.fromto(responses=responses.integers,
+#'                fromto.tb=phrase2int.tb,
+#'                from="integer", to="phrase")
+#' # [1] "meh"       "hated it!" "loved it!" "hated it!" "meh"
+#'
+#' \dontrun{
+#' mutate(tibble.oi, Q1.ints=convert.fromto(responses=Q1,
+#'                                          fromto.tb=phrase2int.tb,
+#'                                          from="phrase", to="integer"))
+#' }
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+convert.fromto <- function(responses, fromto.tb, from, to) {
+
+  converted <- fromto.tb[[to]][match(responses, table=fromto.tb[[from]])]
+
+  return(converted)
+}
 
 
 #' @title Convert Collection of Numerical IDs
