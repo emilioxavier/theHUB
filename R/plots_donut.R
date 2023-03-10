@@ -9,6 +9,8 @@
 #' @param facetBy string indicating the column to group data by; for when you
 #'   want to **facet** your donut plots via [ggplot2::facet_wrap()]; see
 #'    [make.donut.plot()].
+#' @param layerBy string indicating the column to group data by; for when you
+#'   want to **add layers** your donut plots; see [make.donut.plot()].
 #' @param layer.order string indicating the order of the layers. There are four
 #'   options:
 #'
@@ -29,10 +31,10 @@
 #'   default: `"count"`.
 #' @param levels.rev logical indicating if the order of the categories should be
 #'   reversed.
-#  @param category.count string with the column containing "counts" for each "category."
-#    This parameter is _**required**_ when the count (or total) for each row was
-#    pre-calculated and allows for the creation of donut data when raw data is
-#    not available and one only has the summarised values.
+#' @param category.count string with the column containing "counts" for each "category."
+#'   This parameter is _**required**_ when the count (or total) for each row was
+#'   pre-calculated and allows for the creation of donut data when raw data is
+#'   not available and one only has the summarised values.
 #' @param r.inner numeric value defining the inner radius of the donut; default: `4`
 #' @param r.outer numeric value defining the outer radius of the donut; default: `6`
 #'
