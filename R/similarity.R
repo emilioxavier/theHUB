@@ -249,6 +249,8 @@ make.fps <- function(data, id.col, cols.oi) {
 #'
 #' @export
 #'
+#' @importFrom dplyr across
+#'
 #' @examples
 #' \dontrun{
 #'   library(tidyverse)
