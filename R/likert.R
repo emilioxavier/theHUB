@@ -140,6 +140,7 @@ make.likert.barplot.data <- function(data, likert2int.tb) {
 #'   _**Note**_: Ensure the integers are positive and non-zero.
 #' @param QoI string with the Question of Interest (the rows)
 #' @param Qcompared string with the Question being Compared to (the columns)
+#' @param value.range range of possible Likert values
 #'
 #' @return `tibble` (or `data.frame`) containing the needed count, percentage, and
 #'   colour hex values to construct a heatmap with percentage values overlaid on
