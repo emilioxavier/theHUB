@@ -38,7 +38,7 @@
 #' @param r.inner numeric value defining the inner radius of the donut; default: `4`
 #' @param r.outer numeric value defining the outer radius of the donut; default: `6`
 #'
-#' @return `tibble` with the
+#' @return `tibble` with the data to construct the donut plot.
 #' @export
 #'
 #' @importFrom tidyselect all_of
