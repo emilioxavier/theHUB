@@ -527,7 +527,6 @@ convert.YN2TF <- function(YN.string) {
 #'   |   8  | Fall   | FS |
 #'   |   9  | Fall Quarter (FallQ) | FQ |
 #'
-#'
 #' @param term.code Four-digit code indicating the semester and year of the term.
 #' @param term.type Indicate if the full or short semester (or quarter) designation
 #'   is returned; default: `"full"`.
@@ -559,10 +558,10 @@ convert.termCode <- function(term.code, term.type="full") {
 
   term <- substr(x=term.code, start=4, stop=4)
   if (tolower(term.type) == "full") {
-    term <- term.translation$full[term.translation$abbrev == term]
+    term <- theHUB::term.translation$full[term.translation$abbrev == term]
   }
   if (tolower(term.type) == "short") {
-    term <- term.translation$short[term.translation$abbrev == term]
+    term <- theHUB::term.translation$short[term.translation$abbrev == term]
   }
 
   termcode.readable <- paste(term, year, sep=" ")
@@ -716,7 +715,6 @@ course.type <- function(crse_code) {
 
   return(course.type)
 }
-
 
 
 #' @title Make Course-Section Designation
