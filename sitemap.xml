@@ -73,6 +73,9 @@
     <loc>https://emilioxavier.github.io/theHUB/news/index.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/ACT.2.SAT.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/ID.convert.html</loc>
   </url>
   <url>
@@ -125,6 +128,12 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/compare.dataset.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/convert.ACT2SAT.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/convert.SAT2ACT.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/convert.YN2TF.html</loc>
