@@ -445,6 +445,82 @@ ID.random <- function(ID, ID.type="mixed") {
 }
 
 
+#' @title Convert ACT Score to SAT Score
+#'
+#' @description Convert a user provided ACT score to the corresponding SAT score.
+#'   This function uses the [Princeton Review](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'   conversion table. Because a range of SAT values equal a single ACT score, the
+#'   mean of the SAT scores provided in
+#'   [The Princeton Review's ACT to SAT Score Conversion Chart](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'   is used for this conversion. Please see the the [theHUB::ACT.2.SAT]
+#'   dataset for details.
+#'
+#' @param ACT.score ACT score as a number (float or integer). `NA`s and text (aka
+#'   `as.character()`) are converted to integer values via `as.integer()`.
+#'
+#' @return integer of the corresponding SAT score
+#' @export
+#'
+#' @examples
+#' ACT.score <- c(25, "34", NA, 25.25, "NA", 50)
+#' convert.ACT2SAT(ACT.score)
+#' # [1] 1215 1535   NA 1215   NA   NA
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+convert.ACT2SAT <- function(ACT.score) {
+
+  ## convert all provided scores to integers ----
+  ACT.score <- suppressWarnings(as.integer(ACT.score))
+
+  ## match provided ACT scores to corresponding ACT-SAT score row ----
+  ACT.idc <- match(ACT.score, theHUB::ACT.2.SAT$ACT)
+
+  ## match ACT score indices to SAT score ----
+  SAT.score <- theHUB::ACT.2.SAT$SAT[ACT.idc]
+
+  return(SAT.score)
+}
+
+
+#' @title Convert SAT Score to ACT Score
+#'
+#' @description Convert a user provided SAT score to the corresponding ACT score.
+#'   This function uses the [Princeton Review](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'   conversion table. Because a range of SAT values equal a single ACT score, a
+#'   range of SAT scores will return the same ACT score. Please see
+#'   [The Princeton Review's ACT to SAT Score Conversion Chart](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'   or the [theHUB::SAT.2.ACT] dataset for details.
+#'
+#' @param SAT.score SAT score as a number (float or integer)
+#'
+#' @return integer of the corresponding ACT score
+#' @export
+#'
+#' @examples
+#' SAT.score <- c(1326, "1444", NA, 1444.44, "NA", 3600)
+#' convert.SAT2ACT(SAT.score)
+#' # [1] 28 31 NA 31 NA NA
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+convert.SAT2ACT <- function(SAT.score) {
+
+  ## convert all provided scores to integers ----
+  SAT.score <- suppressWarnings(as.integer(SAT.score))
+
+  ## match provided SAT scores to corresponding SAT-ACT score row ----
+  SAT.idc <- match(SAT.score, theHUB::SAT.2.ACT$SAT)
+
+  ## match SAT score indices to ACT score ----
+  ACT.score <- theHUB::SAT.2.ACT$ACT[SAT.idc]
+
+  return(ACT.score)
+}
+
+
 #' @title Convert Yes-No indicators to TRUE-FALSE
 #'
 #' @description Often True-False data is returned as a vector of Ys and Ns or 1s
