@@ -26,12 +26,13 @@ country.currencies <- currencies() |>
 
 ## merge together the datasets ----
 country.DATA <- full_join(x=country.iso, y=country.currencies, by="Alpha_2") |>
-  full_join(y=SLATE.country.names.2022, by="Name")
+  full_join(y=SLATE.country.names.2022, by="Name") |>
+  select(-SLATE.tf)
 
 # SLATE.matches <- right_join(x=country.iso, y=SLATE.country.names.2022, by="Name")
 
 WriteXLS::WriteXLS(x=c("country.iso", "country.DATA", "SLATE.matches"),
-                   ExcelFileName="SLATE-ISO-countryMatches_v02.xlsx",
+                   ExcelFileName="datasets_CountryAndCurrency_mmddyyyy.xlsx",
                    FreezeRow=1)
 
 ## merge rows based on Name.ISO and Name.SLATE
