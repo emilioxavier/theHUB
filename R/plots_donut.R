@@ -1,6 +1,8 @@
 #' @title Construct Donut Plot Data
 #'
-#' @description add the description of making the data
+#' @description Construct the `data.frame` for the [theHUB::make.donut.plot()] function.
+#'   The raw `data.frame` or a summarised `data.frame` is acceptable and will be
+#'   converted into the needed data for the construction of a donut plot.
 #'
 #' @param data `tibble` (or `data.frame`) with the column of interest. _**NOTE**_:
 #'   Do **NOT** use counted data.
@@ -8,9 +10,9 @@
 #'   comprise the donut (_aka_ ring). Only provide **ONE** column name.
 #' @param facetBy string indicating the column to group data by; for when you
 #'   want to **facet** your donut plots via [ggplot2::facet_wrap()]; see
-#'    [make.donut.plot()].
+#'    [theHUB::make.donut.plot()].
 #' @param layerBy string indicating the column to group data by; for when you
-#'   want to **add layers** your donut plots; see [make.donut.plot()].
+#'   want to **add layers** your donut plots; see [theHUB::make.donut.plot()].
 #' @param layer.order string indicating the order of the layers. There are four
 #'   options:
 #'
@@ -83,6 +85,11 @@ make.donut.data <- function(data,
                     "LayerBy"={{layerBy}},
                     "Counts"={{category.count}})
 
+    ## check for each type of column ----
+    colNames.RAW <- colnames(donut.RAW)
+    ## determine columns of interest ----
+    colNames.oi <- c(colNames.RAW[c("Categories", "FacetBy", "LayerBy") %in% colNames.RAW])
+
     donut.COUNTS <- dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
       dplyr::tally(Counts, name="Counts") |>
       dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
@@ -144,9 +151,9 @@ make.donut.data <- function(data,
   colNames.oi <- c(colNames.RAW[c("Categories", "FacetBy", "LayerBy") %in% colNames.RAW])
 
   ## calculate the counts for each category, facet, and layer ----
-  donut.COUNTS <- dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
-    dplyr::tally(name="Counts") |>
-    dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
+  # donut.COUNTS <- dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
+  #   dplyr::tally(name="Counts") |>
+  #   dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
 
   ## how to order the data ----
   category.order <- tolower(category.order)
@@ -200,7 +207,6 @@ make.donut.data <- function(data,
                                     levels=categories)
   }
 
-
   ## return donut data ----
   return(donut.DATA)
 }
@@ -208,21 +214,44 @@ make.donut.data <- function(data,
 
 #' @title Construct Donut Plot
 #'
-#' @description add the description of making the plot
+#' @description Construct the donut plot using the donut data constructed with
+#'   [theHUB::make.donut.data()] function. This function automatically determines
+#'   if the provided data includes information for creating a facet of donut
+#'   plots and including layers.
 #'
 #' @param donut.DATA `tibble` (or `data.frame`) constructed via [make.donut.data()]
 #' @param colour.palette vector of strings containing the colour palette.
 #' @param label.col string with the column containing the labels. Setting to `NULL`
 #'   will result in no labels.
 #' @param label.size label sizes; default: `3.5`
-#' @param facet.nrow numeric [ggplot2::facet_wrap()] rows; default: `NULL`
-#' @param facet.ncol numeric [ggplot2::facet_wrap()] columns; default: `NULL`
+#' @param facet.nrow numeric [ggplot2::facet_wrap()] rows; default: `NULL` Only
+#'   provide `facet.nrow` _**OR**_ `facet.ncol`.
+#' @param facet.ncol numeric [ggplot2::facet_wrap()] columns; default: `NULL` Only
+#'   provide `facet.nrow` _**OR**_ `facet.ncol`.
+#'
+#' @details
+#' **Custom Colour Palette**
+#'   When creating a collection of donut plots in a facet it is important to have
+#'   the same colours assigned to the same segments for all donut plots. Often,
+#'   each donut plot does not always include the same collection of segments. The
+#'   following code ensures that the same segment-colour combination is used for each
+#'   donut plot.
+#'
+#' ```
+#' custom.palette <- msu.palette[1:9]
+#' names(custom.palette) <- all.donut.DATA$Categories |> unique()
+#' ```
+#'
+#'   If a "named colour palette" is not provided, one is created from the categories
+#'   within the `donut.DATA` data.frame and the provided `colour.palette` to ensure
+#'   a consistent colour palette is used for all donut plots.
 #'
 #' @return ggplot2 graphic object
 #'
 #' @importFrom ggplot2 geom_rect coord_polar scale_fill_manual vars
 #' @importFrom ggplot2 guide_legend xlim guides theme_bw facet_wrap
 #' @importFrom grid unit
+#' @importFrom stringr str_wrap
 #'
 #' @export
 #'
@@ -249,7 +278,44 @@ make.donut.plot <- function(donut.DATA,
   ## determine the xlimit maximum ----
   xlim.max <- max(donut.DATA$xmax)
 
+  ## check facet information ----
   colNames.oi <- colnames(donut.DATA)
+  facet.tf <- any(colnames(all.donut.DATA) %in% "FacetBy")
+  facet.count <- length(unique(donut.DATA$FacetBy))
+  ##_ facet information but no indication of the number of columns or rows ----
+  if ( facet.tf & is.null(facet.ncol) & is.null(facet.nrow) ) {
+    facet.mess <- paste0("The donut.DATA contains a FacetBy column with ",
+                         facet.count, " individual donut plots, but the ",
+                         "facet.nrow OR facet.ncol is not set. Please ",
+                         "indicated the number of rows OR columns.")
+    facet.mess <- stringr::str_wrap(facet.mess,
+                                    width=80, indent=0, exdent=7,
+                                    whitespace_only=TRUE)
+    stop(facet.mess)
+  }
+  ##_ facet information but both the number of columns and rows provided ----
+  if ( facet.tf & is.numeric(facet.ncol) & is.numeric(facet.nrow) ) {
+    facet.mess <- paste0("The number of columns (", facet.ncol, ") and rows (",
+                         facet.nrow, ") are provided and only ONE of these ",
+                         "parameters is needed. Only the number of columns will ",
+                         "be retained. In the future, please indicated the ",
+                         "number of columns OR rows.")
+    facet.mess <- stringr::str_wrap(facet.mess,
+                                    width=80, indent=0, exdent=0,
+                                    whitespace_only=TRUE)
+    message(facet.mess)
+    facet.nrow <- NULL
+  }
+
+
+
+
+  ## construct the colour values vector ----
+  if ( is.null(names(colour.palette)) ) {
+    category.values <- unique(donut.DATA$Categories)
+    colour.palette <- colour.palette[1:length(category.values)]
+    names(colour.palette) <- category.values
+  }
 
   ## build the donut plot ----
   donut.plot <- ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
