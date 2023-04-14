@@ -1,6 +1,6 @@
 ---
 title: "Dataset: Country and Currency Dataset"
-date: "Updated 02/Mar/2023"
+date: "Updated 03/Mar/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Dataset: Country and Currency Dataset}
@@ -14,6 +14,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(knitr)
+library(kableExtra)
 ```
 
 
@@ -31,9 +32,8 @@ The Country and Currency Dataset was constructed to help the [Predictive Analyti
  - Within Excel, reorder data based on the **Name** column.
    - Instances where the slate name does not match the ISO 3166 name are easily recognizable because there are no **Alpha_2**, **Alpha_3**, **Numeric**, and **Name** entries, move the two slate cells (**Name.SLATE** and **SLATE.tf**) to the appropriate ISO 3166 row.
    - Wikipedia was used to determine currency used in the countries without a noted currency. See [Data Sources](#DataSources).
- - Read in the updated Excel workbook as a tibble.
+ - Import the updated Excel workbook as a tibble.
 
-The 257 International Organization for Standardization (ISO) recognized countries and the currencies they use.
 
 
 ## Construction of the Country and Currency Dataset
@@ -78,9 +78,13 @@ WriteXLS::WriteXLS(x="country.DATA",
 
 ## The Dataset
 
+The 257 International Organization for Standardization (ISO) recognized countries and the currencies they use.
+
+
 ```{r loadPackages2, include=FALSE}
-library(tidyverse)
-library(kableExtra)
+library(tidyselect)
+library(dplyr)
+library(tidyr)
 ```
 
 
@@ -91,8 +95,6 @@ col.names <- c("Alpha 2", "Alpha 3", "Numeric", "Name", "Official Name", "Name (
 
 kableExtra::kbl(country.currency.DISPLAY, booktabs=TRUE, caption=NULL, col.names=col.names) |> 
   kableExtra::kable_styling(latex_options="striped")
-
-
 ```
 
 
