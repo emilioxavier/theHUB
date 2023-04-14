@@ -36,22 +36,22 @@ make.likert.barplot.data <- function(data, likert2int.tb) {
                             cols=everything(),
                             names_to="Question",
                             values_to="Answer") |>
-    arrange(Question, Answer) |>
-    group_by(Question, Answer) |>
+    arrange("Question", "Answer") |>
+    group_by("Question", "Answer") |>
     summarise(Count=n()) |>
     bind_rows(data.range) |>
-    filter(!is.na(Answer)) |>
+    filter(!is.na("Answer")) |>
     ungroup() |>
-    complete(Question, Answer, fill=list(Count=0)) |>
-    filter(Question!="RANGE") |>
-    group_by(Question) |>
-    mutate(Total=sum(Count),
-           Percent=(Count/Total*100),
-           Label.long=paste(Count, " (", round(Percent, digits=0), "%)", sep=""),
-           pct.label.pos=cumsum(Percent)-0.5*Percent,
-           count.label.pos=cumsum(Count)-0.5*Count
+    complete("Question", "Answer", fill=list(Count=0)) |>
+    filter("Question"!="RANGE") |>
+    group_by("Question") |>
+    mutate(Total=sum("Count"),
+           Percent=("Count"/"Total"*100),
+           Label.long=paste("Count", " (", round("Percent", digits=0), "%)", sep=""),
+           pct.label.pos=cumsum("Percent")-0.5*"Percent",
+           count.label.pos=cumsum("Count")-0.5*"Count"
     ) |>
-    mutate(Label.long=case_when(Count<=2~"",
+    mutate(Label.long=case_when("Count"<=2~"",
                                 TRUE~as.character(Label.long))) |>
     ungroup() |>
     full_join(y=likert2int.tb, by=c("Answer"="integer")) |>
