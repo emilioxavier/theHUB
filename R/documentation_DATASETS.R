@@ -77,6 +77,8 @@
 #'   - [WMU's Institutional Research's Peer Institutions](https://wmich.edu/institutionalresearch/peers)
 #'   - [Carnegie Classification of Institutions of Higher Education](https://carnegieclassifications.acenet.edu/)
 #'
+#' @family Datasets
+#'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
@@ -99,6 +101,8 @@
 #'   - Wikipedia's [List of circulating currencies](https://en.wikipedia.org/wiki/List_of_circulating_currencies)
 #'   - Individual currency [Wikipedia](https://en.wikipedia.org/) pages (too many to list)
 #'   - Individaul country [Wikipedia](https://en.wikipedia.org/) pages (also, too many to list)
+#'
+#' @family Datasets
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -133,14 +137,21 @@
 #' @source Data source:
 #'   [The Princeton Review's ACT to SAT Score Conversion Chart](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
 #'
+#' @family Datasets
+#'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 "ACT.2.SAT"
 
 #' @describeIn ACT.2.SAT SAT Score Conversion Table
+#'
+#' @family Datasets
+#'
 "SAT.2.ACT"
 
 #' @describeIn ACT.2.SAT The [original Princeton Review Conversation Table](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'
+#' @family Datasets
 #'
 "SAT.ACT.PR"
