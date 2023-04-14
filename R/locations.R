@@ -85,8 +85,7 @@ LatLonDistances <- function(lat1, lon1, lat2, lon2, distance.units="miles") {
 #'   When using the world GADM database, loading the rather large world database
 #'   takes time and, thus, the function appears to be slow.
 #'
-#'   This function is based on the ["Latitude Longitude Coordinates to State Code
-#'   in R"](https://stackoverflow.com/questions/8751497/latitude-longitude-coordinates-to-state-code-in-r)
+#'   This function is based on the ["Latitude Longitude Coordinates to State Code in R"](https://stackoverflow.com/questions/8751497/latitude-longitude-coordinates-to-state-code-in-r)
 #'   stackoverflow response by
 #'   [Josh O'Brien](https://stackoverflow.com/users/980833/josh-obrien).
 #'
@@ -167,8 +166,7 @@ lonlat2region <- function(longitude, latitude, gadm.mapfile) {
 #'   When using the world GADM database, loading the rather large world database
 #'   takes time and, thus, the function appears to be slow.
 #'
-#'   This function is based on the ["Latitude Longitude Coordinates to State Code
-#'   in R"](https://stackoverflow.com/questions/8751497/latitude-longitude-coordinates-to-state-code-in-r)
+#'   This function is based on the ["Latitude Longitude Coordinates to State Code in R"](https://stackoverflow.com/questions/8751497/latitude-longitude-coordinates-to-state-code-in-r)
 #'   stackoverflow response by
 #'   [Josh O'Brien](https://stackoverflow.com/users/980833/josh-obrien).
 #'
