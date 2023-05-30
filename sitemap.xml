@@ -25,6 +25,9 @@
     <loc>https://emilioxavier.github.io/theHUB/articles/Datasets_PubliclyAvailable.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/EDW_Navigation.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/EDW_R-SQLsetup.html</loc>
   </url>
   <url>
@@ -35,6 +38,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/GeoCoding_DownloadShapeFiles.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/HowTo_ClearinghouseData.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/HowTo_DonutPlots.html</loc>
@@ -224,6 +230,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/likert.plot.matrix.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.2.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.html</loc>
