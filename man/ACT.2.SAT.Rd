@@ -54,8 +54,22 @@ the ACT-SAT conversion table.
 \item \code{SAT.ACT.PR}: The \href{https://www.princetonreview.com/college-advice/act-to-sat-conversion}{original Princeton Review Conversation Table}
 
 }}
+\seealso{
+Other Datasets: 
+\code{\link{MSUpeers}},
+\code{\link{country.currency}}
+
+Other Datasets: 
+\code{\link{MSUpeers}},
+\code{\link{country.currency}}
+
+Other Datasets: 
+\code{\link{MSUpeers}},
+\code{\link{country.currency}}
+}
 \author{
 Emilio Xavier Esposito \email{emilio@msu.edu}
 (\url{https://github.com/emilioxavier})
 }
+\concept{Datasets}
 \keyword{datasets}

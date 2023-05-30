@@ -25,9 +25,9 @@ values by a user defined value. \emph{\strong{This method is inferior to the
 \examples{
 IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
 ID.convert(ID=IDs, deID.value=12345)
-[1] "1234512345" "24690"      NA           "24690"      "13579.56"   NA           "00023456"
-Warning message:
-In ID.convert(ID = IDs, deID.value = 12345) : NAs introduced by coercion
+# [1] "1234512345" "24690"      NA           "24690"      "13579.56"   NA           "00023456"
+# Warning message:
+# In ID.convert(ID = IDs, deID.value = 12345) : NAs introduced by coercion
 
 }
 \author{

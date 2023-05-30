@@ -38,6 +38,7 @@ Useful links:
 \itemize{
   \item \url{https://github.com/emilioxavier/theHUB/}
   \item \url{https://emilioxavier.github.io/theHUB/}
+  \item \url{https://theHopefulBox.com}
   \item Report bugs at \url{https://github.com/emilioxavier/theHUB/issues/}
 }
 

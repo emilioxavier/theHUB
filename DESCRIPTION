@@ -3,27 +3,23 @@ Type: Package
 Title: the Haabefuld (Hopeful) Utility Box (theHUB)
 Description: The analytics utility box of the Predictive Analytics Group to aid the evaluation of student-related data and surveys.
 Version: 0.4.0
-Depends: R (>= 4.1)
+Depends: R (>= 4.1),
+    mathjaxr,
+    kableExtra
 Imports: 
-    tidyverse,
-    lubridate,
-    tibble,
-    dplyr,
-    purrr,
-    stringr,
     tidyr,
     tidyselect,
-    tidytext,
+    tibble,
+    lubridate,
+    dplyr,
     ggplot2,
+    purrr,
+    stringr,
     ggrepel,
-    kableExtra,
     cowplot,
     rlang,
     sf,
-    zipcodeR,
-    ggwordcloud,
     digest,
-    mathjaxr,
     WriteXLS
 Suggests: 
     knitr,

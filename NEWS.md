@@ -1,4 +1,16 @@
 
+# theHUB 1.0.0
+
+* Rectified
+  - Issue #2, #5, #14, #15, #17, #19, #20, #21, #22, #23
+* Added [`ID.convert()`](https://thehopefulbox.com/reference/ID.convert.html) and [`ID.random()`](https://thehopefulbox.com/reference/ID.random.html) along with documentation.
+* Added [Country and Currency Dataset](https://thehopefulbox.com/articles/Datasets_CountryCurrency) article and [dataset](https://thehopefulbox.com/reference/country.currency.html).
+* Added [SAT to ACT Conversion Dataset](https://thehopefulbox.com/reference/ACT.2.SAT.html) and conversion functions [`convert.ACT2SAT()`](https://thehopefulbox.com/reference/convert.ACT2SAT.html) and [`convert.SAT2ACT()`](https://thehopefulbox.com/reference/convert.SAT2ACT.html). Issue #23
+* The Big Ten color (or colour) palette (issue #5) is available through the [`MSUpeers` dataset](https://thehopefulbox.com/reference/MSUpeers.html) with the following command:
+  > `filter(MSUpeers, BigTen.tf) |> select(name.short, starts_with("colour")) |> distinct()`
+* Corrected many, many, many notes, warnings, and errors from a `R CMD check --as-cran` check.
+
+
 # theHUB 0.3.0
 
 * Rectified

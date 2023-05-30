@@ -4,19 +4,21 @@
 \alias{LatLonDistances}
 \title{Latitude-Longitude Distances}
 \usage{
-LatLonDistances(lat1, long1, lat2, long2, distance.units = "miles")
+LatLonDistances(lat1, lon1, lat2, lon2, distance.units = "miles")
 }
 \arguments{
+\item{lat1}{latitude value for the first set of latitude-longitude coordinates}
+
+\item{lon1}{longitude value for the first set of latitude-longitude coordinates
+\emph{e.g.}, c(lat1, lon1), c(42.331177, -83.046023)  ## Detroit, Michigan}
+
+\item{lat2}{latitude value for the second set of latitude-longitude coordinates}
+
+\item{lon2}{longitude value for the second set of latitude-longitude coordinates
+\emph{e.g.}, c(lat2, lon2), c(42.737652, -84.483788)  ## East Lansing, Michigan}
+
 \item{distance.units}{string indicating if the resulting distance should be
-miles or kilometers; default is \code{"miles"}.}
-
-\item{point1}{vector with two numeric values for the first pair of
-latitude-longitude coordinates;
-\emph{e.g.}, c(latitude, longitude), c(42.331177, -83.046023)  ## Detroit, Michigan}
-
-\item{point2}{vector with two numeric values for the first pair of
-latitude-longitude coordinates;
-\emph{e.g.}, c(latitude, longitude), c(42.737652, -84.483788)  ## East Lansing, Michigan}
+miles or kilometers expressed as \code{"km"}; default is \code{"miles"}.}
 }
 \value{
 distance between the two points taking into consideration the curvature of the earth
@@ -31,7 +33,12 @@ long description with what the function does and returns
 point1 <- c(42.331177, -83.046023)  ## Detroit, Michigan
 point2 <- c(42.737652, -84.483788)  ## East Lansing, Michigan
 
-LatLonDistances(point1, point2, distance.units="miles")
+LatLonDistances(lat1=point1[1], lon1=point1[2],
+                lat2=point2[1], lon2=point2[2], distance.units="miles")
+# 78.48957
+
+LatLonDistances(lat1=42.331177, lon1=-83.046023,
+                lat2=42.737652, lon2=-84.483788, distance.units="miles")
 # 78.48957
 
 }

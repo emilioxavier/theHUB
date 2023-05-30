@@ -12,6 +12,8 @@ Use the \code{\link[=convert.fromto]{convert.fromto()}} function to convert text
 \emph{\strong{Note}}: Ensure the integers are positive and non-zero.}
 
 \item{QoI}{string with the Question of Interest (the rows)}
+
+\item{value.range}{range of possible Likert values}
 }
 \value{
 ggplot2 graphics object

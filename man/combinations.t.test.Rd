@@ -26,7 +26,8 @@ sample; default: \code{FALSE}}
 \item{na.rm}{\code{logical} indicating if \code{NA} values are removed; default: \code{TRUE}}
 }
 \value{
-A \code{data.frame} with the \code{t-value}, degrees of freedom (\code{df}), and \code{p-value}.
+A \code{data.frame} or \code{tibble} with the \code{t-value}, degrees of freedom
+(\code{df}), and \code{p-value}.
 }
 \description{
 Calculate all t-test Combinations
@@ -35,8 +36,12 @@ Calculate all t-test Combinations
 Calculate all t-test combinations within a list of values.
 }
 \examples{
-  values <- list(a=1:3, b=1:5, c=1:10, d=1:20)
-  combinations.t.test(values)
+\dontrun{
+  values.ls <- list(a=1:3, b=1:5, c=1:10, d=1:20, e=letters[1:20])
+  values.tb <- tibble::tibble(a=1:10, b=11:20, c=21:30, d=31:40, e=letters[1:10])
+  combinations.t.test(values.ls)
+  combinations.t.test(values.tb)
+}
 
 }
 \author{

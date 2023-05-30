@@ -5,11 +5,14 @@ articles:
   AdvancedCandidateEvaluation: AdvancedCandidateEvaluation.html
   AdvancedCandidateEvaluation_questions: AdvancedCandidateEvaluation_questions.html
   AdvancedCandidateEvaluation_setup: AdvancedCandidateEvaluation_setup.html
+  Datasets_CountryCurrency: Datasets_CountryCurrency.html
   Datasets_PubliclyAvailable: Datasets_PubliclyAvailable.html
+  EDW_Navigation: EDW_Navigation.html
   EDW_R-SQLsetup: EDW_R-SQLsetup.html
   EDW_SQLsnippetLibrary: EDW_SQLsnippetLibrary.html
   EDW_dBeaverSetup: EDW_dBeaverSetup.html
   GeoCoding_DownloadShapeFiles: GeoCoding_DownloadShapeFiles.html
+  HowTo_ClearinghouseData: HowTo_ClearinghouseData.html
   HowTo_DonutPlots: HowTo_DonutPlots.html
   HowTo_Software: HowTo_Software.html
   PAG_About: web_only/PAG_About.html
@@ -18,7 +21,7 @@ articles:
   PAG_HowILikeToBeMentored: web_only/PAG_HowILikeToBeMentored.html
   PAG_Onboarding: web_only/PAG_Onboarding.html
   PAG_ProfessionalDevelopment: web_only/PAG_ProfessionalDevelopment.html
-last_built: 2023-01-11T16:27Z
+last_built: 2023-04-05T17:34Z
 urls:
   reference: https://emilioxavier.github.io/theHUB/reference
   article: https://emilioxavier.github.io/theHUB/articles

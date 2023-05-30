@@ -107,8 +107,14 @@ The WMU peer instititions:
 \item \code{WMUpeers}: Western Michigan Peer Institutions dataset
 
 }}
+\seealso{
+Other Datasets: 
+\code{\link{ACT.2.SAT}},
+\code{\link{country.currency}}
+}
 \author{
 Emilio Xavier Esposito \email{emilio@msu.edu}
 (\url{https://github.com/emilioxavier})
 }
+\concept{Datasets}
 \keyword{datasets}

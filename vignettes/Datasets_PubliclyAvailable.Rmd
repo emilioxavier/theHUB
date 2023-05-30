@@ -1,9 +1,9 @@
 ---
-title: "Public Datasets"
-date: "Updated 22/Sep/2022"
+title: "Dataset: Public Datasets"
+date: "Updated 03/Mar/2023"
 output: html_document
 vignette: >
-  %\VignetteIndexEntry{PAG: About}
+  %\VignetteIndexEntry{Dataset: Public Datasets}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

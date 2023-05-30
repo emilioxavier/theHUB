@@ -19,7 +19,13 @@
     <loc>https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation_setup.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/Datasets_CountryCurrency.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/Datasets_PubliclyAvailable.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/EDW_Navigation.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/EDW_R-SQLsetup.html</loc>
@@ -32,6 +38,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/GeoCoding_DownloadShapeFiles.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/articles/HowTo_ClearinghouseData.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/articles/HowTo_DonutPlots.html</loc>
@@ -77,6 +86,15 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/ACT.2.SAT.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/ID.convert.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/ID.random.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/LatLonDistances.html</loc>
@@ -127,6 +145,12 @@
     <loc>https://emilioxavier.github.io/theHUB/reference/compare.dataset.html</loc>
   </url>
   <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/convert.ACT2SAT.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/convert.SAT2ACT.html</loc>
+  </url>
+  <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/convert.YN2TF.html</loc>
   </url>
   <url>
@@ -143,6 +167,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/convert.toASCII.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/country.currency.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/course.type.html</loc>
@@ -212,6 +239,9 @@
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/likert.plot.matrix.html</loc>
+  </url>
+  <url>
+    <loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.2.html</loc>
   </url>
   <url>
     <loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.html</loc>

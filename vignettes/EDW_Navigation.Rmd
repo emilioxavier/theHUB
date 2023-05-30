@@ -1,0 +1,131 @@
+---
+title: "EDW: Navigation"
+date: "Updated 08/Mar/2023"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{EDW: Navigation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### FERPA Disclaimer Statement
+
+> **IMPORTANT NOTE**: You are solely responsible for the maintenance of the confidentiality of this information as established in the Family Educational Rights and Privacy Act (FERPA) and Michigan State University Guidelines Governing Privacy and Release of Student Records.
+
+***
+
+## Table/View Naming Convention
+To easily navigate the EDW, Tables/Views have uniform prefixes and suffixes. The prefixes indicate the area the data is from while the suffixes indicate the type of data being presented.
+
+### Table/View Prefix
+The prefix indicates the area (unit or depeartment) the data originated or what the data is related to. 
+
+| Prefix | Type of Data |
+|:------:|--------------|
+| A_ | Academic Advisement/Degree Audit |
+| B_ | Student Financials (aka Billing) |
+| C_ | Course Catalog/Class Schedule |
+| F_ | Financial Aid |
+| P_ | Person/Student (admissions, bio-demographic,<br>and student record-related<br>tables that contain an EMPLID) |
+| R_ | Derived Reporting Views |
+| S_ | Support tables such as setup and configuration |
+| T_ | PeopleTools and EDW Tools |
+| X_ | Crosswalks: legacy SIS <-> Campus Solutions |
+
+
+### Table/View Suffix
+The suffixes indicate the type of data available within the Table/View and are a bit diverse. It is possible that not all available views are present below due to recent changes. The **`_AV`** and **`_RAV`** views include **time stamped** data to allow those interested to see and explore data for an individual changed over time. The dated data is referred to as "effective dated" by Campus Solutions, though, this term is a misnomer. The date indicates when the data of interest within the Table/View was changed. Unfortunately, those with write access to the EDW are able to also set these dates. 
+
+| Suffix | Description |
+|:------:|-------------|
+| _V | Non-Sensitive View (current updated) |
+| _SV | Sensitive View (current updated) |
+| _AV | All View (Pending, Historical, Current) |
+| _STGV | Stage View |
+| _R | Support RSV and RV Views |
+| _RAV | Requested/Derived/Report View with<br>pending, historical, and current<br>data |
+| _RV | Requested/Derived/Report View |
+| _AGRV | Aggregated Requested View |
+| _AGV | Aggregated View |
+| _FV | Field View |
+| _H | Period History View (not available to everyone) |
+| _HV | Period History View |
+| _PRD_HV | Period History View |
+| _$V/_V0 | Internal View |
+
+
+## Term (aka Semester-Year) Designations and Construction
+
+Within the legacy student information system, a four digit code was used to indicate the semester and year. Why they couldn't use five digits is likely due to the meager storage capacities of a bygone era, but now we get to deal with the ramifications. To shorten the ideal year plus semester (_e.g._, `YYYYS`) format the designers of the **term code** (commonly referred to as the `STRM` column in the tables and views) removed the century digit from the year. 
+
+Specifically, the term code is a four digit representation of the century (position 1), the two-digit calendar year (positions 2 and 3), and the term (position 4). The following is the translation between digits and four-digit years and term types. To represent the spring semester during 2023, the `STRM` is `2232`.
+
+Within [theHUB](https://thehopefulbox.com/reference/index.html) there is the [`convert.termCode()`](https://thehopefulbox.com/reference/convert.termCode.html) function that converts the digit form representing the year-semester into a human readable form. A function to convert the human readable form into the term code is under development.
+
+| **Position** | **Information** |
+|:--------:|:-----------:|
+|  1  |  Century Code |
+|     |  (1 = 19xx & 2 = 20xx) |
+|  2 & 3  |  Two-Digit Calendar Year |
+|  4  |  Term Indicator (see below) |
+
+### Term-Code Translation Table
+This table is part of `theHUB` and is available via the [term.translation](https://thehopefulbox.com/reference/term.translation.html) constant.
+
+| **Term abbreviation** | **Full Term Name** | **Short Term Name** |
+|:-------------------:|:-------------:|:--------------:|
+|   1  | Winter Quarter (WinterQ) |  WQ  |
+|   2  | Spring | SS |
+|   3  | Spring Quarter (SpringQ) | SQ  |
+|   5  | Summer | US |
+|   6  | Summer Quarter | UQ |
+|   8  | Fall   | FS |
+|   9  | Fall Quarter (FallQ) | FQ |
+
+```r
+term.code <- "2208"
+
+convert.termCode(term.code, term.type="full")
+# [1] "Fall 2020"
+
+convert.termCode(term.code, term.type="short")
+# [1] "FS 2020"
+```
+
+Incorporating the `convert.termCode()` function into an EDW data pull and combined with a separation function (see below), allows the retention of the original term code and the creation of a human readable term code column, a column indicating only the semester (or quarter) type, and the year. 
+
+| STRM | College | Course.Number | Course.Section | Course.Name |
+|:----:|:-------:|:-------------:|:--------------:|:-----------:|
+| 2188 | GEOL    |  101          |    001         | Intro to Rocks |
+| 2192 | GEOL    |  201          |    001         | Granite |
+| 2198 | GEOL    |  301          |    001         | Volcanic |
+| 2188 | HIST    |  101          |    001         | US History |
+| 2192 | HIST    |  102          |    001         | Eastern European History |
+| 2198 | HIST    |  103          |    001         | Pacific Island History |
+
+```r
+mutate(course.schedule, termCode=convert.termCode(STRM), term.type="short") |>
+  separate(termCode, sep=" ", into=c("semester", "year"), remove=FALSE)
+```
+
+With the update of [tidyr](https://tidyr.tidyverse.org/) to version 1.3.0, the [`separate()`](https://tidyr.tidyverse.org/reference/separate.html) function is no longer being updated and being superseded by [`separate_wider_delim()`](https://tidyr.tidyverse.org/reference/separate_wider_delim.html), [`separate_wider_position()`](https://tidyr.tidyverse.org/reference/separate_wider_delim.html), and [`separate_wider_regex()`](https://tidyr.tidyverse.org/reference/separate_wider_delim.html).
+
+```r
+mutate(course.schedule, termCode=convert.termCode(STRM), term.type="short") |>
+  separate_wider_delim(term, delim=" ", names=c("semester", "year"), cols_remove=FALSE)
+```
+
+Either way, the results are the same. The new **semester** and **year** columns are added to the left-most side of the table (aka `tibble` or `data.frame`).
+
+| semester | year | STRM | College | Course.Number | Course.Section | Course.Name |
+|:--------:|:----:|:----:|:-------:|:-------------:|:--------------:|:-----------:|
+|  FS      | 2018 | 2188 | GEOL    |  101          |    001         | Intro to Rocks |
+|  SS      | 2019 | 2192 | GEOL    |  201          |    001         | Granite |
+|  FS      | 2019 | 2198 | GEOL    |  301          |    001         | Volcanic |
+|  FS      | 2018 | 2188 | HIST    |  101          |    001         | US History |
+|  SS      | 2019 | 2192 | HIST    |  102          |    001         | Eastern European History |
+|  FS      | 2019 | 2198 | HIST    |  103          |    001         | Pacific Island History |
+
+
+
+

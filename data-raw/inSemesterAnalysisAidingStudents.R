@@ -32,8 +32,8 @@ pmap_dfr(tb, rbinom)
 pmap_df(tb, rbinom)
 pmap_dfc(tb, rbinom)
 tb
-tb %>% as.data.frame()
-tb %>% as.data.frame() -> blah
+tb |> as.data.frame()
+tb |> as.data.frame() -> blah
 blah
 pmap_dfc(blah, rbinom)
 pmap(blah, rbinom)
@@ -42,7 +42,7 @@ pmap(tb, rbinom)
 pmap_dfc(tb, rbinom)
 pmap_dfr(tb, rbinom)
 pmap_dfc(tb, rbinom)
-pmap_dfc(tb, rbinom) %>% t()
+pmap_dfc(tb, rbinom) |> t()
 sample(x=2:5, size=1)
 row.idc <- 1:5
 row.idc
@@ -64,7 +64,7 @@ pmap_dfr(blah, rbinom, .id="yad")
 map_dfr(blah, rbinom, .id="yad")
 pmap_dfr(blah, rbinom)
 pmap_dfc(blah, rbinom)
-pmap_dfc(blah, rbinom) %>% colMeans()
+pmap_dfc(blah, rbinom) |> colMeans()
 tb <- tibble(n=rep_len(x=15, length.out=15), size=rep_len(x=25, length.out=15), prob=probs)
 tb <- tibble(n=rep_len(x=15, length.out=15), size=rep_len(x=25, length.out=15), prob=rep(probs,3 ))
 tb
@@ -100,7 +100,7 @@ pmap_dfr(blah, rbinom, .id="yad")
 map_dfr(blah, rbinom, .id="yad")
 pmap_dfr(blah, rbinom)
 pmap_dfc(blah, rbinom)
-pmap_dfc(blah, rbinom) %>% colMeans()
+pmap_dfc(blah, rbinom) |> colMeans()
 tb <- tibble(n=rep_len(x=15, length.out=15), size=rep_len(x=25, length.out=15), prob=probs)
 tb <- tibble(n=rep_len(x=15, length.out=15), size=rep_len(x=25, length.out=15), prob=rep(probs,3 ))
 tb

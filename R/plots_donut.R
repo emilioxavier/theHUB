@@ -68,38 +68,50 @@ make.donut.data <- function(data,
                             r.outer=6) {
 
   ## sanity check ----
-  layer.order.orig <- layer.order
+  # layer.order.orig <- layer.order
   ##_ if layer.order is set... ----
-  if ( !is.null(layerBy) & (length(layer.order) == 1) ) {
-    warning.message <- paste0("The provided layer.order of ", layer.order.orig,
-                              " was not `alphabetical`, `ascend`, or `descend` and was set to `descend`.")
-    if ( nchar(layer.order) < 2 ) { layer.order <- "descend" }
-    warning(warning.message,
-            immediate.=TRUE)
+  # if ( !is.null(layerBy) & (length(layer.order) == 1) ) {
+  #   warning.message <- paste0("The provided layer.order of ", layer.order.orig,
+  #                             " was not `alphabetical`, `ascend`, or `descend` and was set to `descend`.")
+  #   if ( nchar(layer.order) < 2 ) { layer.order <- "descend" }
+  #   warning(warning.message,
+  #           immediate.=TRUE)
+  # }
+
+  ## how to order the data ----
+  category.order <- tolower(category.order)
+  if ( (category.order != "count") & (category.order != "category") ) {
+    category.order <- "count"
   }
 
+  ## extract needed columns and rename ----
+  donut.RAW <- dplyr::select(data, {{category}}, {{facetBy}}, {{layerBy}}, {{category.count}}) |>
+    dplyr::rename("Categories"={{category}},
+                  "FacetBy"={{facetBy}},
+                  "LayerBy"={{layerBy}},
+                  "Counts"={{category.count}})
+
+  ## check for each type of column ----
+  colNames.RAW <- colnames(donut.RAW)
+  ## determine columns of interest ----
+  # colNames.oi <- c(colNames.RAW[c("Categories", "FacetBy", "LayerBy") %in% colNames.RAW])
+  colNames.oi <- na.omit(colNames.RAW[match(x=c("Categories", "FacetBy", "LayerBy"), table=colNames.RAW)])
+
   if ( !is.null(category.count) ) {
-    donut.RAW <- dplyr::select(data, {{category}}, {{facetBy}}, {{layerBy}}, {{category.count}}) |>
-      dplyr::rename("Categories"={{category}},
-                    "FacetBy"={{facetBy}},
-                    "LayerBy"={{layerBy}},
-                    "Counts"={{category.count}})
-
-    ## check for each type of column ----
-    colNames.RAW <- colnames(donut.RAW)
-    ## determine columns of interest ----
-    colNames.oi <- c(colNames.RAW[c("Categories", "FacetBy", "LayerBy") %in% colNames.RAW])
-
     donut.COUNTS <- dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
       dplyr::tally(Counts, name="Counts") |>
+      dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
+  } else {
+    donut.COUNTS <- dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
+      dplyr::summarise(Counts=n()) |>
       dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
   }
 
   ## extract needed data and rename ----
-  donut.RAW <- dplyr::select(data, {{category}}, {{facetBy}}, {{layerBy}}) |>
-    dplyr::rename("Categories"={{category}},
-                  "FacetBy"={{facetBy}},
-                  "LayerBy"={{layerBy}})
+  # donut.RAW <- dplyr::select(data, {{category}}, {{facetBy}}, {{layerBy}}) |>
+  #   dplyr::rename("Categories"={{category}},
+  #                 "FacetBy"={{facetBy}},
+  #                 "LayerBy"={{layerBy}})
 
   ## number of facets ----
   if ( !is.null(facetBy) ) {
@@ -107,8 +119,20 @@ make.donut.data <- function(data,
   }
 
   ## number of layers ----
+  layer.order.orig <- layer.order
   if ( !is.null(layerBy) ) {
-    n.layers <- unique(donut.RAW$LayerBy) |> length()
+    n.layers <- length(unique(donut.RAW$LayerBy))
+
+    ##_ alpha values ----
+    alpha.max <- 1
+    alpha.min <- alpha.max/n.layers
+    LayerAlpha <- seq(from=alpha.min, to=1, by=alpha.min)
+
+    donut.DATA <- mutate(donut.DATA,
+                         LayerAlpha=case_when(LayerBy=="f"~1,
+                                              LayerBy=="r"~0.5,
+                                              LayerBy=="4"~0.75))
+
     ##_ layer summary ----
     if ( n.layers > 1 ) {
       layer.summary <- dplyr::group_by(donut.RAW, LayerBy) |>
@@ -142,24 +166,21 @@ make.donut.data <- function(data,
                                           xmin=layer.inner,
                                           xmax=layer.outer)
     }
+  } else {
+    LayerAlpha <- n.layers <- 1
   }
 
+
   ## check for each type of column ----
-  colNames.RAW <- colnames(donut.RAW)
+  # colNames.RAW <- colnames(donut.RAW)
 
   ## determine columns of interest ----
-  colNames.oi <- c(colNames.RAW[c("Categories", "FacetBy", "LayerBy") %in% colNames.RAW])
+  # colNames.oi <- c(colNames.RAW[c("Categories", "FacetBy", "LayerBy") %in% colNames.RAW])
 
   ## calculate the counts for each category, facet, and layer ----
   # donut.COUNTS <- dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
   #   dplyr::tally(name="Counts") |>
   #   dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
-
-  ## how to order the data ----
-  category.order <- tolower(category.order)
-  if ( (category.order != "count") & (category.order != "category") ) {
-    category.order <- "count"
-  }
 
 
   ## arrange data by count OR category ----
@@ -221,6 +242,7 @@ make.donut.data <- function(data,
 #'
 #' @param donut.DATA `tibble` (or `data.frame`) constructed via [make.donut.data()]
 #' @param colour.palette vector of strings containing the colour palette.
+#' @param colour.outline string indicating the colour of the donut's outline.
 #' @param label.col string with the column containing the labels. Setting to `NULL`
 #'   will result in no labels.
 #' @param label.size label sizes; default: `3.5`
@@ -270,6 +292,7 @@ make.donut.data <- function(data,
 #'
 make.donut.plot <- function(donut.DATA,
                             colour.palette,
+                            colour.outline="grey90",
                             label.col=NULL,
                             label.size=3.5,
                             facet.nrow=NULL,
@@ -280,7 +303,7 @@ make.donut.plot <- function(donut.DATA,
 
   ## check facet information ----
   colNames.oi <- colnames(donut.DATA)
-  facet.tf <- any(colnames(all.donut.DATA) %in% "FacetBy")
+  facet.tf <- any(colnames(donut.DATA) %in% "FacetBy")
   facet.count <- length(unique(donut.DATA$FacetBy))
   ##_ facet information but no indication of the number of columns or rows ----
   if ( facet.tf & is.null(facet.ncol) & is.null(facet.nrow) ) {
@@ -307,9 +330,6 @@ make.donut.plot <- function(donut.DATA,
     facet.nrow <- NULL
   }
 
-
-
-
   ## construct the colour values vector ----
   if ( is.null(names(colour.palette)) ) {
     category.values <- unique(donut.DATA$Categories)
@@ -318,8 +338,10 @@ make.donut.plot <- function(donut.DATA,
   }
 
   ## build the donut plot ----
-  donut.plot <- ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
-    geom_rect() +
+  # donut.plot <- ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
+  # ggplot(data=donut.DATA, aes(fill=Categories, alpha=LayerBy, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
+  ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
+    geom_rect(colour=colour.outline, alpha=donut.DATA$LayerAlpha) +
     coord_polar(theta="y") +
     labs(x=NULL, y=NULL, title=NULL) +
     scale_fill_manual(values=colour.palette,
@@ -330,7 +352,8 @@ make.donut.plot <- function(donut.DATA,
     guides(fill=guide_legend(title.position="top",  ## place title on top of legend (not needed)
                              title.hjust=0.5,  ## center the title (not needed)
                              label.position="bottom",
-                             nrow=1)) +
+                             nrow=1),
+           alpha="none") +
     theme_bw() +
     cowplot::theme_cowplot() +
     theme(panel.border=element_blank(),

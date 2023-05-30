@@ -15,7 +15,7 @@ string with the terms to search the text string of interest, \emph{e.g.},
 }
 \description{
 Construct the search string (aka "pattern") based on provided
-search terms. The \code{\link[=get.unique.terms]{get.unique.terms()}} and \code{\link[=get.all.nodes]{get.all.nodes()}} functions use this
+search terms. The \code{\link[=get.unique.terms]{get.unique.terms()}} and \code{\link[=get.bigrams.oi]{get.bigrams.oi()}} functions use this
 function. The function is a simple wrapper for the \code{\link[=paste]{paste()}} function that
 surrounds each search term with \verb{\\\\b} and separates multiple terms with
 pipes \code{|}.

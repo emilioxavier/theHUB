@@ -21,11 +21,17 @@ Data sources:
 country.currency
 }
 \description{
-The 249 International Organization for Standardization (ISO)
+The 257 International Organization for Standardization (ISO)
 recognized countries and the currencies they use.
+}
+\seealso{
+Other Datasets: 
+\code{\link{ACT.2.SAT}},
+\code{\link{MSUpeers}}
 }
 \author{
 Emilio Xavier Esposito \email{emilio@msu.edu}
 (\url{https://github.com/emilioxavier})
 }
+\concept{Datasets}
 \keyword{datasets}

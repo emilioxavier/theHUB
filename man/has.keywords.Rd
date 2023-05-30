@@ -37,7 +37,7 @@ the following command.
 3 advisor    acadSupport
 4 assignment assessment
 
-keywords.tb <- dplyr::group_by(keywords, area) \%>\%
+keywords.tb <- dplyr::group_by(keywords, area) |>
   dplyr::summarise(query=paste(keyword, collapse="|"))
 
 keywords.tb
@@ -51,7 +51,7 @@ keywords.tb
 \examples{
 \dontrun{
 library(dplyr)
-keywords.tb <- group_by(keywords, area) \%>\%
+keywords.tb <- group_by(keywords, area) |>
     summarise(query=paste(keyword, collapse="|"))
 
 fs20.comments <- has.keywords(data=fs20.comments,

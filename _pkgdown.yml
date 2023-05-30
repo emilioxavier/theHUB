@@ -5,19 +5,90 @@ template:
   includes:
     in_header:
        <!-- Google tag (gtag.js) -->
-       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143011948-3"></script>
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZQ7494RM2"></script>
        <script>
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
 
-         gtag('config', 'UA-143011948-3');
-       </script>
+         gtag('config', 'G-0ZQ7494RM2');
+      </script>
 navbar:
   structure:
-    left:  [intro, reference, PAGroup, articles, news]
+    left:  [intro, reference, PAGroup, articles, Datasets, MSUEDW, news]
     right: [search, github, twitter]
+  development:
+    mode: auto
+  authors:
+    Emilio Xavier Esposito:
+      href: https://exeResearch.com
   components:
+    Reference:
+    - title: General Information
+      desc: >
+        blah blah blah
+    - title: Converters & Cleaners
+      desc: >
+        The conversion and cleaning of common abbreviations, data formats, and data.
+      contents:
+      - convert.ACT2SAT
+      - convert.SAT2ACT
+      - convert.YN2TF
+      - convert.fps2binary
+      - convert.fromto
+      - convert.spaces
+      - convert.termCode
+      - convert.toASCII
+      - clean.DATE
+      - clean.DoB
+      - clean.OStype
+      - clean.OSversion
+      - clean.YoB
+      - clean.cntrl
+      - clean.comment
+    - title: Text
+      desc: >
+        Functions to assist in the analysis of user provided and general text.
+      contents:
+      - has.keywords
+      - extract.emails
+    - title: Dates & Times
+      desc: >
+        Creation of date and time notation.
+      contents:
+      - file.date
+      - file.datetime
+      - file.time
+    - title: Datasets
+      desc: >
+        The included datasets are designed to assist the analysis of university
+        and applicant data. They are generalized (the country and currency dataset)
+        and also specific (the MSU and WMU peers).
+      contents:
+      - MSUpeers
+      - WMUpeers
+      - country.currency
+      - SAT.ACT.PR
+      - keywords
+    - title: Color Palettes
+      desc: >
+        Included color palettes. Currently, the Michigan State University and
+        University of Wisconsin color palettes are included.
+        The Big Ten color palette can be constructed
+        using the command `filter(MSUpeers, BigTen.tf) |> select(name.short, starts_with("colour")) |> distinct()`
+      contents:
+      - msu.palette
+      - msu.darkGreen
+      - msu.darkGreenTints
+      - msu.heatmap.20
+      - msu.heatmap.100
+      - wisc.badgerRed
+      - wisc.white
+      - wisc.badgerRedTints
+      - wisc.heatmap.20
+      - wisc.heatmap.100
+      - wisc.secondary
+      - wisc.accent
     PAGroup:
      text: PAGroup
      menu:
@@ -46,12 +117,27 @@ navbar:
      - text: GeoCoding
      - text: Downloading Shape Files
        href: articles/GeoCoding_DownloadShapeFiles.html
-     - text: MSUEDW
+     - text: General
+     - text: Our Software Stack
+       href: articles/HowTo_Software.html
+    Datasets:
+     text: Datasets
+     menu:
+     - text: Publicly Available Datasets
+       href: articles/Datasets_PubliclyAvailable.html
+     - text: Country and Currency Dataset
+       href: articles/Datasets_CountryCurrency.html
+    MSUEDW:
+     text: MSUEDW
+     menu:
      - text: dBeaver Setup
        href: articles/EDW_dBeaverSetup.html
      - text: R-SQL Setup
        href: articles/EDW_R-SQLsetup.html
-     - text: SQL Snippet Library for the MSUEDW (Coming soon!)
+     - text: EDW Navigation
+       href: articles/EDW_Navigation.html
+     - text: SQL Snippet Library (In Progress)
+       href: articles/EDW_R-SQLsnippetLibrary.html
     news:
      text: News
      href: news/index.html

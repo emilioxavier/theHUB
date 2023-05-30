@@ -1,0 +1,287 @@
+---
+title: "How To: Requesting Clearinghouse Data"
+date: "Updated 15/Mar/2023"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How To: Requesting Clearinghouse Data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r setup, echo=FALSE, include=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE, include=FALSE)
+library(knitr)
+```
+
+
+---
+
+
+### FERPA Disclaimer Statement
+
+> **IMPORTANT NOTE**: You are solely responsible for the maintenance of the confidentiality of this information as established in the Family Educational Rights and Privacy Act (FERPA) and Michigan State University Guidelines Governing Privacy and Release of Student Records.
+
+***
+
+
+## Introduction
+The collecting and formatting of information to send to Clearinghouse is often seen as a daunting task with little room for error. This document is designed to help streamline the process through a standardized workflow.
+
+
+## Format of the Data File
+All provided data **must be** of type text. While there does not appear to be a preference on if the data request is provided as a CSV file or Excel workbook, both are written.
+
+
+### Header
+The first row of the data request file contains the following information. The **bolded Information** within the header is static and should be the same for all requests. 
+
+| Column | Information | Notes |
+|:------:|:-----------:|:------|
+|   A    | **HI** | Capital HI |
+|   B    | **######** | Institution code (six digit code) |
+|   C    | **##** | Branch code (two digit code). If no branch, double zeros |
+|   D    | **Institution Name** | Official full name of the institution |
+|   E    | `YYYYMMDD` | File creation date |
+|   F    | `Search type` | `SE`[^1] or `CO`[^2]|
+|   G    | **I** | Capital I |
+
+[^1]: `SE` for current or previously enrolled students/transfers out (used for IPEDS)
+[^2]: `CO` for **Co**hort query (used for SAM) 
+
+
+### Required Data
+The data of interest starts on the second row and has the following format.
+
+| Column | Name | Type | Value | Notes |
+|:------:|:----:|:----:|:------|:------|
+|   A    | D1.col  | Text | D1   | Literal value - "D1" in this field |
+|   B    | blank.1 | Text | "  " | Leave blank unless querying Pending Admission |
+|   C    | first.name | Text | Student's first name |
+|   D    | middle.initial | Text | Student's iddle initial | 1 character only, no period	|
+|   E    | last.name | Text | Student's last name |
+|   F    | suffix | Text | Student's last name suffix |
+|   G    | DoB | Text | Student's date of birth | YYYYMMDD format |
+|   H    | search.date | Text | Search begin date | YYYYMMDD format;  use in conjunction with search type |
+|   I    | blank.2 | Text | "  " | Leave blank |
+|   J    | institution.code | Text | 002290 | MSU's code |
+|   K    | branch.code | Text | 00 | Branch code (we don't have one); enter as "00" |
+|   L    | ID.number | Text | Student's PID/EMPLID |
+
+
+## Obtaining Data from MSUEDW
+The following `R` commands provide the steps to assist the construction of the Clearinghouse data request. Before using the information below, please ensure the required R-SQL setup was completed. The instructions on how to setup an `R` session to interact with the MSUEDW is available in the [EDW: R-SQL Setup](https://thehopefulbox.com/articles/EDW_R-SQLsetup.html) article.
+
+
+
+### Setup the `R` Session
+The first step is setting up the `R` session by setting a java parameter related to memory allocation and loading required packages. 
+
+```r
+options(java.parameters = c("-XX:+UseConcMarkSweepGC", "-Xmx8192m"))
+
+library(DBI)
+library(rJava)
+library(RJDBC)
+library(keyring)
+library(tidyverse)
+```
+
+
+### Define User-Specified Variables
+The user-defined variables provide easy modification of the script for future Clearinghouse data requests. The available application types are undergraduate (`UGRD`), graduate (`GRAD`), human medicine (`HMED`), osteopathic medicine (`OMED`), veternary medicine (`VMED`), agriculture technology (`AGTC`), graduate certificate (`GCRT`), law school (`LAW`), MSU law school (`LAWM`),  (`NON`), and (`NONL`). Notice the format for the `search.start` and `search.stop` dates. They are in the day-month-year (DDMMYYYY; 01-aug-2021) format to accommodate SQL queries. The dates will be transformed by the script for different portions of the data request. The MSUEDW user name, institution name and code, branch code, and search type are also set.
+
+```r
+application.type <- "UGRD"
+search.start <- "01-aug-2021"
+search.stop <- "01-aug-2022"
+EDW.username <- "emilio"
+
+institution.name <- "Michigan State University"
+institution.code <- "002290"
+branch.code <- "00"
+search.type <- "SE"
+```
+
+### Setup the MSUEDW Connection
+These commands will initiate a connection with the MSUEDW. Please ensure the `classPath` matches your installation. The `USERNAME` in `"/Users/USERNAME/software/ojdbc11-full/ojdbc11.jar"` is a placeholder. Please ensure the `classPath` is correct. For more information, view the [EDW: R-SQL Setup](https://thehopefulbox.com/articles/EDW_R-SQLsetup.html) article. 
+
+```r
+jdbcDriver <- RJDBC::JDBC(driverClass="oracle.jdbc.OracleDriver", 
+                          classPath="/Users/USERNAME/software/ojdbc11-full/ojdbc11.jar")
+                          
+MSUEDW.jdbc <- DBI::dbConnect(jdbcDriver, 
+                              "jdbc:oracle:thin:@//ebsprd390d.ais.msu.edu:1521/MSUEDW.EBSP.MSU.EDU",
+                              EDW.username, 
+                              keyring::key_get("MSUEDW", EDW.username))
+```
+
+
+### Reformat the Dates
+The dates of interest are constructed in the format needed by Clearinghouse, and the date for the resulting Excel workbook and CSV file are constructed. 
+
+```r
+search.start.DT <- lubridate::dmy(x=search.start)
+search.start.yyyymmdd <- paste0(lubridate::year(search.start.DT),
+                                formatC(lubridate::month(search.start.DT), flag="0", width=2),
+                                formatC(lubridate::day(search.start.DT), flag="0", width=2))
+
+today.date <- lubridate::today()
+file.date <- paste0(lubridate::year(today.date), 
+                    formatC(lubridate::month(today.date), flag="0", width=2), 
+                    formatC(lubridate::day(today.date), flag="0", width=2))
+```
+
+### Collect the Data
+Clearinghouse uses the applicant's full name and date of birth to identify them within their comprehensive database. Three Tables/Views within the MSUEDW contain the needed data to construct the Clearinghouse data request. The `siscs.p_adm_appl_data_v` view contains application data and contains several date columns related to the submission of an application. The date columns are:
+
+  - ADM_CREATION_DT: application creation date
+  - ADM_APPL_DT: application submission date
+  - APPL_FEE_DT: application fee paid
+  - ADM_APPL_CMPLT_DT: application completion date
+  - ADM_UPDATED_DT: application last updated date
+  
+The `siscs.p_names_v` view contains the applicant's name, and four name components are required. The column titles follow and are self-explanatory.
+
+  - FIRST_NAME
+  - MIDDLE_NAME
+  - LAST_NAME
+  - NAME_SUFFIX
+  
+The applicant's date of birth (column title BIRTHDATE) is obtained from `siscs.p_person_v`.
+
+
+### Construct the SQL Queries
+The three SQL queries are constructed to include the noted dates of interest. The application view (`p_adm_appl_data_v`) query fetches applicants within the restricted time frame of the applications. This example finds those that applied to MSU between 01/Aug/2021 and 01/Aug/2022 and equates to students starting in the fall/2022 semester. The full name and date of birth queries include all individuals (applicants and students) with the last updated dates since the first day of the application query. The provided queries are general, and you are encouraged to change them to fit your needs.
+
+```r
+apply.query <- paste("select *
+ from siscs.p_adm_appl_data_v
+ where ACAD_CAREER='", application.type,
+                     "' and ADM_CREATION_DT between '",
+                     search.start, "' and '", search.stop, "'", sep="")
+
+name.query <- paste("select *
+ from siscs.p_names_v
+ where LASTUPDDTTM >= '", search.start, "'", sep="")
+ 
+DoB.query <- paste("select *
+ from siscs.p_person_v
+ where LAST_CHILD_UPDDTM >= '", search.start, "'", sep="")
+```
+
+### Fetch the Data
+The following commands send the query to the MSUEDW and fetch the data. The fetched data is pared down to only include the columns of interest and the most current entry retained for the full name.
+
+```r
+## pull application data ----
+apply.results <- dbSendQuery(MSUEDW.jdbc, apply.query)
+apply.DATA <- dbFetch(apply.results) |>
+  as_tibble() |>
+  select(EMPLID, ends_with("_DT"))
+
+## pull name data ----
+name.results <- dbSendQuery(MSUEDW.jdbc, name.query)
+name.DATA <- dbFetch(name.results) |>
+  as_tibble() |>
+  select(EMPLID, NAME, FIRST_NAME, MIDDLE_NAME, LAST_NAME, NAME_SUFFIX, LASTUPDDTTM) |>
+  group_by(EMPLID) |>
+  arrange(EMPLID, LASTUPDDTTM) |>
+  distinct(LASTUPDDTTM, .keep_all=TRUE) |>
+  ungroup()
+
+## pull date-of-birth data ----
+DoB.results <- dbSendQuery(MSUEDW.jdbc, DoB.query)
+DoB.DATA <- dbFetch(DoB.results) |>
+  as_tibble() |>
+  select(EMPLID, BIRTHDATE, LAST_CHILD_UPDDTM)
+
+## disconnect from the MSUEDW ----
+DBI::dbDisconnect(MSUEDW.jdbc)
+```
+
+### Merge the Data
+The three data sets are merged using the student ID (`EMPLID`), where only those present in the application data are retained.
+
+```r
+combined.DATA <- left_join(x=apply.DATA, y=name.DATA,
+          by="EMPLID") |>
+  left_join(y=DoB.DATA,
+            by="EMPLID")
+
+```
+
+### Create First Row
+The first row is constructed based on the user-provided information above.
+
+```r
+first.row <- tibble_row(D1.col="HI",
+                        blank.1=institution.code,
+                        first.name=branch.code,
+                        middle.initial=institution.name,
+                        last.name=file.date,
+                        suffix=search.type,
+                        DoB="I",
+                        search.date="",
+                        blank.2="",
+                        institution.code="",
+                        branch.code="",
+                        ID.number="")
+```
+
+
+### Format the Data
+The data from the merge data is reformatted, and the data to be sent to Clearinghouse is constructed.
+
+```r
+Clearinghouse.DATA <- tibble(D1.col="D1",
+                             blank.1="",
+                             first.name=combined.DATA$FIRST_NAME,
+                             middle.initial=substr(combined.DATA$MIDDLE_NAME, start=1, stop=1),
+                             last.name=combined.DATA$LAST_NAME,
+                             suffix=combined.DATA$NAME_SUFFIX,
+                             DoB=paste0(lubridate::year(combined.DATA$BIRTHDATE),
+                                        formatC(lubridate::month(combined.DATA$BIRTHDATE), flag="0", width=2),
+                                        formatC(lubridate::day(combined.DATA$BIRTHDATE), flag="0", width=2)),
+                             search.date=search.start.yyyymmdd,
+                             blank.2="",
+                             institution.code=institution.code,
+                             branch.code=branch.code,
+                             ID.number=combined.DATA$EMPLID
+                             ) |>
+  distinct(.keep_all=TRUE)
+                             
+export.DATA <- bind_rows(first.row,
+                         Clearinghouse.DATA)
+```
+
+
+### Create File Names
+The file names are constructed to make exporting the data easier.
+
+```r
+filename.date <- paste0(as.vector(lubridate::month(today, label=TRUE, abbr=TRUE)),
+                        formatC(lubridate::day(today.date), flag="0", width=2), 
+                        lubridate::year(today.date))
+
+xlsx.filename <- paste0("Clearinghouse_data_request_", filename.date, ".xlsx")
+csv.filename <- paste0("Clearinghouse_data_request_", filename.date, ".csv")
+RData.filename <- paste0("Clearinghouse_data_request_", filename.date, ".RData")
+```
+
+### Export the Data
+The Clearinghouse data is exported as an Excel workbook and a CSV file.
+
+```r
+WriteXLS::WriteXLS(x=export.DATA,
+                   ExcelFileName=xlsx.filename,
+                   SheetNames="RequestDATA",
+                   colnames=FALSE)
+
+write.csv(x=export.DATA,
+         file=csv.filename,
+         row.names=FALSE,
+         col.names=FALSE)
+```
+
+

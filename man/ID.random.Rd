@@ -32,17 +32,17 @@ IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
 
 set.seed(13)
 ID.random(ID=IDs, ID.type="numbers")
-[1] "4870" "5706" "0717" "0944" "5989" "5592" "0960"
+# [1] "4870" "5706" "0717" "0944" "5989" "5592" "0960"
 
 ID.random(ID=IDs, ID.type="letters")
-[1] "XWEvKQIsaCtOebfTOQLT" "uGUyOZBtcXwgRNbiBChq" "TTmJCbNheHsUQsDnTQni"
-"oRunjWsEvOlsaHFwqVUk" "eBnpYgroTrWIygAeYoBw" "HlUVBpkyMDGOowcXaMhX"
-"UIdWmaXZXTqjMzJRczxs"
+# [1] "XWEvKQIsaCtOebfTOQLT" "uGUyOZBtcXwgRNbiBChq" "TTmJCbNheHsUQsDnTQni"
+# "oRunjWsEvOlsaHFwqVUk" "eBnpYgroTrWIygAeYoBw" "HlUVBpkyMDGOowcXaMhX"
+# "UIdWmaXZXTqjMzJRczxs"
 
 ID.random(ID=IDs, ID.type="mixed")
-[1] "HL0WXSdG8sf5jFIJXbuz" "fUGVPSvRYS7l5LvsEjmH" "t3GCKf3JkZDgb2kuq6Be"
-"NXC9vLfKTV7tqwS3ss7F" "AywRolRrH4Myl5zvXCjA" "H0DLeZ7AGQp8RGDhLSoV"
-"vVTaHCI0rxVlJ3AU9wrK"
+# [1] "HL0WXSdG8sf5jFIJXbuz" "fUGVPSvRYS7l5LvsEjmH" "t3GCKf3JkZDgb2kuq6Be"
+# "NXC9vLfKTV7tqwS3ss7F" "AywRolRrH4Myl5zvXCjA" "H0DLeZ7AGQp8RGDhLSoV"
+# "vVTaHCI0rxVlJ3AU9wrK"
 
 }
 \author{

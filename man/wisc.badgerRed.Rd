@@ -3,6 +3,7 @@
 \docType{data}
 \name{wisc.badgerRed}
 \alias{wisc.badgerRed}
+\alias{wisc.white}
 \alias{wisc.badgerRedTints}
 \alias{wisc.secondary}
 \alias{wisc.accent}
@@ -11,6 +12,8 @@
 \title{University of Wisconsin Colour Palette}
 \format{
 A vector with the colours of interest.
+
+An object of class \code{character} of length 1.
 
 An object of class \code{character} of length 10.
 
@@ -28,6 +31,8 @@ University of Wisconsin's Brand website:
 }
 \usage{
 wisc.badgerRed
+
+wisc.white
 
 wisc.badgerRedTints
 
@@ -78,6 +83,8 @@ values.
 }
 \section{Functions}{
 \itemize{
+\item \code{wisc.white}: corresponding colour to wisc.badgerRed
+
 \item \code{wisc.badgerRedTints}: Ten tints of wisc.badgerRed including "#da004c"
 
 \item \code{wisc.secondary}: The six secondary colours of the University of Wisconsin's color palette
