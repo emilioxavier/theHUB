@@ -12,7 +12,7 @@ Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](c
 
 # theHUB: the Haabefuld Utility Box. <a href="https://theHopefulBox.com"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
-***the Haabefuld[1],[2] Utility Box*** (***theHUB***), a collection of
+***the Haabefuld[^1],[^2] Utility Box*** (***theHUB***), a collection of
 analysis tools composed of functions, scripts, electronic notebooks, and
 worked examples. *theHUB* is how we will share these tools with the MSU
 community to improve the analyses of student outcomes, student success,
@@ -76,21 +76,36 @@ demonstrating these abilities.
 ``` r
 # Install from GitHub:
 install.packages("devtools")
+remove.packages("theHUB")
+install.packages(c("tidyr","tidyselect","tibble","lubridate","dplyr","ggplot2","purrr","stringr","ggrepel","cowplot","rlang","sf","digest","WriteXLS"))
 devtools::install_github("emilioxavier/theHUB")
 ```
+
+- You will need [`devtools`](https://devtools.r-lib.org/) or
+  [`remote`](https://remotes.r-lib.org/) or another package that allows
+  installation from remote sources, such as
+  [GitHub](https://github.com), [GitLab](https://about.gitlab.com/), or
+  [BitBucket](https://bitbucket.org/), to install `theHUB` from
+  [GitHub](https://github.com/emilioxavier/theHUB/).
+- We have found that it is beneficial to uninstall (aka remove) the
+  previous `theHUB` installation ***before*** installing an update.
+- For some reason you need to ensure the **imported** packages are
+  installed.
 
 ## How to use `theHUB`
 
 ``` r
 library(theHUB)
+#> Loading required package: mathjaxr
+#> Loading required package: kableExtra
 ```
 
 ## Have a suggestion? Need help? Found a bug?
 
--   Contact [Emilio](https://github.com/emilioxavier/) at
-    <emilio@msu.edu> OR <emilio.esposito@gmail.com>
--   Submit a [request or issue via
-    GitHub](https://github.com/emilioxavier/theHUB/issues/)
+- Contact [Emilio](https://github.com/emilioxavier/) at <emilio@msu.edu>
+  OR <emilio.esposito@gmail.com>
+- Submit a [request or issue via
+  GitHub](https://github.com/emilioxavier/theHUB/issues/)
 
 ## Code of conduct
 
@@ -104,14 +119,14 @@ MIT © [Emilio Xavier Esposito](https://github.com/emilioxavier/)
 
 ## Footnotes
 
-[1] The word haabefuld is Danish for hopeful. The **aa** is really an
-**å**, and thus, haabefuld is really håbefuld. The use of **aa** makes
-typing ([Emilio](https://github.com/emilioxavier/) can never remember
-the correct ASCII code for the å) and web searches easier.
+[^1]: The word haabefuld is Danish for hopeful. The **aa** is really an
+    **å**, and thus, haabefuld is really håbefuld. The use of **aa**
+    makes typing ([Emilio](https://github.com/emilioxavier/) can never
+    remember the correct ASCII code for the å) and web searches easier.
 
-[2] The Haabefuld Utility Box was originally *the Hub Utility Box*,
-*theHUB* for short. The original name – a [recursive
-backronym](https://en.wikipedia.org/wiki/Recursive_acronym) – was a way
-to include The Hub for Innovation in Learning and Technology where this
-package’s development was started. Now, *theHUB* is used to pay homage
-to the Hub.
+[^2]: The Haabefuld Utility Box was originally *the Hub Utility Box*,
+    *theHUB* for short. The original name – a [recursive
+    backronym](https://en.wikipedia.org/wiki/Recursive_acronym) – was a
+    way to include The Hub for Innovation in Learning and Technology
+    where this package’s development was started. Now, *theHUB* is used
+    to pay homage to the Hub.
