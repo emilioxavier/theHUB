@@ -7,7 +7,7 @@
 clean.cntrl(text)
 }
 \arguments{
-\item{comment}{A string of words forming a sentence or phrase.}
+\item{text}{A string of words forming a sentence or phrase.}
 }
 \value{
 string of cleaned characters forming a sentence or phrase.

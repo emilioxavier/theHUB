@@ -20,7 +20,10 @@ Convert integer fingerprints into binary (logical) representation.
 \examples{
 \dontrun{
   library(tidyverse)
-  where2eat <- tibble::tibble(what=c("BBQ", "Burgers", "Pizza"), loc=c(1,2,3), size=c(4,2,6), cost=c(10,9,8))
+  where2eat <- tibble::tibble(what=c("BBQ", "Burgers", "Pizza"),
+                              loc=c(1,2,3),
+                              size=c(4,2,6),
+                              cost=c(10,9,8))
   make.fps(data=where2eat, id.col="what", cols.oi=c("loc", "size", "cost")) |>
     convert.fps2binary()
 }

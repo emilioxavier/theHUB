@@ -70,11 +70,11 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 #' @title Find Duplicate Columns
 #'
 #' @description Identifies and returns duplicate columns. The resulting data.frame
-#'   includes the following:#'
-#'   - column.name: column name
-#'   - duplicate: logical indicating if the column is duplicate. FYI: only duplicate
+#'   includes the following:
+#'   - **column.name**: column name
+#'   - **duplicate**: logical indicating if the column is duplicate. FYI: only duplicate
 #'   columns are returned
-#'   - duplicate.colName: duplicate columns
+#'   - **duplicate.colName**: duplicate columns
 #'
 #'  _**Not a publicly available function at this time.**_
 #'
@@ -84,6 +84,8 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 #' @return data.frame with the above information
 #'
 #' @examples
+#' \dontrun{
+#' library(tibble)
 #' data <- tibble(first.name=c("Alice", "Bob", "Carl", "Debbie"),
 #'                   last.name=c("Masters", "Roberts", "Roberts", "Smith"),
 #'                   pref.name=c("Alice", "Bob", "Carl", "Debbie"),
@@ -98,6 +100,7 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 #' #3        role         TRUE     role, job, expert
 #' #4         job         TRUE     role, job, expert
 #' #5      expert         TRUE     role, job, expert
+#' }
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -158,10 +161,14 @@ find.duplicate.cols <- function(data, data.md5s) {
 #' @return tibble of column names, types, and examples
 #' @export
 #'
+#' @importFrom dplyr row_number case_when select arrange
+#'
 #' @examples
+#' \dontrun{
 #' dataset.summary(dataset=ds.orig,
 #'                 ExcelFileName="ds_Column-names-and-data-types-and-examples.xlsx",
 #'                 n.examples=4)
+#' }
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -201,8 +208,8 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
                     col.idx=row_number() ) |>
       tibble::as_tibble() |>
       tibble::add_column(md5.hash=dataset.md5s) |>
-      dplyr::select(column.name, col.idx,
-                    colType.1, colType.2, colType.diff, md5.hash)
+      select(column.name, col.idx,
+             colType.1, colType.2, colType.diff, md5.hash)
 
   } else {
     ds.colTypes <- dplyr::rename(ds.colTypes,
@@ -210,8 +217,8 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
       dplyr::mutate(col.idx=row_number()) |>
       tibble::as_tibble() |>
       tibble::add_column(md5.hash=dataset.md5s) |>
-      dplyr::select(column.name, col.idx,
-                    colType.1, md5.hash)
+      select(column.name, col.idx,
+             colType.1, md5.hash)
   }
 
   ## is blank? ----
@@ -238,7 +245,7 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ## create and apply example names ----
   example.names <- paste("example.", seq_len(length.out=n.examples), sep="")
   colnames(ds.examples) <- c("n.unique", example.names)
-  ds.examples <- as_tibble(ds.examples)
+  ds.examples <- tibble::as_tibble(ds.examples)
 
   ## create dataset for export ----
   ds.summary <- dplyr::bind_cols(ds.colTypes, ds.examples) |>

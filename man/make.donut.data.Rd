@@ -6,12 +6,13 @@
 \usage{
 make.donut.data(
   data,
-  col.oi,
+  category,
   facetBy = NULL,
   layerBy = NULL,
+  layer.order = "descend",
   category.order = "count",
   levels.rev = FALSE,
-  col.count = NULL,
+  category.count = NULL,
   r.inner = 4,
   r.outer = 6
 )
@@ -20,11 +21,32 @@ make.donut.data(
 \item{data}{\code{tibble} (or \code{data.frame}) with the column of interest. \emph{\strong{NOTE}}:
 Do \strong{NOT} use counted data.}
 
-\item{col.oi}{string with column of interest. Only provide \strong{ONE} column name.}
+\item{category}{string with column of interest containing the categories to
+comprise the donut (\emph{aka} ring). Only provide \strong{ONE} column name.}
 
 \item{facetBy}{string indicating the column to group data by; for when you
 want to \strong{facet} your donut plots via \code{\link[ggplot2:facet_wrap]{ggplot2::facet_wrap()}}; see
 \code{\link[=make.donut.plot]{make.donut.plot()}}.}
+
+\item{layerBy}{string indicating the column to group data by; for when you
+want to \strong{add layers} your donut plots; see \code{\link[=make.donut.plot]{make.donut.plot()}}.}
+
+\item{layer.order}{string indicating the order of the layers. There are four
+options:
+\itemize{
+\item \code{ascend} where the inner ring (donut) has the smallest value and the outer
+donut has the greatest value
+\item \code{descend} where the inner donut as the largest value and the outer ring
+has the smallest value
+\item \code{alphabetical} where the rings are ordered alphabetically starting from
+the inner ring
+\item \verb{user defined} where the user provides the order of the donuts starting
+from inner ring. Only layers included in the vector (\emph{e.g.}, \code{c("4", "r", "f")})
+are included in the resulting data.
+}
+
+For \code{alphabetical}, \code{ascend}, and \code{descend} only the first \emph{\strong{two}} characters
+are needed.}
 
 \item{category.order}{string indicating if you want the data to be ordered by
 \code{"count"} in \emph{\strong{decreasing}} order or by \code{"category"} in alphabetical order;
@@ -33,7 +55,7 @@ default: \code{"count"}.}
 \item{levels.rev}{logical indicating if the order of the categories should be
 reversed.}
 
-\item{col.count}{string with the column containing "counts" for each "category."
+\item{category.count}{string with the column containing "counts" for each "category."
 This parameter is \emph{\strong{required}} when the count (or total) for each row was
 pre-calculated and allows for the creation of donut data when raw data is
 not available and one only has the summarised values.}
@@ -43,14 +65,16 @@ not available and one only has the summarised values.}
 \item{r.outer}{numeric value defining the outer radius of the donut; default: \code{6}}
 }
 \value{
-\code{tibble} with the
+\code{tibble} with the data to construct the donut plot.
 }
 \description{
-add the description of making the data
+Construct the \code{data.frame} for the \code{\link[=make.donut.plot]{make.donut.plot()}} function.
+The raw \code{data.frame} or a summarised \code{data.frame} is acceptable and will be
+converted into the needed data for the construction of a donut plot.
 }
 \examples{
 \dontrun{
-  donut.DATA <- make.donut.data(data, col.oi, facetBy=NULL,
+  donut.DATA <- make.donut.data(data, category, facetBy=NULL,
                                 category.order="count", levels.rev=FALSE,
                                 r.inner=4, r.outer=6)
 }

@@ -8,7 +8,7 @@
 #'   by any printable character (defined by `[:print:]`), even spaces, are retained;
 #'   see example.
 #'
-#' @param comment A string of words forming a sentence or phrase.
+#' @param text A string of words forming a sentence or phrase.
 #'
 #' @return string of cleaned characters forming a sentence or phrase.
 #' @export
@@ -41,7 +41,7 @@ clean.cntrl <- function(text) {
 #'   types of spaces with ASCII spaces that are breakable. The reason for this
 #'   function is to replace non-breakable space with standard, breakable spaces.
 #'
-#' @param comment A string of words forming a sentence or phrase.
+#' @param text A string of words forming a sentence or phrase.
 #'
 #' @return string of cleaned characters forming a sentence or phrase.
 #' @export
@@ -107,7 +107,8 @@ convert.toASCII <- function(comment) {
 #' @export
 #'
 #' @examples
-#' extract.emails(emails.string="emilio.dork@gmail.com 2.that.dork@egr.msu.edu dork@egr.msu.edu 517565656325@162.123 thatDork@msu.edu", domains="msu.edu")
+#' extract.emails(emails.string="emilio.dork@gmail.com 2.that.dork@egr.msu.edu
+#' dork@egr.msu.edu 517565656325@162.123 thatDork@msu.edu", domains="msu.edu")
 #' # [1] "2.that.dork@egr.msu.edu" "thatdork@msu.edu"
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}

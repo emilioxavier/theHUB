@@ -247,6 +247,280 @@ clean.DATE <- function(dates) {
 }
 
 
+#' @title Phrase/Integer Conversion
+#'
+#' @description Convert a collection of characters to another set of characters.
+#'
+#' @details The function was initially designed to convert Likert responses to
+#'   integers, but it was quickly realized that it could easily be used for a
+#'   multitude of sins against data. The function relies on a user provided
+#'   `tibble` or `data.frame` with two columns; one with the characters to be
+#'   converted and the characters to be converted to.
+#'
+#'   The function is designed to work with [dplyr::mutate()] allowing multiple
+#'   conversions in a single command.
+#'
+#'   _**Note**_: Ideally, the integers are positive and non-zero.
+#'
+#' @param responses column to be converted; _e.g._, `Q1`
+#' @param fromto.tb `tibble` (or `data.frame`) with the matched convertee and
+#'   converted pairs; see the example below.
+#' @param from column in the `fromto.tb` containing the characters to be converted
+#' @param to column in the `fromto.tb` containing the characters being converted to
+#'
+#' @return a vector of converted characters/phrases
+#' @export
+#'
+#' @examples
+#' set.seed(13)
+#' phrase2int.tb <- tibble::tibble(phrase=c("hated it!", "meh", "loved it!"),
+#'                                 integer=c(-1, 0, 1))
+#' responses.words <- sample(x=c("hated it!", "meh", "loved it!"), size=5, replace=TRUE)
+#' responses.integers <- sample(x=c(-1, 0, 1), size=5, replace=TRUE)
+#'
+#' convert.fromto(responses=responses.words,
+#'                fromto.tb=phrase2int.tb,
+#'                from="phrase", to="integer")
+#' # [1]  1 -1  0 -1  0
+#'
+#' convert.fromto(responses=responses.integers,
+#'                fromto.tb=phrase2int.tb,
+#'                from="integer", to="phrase")
+#' # [1] "meh"       "hated it!" "loved it!" "hated it!" "meh"
+#'
+#' \dontrun{
+#' mutate(tibble.oi, Q1.ints=convert.fromto(responses=Q1,
+#'                                          fromto.tb=phrase2int.tb,
+#'                                          from="phrase", to="integer"))
+#' }
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+convert.fromto <- function(responses, fromto.tb, from, to) {
+
+  converted <- fromto.tb[[to]][match(responses, table=fromto.tb[[from]])]
+
+  return(converted)
+}
+
+
+#' @title Convert Collection of Numerical IDs
+#'
+#' @description Given a collection of numerical IDs, systematically change their
+#'   values by a user defined value. _**This method is inferior to the
+#'   [theHUB::ID.random()] method. No judgement.**_
+#'
+#' @param ID string with ID or collection of IDs
+#' @param deID.value numeric value, preferably an integer, to add to the
+#'   numeric ID; default: `12345`. Values are converted from string to numeric
+#'   (real) back to string to avoid the `.Machine$integer.max` (`2,147,483,647`)
+#'   problem.
+#'
+#' @importFrom stringr str_pad
+#' @return string vector
+#' @export
+#'
+#' @examples
+#' IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
+#' ID.convert(ID=IDs, deID.value=12345)
+#' # [1] "1234512345" "24690"      NA           "24690"      "13579.56"   NA           "00023456"
+#' # Warning message:
+#' # In ID.convert(ID = IDs, deID.value = 12345) : NAs introduced by coercion
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#' @author Seth Walker \email{walker893@@msu.edu}
+#'   ([https://github.com/walker893](https://github.com/walker893))
+#'
+ID.convert <- function(ID, deID.value=12345) {
+
+  ## gather information ----
+  ID.nchar <- nchar(ID)
+
+  ## convert character to numeric ----
+  ID.num <- as.numeric(ID)
+
+  ## add de-identifying value ----
+  ID.num <- (ID.num + deID.value)
+
+  ## convert to character ----
+  # ID.char <- as.character(ID.num)
+  ID.char <- stringr::str_pad(string=ID.num, width=ID.nchar, pad="0")
+
+  ## return to user ----
+  return(ID.char)
+}
+
+
+#' @title Create Collection of Random IDs
+#'
+#' @description Given a collection of IDs, create random IDs from a large pool
+#'   of potential IDs. The function can create random IDs comprised of number,
+#'   letters, or both letters-and-numbers referred to as mixed for short.
+#'
+#'   Random IDs comprised of numbers include leading zeros (_e.g._, `0013`).
+#'
+#'   Random IDs comprised of letters and letters-and-numbers (aka mixed) are
+#'   20 characters long and contain a mixture of upper and lower case letters.
+#'
+#' @param ID string with ID or collection of IDs
+#' @param ID.type string indicating the type of random IDs to generate; default:
+#'   `mixed`. Three options are available. 1. `numbers`, 2. `letters`, and 3.
+#'   `mixed` (aka, letters-and-numbers). In all instances, random IDs with letters
+#'   contain a mixture of upper and lower case letters.
+#'
+#' @importFrom stringr str_pad
+#' @return string vector
+#' @export
+#'
+#' @examples
+#' IDs <- c("1234500000", "12345", NA, 12345, 1234.56, "puzzle", "00011111")
+#'
+#' set.seed(13)
+#' ID.random(ID=IDs, ID.type="numbers")
+#' # [1] "4870" "5706" "0717" "0944" "5989" "5592" "0960"
+#'
+#' ID.random(ID=IDs, ID.type="letters")
+#' # [1] "XWEvKQIsaCtOebfTOQLT" "uGUyOZBtcXwgRNbiBChq" "TTmJCbNheHsUQsDnTQni"
+#' # "oRunjWsEvOlsaHFwqVUk" "eBnpYgroTrWIygAeYoBw" "HlUVBpkyMDGOowcXaMhX"
+#' # "UIdWmaXZXTqjMzJRczxs"
+#'
+#' ID.random(ID=IDs, ID.type="mixed")
+#' # [1] "HL0WXSdG8sf5jFIJXbuz" "fUGVPSvRYS7l5LvsEjmH" "t3GCKf3JkZDgb2kuq6Be"
+#' # "NXC9vLfKTV7tqwS3ss7F" "AywRolRrH4Myl5zvXCjA" "H0DLeZ7AGQp8RGDhLSoV"
+#' # "vVTaHCI0rxVlJ3AU9wrK"
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#' @author Seth Walker \email{walker893@@msu.edu}
+#'   ([https://github.com/walker893](https://github.com/walker893))
+#'
+ID.random <- function(ID, ID.type="mixed") {
+
+  ## number of IDs ----
+  n.IDs <- length(ID)
+
+  ## create pool of potential random IDs ----
+  maxSample.n <- n.IDs * 1000
+  maxSample.log10 <- log10(maxSample.n)
+  maxInteger <- .Machine$integer.max
+  maxInteger.log10 <- log10(maxInteger)
+  max.diff <- floor(maxInteger.log10 - maxSample.log10)
+
+  if ( max.diff > 4 ) {
+    maxSample.n <- n.IDs * 1000
+  } else {
+    maxSample.n <- n.IDs * 10^max.diff
+  }
+  maxSample.nchar <- max(maxSample.n) |>
+    nchar()
+
+  if ( ID.type == "letters") { random.options <- c(letters, LETTERS) }
+  if ( ID.type == "mixed") { random.options <- c(letters, LETTERS, 0:9) }
+
+  ## create ID pool of mixed values ----
+  if ( (ID.type == "mixed") || (ID.type == "letters") ) {
+    random.IDs.pool <- rep_len(x=NA, length.out=maxSample.n)
+    for ( curr.ID in 1:maxSample.n) {
+      random.IDs.pool[curr.ID] <- sample(x=random.options, size=20, replace=TRUE) |> paste0(collapse="")
+    }
+    dup.TF <- duplicated(random.IDs.pool)
+    if ( any(dup.TF) ) {
+      random.IDs.pool <- random.IDs.pool[!dup.TF]
+    }
+  }
+
+  ## create ID pool of numbers ----
+  if ( (ID.type == "numbers") ) {
+    random.IDs.pool <- sample(x=1:maxSample.n, size=n.IDs, replace=FALSE) |>
+      stringr::str_pad(width=maxSample.nchar, pad="0")
+  }
+
+  ## select random IDs ----
+  random.IDs <- sample(x=random.IDs.pool, size=n.IDs, replace=FALSE)
+
+  ## return to user ----
+  return(random.IDs)
+}
+
+
+#' @title Convert ACT Score to SAT Score
+#'
+#' @description Convert a user provided ACT score to the corresponding SAT score.
+#'   This function uses the [Princeton Review](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'   conversion table. Because a range of SAT values equal a single ACT score, the
+#'   mean of the SAT scores provided in
+#'   [The Princeton Review's ACT to SAT Score Conversion Chart](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'   is used for this conversion. Please see the the [theHUB::ACT.2.SAT]
+#'   dataset for details.
+#'
+#' @param ACT.score ACT score as a number (float or integer). `NA`s and text (aka
+#'   `as.character()`) are converted to integer values via `as.integer()`.
+#'
+#' @return integer of the corresponding SAT score
+#' @export
+#'
+#' @examples
+#' ACT.score <- c(25, "34", NA, 25.25, "NA", 50)
+#' convert.ACT2SAT(ACT.score)
+#' # [1] 1215 1535   NA 1215   NA   NA
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+convert.ACT2SAT <- function(ACT.score) {
+
+  ## convert all provided scores to integers ----
+  ACT.score <- suppressWarnings(as.integer(ACT.score))
+
+  ## match provided ACT scores to corresponding ACT-SAT score row ----
+  ACT.idc <- match(ACT.score, theHUB::ACT.2.SAT$ACT)
+
+  ## match ACT score indices to SAT score ----
+  SAT.score <- theHUB::ACT.2.SAT$SAT[ACT.idc]
+
+  return(SAT.score)
+}
+
+
+#' @title Convert SAT Score to ACT Score
+#'
+#' @description Convert a user provided SAT score to the corresponding ACT score.
+#'   This function uses the [Princeton Review](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'   conversion table. Because a range of SAT values equal a single ACT score, a
+#'   range of SAT scores will return the same ACT score. Please see
+#'   [The Princeton Review's ACT to SAT Score Conversion Chart](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'   or the [theHUB::SAT.2.ACT] dataset for details.
+#'
+#' @param SAT.score SAT score as a number (float or integer)
+#'
+#' @return integer of the corresponding ACT score
+#' @export
+#'
+#' @examples
+#' SAT.score <- c(1326, "1444", NA, 1444.44, "NA", 3600)
+#' convert.SAT2ACT(SAT.score)
+#' # [1] 28 31 NA 31 NA NA
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+convert.SAT2ACT <- function(SAT.score) {
+
+  ## convert all provided scores to integers ----
+  SAT.score <- suppressWarnings(as.integer(SAT.score))
+
+  ## match provided SAT scores to corresponding SAT-ACT score row ----
+  SAT.idc <- match(SAT.score, theHUB::SAT.2.ACT$SAT)
+
+  ## match SAT score indices to ACT score ----
+  ACT.score <- theHUB::SAT.2.ACT$ACT[SAT.idc]
+
+  return(ACT.score)
+}
+
+
 #' @title Convert Yes-No indicators to TRUE-FALSE
 #'
 #' @description Often True-False data is returned as a vector of Ys and Ns or 1s
@@ -329,7 +603,6 @@ convert.YN2TF <- function(YN.string) {
 #'   |   8  | Fall   | FS |
 #'   |   9  | Fall Quarter (FallQ) | FQ |
 #'
-#'
 #' @param term.code Four-digit code indicating the semester and year of the term.
 #' @param term.type Indicate if the full or short semester (or quarter) designation
 #'   is returned; default: `"full"`.
@@ -361,10 +634,10 @@ convert.termCode <- function(term.code, term.type="full") {
 
   term <- substr(x=term.code, start=4, stop=4)
   if (tolower(term.type) == "full") {
-    term <- term.translation$full[term.translation$abbrev == term]
+    term <- theHUB::term.translation$full[term.translation$abbrev == term]
   }
   if (tolower(term.type) == "short") {
-    term <- term.translation$short[term.translation$abbrev == term]
+    term <- theHUB::term.translation$short[term.translation$abbrev == term]
   }
 
   termcode.readable <- paste(term, year, sep=" ")
@@ -518,7 +791,6 @@ course.type <- function(crse_code) {
 
   return(course.type)
 }
-
 
 
 #' @title Make Course-Section Designation

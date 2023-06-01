@@ -1,6 +1,6 @@
 ---
 title: "PAG: Onboarding"
-date: "Updated 04/Oct/2022"
+date: "Updated 20/Jan/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Onboarding}
@@ -14,11 +14,11 @@ Onboarding is the Predictive Analytics Group's (PAG) opportunity for the new gro
  - Inform the PAG members, EASP with similar functions, and EASP leadership
  - Arrange meeting with April Stellard regarding HR paperwork and benefits
  - Assist with getting [MSU NetID](https://netid.msu.edu/)
- - Send "[How I Like to be Mentored](PAG_HowILikeToBeMentored.Rmd)" worksheet
+ - Send "[How I Like to be Mentored](PAG_HowILikeToBeMentored.html)" worksheet
  - Ensure One-On-Ones are scheduled or arranged
  - Ensure computer was ordered and get arrival date
  - Identify a "buddy" for the new member
- - Buy items for new member's start-day swag bag/welcome basket (MSU t-shirt/hoodie/fleece?, water bottle/thermal mug, MSU & local stickers pack; $25 gift card to local coffee shops?)
+ - Buy items for new member's start-day swag bag/welcome basket (MSU t-shirt/hoodie/fleece?, water bottle/thermal mug, MSU & local stickers pack; $50 gift card to local coffee shops?)
  - Send start-day swag bag/welcome basket to new member
 
 ## The Day Before

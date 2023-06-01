@@ -1,0 +1,75 @@
+---
+title: "EDW: SQL Snippets Library"
+date: "Updated 08/Mar/2023"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{EDW: SQL Snippets Library}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### FERPA Disclaimer Statement
+
+> **IMPORTANT NOTE**: You are solely responsible for the maintenance of the confidentiality of this information as established in the Family Educational Rights and Privacy Act (FERPA) and Michigan State University Guidelines Governing Privacy and Release of Student Records.
+
+***
+
+Often we struggle with consistently pulling the same data from the same sources due to differences in interpretation of terms. These inconsistencies are frustrating. We believe providing the code used to construct datasets is the easiest way to ensure reproducibility. Adequately documenting the code and noting changes ensures that everyone understands what the script does, how it is done, and provides a historical retrospective of the changes. Script libraries streamline the process of data retrieval by removing a hurdle to accessing data and reducing the time to acquire the data. Anytime spent on the cataloging data pull scripts is gained back when others use them.
+
+We welcome others to provide their scripts for others to use. Please contact Emilio ([MSU email](mailto:emilio@msu.edu?subject=EDW%20scripts) | [Gmail](mailto:emilio.esposito@gmail.com?subject=EDW%20scripts)) to arrange the inclusion of your scripts. Alternatively, perform a pull request.
+
+
+
+## Common Tables/Views of Interest
+
+|  Table/View  | Description |
+|--------------|-------------|
+| siscs.r_admissapp_rv | xxxx |
+| siscs.r_extorg_r | xxxx |
+| SISCS.S_ACAD_PLAN_CAF_V | xxxx |
+
+
+you can find CIP code in several places in SISCS.  The column name is cip_code. 
+
+  - S_ACAD_PLAN_TBL‬ and R_ACADPLAN_RV show the CIP code associated with a given acad_plan. 
+  - You can join one of the tables above on student-based tables like R_STUDENTTERM_RV or R_STUDENTCPPTERM_RV to view students with majors in a given CIP. 
+	- R_STUDENTAWARD_RV includes the CIP code for the major associated with the degree recorded for a student in a given row.
+
+
+### Courses during a Specific Semester
+
+
+```sql
+select *
+ from siscs.?????????
+ where ADMIT_TERM == 2178
+```
+
+
+### Applicants Since a Specific Semester
+
+
+```sql
+select *
+ from siscs.R_ADMISSAPP_RV
+ where ADMIT_TERM >= 2178
+```
+
+
+### External Institutions
+
+
+```sql
+select *
+ from siscs.R_EXTORG_R
+```
+
+
+### Gather Academic Delivery Methods
+
+
+```sql
+select * 
+  from siscs.S_ACAD_PLAN_CAF_V 
+  where SCC_CAF_ATTRIB_NM = 'MSU_SR_DELIVERY_MTHD' or SCC_CAF_ATTRIB_NM = 'MSU_SR_THIRD_PARTY'
+```

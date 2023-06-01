@@ -16,7 +16,8 @@ mapfile. Any mapfile can be used, but for datasets containing geospatial
 location data from anywhere on the planet, it is advantageous to use the
 entire world map. Obtain the mapfile of interest from
 \url{https://gadm.org}. The world GADM data is available from
-\url{https://biogeo.ucdavis.edu/data/gadm3.6/gadm36_gpkg.zip}.
+\link{https://biogeo.ucdavis.edu/data/gadm3.6/gadm36_gpkg.zip}
+(https://biogeo.ucdavis.edu/data/gadm3.6/gadm36_gpkg.zip).
 Ensure the \href{https://gadm.org/formats.html}{GeoPackage format} is downloaded.
 The compressed complete world database is approximately 1.6 GBs and the
 unzipped file is 3.81 GBs. For example, \verb{~/mapfiles/gadm36_levels.gpkg}
@@ -42,12 +43,13 @@ When using the world GADM database, loading the rather large world database
 takes time and, thus, the function appears to be slow.
 
 This function is based on the \href{https://stackoverflow.com/questions/8751497/latitude-longitude-coordinates-to-state-code-in-r}{"Latitude Longitude Coordinates to State Code in R"}
-stackoverflow response by \href{https://stackoverflow.com/users/980833/josh-obrien}{Josh O'Brien}.
+stackoverflow response by
+\href{https://stackoverflow.com/users/980833/josh-obrien}{Josh O'Brien}.
 }
 \examples{
 \dontrun{
 mapfile.world <- "~/mapfiles/gadm36_levels.gpkg"
-lonlat2regionfunction(longitude, latitude, gadm.mapfile=mapfile.world)
+lonlat2region(longitude, latitude, gadm.mapfile=mapfile.world)
 }
 
 }

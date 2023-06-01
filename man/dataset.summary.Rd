@@ -44,9 +44,11 @@ This function will likely evolve overtime.
 \emph{\strong{Re-running this command will overwrite previous versions of the file!!}}
 }
 \examples{
+\dontrun{
 dataset.summary(dataset=ds.orig,
                 ExcelFileName="ds_Column-names-and-data-types-and-examples.xlsx",
                 n.examples=4)
+}
 
 }
 \author{

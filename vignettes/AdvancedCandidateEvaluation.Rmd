@@ -1,7 +1,7 @@
 ---
 title: "Advanced Candidate Evaluation: Overview"
 author: "Emilio Xavier Esposito, Ph.D."
-date: "`r format(Sys.Date(), '%d/%b/%Y')`"
+date: "Updated 11/Jul/2022"
 output: rmarkdown::html_vignette
 resource_files:
   - images_ACE/*.png

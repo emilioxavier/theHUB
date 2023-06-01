@@ -14,6 +14,8 @@ Use the \code{\link[=convert.fromto]{convert.fromto()}} function to convert text
 \item{QoI}{string with the Question of Interest (the rows)}
 
 \item{Qcompared}{string with the Question being Compared to (the columns)}
+
+\item{value.range}{range of possible Likert values}
 }
 \value{
 \code{tibble} (or \code{data.frame}) containing the needed count, percentage, and

@@ -60,9 +60,13 @@ make.assignment.params <- function(n.students, n.assignments, max.points) {
 #' @export
 #' @importFrom dplyr mutate
 #' @importFrom tibble as_tibble
+#' @importFrom stats rbinom
 #'
 #' @examples
 #' set.seed(13)
+#' assignment.params <- make.assignment.params(n.students=5,
+#'                                             n.assignments=5,
+#'                                             max.points=25)
 #' make.pseudo.grades(assignment.params)
 #' # # A tibble: 5 × 6
 #' #   student   assign.1 assign.2 assign.3 assign.4 assign.5

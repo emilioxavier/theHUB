@@ -1,0 +1,4 @@
+name: Create Clearinghouse Request Data
+description: >
+   Template to construct the Clearinghouse request data
+create_dir: TRUE

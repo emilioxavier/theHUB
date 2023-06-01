@@ -23,19 +23,40 @@ will result in no labels.}
 
 \item{label.size}{label sizes; default: \code{3.5}}
 
-\item{facet.nrow}{numeric \code{\link[ggplot2:facet_wrap]{ggplot2::facet_wrap()}} rows; default: \code{NULL}}
+\item{facet.nrow}{numeric \code{\link[ggplot2:facet_wrap]{ggplot2::facet_wrap()}} rows; default: \code{NULL} Only
+provide \code{facet.nrow} \emph{\strong{OR}} \code{facet.ncol}.}
 
-\item{facet.ncol}{numeric \code{\link[ggplot2:facet_wrap]{ggplot2::facet_wrap()}} columns; default: \code{NULL}}
+\item{facet.ncol}{numeric \code{\link[ggplot2:facet_wrap]{ggplot2::facet_wrap()}} columns; default: \code{NULL} Only
+provide \code{facet.nrow} \emph{\strong{OR}} \code{facet.ncol}.}
 }
 \value{
 ggplot2 graphic object
 }
 \description{
-add the description of making the plot
+Construct the donut plot using the donut data constructed with
+\code{\link[=make.donut.data]{make.donut.data()}} function. This function automatically determines
+if the provided data includes information for creating a facet of donut
+plots and including layers.
+}
+\details{
+\strong{Custom Colour Palette}
+When creating a collection of donut plots in a facet it is important to have
+the same colours assigned to the same segments for all donut plots. Often,
+each donut plot does not always include the same collection of segments. The
+following code ensures that the same segment-colour combination is used for each
+donut plot.
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{custom.palette <- msu.palette[1:9]
+names(custom.palette) <- all.donut.DATA$Categories |> unique()
+}\if{html}{\out{</div>}}
+
+If a "named colour palette" is not provided, one is created from the categories
+within the \code{donut.DATA} data.frame and the provided \code{colour.palette} to ensure
+a consistent colour palette is used for all donut plots.
 }
 \examples{
 \dontrun{
-  donut.DATA <- make.donut.data(data, col.oi, facetBy=NULL,
+  donut.DATA <- make.donut.data(data, category, facetBy=NULL,
                                 category.order="count", levels.rev=FALSE,
                                 r.inner=4, r.outer=6)
   donut.PLOT <- make.donut.plot(donut.DATA, colour.palette=msu.palette,

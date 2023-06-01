@@ -8,7 +8,7 @@
 \format{
 A tibble of institutions.
 
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 16 rows and 11 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 16 rows and 13 columns.
 }
 \source{
 Data sources:
@@ -46,6 +46,8 @@ The information common to each dataset:
 \item CITY: City
 \item STABBR: State
 \item ZIP: Zip code
+\item LAT: Latitude coordinate
+\item LON: Longitude coordinate
 \item index: Index to aid reordering
 \item colour.primary: Institution's primary colour
 \item colour.secondary: Institution's secondary colour
@@ -105,8 +107,14 @@ The WMU peer instititions:
 \item \code{WMUpeers}: Western Michigan Peer Institutions dataset
 
 }}
+\seealso{
+Other Datasets: 
+\code{\link{ACT.2.SAT}},
+\code{\link{country.currency}}
+}
 \author{
 Emilio Xavier Esposito \email{emilio@msu.edu}
 (\url{https://github.com/emilioxavier})
 }
+\concept{Datasets}
 \keyword{datasets}

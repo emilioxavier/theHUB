@@ -20,6 +20,8 @@
 #'   - CITY: City
 #'   - STABBR: State
 #'   - ZIP: Zip code
+#'   - LAT: Latitude coordinate
+#'   - LON: Longitude coordinate
 #'   - index: Index to aid reordering
 #'   - colour.primary: Institution's primary colour
 #'   - colour.secondary: Institution's secondary colour
@@ -75,6 +77,8 @@
 #'   - [WMU's Institutional Research's Peer Institutions](https://wmich.edu/institutionalresearch/peers)
 #'   - [Carnegie Classification of Institutions of Higher Education](https://carnegieclassifications.acenet.edu/)
 #'
+#' @family Datasets
+#'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
@@ -82,3 +86,72 @@
 
 #' @describeIn MSUpeers Western Michigan Peer Institutions dataset
 "WMUpeers"
+
+
+#' @title Country and Currency Dataset
+#'
+#' @description The 257 International Organization for Standardization (ISO)
+#'   recognized countries and the currencies they use.
+#'
+#' @format A tibble of countries and their associated currency.
+#'
+#' @source Data sources:
+#'   - List of countries (via `ISOcodes::ISO_3166_1`) from ISOcodes ([CRAN](https://cran.r-project.org/web/packages/ISOcodes/))
+#'   - List of currencies (via `priceR::currencies()`) from priceR ([CRAN](https://cran.r-project.org/package=priceR) & [GitHub](https://github.com/stevecondylios/priceR))
+#'   - Wikipedia's [List of circulating currencies](https://en.wikipedia.org/wiki/List_of_circulating_currencies)
+#'   - Individual currency [Wikipedia](https://en.wikipedia.org/) pages (too many to list)
+#'   - Individaul country [Wikipedia](https://en.wikipedia.org/) pages (also, too many to list)
+#'
+#' @family Datasets
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+"country.currency"
+
+
+#' @title ACT Score Conversion Table
+#'
+#' @description The conversion tables used to convert a user provided ACT or SAT
+#'   score to the corresponding SAT or ACT score, or _vice versa_. These conversion
+#'   tables are based on the [The Princeton Review's ACT to SAT Score Conversion Chart](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'   conversion table.
+#'
+#'   The full range of SAT scores are used when calculating the mean SAT score
+#'   that corresponds with the singular ACT score. The table provided by The
+#'   Princeton Review indicates the starting and several midpoint SAT values for
+#'   each ACT value but does _not_ indicate the ending value in the SAT range.
+#'   It should be noted that starting and ending SAT values depends on your
+#'   perspective, but in this case, we consider the smallest SAT value for a
+#'   specific ACT score to be the starting value and the greatest SAT value to
+#'   be the ending value. If we take the range of SAT scores for an ACT score
+#'   of 35, The Princeton Review table provides four values (1560, 1570, 1580, and
+#'   1590) with the maximum ACT value of 36 corresponding to 1600 for SAT.
+#'   Simply taking the mean of the four values is 1575 but if the entire range
+#'   of SAT values (1560-1599) is considered, the mean is 1579.5. Since you cannot
+#'   have a non-integer value for an SAT score, the mean SAT score is rounded up
+#'   to 1580. The process of calculating the mean SAT score for each ACT score
+#'   from the entire range of SAT scores and rounding up was done to construct
+#'   the ACT-SAT conversion table.
+#'
+#' @source Data source:
+#'   [The Princeton Review's ACT to SAT Score Conversion Chart](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'
+#' @family Datasets
+#'
+#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+"ACT.2.SAT"
+
+#' @describeIn ACT.2.SAT SAT Score Conversion Table
+#'
+#' @family Datasets
+#'
+"SAT.2.ACT"
+
+#' @describeIn ACT.2.SAT The [original Princeton Review Conversation Table](https://www.princetonreview.com/college-advice/act-to-sat-conversion)
+#'
+#' @family Datasets
+#'
+"SAT.ACT.PR"

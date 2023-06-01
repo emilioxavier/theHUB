@@ -9,7 +9,7 @@ vignette: >
 ---
 
 
-```{r setup, echo=FALSE, include=FALSE}
+```{r setup, echo=FALSE, eval=FALSE, include=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -29,26 +29,63 @@ Using the [mpg dataset](https://ggplot2.tidyverse.org/reference/mpg.html) from [
 
 The `class` column will be used for facets.
 
-```{r constructDataFrame}
+```{r constructDataFrame, eval=FALSE, include=FALSE}
 
 library(tidyverse)
 library(theHUB)
 
+data=mpg; category="cyl"; facetBy=NULL; category.order="count"; category.count=NULL; r.inner=4; r.outer=6; levels.rev=FALSE; layerBy=NULL; layer.order <- c("4", "r", "f")
 
-data <- mpg; col.oi="cyl"; facetBy="class"; layerBy=NULL; category.order="count"; col.count=NULL; r.inner=4; r.outer=6
+data=mpg; category="cyl"; facetBy="class"; category.order="count"; category.count=NULL; r.inner=4; r.outer=6; levels.rev=FALSE; layerBy="drv"; layer.order <- c("4", "r", "f")
+data=mpg; category="cyl"; facetBy="class"; category.order="count"; category.count=NULL; r.inner=4; r.outer=6; levels.rev=FALSE; layerBy=NULL; layer.order <- c("4", "r", "f")
 
-make.donut.data(data=mpg, col.oi="cyl", facetBy="class")
+make.donut.data(data=mpg, category="cyl", facetBy="class", layerBy="drv")
+make.donut.plot(donut.DATA=donut.DATA, colour.palette=msu.palette, label.col="Labels.short", facet.ncol=3)
+make.donut.plot(donut.DATA=donut.DATA, colour.palette=msu.palette, label.col="Labels.short")
 
 
 ```
 
 
 
-## Donut Plot
+## Custom Colour Palette
+When creating a collection of donut plots in a facet it is important to have the same colours assigned to the same segments for all donut plots. Often, each donut plot does not always include the same collection of segments. The following code ensures that the same segment-colour combination is used for each donut plot.
 
+```
+custom.palette <- msu.palette[1:9]
+names(custom.palette) <- all.donut.DATA$Categories |> unique()
+```
+
+If a "named colour palette" is not provided, one is created from the categories within the `donut.DATA` data.frame and the provided `colour.palette` to ensure a consistent colour palette is used for all donut plots.
+
+
+
+
+## Donut Plot
+library(tidyverse)
+library(theHUB)
+
+data=mpg; category="cyl"; facetBy=NULL; category.order="count"; category.count=NULL; r.inner=4; r.outer=6; levels.rev=FALSE; layerBy=NULL; layer.order <- c("4", "r", "f")
+
+## !!! works !!!!
+donut.DATA <- make.donut.data(data=mpg, category="cyl", facetBy=NULL, layerBy=NULL, category.order="count", category.count=NULL, r.inner=4, r.outer=6, levels.rev=FALSE)
+make.donut.plot(donut.DATA=donut.DATA, colour.palette=msu.palette, label.col="Labels.short", facet.ncol=3)
+
+## !!! works !!!!
+donut.DATA <- make.donut.data(data=mpg, category="cyl", facetBy="class", layerBy=NULL, category.order="count", category.count=NULL, r.inner=4, r.outer=6, levels.rev=FALSE)
+make.donut.plot(donut.DATA=donut.DATA, colour.palette=msu.palette, label.col="Labels.short", facet.ncol=3)
+
+## !!! works !!!!
+donut.DATA <- make.donut.data(data=mpg, category="cyl", facetBy="class", layerBy="drv", category.order="category", layer.order="descend", category.count=NULL, r.inner=4, r.outer=6, levels.rev=FALSE)
+make.donut.plot(donut.DATA=donut.DATA, colour.palette=msu.palette, label.col="Labels.short", facet.ncol=3)
+
+## !!! works !!!!
+donut.DATA <- make.donut.data(data=mpg, category="cyl", facetBy=NULL, layerBy="drv", category.order="category", layer.order="descend", category.count=NULL, r.inner=4, r.outer=6, levels.rev=FALSE)
+make.donut.plot(donut.DATA=donut.DATA, colour.palette=msu.palette, label.col="Labels.short", facet.ncol=3)
 
 
 ## A Donut Plot with Layers
+data=mpg; category="cyl"; facetBy=NULL; layerBy="drv"; category.order="count"; layer.order="descend"; category.count=NULL; r.inner=4; r.outer=6; levels.rev=FALSE
 
 
 

@@ -16,17 +16,19 @@ data.frame with the above information
 }
 \description{
 Identifies and returns duplicate columns. The resulting data.frame
-includes the following:#'
+includes the following:
 \itemize{
-\item column.name: column name
-\item duplicate: logical indicating if the column is duplicate. FYI: only duplicate
+\item \strong{column.name}: column name
+\item \strong{duplicate}: logical indicating if the column is duplicate. FYI: only duplicate
 columns are returned
-\item duplicate.colName: duplicate columns
+\item \strong{duplicate.colName}: duplicate columns
 }
 
 \emph{\strong{Not a publicly available function at this time.}}
 }
 \examples{
+\dontrun{
+library(tibble)
 data <- tibble(first.name=c("Alice", "Bob", "Carl", "Debbie"),
                   last.name=c("Masters", "Roberts", "Roberts", "Smith"),
                   pref.name=c("Alice", "Bob", "Carl", "Debbie"),
@@ -41,6 +43,7 @@ find.duplicate.cols(data=data)
 #3        role         TRUE     role, job, expert
 #4         job         TRUE     role, job, expert
 #5      expert         TRUE     role, job, expert
+}
 
 }
 \author{

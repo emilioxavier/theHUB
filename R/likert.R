@@ -1,62 +1,4 @@
 
-#' @title Phrase/Integer Conversion
-#'
-#' @description Convert a collection of characters to another set of characters.
-#'
-#' @details The function was initially designed to convert Likert responses to
-#'   integers, but it was quickly realized that it could easily be used for a
-#'   multitude of sins against data. The function relies on a user provided
-#'   `tibble` or `data.frame` with two columns; one with the characters to be
-#'   converted and the characters to be converted to.
-#'
-#'   The function is designed to work with [dplyr::mutate()] allowing multiple
-#'   conversions in a single command.
-#'
-#'   _**Note**_: Ideally, the integers are positive and non-zero.
-#'
-#' @param responses column to be converted; _e.g._, `Q1`
-#' @param fromto.tb `tibble` (or `data.frame`) with the matched convertee and
-#'   converted pairs; see the example below.
-#' @param from column in the `fromto.tb` containing the characters to be converted
-#' @param to column in the `fromto.tb` containing the characters being converted to
-#'
-#' @return a vector of converted characters/phrases
-#' @export
-#'
-#' @examples
-#' set.seed(13)
-#' phrase2int.tb <- tibble::tibble(phrase=c("hated it!", "meh", "loved it!"),
-#'                                 integer=c(-1, 0, 1))
-#' responses.words <- sample(x=c("hated it!", "meh", "loved it!"), size=5, replace=TRUE)
-#' responses.integers <- sample(x=c(-1, 0, 1), size=5, replace=TRUE)
-#'
-#' convert.fromto(responses=responses.words,
-#'                fromto.tb=phrase2int.tb,
-#'                from="phrase", to="integer")
-#' # [1]  1 -1  0 -1  0
-#'
-#' convert.fromto(responses=responses.integers,
-#'                fromto.tb=phrase2int.tb,
-#'                from="integer", to="phrase")
-#' # [1] "meh"       "hated it!" "loved it!" "hated it!" "meh"
-#'
-#' \dontrun{
-#' mutate(tibble.oi, Q1.ints=convert.fromto(responses=Q1,
-#'                                          fromto.tb=phrase2int.tb,
-#'                                          from="phrase", to="integer"))
-#' }
-#'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
-#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
-#'
-convert.fromto <- function(responses, fromto.tb, from, to) {
-
-  converted <- fromto.tb[[to]][match(responses, table=fromto.tb[[from]])]
-
-  return(converted)
-}
-
-
 #' @title Construct Likert Stacked, Barplot Data
 #'
 #' @description Construct the Likert data for [likert.barplot.stacked()].
@@ -75,8 +17,9 @@ convert.fromto <- function(responses, fromto.tb, from, to) {
 #' @importFrom rlang .data
 #' @importFrom tibble tibble
 #' @importFrom dplyr left_join group_by summarise ungroup mutate select n
-#' @importFrom tidyr pivot_longer pivot_wider separate
-#' @importFrom magrittr %>%
+#' @importFrom dplyr case_when rename bind_rows arrange
+#' @importFrom tidyr pivot_longer pivot_wider separate complete
+#' @importFrom tidyselect everything
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -92,26 +35,26 @@ make.likert.barplot.data <- function(data, likert2int.tb) {
   data.long <- pivot_longer(data=data,
                             cols=everything(),
                             names_to="Question",
-                            values_to="Answer") %>%
-    arrange(Question, Answer) %>%
-    group_by(Question, Answer) %>%
-    summarise(Count=n()) %>%
-    bind_rows(data.range) %>%
-    filter(!is.na(Answer)) %>%
-    ungroup() %>%
-    complete(Question, Answer, fill=list(Count=0)) %>%
-    filter(Question!="RANGE") %>%
-    group_by(Question) %>%
-    mutate(Total=sum(Count),
-           Percent=(Count/Total*100),
-           Label.long=paste(Count, " (", round(Percent, digits=0), "%)", sep=""),
-           pct.label.pos=cumsum(Percent)-0.5*Percent,
-           count.label.pos=cumsum(Count)-0.5*Count
-    ) %>%
-    mutate(Label.long=case_when(Count<=2~"",
-                                TRUE~as.character(Label.long))) %>%
-    ungroup() %>%
-    full_join(y=likert2int.tb, by=c("Answer"="integer")) %>%
+                            values_to="Answer") |>
+    arrange("Question", "Answer") |>
+    group_by("Question", "Answer") |>
+    summarise(Count=n()) |>
+    bind_rows(data.range) |>
+    filter(!is.na("Answer")) |>
+    ungroup() |>
+    complete("Question", "Answer", fill=list(Count=0)) |>
+    filter("Question"!="RANGE") |>
+    group_by("Question") |>
+    mutate(Total=sum("Count"),
+           Percent=("Count"/"Total"*100),
+           Label.long=paste("Count", " (", round("Percent", digits=0), "%)", sep=""),
+           pct.label.pos=cumsum("Percent")-0.5*"Percent",
+           count.label.pos=cumsum("Count")-0.5*"Count"
+    ) |>
+    mutate(Label.long=case_when("Count"<=2~"",
+                                TRUE~as.character(Label.long))) |>
+    ungroup() |>
+    full_join(y=likert2int.tb, by=c("Answer"="integer")) |>
     rename("Answer.txt"="phrase")
 
   ## add factors for the plotting ----
@@ -139,6 +82,7 @@ make.likert.barplot.data <- function(data, likert2int.tb) {
 #'   _**Note**_: Ensure the integers are positive and non-zero.
 #' @param QoI string with the Question of Interest (the rows)
 #' @param Qcompared string with the Question being Compared to (the columns)
+#' @param value.range range of possible Likert values
 #'
 #' @return `tibble` (or `data.frame`) containing the needed count, percentage, and
 #'   colour hex values to construct a heatmap with percentage values overlaid on
@@ -146,8 +90,8 @@ make.likert.barplot.data <- function(data, likert2int.tb) {
 #'
 #' @importFrom rlang .data
 #' @importFrom dplyr left_join group_by summarise ungroup mutate select n
-#' @importFrom tidyr pivot_longer pivot_wider separate
-#' @importFrom magrittr %>%
+#' @importFrom dplyr case_when rename
+#' @importFrom tidyr pivot_longer pivot_wider separate expand
 #'
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -160,31 +104,31 @@ make.likert.heatmap.data <- function(data, QoI, Qcompared, value.range) {
   data.range <- tibble::tibble(!!QoI:=value.range, !!Qcompared:=value.range)
   data.range <- expand(data.range, .data[[QoI]], .data[[Qcompared]])
 
-  # QvQ.data <- group_by(data.oi, .data[[QoI]], .data[[Qcompared]]) %>%
-  #   summarise("n"=n()) %>%
-  #   ungroup() %>%
-  #   mutate("QoI.n"=sum(n), "QoI.pct"=as.integer(round(n/.data$QoI.n*100, digits=0))) %>%
-  #   select(-"QoI.n", -"n") %>%
-  #   # # pivot_wider(names_from="Q.overall.comm.MSU.leaders", names_prefix="Q2.", values_from="QoI.pct", values_fill=0) %>%
-  #   # pivot_wider(names_from="Q2.ints", names_prefix="Q2.", values_from="QoI.pct", values_fill=0) %>%
-  #   pivot_wider(names_from={{Qcompared}}, names_prefix="Qcompare.", values_from="QoI.pct", values_fill=0) %>%
-  #   pivot_longer(cols=-{{QoI}}, names_to="Q.compared", values_to="pct") %>%
-  #   separate(col="Q.compared", into=c("pre", "Qcompared.ints"), sep="\\.") %>%
-  #   select(-"pre") %>%
-  #   mutate("Qcompared.ints"=as.integer(.data$Qcompared.ints)) %>%
+  # QvQ.data <- group_by(data.oi, .data[[QoI]], .data[[Qcompared]]) |>
+  #   summarise("n"=n()) |>
+  #   ungroup() |>
+  #   mutate("QoI.n"=sum(n), "QoI.pct"=as.integer(round(n/.data$QoI.n*100, digits=0))) |>
+  #   select(-"QoI.n", -"n") |>
+  #   # # pivot_wider(names_from="Q.overall.comm.MSU.leaders", names_prefix="Q2.", values_from="QoI.pct", values_fill=0) |>
+  #   # pivot_wider(names_from="Q2.ints", names_prefix="Q2.", values_from="QoI.pct", values_fill=0) |>
+  #   pivot_wider(names_from={{Qcompared}}, names_prefix="Qcompare.", values_from="QoI.pct", values_fill=0) |>
+  #   pivot_longer(cols=-{{QoI}}, names_to="Q.compared", values_to="pct") |>
+  #   separate(col="Q.compared", into=c("pre", "Qcompared.ints"), sep="\\.") |>
+  #   select(-"pre") |>
+  #   mutate("Qcompared.ints"=as.integer(.data$Qcompared.ints)) |>
   #   left_join(msu.heatmap.100, by="pct")
 
-  QvQ.data.1 <- group_by(data.oi, .data[[QoI]], .data[[Qcompared]]) %>%
-    summarise("n"=n()) %>%
+  QvQ.data.1 <- group_by(data.oi, .data[[QoI]], .data[[Qcompared]]) |>
+    summarise("n"=n()) |>
     ungroup()
 
   QvQ.data <- full_join(x=data.range, y=QvQ.data.1,
-                        by=c({{QoI}}, {{Qcompared}})) %>%
-    replace_na(list(n=0L)) %>%
+                        by=c({{QoI}}, {{Qcompared}})) |>
+    replace_na(list(n=0L)) |>
     mutate("QoI.n"=sum(n),
-           "pct"=as.integer(round(n/.data$QoI.n*100, digits=0))) %>%
-    left_join(msu.heatmap.100, by="pct") %>%
-    rename("Qcompared.ints"=.data[[Qcompared]]) %>%
+           "pct"=as.integer(round(n/.data$QoI.n*100, digits=0))) |>
+    left_join(msu.heatmap.100, by="pct") |>
+    rename("Qcompared.ints"=.data[[Qcompared]]) |>
     mutate(hex=case_when(hex=="#E7ECEB"~"#ffffff",
                          TRUE~as.character(hex)))
 
@@ -205,12 +149,15 @@ make.likert.heatmap.data <- function(data, QoI, Qcompared, value.range) {
 #'   Use the [convert.fromto()] function to convert text responses to integers.
 #'   _**Note**_: Ensure the integers are positive and non-zero.
 #' @param QoI string with the Question of Interest (the rows)
+#' @param value.range range of possible Likert values
 #'
 #' @return ggplot2 graphics object
 #' @export
 #'
 #' @importFrom rlang .data
-#' @importFrom ggplot2 ggplot aes geom_bar labs geom_text after_stat position_stack stat_count
+#' @importFrom dplyr case_when
+#' @importFrom ggplot2 ggplot aes geom_bar labs geom_text after_stat position_stack
+#' @importFrom ggplot2 stat_count geom_col
 #' @importFrom cowplot theme_nothing
 #'
 #' @examples
@@ -226,16 +173,16 @@ likert.barplot <- function(data, QoI, value.range) {
   ## create data for plot ----
   ##_ tibble with values of interest ----
   data.QoI <- tibble::tibble(value=data[[QoI]])
-  data.bar <- group_by(data.QoI, value) %>%
+  data.bar <- group_by(data.QoI, value) |>
     summarise(count=n())
   ##_ tibble with range of values ----
   data.range <- tibble::tibble(value=value.range)
   ##_ construct plot data ----
-  data.bar <- full_join(x=data.range, y=data.bar, by="value") %>%
-    replace_na(list(count=0)) %>%
+  data.bar <- full_join(x=data.range, y=data.bar, by="value") |>
+    replace_na(list(count=0)) |>
     mutate(total=sum(count),
            pct=as.integer(round(count/total*100), digits=0),
-           label.full=paste(count, " (",pct,"%)", sep="")) %>%
+           label.full=paste(count, " (",pct,"%)", sep="")) |>
     mutate(label.full=case_when(count==0~"",
                                 TRUE~as.character(label.full)))
 
@@ -249,9 +196,9 @@ likert.barplot <- function(data, QoI, value.range) {
               size=4) +
     theme_nothing()
 
-  # bar.data <- dplyr::group_by(data, .data[[QoI]]) %>%
-  #   dplyr::summarise(group.count=n()) %>%
-  #   dplyr::ungroup() %>%
+  # bar.data <- dplyr::group_by(data, .data[[QoI]]) |>
+  #   dplyr::summarise(group.count=n()) |>
+  #   dplyr::ungroup() |>
   #   dplyr::mutate(total=sum(group.count),
   #                 pct=as.integer(round(group.count/total*100, digits=0)))
 
@@ -297,8 +244,11 @@ likert.barplot <- function(data, QoI, value.range) {
 #' @export
 #'
 #' @importFrom rlang .data
-#' @importFrom ggplot2 ggplot aes geom_bar labs geom_text after_stat position_stack stat_count
-#' @importFrom cowplot theme_nothing
+#' @importFrom ggplot2 ggplot aes geom_bar labs geom_text after_stat position_stack
+#' @importFrom ggplot2 stat_count scale_fill_manual guide_legend coord_flip
+#' @importFrom ggplot2 guides
+#' @importFrom grid unit
+#' @importFrom cowplot theme_nothing theme_cowplot
 #'
 #' @examples
 #' \dontrun{
@@ -386,12 +336,14 @@ likert.barplot.stacked <- function(data,
 #'   _**Note**_: Ensure the integers are positive and non-zero.
 #' @param QoI string with the Question of Interest (the rows)
 #' @param Qcompared string with the Question being Compared to (the columns)
+#' @param value.range range of possible Likert values
 #'
 #' @return ggplot2 graphics object
 #' @export
 #'
 #' @importFrom rlang .data
-#' @importFrom ggplot2 ggplot aes geom_raster scale_fill_gradientn geom_label scale_x_reverse labs
+#' @importFrom ggplot2 ggplot aes geom_raster scale_fill_gradientn geom_label
+#' @importFrom ggplot2 scale_x_reverse labs scale_fill_identity
 #' @importFrom cowplot theme_nothing
 #'
 #' @examples
