@@ -340,8 +340,9 @@ make.donut.plot <- function(donut.DATA,
   ## build the donut plot ----
   # donut.plot <- ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
   # ggplot(data=donut.DATA, aes(fill=Categories, alpha=LayerBy, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
-  ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
-    geom_rect(colour=colour.outline, alpha=donut.DATA$LayerAlpha) +
+  donut.plot <- ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
+    # geom_rect(colour=colour.outline, alpha=donut.DATA$LayerAlpha) +
+    geom_rect(colour=colour.outline) +
     coord_polar(theta="y") +
     labs(x=NULL, y=NULL, title=NULL) +
     scale_fill_manual(values=colour.palette,
@@ -384,5 +385,6 @@ make.donut.plot <- function(donut.DATA,
                                           ncol=facet.ncol)
   }
 
+  ## return plot to user ----
   return(donut.plot)
 }

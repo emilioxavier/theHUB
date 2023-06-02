@@ -7,6 +7,7 @@
 make.donut.plot(
   donut.DATA,
   colour.palette,
+  colour.outline = "grey90",
   label.col = NULL,
   label.size = 3.5,
   facet.nrow = NULL,
@@ -17,6 +18,8 @@ make.donut.plot(
 \item{donut.DATA}{\code{tibble} (or \code{data.frame}) constructed via \code{\link[=make.donut.data]{make.donut.data()}}}
 
 \item{colour.palette}{vector of strings containing the colour palette.}
+
+\item{colour.outline}{string indicating the colour of the donut's outline.}
 
 \item{label.col}{string with the column containing the labels. Setting to \code{NULL}
 will result in no labels.}
