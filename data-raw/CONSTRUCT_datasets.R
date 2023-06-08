@@ -27,8 +27,10 @@ WMUpeers <- readxl::read_excel(path="./data-raw/datasets_theHUB.xlsx",
 country.currency <- readxl::read_excel(path="./data-raw/datasets_CountryAndCurrency_spring2023.xlsx",
                                        sheet="country.DATA") |>
   filter(!is.na(Alpha_2)) |>
-  select(Alpha_2:Name, Name.SLATE, Official_name:currency.code)
+  select(Alpha_2, Alpha_3, Alpha_3.shape, Numeric, Name, Name.SLATE, Name.ggplot, Name.shape, Name.ISO, Official_name:currency.code)
 
+usethis::use_data(country.currency,
+                  internal=FALSE, overwrite=TRUE)
 
 ## save datasets ----
 usethis::use_data(MSUpeers, WMUpeers, country.currency,
