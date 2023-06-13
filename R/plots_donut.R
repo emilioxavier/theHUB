@@ -28,6 +28,7 @@
 #'
 #'   For `alphabetical`, `ascend`, and `descend` only the first _**two**_ characters
 #'   are needed.
+#' @param layer.alpha.min value indicating the minimum alpha value; default: `0.75`
 #' @param category.order string indicating if you want the data to be ordered by
 #'   `"count"` in _**decreasing**_ order or by `"category"` in alphabetical order;
 #'   default: `"count"`.
@@ -61,6 +62,7 @@ make.donut.data <- function(data,
                             facetBy=NULL,
                             layerBy=NULL,
                             layer.order="descend",
+                            layer.alpha.min=0.75,
                             category.order="count",
                             levels.rev=FALSE,
                             category.count=NULL,
@@ -89,7 +91,10 @@ make.donut.data <- function(data,
     dplyr::rename("Categories"={{category}},
                   "FacetBy"={{facetBy}},
                   "LayerBy"={{layerBy}},
-                  "Counts"={{category.count}})
+                  "Counts"={{category.count}}) |>
+    dplyr::group_by(Categories) |>
+    dplyr::mutate(category.total=sum(Counts)) |>
+    dplyr::ungroup()
 
   ## check for each type of column ----
   colNames.RAW <- colnames(donut.RAW)
@@ -106,6 +111,8 @@ make.donut.data <- function(data,
       dplyr::summarise(Counts=n()) |>
       dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
   }
+
+  n.categories <- length(unique(donut.COUNTS$Categories))
 
   ## extract needed data and rename ----
   # donut.RAW <- dplyr::select(data, {{category}}, {{facetBy}}, {{layerBy}}) |>
@@ -125,18 +132,17 @@ make.donut.data <- function(data,
 
     ##_ alpha values ----
     alpha.max <- 1
-    alpha.min <- alpha.max/n.layers
-    LayerAlpha <- seq(from=alpha.min, to=1, by=alpha.min)
-
-    donut.DATA <- mutate(donut.DATA,
-                         LayerAlpha=case_when(LayerBy=="f"~1,
-                                              LayerBy=="r"~0.5,
-                                              LayerBy=="4"~0.75))
+    if ( is.null(layer.alpha.min) ) {
+      layer.alpha.min <- alpha.max/n.layers
+    }
+    alpha.dist <- (alpha.max-layer.alpha.min)/(n.layers-1)
+    LayerAlpha <- seq(from=layer.alpha.min, to=1, by=alpha.dist)
 
     ##_ layer summary ----
     if ( n.layers > 1 ) {
       layer.summary <- dplyr::group_by(donut.RAW, LayerBy) |>
-        dplyr::summarise(n=n())
+        dplyr::summarise(n=n(),
+                         total=sum(Counts))
       ##_ layer order ----
       layer.order.n <- length(layer.order)
       ##__ if only one layer is provided ----
@@ -164,7 +170,11 @@ make.donut.data <- function(data,
       layer.outer <- layer.breaks[-1]
       layer.summary <- tibble::add_column(layer.summary,
                                           xmin=layer.inner,
-                                          xmax=layer.outer)
+                                          xmax=layer.outer,
+                                          LayerAlpha=LayerAlpha)
+      ##_ merge the layer.summary with donut.COUNTS ----
+      # donut.COUNTS <- dplyr::left_join(x=donut.COUNTS, y=layer.summary)
+
     }
   } else {
     LayerAlpha <- n.layers <- 1
@@ -184,7 +194,7 @@ make.donut.data <- function(data,
 
 
   ## arrange data by count OR category ----
-  if ( category.order == "count" ) {
+  if ( (category.order == "count") & (is.null(layerBy)) ) {
     donut.COUNTS <- dplyr::arrange(donut.COUNTS, desc(Counts))
   }
   if ( category.order == "category" ) {
@@ -341,8 +351,7 @@ make.donut.plot <- function(donut.DATA,
   # donut.plot <- ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
   # ggplot(data=donut.DATA, aes(fill=Categories, alpha=LayerBy, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
   donut.plot <- ggplot(data=donut.DATA, aes(fill=Categories, ymax=ymax, ymin=ymin, xmax=xmax, xmin=xmin)) +
-    # geom_rect(colour=colour.outline, alpha=donut.DATA$LayerAlpha) +
-    geom_rect(colour=colour.outline) +
+    geom_rect(colour=colour.outline, alpha=donut.DATA$LayerAlpha) +
     coord_polar(theta="y") +
     labs(x=NULL, y=NULL, title=NULL) +
     scale_fill_manual(values=colour.palette,

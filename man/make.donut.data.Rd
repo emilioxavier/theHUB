@@ -10,6 +10,7 @@ make.donut.data(
   facetBy = NULL,
   layerBy = NULL,
   layer.order = "descend",
+  layer.alpha.min = 0.75,
   category.order = "count",
   levels.rev = FALSE,
   category.count = NULL,
@@ -47,6 +48,8 @@ are included in the resulting data.
 
 For \code{alphabetical}, \code{ascend}, and \code{descend} only the first \emph{\strong{two}} characters
 are needed.}
+
+\item{layer.alpha.min}{value indicating the minimum alpha value; default: \code{0.75}}
 
 \item{category.order}{string indicating if you want the data to be ordered by
 \code{"count"} in \emph{\strong{decreasing}} order or by \code{"category"} in alphabetical order;
