@@ -8,6 +8,13 @@
 #'   Do **NOT** use counted data.
 #' @param category string with column of interest containing the categories to
 #'   comprise the donut (_aka_ ring). Only provide **ONE** column name.
+#' @param category.order string indicating if you want the data to be ordered by
+#'   `"count"` in _**decreasing**_ order or by `"category"` in alphabetical order;
+#'   default: `"count"`.
+#' @param category.count string with the column containing "counts" for each "category."
+#'   This parameter is _**required**_ when the count (or total) for each row was
+#'   pre-calculated and allows for the creation of donut data when raw data is
+#'   not available and one only has the summarised values.
 #' @param facetBy string indicating the column to group data by; for when you
 #'   want to **facet** your donut plots via [ggplot2::facet_wrap()]; see
 #'    [theHUB::make.donut.plot()].
@@ -29,15 +36,8 @@
 #'   For `alphabetical`, `ascend`, and `descend` only the first _**two**_ characters
 #'   are needed.
 #' @param layer.alpha.min value indicating the minimum alpha value; default: `0.75`
-#' @param category.order string indicating if you want the data to be ordered by
-#'   `"count"` in _**decreasing**_ order or by `"category"` in alphabetical order;
-#'   default: `"count"`.
 #' @param levels.rev logical indicating if the order of the categories should be
 #'   reversed.
-#' @param category.count string with the column containing "counts" for each "category."
-#'   This parameter is _**required**_ when the count (or total) for each row was
-#'   pre-calculated and allows for the creation of donut data when raw data is
-#'   not available and one only has the summarised values.
 #' @param r.inner numeric value defining the inner radius of the donut; default: `4`
 #' @param r.outer numeric value defining the outer radius of the donut; default: `6`
 #'
@@ -59,13 +59,13 @@
 #'
 make.donut.data <- function(data,
                             category,
+                            category.order="count",
+                            category.count=NULL,
                             facetBy=NULL,
                             layerBy=NULL,
                             layer.order="descend",
                             layer.alpha.min=0.75,
-                            category.order="count",
                             levels.rev=FALSE,
-                            category.count=NULL,
                             r.inner=4,
                             r.outer=6) {
 
@@ -93,7 +93,6 @@ make.donut.data <- function(data,
                   "LayerBy"={{layerBy}},
                   "Counts"={{category.count}}) |>
     dplyr::group_by(Categories) |>
-    dplyr::mutate(category.total=sum(Counts)) |>
     dplyr::ungroup()
 
   ## check for each type of column ----
@@ -112,17 +111,13 @@ make.donut.data <- function(data,
       dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
   }
 
+  ## category, facet, and layer counts ----
   n.categories <- length(unique(donut.COUNTS$Categories))
-
-  ## extract needed data and rename ----
-  # donut.RAW <- dplyr::select(data, {{category}}, {{facetBy}}, {{layerBy}}) |>
-  #   dplyr::rename("Categories"={{category}},
-  #                 "FacetBy"={{facetBy}},
-  #                 "LayerBy"={{layerBy}})
-
-  ## number of facets ----
   if ( !is.null(facetBy) ) {
-    n.facets <- unique(donut.RAW$FacetBy) |> length()
+    n.facets <- length(unique(donut.RAW$FacetBy))
+  }
+  if ( !is.null(layerBy) ) {
+    n.layers <- length(unique(donut.RAW$LayerBy))
   }
 
   ## number of layers ----
@@ -172,26 +167,10 @@ make.donut.data <- function(data,
                                           xmin=layer.inner,
                                           xmax=layer.outer,
                                           LayerAlpha=LayerAlpha)
-      ##_ merge the layer.summary with donut.COUNTS ----
-      # donut.COUNTS <- dplyr::left_join(x=donut.COUNTS, y=layer.summary)
-
     }
   } else {
     LayerAlpha <- n.layers <- 1
   }
-
-
-  ## check for each type of column ----
-  # colNames.RAW <- colnames(donut.RAW)
-
-  ## determine columns of interest ----
-  # colNames.oi <- c(colNames.RAW[c("Categories", "FacetBy", "LayerBy") %in% colNames.RAW])
-
-  ## calculate the counts for each category, facet, and layer ----
-  # donut.COUNTS <- dplyr::group_by(donut.RAW, dplyr::across(all_of(colNames.oi))) |>
-  #   dplyr::tally(name="Counts") |>
-  #   dplyr::group_by(dplyr::across(all_of(rev(colNames.oi[-1]))))
-
 
   ## arrange data by count OR category ----
   if ( (category.order == "count") & (is.null(layerBy)) ) {
@@ -200,10 +179,8 @@ make.donut.data <- function(data,
   if ( category.order == "category" ) {
     donut.COUNTS <- dplyr::arrange(donut.COUNTS, Categories)
   }
-  # if ( !is.null(facetBy) ){
-  #   donut.COUNTS <- dplyr::group_by(donut.COUNTS, FacetBy)
-  # }
 
+  ## construct the donut.DATA ----
   donut.DATA <- dplyr::mutate(donut.COUNTS,
                               Total=sum(Counts),
                               Ratios=Counts/Total,
@@ -217,14 +194,17 @@ make.donut.data <- function(data,
                               xmin={{r.inner}},
                               xmax={{r.outer}},
                               ymax=cumsum(Ratios),
-                              ymin=dplyr::coalesce(lag(ymax), 0))
+                              ymin=dplyr::coalesce(lag(ymax), 0),
+                              LayerAlpha=LayerAlpha[1])
 
+  ##_ arrange by the facet ----
   if ( !is.null(facetBy) ) {
     donut.DATA <- dplyr::arrange(donut.DATA, FacetBy, ymin)
   }
 
+  ##_ add the layer information ----
   if ( !is.null(layerBy) ) {
-    donut.DATA <- dplyr::left_join(x=dplyr::select(donut.DATA, -xmin, -xmax), y=layer.summary,
+    donut.DATA <- dplyr::left_join(x=dplyr::select(donut.DATA, -xmin, -xmax, -LayerAlpha), y=layer.summary,
                                    by="LayerBy")
   }
 
@@ -314,30 +294,34 @@ make.donut.plot <- function(donut.DATA,
   ## check facet information ----
   colNames.oi <- colnames(donut.DATA)
   facet.tf <- any(colnames(donut.DATA) %in% "FacetBy")
-  facet.count <- length(unique(donut.DATA$FacetBy))
-  ##_ facet information but no indication of the number of columns or rows ----
-  if ( facet.tf & is.null(facet.ncol) & is.null(facet.nrow) ) {
-    facet.mess <- paste0("The donut.DATA contains a FacetBy column with ",
-                         facet.count, " individual donut plots, but the ",
-                         "facet.nrow OR facet.ncol is not set. Please ",
-                         "indicated the number of rows OR columns.")
-    facet.mess <- stringr::str_wrap(facet.mess,
-                                    width=80, indent=0, exdent=7,
-                                    whitespace_only=TRUE)
-    stop(facet.mess)
-  }
+  if ( facet.tf ) {
+    facet.count <- length(unique(donut.DATA$FacetBy))
+
+    ##_ facet information but no indication of the number of columns or rows ----
+    if ( is.null(facet.ncol) & is.null(facet.nrow) ) {
+      facet.mess <- paste0("The donut.DATA contains a FacetBy column with ",
+                           facet.count, " individual donut plots, but the ",
+                           "facet.nrow OR facet.ncol is not set. Please ",
+                           "indicated the number of rows OR columns.")
+      facet.mess <- stringr::str_wrap(facet.mess,
+                                      width=80, indent=0, exdent=7,
+                                      whitespace_only=TRUE)
+      stop(facet.mess)
+    }
+
   ##_ facet information but both the number of columns and rows provided ----
-  if ( facet.tf & is.numeric(facet.ncol) & is.numeric(facet.nrow) ) {
-    facet.mess <- paste0("The number of columns (", facet.ncol, ") and rows (",
-                         facet.nrow, ") are provided and only ONE of these ",
-                         "parameters is needed. Only the number of columns will ",
-                         "be retained. In the future, please indicated the ",
-                         "number of columns OR rows.")
-    facet.mess <- stringr::str_wrap(facet.mess,
-                                    width=80, indent=0, exdent=0,
-                                    whitespace_only=TRUE)
-    message(facet.mess)
-    facet.nrow <- NULL
+    if ( is.numeric(facet.ncol) & is.numeric(facet.nrow) ) {
+      facet.mess <- paste0("The number of columns (", facet.ncol, ") and rows (",
+                           facet.nrow, ") are provided and only ONE of these ",
+                           "parameters is needed. Only the number of columns will ",
+                           "be retained. In the future, please indicated the ",
+                           "number of columns OR rows.")
+      facet.mess <- stringr::str_wrap(facet.mess,
+                                      width=80, indent=0, exdent=0,
+                                      whitespace_only=TRUE)
+      message(facet.mess)
+      facet.nrow <- NULL
+    }
   }
 
   ## construct the colour values vector ----

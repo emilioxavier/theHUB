@@ -7,13 +7,13 @@
 make.donut.data(
   data,
   category,
+  category.order = "count",
+  category.count = NULL,
   facetBy = NULL,
   layerBy = NULL,
   layer.order = "descend",
   layer.alpha.min = 0.75,
-  category.order = "count",
   levels.rev = FALSE,
-  category.count = NULL,
   r.inner = 4,
   r.outer = 6
 )
@@ -24,6 +24,15 @@ Do \strong{NOT} use counted data.}
 
 \item{category}{string with column of interest containing the categories to
 comprise the donut (\emph{aka} ring). Only provide \strong{ONE} column name.}
+
+\item{category.order}{string indicating if you want the data to be ordered by
+\code{"count"} in \emph{\strong{decreasing}} order or by \code{"category"} in alphabetical order;
+default: \code{"count"}.}
+
+\item{category.count}{string with the column containing "counts" for each "category."
+This parameter is \emph{\strong{required}} when the count (or total) for each row was
+pre-calculated and allows for the creation of donut data when raw data is
+not available and one only has the summarised values.}
 
 \item{facetBy}{string indicating the column to group data by; for when you
 want to \strong{facet} your donut plots via \code{\link[ggplot2:facet_wrap]{ggplot2::facet_wrap()}}; see
@@ -51,17 +60,8 @@ are needed.}
 
 \item{layer.alpha.min}{value indicating the minimum alpha value; default: \code{0.75}}
 
-\item{category.order}{string indicating if you want the data to be ordered by
-\code{"count"} in \emph{\strong{decreasing}} order or by \code{"category"} in alphabetical order;
-default: \code{"count"}.}
-
 \item{levels.rev}{logical indicating if the order of the categories should be
 reversed.}
-
-\item{category.count}{string with the column containing "counts" for each "category."
-This parameter is \emph{\strong{required}} when the count (or total) for each row was
-pre-calculated and allows for the creation of donut data when raw data is
-not available and one only has the summarised values.}
 
 \item{r.inner}{numeric value defining the inner radius of the donut; default: \code{4}}
 
