@@ -9,6 +9,8 @@
 #' @param likert2int.tb `tibble` (or `data.frame`) with the conversion between the
 #'   _**long**_ description and the _**integer**_ value. See [convert.fromto()]
 #'   for an example of the `tibble`'s construction.
+#' @param from column in the `likert2int.tb` containing the characters to be converted
+#' @param to column in the `likert2int.tb` containing the characters being converted to
 #'
 #' @return `tibble` (or `data.frame`) containing the needed count, percentage, and
 #'   xxxx to construct a Likert stacked, bar chart with [likert.barplot.stacked()].
@@ -24,11 +26,11 @@
 #' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
-make.likert.barplot.data <- function(data, likert2int.tb) {
+make.likert.barplot.data <- function(data, likert2int.tb, from="long", to="short") {
 
   ## tibble with range of values ----
   data.range <- tibble::tibble(Question="RANGE",
-                               Answer=likert2int.tb$integer,
+                               Answer=likert2int.tb[[to]],
                                Count=0)
 
   ## make data long ----
@@ -36,34 +38,34 @@ make.likert.barplot.data <- function(data, likert2int.tb) {
                             cols=everything(),
                             names_to="Question",
                             values_to="Answer") |>
-    arrange("Question", "Answer") |>
-    group_by("Question", "Answer") |>
+    arrange(Question, Answer) |>
+    group_by(Question, Answer) |>
     summarise(Count=n()) |>
     bind_rows(data.range) |>
-    filter(!is.na("Answer")) |>
+    filter(!is.na(Answer)) |>
     ungroup() |>
-    complete("Question", "Answer", fill=list(Count=0)) |>
-    filter("Question"!="RANGE") |>
-    group_by("Question") |>
-    mutate(Total=sum("Count"),
-           Percent=("Count"/"Total"*100),
-           Label.long=paste("Count", " (", round("Percent", digits=0), "%)", sep=""),
-           pct.label.pos=cumsum("Percent")-0.5*"Percent",
-           count.label.pos=cumsum("Count")-0.5*"Count"
+    complete(Question, Answer, fill=list(Count=0)) |>
+    filter(Question!="RANGE") |>
+    group_by(Question) |>
+    mutate(Total=sum(Count),
+           Percent=(Count/Total*100),
+           Label.long=paste(Count, " (", round(Percent, digits=0), "%)", sep=""),
+           pct.label.pos=cumsum(Percent)-0.5*Percent,
+           count.label.pos=cumsum(Count)-0.5*Count
     ) |>
-    mutate(Label.long=case_when("Count"<=2~"",
+    mutate(Label.long=case_when(Count<=2~"",
                                 TRUE~as.character(Label.long))) |>
     ungroup() |>
-    full_join(y=likert2int.tb, by=c("Answer"="integer")) |>
-    rename("Answer.txt"="phrase")
+    full_join(y=likert2int.tb, by=c("Answer"={{to}})) |>
+    rename("Answer.txt"={{from}})
 
   ## add factors for the plotting ----
   data.long$Question <- factor(x=data.long$Question,
                                levels=rev(colnames(data)))
   data.long$Answer <- factor(x=data.long$Answer,
-                             levels=unique(likert2int.tb$integer))
+                             levels=unique(likert2int.tb[[to]]))
   data.long$Answer.txt <- factor(x=data.long$Answer.txt,
-                                 levels=unique(likert2int.tb$phrase))
+                                 levels=unique(likert2int.tb[[from]]))
 
   ## return the plot data ----
   return(data.long)

@@ -368,7 +368,8 @@ make.donut.plot <- function(donut.DATA,
                                                              y=(ymin+ymax)/2),
                                                          inherit.aes=FALSE,
                                                          show.legend=FALSE,
-                                                         size=label.size)
+                                                         size=label.size,
+                                                         max.overlaps=50)
   }
 
   ## option to make facets ----
