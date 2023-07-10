@@ -33,6 +33,6 @@ comment.summary(data=comment.data, comment.col="comment.clean")
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

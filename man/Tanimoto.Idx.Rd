@@ -46,6 +46,6 @@ to the number of unique bits present in both samples.
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

@@ -31,7 +31,7 @@
 #'  is.none("")
 #'  # TRUE
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 is.none <- function(comment) {
@@ -81,7 +81,7 @@ is.none <- function(comment) {
 #'  word.count("yes, 3 is a word.")
 #'  # 5
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 word.count <- function(comment) {
@@ -122,7 +122,7 @@ word.count <- function(comment) {
 #' comment.summary(data=comment.data, comment.col="comment.clean")
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 comment.summary <- function(data, comment.col) {
@@ -227,7 +227,7 @@ comment.summary <- function(data, comment.col) {
 #'                               keywords.tb=keywords.tb)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 has.keywords <- function(data, comment.col, keywords.tb) {
@@ -275,7 +275,7 @@ has.keywords <- function(data, comment.col, keywords.tb) {
 #' unified.terms(comment=comment)
 #' # "the WiFi is down. my mentalHealth is bad because i lost my finAid."
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 unified.terms <- function(comment, clean=TRUE) {
@@ -379,7 +379,7 @@ unified.terms <- function(comment, clean=TRUE) {
 #' clean.comment(comment=comment)
 #' # "allDay i see classmate and send eMail. i miss eastLansing."
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 clean.comment <- function(comment) {
@@ -611,7 +611,7 @@ clean.comment <- function(comment) {
 #' keywords.heatmap.data <- keywords.plot.data(keywords.similarities=keywords.comp.sim)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 keywords.plot.data <- function(keywords.similarities) {
@@ -669,7 +669,7 @@ keywords.plot.data <- function(keywords.similarities) {
 #'                                search.terms=c("development", "learning", "health", "research"))
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 get.bigrams.oi <- function(data, col.oi, search.terms) {
@@ -730,7 +730,7 @@ get.bigrams.oi <- function(data, col.oi, search.terms) {
 #' keywords.heatmap.data <- keywords.plot.data(keywords.similarities=keywords.comp.sim)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 get.unique.terms <- function(string.oi, search.terms) {
@@ -767,7 +767,7 @@ get.unique.terms <- function(string.oi, search.terms) {
 #' "\\bdog\\b|\\bcat\\b|\\bfish\\b"
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 create.search.string <- function(search.terms) {

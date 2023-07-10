@@ -19,7 +19,7 @@
 #'
 #' @return tibble of examples
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
@@ -102,7 +102,7 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 #' #5      expert         TRUE     role, job, expert
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 find.duplicate.cols <- function(data, data.md5s) {
@@ -170,7 +170,7 @@ find.duplicate.cols <- function(data, data.md5s) {
 #'                 n.examples=4)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=FALSE, group.same.cols=TRUE) {

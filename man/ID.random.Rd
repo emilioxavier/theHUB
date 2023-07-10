@@ -46,7 +46,7 @@ ID.random(ID=IDs, ID.type="mixed")
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 
 Seth Walker \email{walker893@msu.edu}

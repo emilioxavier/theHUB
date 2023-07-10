@@ -28,6 +28,6 @@ clean.OStype("CrOS x86_64 13505.63.0")
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

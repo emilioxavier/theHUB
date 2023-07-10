@@ -43,6 +43,6 @@ LatLonDistances(lat1=42.331177, lon1=-83.046023,
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

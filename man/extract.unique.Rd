@@ -32,6 +32,6 @@ each column. This function is not publically available, but maybe a future
 version will be.
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

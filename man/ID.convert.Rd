@@ -31,7 +31,7 @@ ID.convert(ID=IDs, deID.value=12345)
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 
 Seth Walker \email{walker893@msu.edu}

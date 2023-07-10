@@ -27,6 +27,6 @@ keywords.heatmap.data <- keywords.plot.data(keywords.similarities=keywords.comp.
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

@@ -35,7 +35,7 @@
 #'   Tanimoto.Idx(set1, set2)
 #'   # 0.2
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 Tanimoto.Idx <- function(set1, set2) {
@@ -100,7 +100,7 @@ Tanimoto.Idx <- function(set1, set2) {
 #'   Tanimoto.Dist(set1, set2)
 #'   # 0.8
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 Tanimoto.Dist <- function(set1, set2) {
@@ -156,7 +156,7 @@ Tanimoto.Dist <- function(set1, set2) {
 #' compare.dataset(data)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 compare.dataset <- function(data) {
@@ -223,7 +223,7 @@ compare.dataset <- function(data) {
 #'   make.fps(data=where2eat, id.col="what", cols.oi=c("loc", "size", "cost"))
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.fps <- function(data, id.col, cols.oi) {
@@ -262,7 +262,7 @@ make.fps <- function(data, id.col, cols.oi) {
 #'     convert.fps2binary()
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 convert.fps2binary <- function(data, id.col) {

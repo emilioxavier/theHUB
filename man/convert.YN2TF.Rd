@@ -36,6 +36,6 @@ YN.string <- c("Y", "N", "1", "0", "yes", "no", NA, NA)
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

@@ -4,7 +4,7 @@
 \alias{make.likert.barplot.data}
 \title{Construct Likert Stacked, Barplot Data}
 \usage{
-make.likert.barplot.data(data, likert2int.tb)
+make.likert.barplot.data(data, likert2int.tb, from = "long", to = "short")
 }
 \arguments{
 \item{data}{\code{tibble} (or \code{data.frame}) with Likert data converted to integers.
@@ -14,6 +14,10 @@ Use the \code{\link[=convert.fromto]{convert.fromto()}} function to convert text
 \item{likert2int.tb}{\code{tibble} (or \code{data.frame}) with the conversion between the
 \emph{\strong{long}} description and the \emph{\strong{integer}} value. See \code{\link[=convert.fromto]{convert.fromto()}}
 for an example of the \code{tibble}'s construction.}
+
+\item{from}{column in the \code{likert2int.tb} containing the characters to be converted}
+
+\item{to}{column in the \code{likert2int.tb} containing the characters being converted to}
 }
 \value{
 \code{tibble} (or \code{data.frame}) containing the needed count, percentage, and
@@ -23,6 +27,6 @@ xxxx to construct a Likert stacked, bar chart with \code{\link[=likert.barplot.s
 Construct the Likert data for \code{\link[=likert.barplot.stacked]{likert.barplot.stacked()}}.
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

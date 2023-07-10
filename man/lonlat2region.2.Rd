@@ -55,6 +55,6 @@ lonlat2region.2(data, longitude, latitude, gadm.mapfile=mapfile.world)
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

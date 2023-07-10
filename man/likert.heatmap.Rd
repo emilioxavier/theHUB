@@ -36,6 +36,6 @@ likert.heatmap(data=fs20.likert, QoI="Q1", Qcompared="Q2")
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

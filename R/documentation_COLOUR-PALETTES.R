@@ -33,7 +33,7 @@
 #'   [https://brand.msu.edu/design-visual/index.html#color](https://brand.msu.edu/design-visual/index.html#color)
 #'   [https://cal.msu.edu/about/the-marketing-communications-office/colors/](https://cal.msu.edu/about/the-marketing-communications-office/colors/)
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 "msu.darkGreen"
@@ -88,7 +88,7 @@
 #' @source University of Wisconsin's Brand website:
 #'   [https://brand.wisc.edu/print/colors/](https://brand.wisc.edu/print/colors/)
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 "wisc.badgerRed"

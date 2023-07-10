@@ -79,7 +79,7 @@
 #'
 #' @family Datasets
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 "MSUpeers"
@@ -106,7 +106,7 @@
 #'
 #' @family Datasets
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 "country.currency"
@@ -141,7 +141,7 @@
 #'
 #' @family Datasets
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 "ACT.2.SAT"

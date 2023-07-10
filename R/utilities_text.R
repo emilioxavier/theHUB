@@ -22,7 +22,7 @@
 #' clean.cntrl(text=comment)
 #' # [1] "All day I see class mates and send e-mails.                  I miss East Lansing."
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 #' @family "text cleaning"
@@ -53,7 +53,7 @@ clean.cntrl <- function(text) {
 #'   convert.spaces(text=comment)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 #' @family "text cleaning"
@@ -84,7 +84,7 @@ convert.spaces <- function(text) {
 #'
 #' convert.toASCII(comment=comment)
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 convert.toASCII <- function(comment) {
@@ -111,7 +111,7 @@ convert.toASCII <- function(comment) {
 #' dork@egr.msu.edu 517565656325@162.123 thatDork@msu.edu", domains="msu.edu")
 #' # [1] "2.that.dork@egr.msu.edu" "thatdork@msu.edu"
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 #' @family "text cleaning"

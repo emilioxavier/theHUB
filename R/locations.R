@@ -30,7 +30,7 @@
 #'                 lat2=42.737652, lon2=-84.483788, distance.units="miles")
 #' # 78.48957
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 # LatLonDistances <- function(point1, point2, distance.units="miles") {
@@ -117,7 +117,7 @@ LatLonDistances <- function(lat1, lon1, lat2, lon2, distance.units="miles") {
 #' lonlat2region(longitude, latitude, gadm.mapfile=mapfile.world)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 lonlat2region <- function(longitude, latitude, gadm.mapfile) {
@@ -199,7 +199,7 @@ lonlat2region <- function(longitude, latitude, gadm.mapfile) {
 #' lonlat2region.2(data, longitude, latitude, gadm.mapfile=mapfile.world)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 # data <- location.data; longitude <- "LocationLongitude"; latitude <- "LocationLatitude"; shapedata <- world.shape.data

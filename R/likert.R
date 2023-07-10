@@ -23,7 +23,7 @@
 #' @importFrom tidyr pivot_longer pivot_wider separate complete
 #' @importFrom tidyselect everything
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.likert.barplot.data <- function(data, likert2int.tb, from="long", to="short") {
@@ -95,7 +95,7 @@ make.likert.barplot.data <- function(data, likert2int.tb, from="long", to="short
 #' @importFrom dplyr case_when rename
 #' @importFrom tidyr pivot_longer pivot_wider separate expand
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.likert.heatmap.data <- function(data, QoI, Qcompared, value.range) {
@@ -167,7 +167,7 @@ make.likert.heatmap.data <- function(data, QoI, Qcompared, value.range) {
 #' likert.barplot(data=fs20.likert, QoI="Q1")
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 likert.barplot <- function(data, QoI, value.range) {
@@ -263,7 +263,7 @@ likert.barplot <- function(data, QoI, value.range) {
 #'                        display.minimum=3)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 likert.barplot.stacked <- function(data,
@@ -353,7 +353,7 @@ likert.barplot.stacked <- function(data,
 #' likert.heatmap(data=fs20.likert, QoI="Q1", Qcompared="Q2")
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 likert.heatmap <- function(data, QoI, Qcompared, value.range) {
@@ -412,7 +412,7 @@ likert.heatmap <- function(data, QoI, Qcompared, value.range) {
 #'                    footnotes=footnote)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 likert.plot.matrix <- function(data, value.range, title, questions, footnotes=NULL) {

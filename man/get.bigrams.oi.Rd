@@ -32,6 +32,6 @@ popular.DATA <- get.bigrams.oi(data=bigrams.n3,
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

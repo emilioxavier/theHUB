@@ -54,7 +54,7 @@
 #'                                 r.inner=4, r.outer=6)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.donut.data <- function(data,
@@ -277,7 +277,7 @@ make.donut.data <- function(data,
 #'                                 facet.nrow=NULL, facet.ncol=NULL)
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.donut.plot <- function(donut.DATA,

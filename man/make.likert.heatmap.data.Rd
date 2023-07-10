@@ -28,6 +28,6 @@ Construct the pairwise heatmap data for \code{\link[=likert.heatmap]{likert.heat
 This function is called by \code{\link[=likert.heatmap]{likert.heatmap()}} but can be called individually.
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

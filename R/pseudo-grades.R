@@ -28,7 +28,7 @@
 #' # 4     5    25  0.75
 #' # 5     5    25  1
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.assignment.params <- function(n.students, n.assignments, max.points) {
@@ -77,7 +77,7 @@ make.assignment.params <- function(n.students, n.assignments, max.points) {
 #' # 4 student.4       18       16       16       18       18
 #' # 5 student.5       25       25       25       25       25
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.pseudo.grades <- function(assignment.params) {
@@ -136,7 +136,7 @@ make.pseudo.grades <- function(assignment.params) {
 #'  crossover.pseudo.grades(grades=grades, crossover.point="random")
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 crossover.pseudo.grades <- function(grades, crossover.point="random") {

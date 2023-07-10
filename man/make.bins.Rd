@@ -34,6 +34,6 @@ make.bins(x=age, bins=age.bins, bin.names=age.bin.names)
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

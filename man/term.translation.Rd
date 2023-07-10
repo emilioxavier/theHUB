@@ -25,7 +25,7 @@ the following information. Used in the function \code{\link[=convert.termCode]{c
 }
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }
 \keyword{datasets}

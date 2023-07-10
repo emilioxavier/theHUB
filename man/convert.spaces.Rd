@@ -34,7 +34,7 @@ Other "text cleaning":
 \code{\link{extract.emails}()}
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }
 \concept{"text cleaning"}

@@ -24,7 +24,7 @@ A collection of keywords (206 unique keywords) and associated
 areas (16)
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }
 \keyword{datasets}

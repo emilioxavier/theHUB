@@ -59,6 +59,6 @@ mutate(tibble.oi, Q1.ints=convert.fromto(responses=Q1,
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

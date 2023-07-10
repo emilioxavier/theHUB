@@ -43,6 +43,6 @@ likert.plot.matrix(data=select(fs20.data, Q1, Q2),
 
 }
 \author{
-Emilio Xavier Esposito \email{emilio@msu.edu}
+Emilio Xavier Esposito \email{emilio.esposito@gmail.com}
 (\url{https://github.com/emilioxavier})
 }

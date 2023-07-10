@@ -47,7 +47,7 @@
 #' @source List of keywords and associated areas as determined by Emilio. Please
 #'   feel free to offer suggestions to expand keywords and areas covered.
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 "keywords"
@@ -71,7 +71,7 @@
 #'
 #' @format numeric (double)
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 "deg2rad"
@@ -100,7 +100,7 @@
 #'   |   9  | Fall Quarter (FallQ) | FQ |
 #'
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 "term.translation"

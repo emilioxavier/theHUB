@@ -28,7 +28,7 @@
 #'
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 canonical.name <- function(name.vector) {
@@ -61,7 +61,7 @@ canonical.name <- function(name.vector) {
 #' clean.OStype("CrOS x86_64 13505.63.0")
 #' # "CrOS"
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 clean.OStype <- function(OperatingSystem) {
@@ -90,7 +90,7 @@ clean.OStype <- function(OperatingSystem) {
 #' clean.OSversion("11.3")
 #' # 11
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 clean.OSversion <- function(Version.number) {
@@ -129,7 +129,7 @@ clean.OSversion <- function(Version.number) {
 #' clean.YoB("69")
 #' # 1969
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 clean.YoB <- function(YoB) {
@@ -164,7 +164,7 @@ clean.YoB <- function(YoB) {
 #' clean.DoB("03/30/1995")
 #' # "1995-03-30"
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 clean.DoB <- function(DoB) {
@@ -216,7 +216,7 @@ clean.DoB <- function(DoB) {
 #' clean.DATE("031995")
 #' # "1995-03-30"
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 clean.DATE <- function(dates) {
@@ -294,7 +294,7 @@ clean.DATE <- function(dates) {
 #'                                          from="phrase", to="integer"))
 #' }
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 convert.fromto <- function(responses, fromto.tb, from, to) {
@@ -328,7 +328,7 @@ convert.fromto <- function(responses, fromto.tb, from, to) {
 #' # Warning message:
 #' # In ID.convert(ID = IDs, deID.value = 12345) : NAs introduced by coercion
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #' @author Seth Walker \email{walker893@@msu.edu}
 #'   ([https://github.com/walker893](https://github.com/walker893))
@@ -391,7 +391,7 @@ ID.convert <- function(ID, deID.value=12345) {
 #' # "NXC9vLfKTV7tqwS3ss7F" "AywRolRrH4Myl5zvXCjA" "H0DLeZ7AGQp8RGDhLSoV"
 #' # "vVTaHCI0rxVlJ3AU9wrK"
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #' @author Seth Walker \email{walker893@@msu.edu}
 #'   ([https://github.com/walker893](https://github.com/walker893))
@@ -466,7 +466,7 @@ ID.random <- function(ID, ID.type="mixed") {
 #' convert.ACT2SAT(ACT.score)
 #' # [1] 1215 1535   NA 1215   NA   NA
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 convert.ACT2SAT <- function(ACT.score) {
@@ -503,7 +503,7 @@ convert.ACT2SAT <- function(ACT.score) {
 #' convert.SAT2ACT(SAT.score)
 #' # [1] 28 31 NA 31 NA NA
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 convert.SAT2ACT <- function(SAT.score) {
@@ -548,7 +548,7 @@ convert.SAT2ACT <- function(SAT.score) {
 #' YN.string <- c("Y", "N", "1", "0", "yes", "no", NA, NA)
 #' # [1]  TRUE FALSE  TRUE FALSE    NA    NA
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 convert.YN2TF <- function(YN.string) {
@@ -619,7 +619,7 @@ convert.YN2TF <- function(YN.string) {
 #' convert.termCode(term.code, term.type="short")
 #' # [1] "FS 2020"
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 convert.termCode <- function(term.code, term.type="full") {
@@ -665,7 +665,7 @@ convert.termCode <- function(term.code, term.type="full") {
 #' is.BLANK(string=string)
 #' # [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 is.BLANK <- function(string) {
@@ -695,7 +695,7 @@ is.BLANK <- function(string) {
 #' crse_code <- "183H"
 #' is.honours(crse_code)
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 is.honours <- function(crse_code) {
@@ -733,7 +733,7 @@ is.honours <- function(crse_code) {
 #' is.prep(crse_code)
 #' # FALSE
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 is.prep <- function(crse_code) {
@@ -772,7 +772,7 @@ is.prep <- function(crse_code) {
 #' is.prep(crse_code)
 #' # ""
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 course.type <- function(crse_code) {
@@ -815,7 +815,7 @@ course.type <- function(crse_code) {
 #' make.crsesect(course, sctn_code)
 #' # "PKG 491-006"
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.crsesect <- function(course, sctn_code) {
@@ -850,7 +850,7 @@ make.crsesect <- function(course, sctn_code) {
 #' age.bin.names <- c("0", "2-3", "4-5", "6-7", "8-9", "10")
 #' make.bins(x=age, bins=age.bins, bin.names=age.bin.names)
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 make.bins <- function(x, bins, bin.names) {
@@ -904,7 +904,7 @@ make.bins <- function(x, bins, bin.names) {
 #' file.datetime(date.time=date.time)
 #' # "Jan232021_1453"
 #'
-#' @author Emilio Xavier Esposito \email{emilio@@msu.edu}
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
 #' @name filename-times
