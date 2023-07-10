@@ -1,4 +1,9 @@
 
+# theHUB 1.1.0
+
+ * Added various versions of country names to the `country.currency` [dataset](https://thehopefulbox.com/reference/country.currency.html).
+
+
 # theHUB 1.0.0
 
 * Rectified
