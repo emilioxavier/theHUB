@@ -1,0 +1,15 @@
+the following table is from an email sent by Marshall Rumsey (rumseyma@msu.edu) on 17/Aug/2023 @ 9:13a
+
+Financial Aid Item Type Coding Structure:
+
+Position | Coding Structure
+1 | FA Item Type (6)
+2 | Source System (0 = ProSAM, 5 = SFP)
+3 | Category (0-4 = Gift Aid, 5 = Loan, 9 = Other)
+4 | Source (0 = Federal, 1 = State, 2 = MSU, 3 = Private, 4 = Athletic)
+3 & 4 | 00-49 = 1098-T Box 5 (Gift Aid), 50-99 = Everything Else
+5 & 6 | Sub-Category (00 = Pell, 05 = SEOG, 10 = TEACH, 15 = IASG,
+        20 = Sub, 25 = Unsub, 30 = Parent PLUS, 35 = Grad PLUS, 40 = HPL, 
+        45 = MSU General Fund, 50 = MSU Endowed, 55+ = Anything Else)
+7 & 8 | Reserved For Future Use (Default to 00)
+9 - 12 | Sequence (0000, 0005, 0010, etc.)
