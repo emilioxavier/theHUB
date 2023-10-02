@@ -273,3 +273,109 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
 }
 
 
+#' @title Replace Column Names
+#'
+#' @description Replace original column names with new column names.
+#'
+#' @details The function was initially designed to convert Likert responses to
+#'   integers, but it was quickly realized that it could easily be used for a
+#'   multitude of sins against data. The function relies on a user provided
+#'   `tibble` or `data.frame` with two columns; one with the characters to be
+#'   converted and the characters to be converted to.
+#'
+#'   The function is designed to work with [dplyr::mutate()] allowing multiple
+#'   conversions in a single command.
+#'
+#'   _**Note**_: Ideally, the integers are positive and non-zero.
+#'
+#' @param data `tibble` (or `data.frame`) to have the column names replaced.
+#' @param conversion.tb `tibble` (or `data.frame`) with the matched convertee and
+#'   converted pairs; see the example below.
+#' @param original column in the `conversion.tb` containing the original column names to be converted
+#' @param new column in the `conversion.tb` containing the new column names being converted to
+#' @param new.cols.only logical indicating if _**ONLY**_ changed columns should be returned; default: `FALSE`
+#' @param verbose logical indicating if all the column names _**NOT**_ replaced will be returned; default: `TRUE`
+#'
+#' @return a `tibble` (or `data.frame`) with column names replaced (based on user
+#'   provided parameters).
+#' @export
+#'
+#' @examples
+#' set.seed(13)
+#' phrase2int.tb <- tibble::tibble(phrase=c("hated it!", "meh", "loved it!"),
+#'                                 integer=c(-1, 0, 1))
+#' responses.words <- sample(x=c("hated it!", "meh", "loved it!"), size=5, replace=TRUE)
+#' responses.integers <- sample(x=c(-1, 0, 1), size=5, replace=TRUE)
+#'
+#' convert.fromto(responses=responses.words,
+#'                fromto.tb=phrase2int.tb,
+#'                from="phrase", to="integer")
+#' # [1]  1 -1  0 -1  0
+#'
+#' convert.fromto(responses=responses.integers,
+#'                fromto.tb=phrase2int.tb,
+#'                from="integer", to="phrase")
+#' # [1] "meh"       "hated it!" "loved it!" "hated it!" "meh"
+#'
+#' \dontrun{
+#' replace.colNames(tibble.oi, Q1.ints=convert.fromto(responses=Q1,
+#'                                          fromto.tb=phrase2int.tb,
+#'                                          from="phrase", to="integer"))
+#' }
+#'
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+replace.colNames <- function(data, conversion.tb, original, new, new.cols.only=FALSE, verbose=TRUE) {
+
+  ## basic information ----
+  data.nCol <- ncol(data)
+  replacement.nCol <- nrow(conversion.tb)
+
+  ## get all column names ----
+  colNames.ORIG.tb <- tibble::tibble(data.orig=colnames(data)) |>
+    mutate(index=row_number())
+  conversion.original <- conversion.tb[[original]]
+  conversion.new <- conversion.tb[[new]]
+  conversion.tb <- tibble::tibble(original=conversion.tb[[original]],
+                                  new=conversion.tb[[new]])
+
+  ## match columns ----
+  match.tb <- left_join(x=colNames.ORIG.tb, y=conversion.tb,
+                        by=c("data.orig"="original"))
+  new.colNames.tb <- filter(match.tb, !is.na(new))
+
+  new.nCol <- nrow(new.colNames.tb)
+
+  ## columns not in the data of interest ----
+  missing.colNames.tb <- filter(match.tb, is.na(new))
+
+  ## non-matching column names ----
+  non.matching.colNames <- paste0(missing.colNames.tb$data.orig, collapse=", ")
+  status.message <- paste0("The dataset of interest has ", data.nCol,
+                           " columns and the replacement data has ", replacement.nCol,
+                           " new column names. There were ", new.nCol,
+                           " column names replaced.")
+  message(status.message)
+
+  if (verbose == TRUE) {
+    notice.message <- "Here are the original column names that were NOT replaced."
+    message(notice.message)
+    print(paste0(missing.colNames.tb$data.orig, collapse=", "))
+  }
+
+  ## set column names ----
+  if (new.cols.only == TRUE) {
+    data <- setNames(object=data[, new.colNames.tb$index], nm=new.colNames.tb$new)
+  } else {
+    colnames(data)[new.colNames.tb$index] <- new.colNames.tb$new
+  }
+
+  ## return data ----
+  return(data)
+}
+
+# slate.column.names -> conversion.tb
+# set.seed(13)
+# sample_n(slate.column.names, 25) -> conversion.tb
+# replace.colNames(data=data, conversion.tb=conversion.tb, original="slate.original", new="slate.new", new.cols.only=TRUE, verbose=TRUE)
