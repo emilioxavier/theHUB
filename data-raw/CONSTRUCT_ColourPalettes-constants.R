@@ -1,5 +1,8 @@
 library(tidyverse)
+library(readr)
 
+
+setwd("./data-raw/")
 
 ## MSU colour palettes ----
 msu.darkGreen <- "#18453b"
@@ -108,17 +111,9 @@ usethis::use_data(deg2rad, earth.radius.miles, earth.radius.km,
                   internal=FALSE, overwrite=TRUE)
 
 ## keywords ----
-keywords <- readr::read_csv(file="./data-raw/keywords_areas.csv", trim_ws=FALSE)
+keywords <- readr::read_csv(file="./datasets_keywords_areas.csv", trim_ws=FALSE)
 usethis::use_data(keywords, overwrite=TRUE)
 # keywords.tb <- group_by(keywords, area) |> summarise(query=paste(keyword, collapse="|"))
-
-## Subject-Course Codes ----
-##_ FS20 ----
-SubjectCourse.codes.FS20 <- readr::read_csv(file="./data-raw/FS20-Subject-Course_CODES_College.csv",
-                                            col_types="cccccccicccccccic") |>
-  select(-tlphn_id) |>
-  rename("index"="number")
-usethis::use_data(SubjectCourse.codes.FS20, overwrite=TRUE)
 
 ## Term-Code Translation Table ----
 term.translation <- tibble::tibble(abbrev=c(1, 2, 3, 5, 6, 8, 9),
@@ -126,3 +121,4 @@ term.translation <- tibble::tibble(abbrev=c(1, 2, 3, 5, 6, 8, 9),
                                    short=c("WQ", "SS", "SQ", "US", "UQ", "FS", "FQ"))
 usethis::use_data(term.translation, overwrite=TRUE)
 
+setwd("..")

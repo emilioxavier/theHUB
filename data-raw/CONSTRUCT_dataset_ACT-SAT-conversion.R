@@ -1,7 +1,7 @@
-library(readxl)
 library(tidyverse)
+library(readxl)
 
-setwd("data-raw/")
+setwd("./data-raw/")
 
 ## read in Princeton Review data ----
 SAT.ACT.PR <- readxl::read_excel(path="datasets_SAT-ACT_scoreConversion_PrincetonReview_spring2022.xlsx") |>
