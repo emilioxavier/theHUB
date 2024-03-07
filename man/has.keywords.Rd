@@ -4,14 +4,28 @@
 \alias{has.keywords}
 \title{Keywords Present}
 \usage{
-has.keywords(data, comment.col, keywords.tb)
+has.keywords(
+  data,
+  column.oi,
+  keywords.tb,
+  kw.group.col,
+  kw.query.col,
+  ignore.case = FALSE
+)
 }
 \arguments{
 \item{data}{\code{tibble} (or \code{data.frame}) with the comments of interest}
 
-\item{comment.col}{string indicating the comments of interest; \emph{e.g.}, \code{"comments.clean"}}
+\item{column.oi}{string indicating the comments of interest; \emph{e.g.}, \code{"comments.clean"} or \code{"event.name"}}
 
-\item{keywords.tb}{\code{tibble} with the keywords and area}
+\item{keywords.tb}{\code{tibble} with the overall group and the query}
+
+\item{kw.group.col}{\code{keywords.tb} containing the the overall area}
+
+\item{kw.query.col}{\code{keywords.tb} containing the queries}
+
+\item{ignore.case}{\code{logical} if \code{FALSE}, the pattern matching is case sensitive
+and if \code{TRUE}, case is ignored during matching; default is \code{FALSE}}
 }
 \value{
 \code{tibble} (or \code{data.frame}) with the original data plus a column

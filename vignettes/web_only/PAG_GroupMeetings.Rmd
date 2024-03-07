@@ -1,6 +1,6 @@
 ---
 title: "PAG: Group Meetings"
-date: "Updated 20/Jan/2023"
+date: "Updated 23/Oct/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Group Meetings}
@@ -25,21 +25,27 @@ Group Meeting are on Tuesdays and Thursdays and we start at 3p and end between 4
   - what they are working on
   - one thing causing grief
   - one victory
+  
+_**The meetings are informal discussions on current projects and help overcoming coding obstacles.**_ We meet at the [Blue Owl Coffee in East Lansing](https://www.blueowlcoffee.net), [Google Map](https://goo.gl/maps/CVkykGhSUkkofDXs5).
 
-| Week of the Month | Tuesday | Thursday |
-|:-----------------:|:-------:|:--------:|
-| 1st               | General | Emilio   |
-| 2nd               | General | Steve    |
-| 3rd               | General | Seth     |
-| 4th               | General | Social   |
+<!-- | Week of the Month | Tuesday | Thursday | -->
+<!-- |:-----------------:|:-------:|:--------:| -->
+<!-- | 1st               | General | Emilio   | -->
+<!-- | 2nd               | General | Steve    | -->
+<!-- | 3rd               | General | Seth     | -->
+<!-- | 4th               | General | Social   | -->
 
-  - The **Tuesday "General" meetings** are a catch-all for coding demonstrations, help solving research and coding conundrums, guest speakers, and administrative and management discussions. 
-  - The **Thursday meetings** are an opportunity for each group member (see schedule below) to present an aspect of their project.
-  - We meet in person for [book club](#BookClub) discussion and these meetings take the place of a predetermined Thursday meeting. Check the meeting schedule below for when and where book club meets.
+  <!-- - The **Tuesday "General" meetings** are a catch-all for coding demonstrations, help solving research and coding conundrums, guest speakers, and administrative and management discussions.  -->
+  <!-- - The **Thursday meetings** are an opportunity for each group member (see schedule below) to present an aspect of their project. -->
+  <!-- - We meet in person for [book club](#BookClub) discussion and these meetings take the place of a predetermined Thursday meeting. Check the meeting schedule below for when and where book club meets. -->
   
   <!-- The fourth Thursday of each month allows the group to meet in-person for beverages and snacks if they can easily make it to -- or near -- campus. We also have the option to cancel the fourth Thursday meeting and make this decision during the fourth Tuesday meeting. -->
 
 ## Group Meeting Topics
+
+### Fall/2023 Meetings
+
+  Meetings now take place in-person at the [Blue Owl Coffee in East Lansing](https://www.blueowlcoffee.net), [Google Map](https://goo.gl/maps/CVkykGhSUkkofDXs5). _**The meetings are informal discussions on current projects and help overcoming coding obstacles.**_
 
 ### Spring/2023 Meetings
 
@@ -49,7 +55,7 @@ Group Meeting are on Tuesdays and Thursdays and we start at 3p and end between 4
   - 24/Jan/2023 (Tuesday):  Introduction to the HPCC (Thank you Seth!)
   - 26/Jan/2023 (Thursday): (Re)Introduction to GitHub and [theHUB](https://theHopefulBox.com). The basics of writing R functions: 1. Make it work, 2. Make it clear, 3. Make it fast-ish. 
   - 31/Jan/2023 (Tuesday):  Cleaning up last year's code and making it reproducible.
-  - 02/Feb/2023 (Thursday): [_**Book club**_](#BookClub) meeting! Meet at [Blue Owl Coffee in East Lansing](https://www.blueowlcoffee.net), [Google Map](https://goo.gl/maps/CVkykGhSUkkofDXs5).
+  - 02/Feb/2023 (Thursday): [_**Book club**_](#BookClub) meeting! Meet at the [Blue Owl Coffee in East Lansing](https://www.blueowlcoffee.net), [Google Map](https://goo.gl/maps/CVkykGhSUkkofDXs5).
 
 
 ### Book Club {#BookClub}

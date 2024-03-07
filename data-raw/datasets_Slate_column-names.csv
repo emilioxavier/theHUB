@@ -130,6 +130,13 @@ Application app_how_long_lived,residency.n.YRS,integer
 Application app_i20_issued_date,i20.issued.DATE,date
 Application app_i20_requested_date,i20.requested.DATE,date
 Application app_i20_status,i20.status,character
+I-20_visa,i20.visa.type,character
+Passport_upload_status,i20.passport.status,character
+Passport_Upload_Status,i20.passport.status,character,
+Financial_Proof_upload_status,i20.FinProof.status,character
+Financial_Proof_Upload_Status,i20.FinProof.status,character,
+Affidavit_of_Support_upload_status,i20.AffSupport.status,character
+Affidavit_Support_Upload_Status,i20.AffSupport.status,character
 Application app_ib_hl,international.Bachelors,character
 Application app_intended_visa_classification,all.NA.22.DROP,character
 Application app_last_awaiting_decision_date,decisionAwaiting02.DATE,date
@@ -483,4 +490,3 @@ Form Weather Forecast,event.weather.forecast,character
 Form Weather,event.weather.sky,character
 Form Weather Chance of Rain,event.weather.pct.rain,integer
 Form Weather Temperature,event.weather.temp,integer
-

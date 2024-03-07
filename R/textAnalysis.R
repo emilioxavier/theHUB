@@ -207,8 +207,12 @@ comment.summary <- function(data, comment.col) {
 #'   ```
 #'
 #' @param data `tibble` (or `data.frame`) with the comments of interest
-#' @param comment.col string indicating the comments of interest; _e.g._, `"comments.clean"`
-#' @param keywords.tb `tibble` with the keywords and area
+#' @param column.oi string indicating the comments of interest; _e.g._, `"comments.clean"` or `"event.name"`
+#' @param keywords.tb `tibble` with the overall group and the query
+#' @param kw.group.col `keywords.tb` containing the the overall area
+#' @param kw.query.col `keywords.tb` containing the queries
+#' @param ignore.case `logical` if `FALSE`, the pattern matching is case sensitive
+#'   and if `TRUE`, case is ignored during matching; default is `FALSE`
 #'
 #' @return `tibble` (or `data.frame`) with the original data plus a column
 #'   for each provided area. Each _area_ column has a `TRUE` or `FALSE` for
@@ -230,18 +234,21 @@ comment.summary <- function(data, comment.col) {
 #' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
-has.keywords <- function(data, comment.col, keywords.tb) {
+has.keywords <- function(data, column.oi,
+                         keywords.tb, kw.group.col, kw.query.col,
+                         ignore.case=FALSE) {
 
   ## pull areas of interest ----
   # areas <- dplyr::pull(keywords.tb, area)
-  areas <- keywords.tb$area
+  areas <- keywords.tb[[kw.group.col]]
 
   ## loop over data and indicate areas ----
   for (area.oi in areas) {
-    query <- dplyr::pull(dplyr::filter(keywords.tb, .data$area==area.oi), query)
-    query.name <- paste(area.oi, ".tf", sep="")
+    query <- dplyr::pull(dplyr::filter(keywords.tb, .data[[kw.group.col]]==area.oi), kw.query.col)
+    query.name <- paste(area.oi, ".TF", sep="")
     data <- dplyr::mutate(data,
-                          {{query.name}}:=stringr::str_detect(string=.data[[comment.col]], pattern=query))
+                          # {{query.name}}:=stringr::str_detect(string=.data[[column.oi]], pattern=query))
+                          {{query.name}}:=grepl(x=.data[[column.oi]], pattern=query, ignore.case=ignore.case))
   }
 
   ## return tibble ----
