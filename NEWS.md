@@ -1,4 +1,13 @@
 
+# theHUB 1.2.0
+
+* Rectified
+  - Issue #23, #24, #25, #26, #29, #31, #32
+* Added [`replace.colNames()`](https://thehopefulbox.com/reference/replace.colNames.html)
+* Added EDW descriptions to [EDW: dBeaver Setup](https://thehopefulbox.com/articles/EDW_dBeaverSetup.html)
+* Added [`geom_split_violin`](https://thehopefulbox.com/reference/geom_split_violin.html); Issue #31
+
+
 # theHUB 1.1.0
 
  * Added various versions of country names to the `country.currency` [dataset](https://thehopefulbox.com/reference/country.currency.html).

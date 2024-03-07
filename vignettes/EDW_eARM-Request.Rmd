@@ -1,5 +1,5 @@
 ---
-title: "EDW: dBeaver Setup"
+title: "EDW: eARM Request"
 date: "Updated 23/Oct/2023"
 output: rmarkdown::html_vignette
 vignette: >
@@ -14,11 +14,56 @@ vignette: >
 
 ***
 
-We use [dBeaver](https://dbeaver.io), the Community Edition, to explore the MSUEDW because it is easy to install and use, is constantly updated, provides all the features of Oracle SQL Developer, and is free. Additionally, there is a great community associated with [dBeaver](https://dbeaver.io) to answer dBeaver related questions.
+## Background
 
-[dBeaver Community](https://dbeaver.io) is a 
+Within each database is a collection of schema that contain tables and views. You are assigned a role for accessing specific segments of a schema and associated tables and views.
 
-> "free multi-platform [macOS, Windows, Linux, there is even an Eclipse plugin] database tool for developers, database administrators, analysts and all people who need to work with databases" that "supports all popular databases: MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc."
+How to Request Access to a System or Application through MSU Information Technology
+https://tdx.msu.edu/TDClient/32/Portal/KB/ArticleDet?ID=791
+
+### Available Databases
+
+ - MSUEDW: Production EDW with SISCS
+ - MSUEDWQ: Quality Assurance (QA) database
+ - MSUEDWR: frozen snapshot
+ - MSUEDWRQ: frozen snapshot quality assurance (QA)
+ 
+### Available Roles
+FINREADERS_BASE
+FINREADERS_OOI
+SISCS_READERS
+
+SISCS_ACADRECORDS_LEVEL3
+SISCS_ADMISSIONS_SNSTV
+SISCS_STDNT_FIN_SNSTV
+SISCS_FINAID_SNSTV
+
+ADMANALYT_READERS
+ADMANALYT_SNSTV_READERS
+
+## Description of Requested Access
+
+```
+Hi
+In an attempt to better understand the research and results of the Deloitte Project, we are requesting access to all data/tables/views within the ADMANALYT schema that is part of the MSUEDW via the roles ADMANALYT_READERS and ADMANALYT_SNSTV_READERS. Access to this data allows us to evaluate the previous work done and learn how the work was performed. Previously, Kristin "Kris" Schuette handled this request but indicated they were not familiar with the ADMANALYT schema and, thus, could not adequately evaluate our request.  
+
+database: MSUEDW
+schema: SchemaName
+roles: ADMANALYT_READERS and ADMANALYT_SNSTV_READERS  Please let me know if you have any questions regarding our access to this data.  
+
+Thank you
+Emilio
+```
+
+
+## Business Need/Comment
+
+```
+The users (_**List the MSU NetIDs**_) work for _**Supervisor's Name**_, the _Supervisor's Title and Unit**_. The noted users are performing exploratory analysis and developing predictive analytics models. The work products will assist the Enrollment Services offices in developing a better understanding of the students interested in attending MSU, learning why students choose to attend MSU, identifying essential factors related to their course outcomes and success at MSU, and developing bespoke gift and financial aid models. They need access to the noted resources to fulfill this role.
+
+Access to _**schema name**_ allows us to _**add your reason here**_. 
+```
+
 
 
 ## Download & Install

@@ -1,6 +1,6 @@
 ---
 title: "Software"
-date: "Updated 08/Mar/2023"
+date: "Updated 23/Oct/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Software}
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(message=FALSE, warning=FALSE, include=FALSE)
 library(knitr)
 ```
 
-# We are looking for Windows 10 and 11 beta testers!!! 
+# We are looking for Windows 11 testers!!! 
 
 ---
 
@@ -57,7 +57,7 @@ We use a select collection of packages to construct plots that stand out. We rel
   - [R Cookbook's Graphs chapter](http://www.cookbook-r.com/Graphs/)
   - [cowplot](https://wilkelab.org/cowplot/): multiple plots in a single image
   - [ggtext](https://wilkelab.org/ggtext/): Improved text rendering support for ggplot2 (aka fancy fonts and text for your plot)
-  - [geomtextpath](https://allancameron.github.io/geomtextpath/) curved text in ggplot2 . Is really useful for [labeling reference lines](https://allancameron.github.io/geomtextpath/#reference-lines)
+  - [geomtextpath](https://allancameron.github.io/geomtextpath/) curved text in ggplot2. Is really useful for [labeling reference lines](https://allancameron.github.io/geomtextpath/#reference-lines)
 
 
 
@@ -180,10 +180,17 @@ Please see our [document for setting up dBeaver to access the MSUEDW]().
 
 With the [sunsetting of GitHub's Atom](https://github.blog/2022-06-08-sunsetting-atom/) the I find [Microsoft Visual Studio Code](https://code.visualstudio.com/) to be an _**excellent**_ text editor. Yes. I use, kinda like, and endorse using Microsoft Visual Studio Code. (Younger me is so disappointed.)
 
-It has a lot of great R-related features including "syntax highlighting, R language service based on code analysis, interacting with R terminals, viewing data, plots, workspace variables, help pages, managing packages, and working with R Markdown documents" via [REditorSupport](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)," is awesome for viewing (and sometime editing) CSV files (and other delimited files) with [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), and has an [Atom teletype](https://teletype.atom.io)-like feature called [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare). Download Microsoft Visual Studio Code [here](https://code.visualstudio.com/Download).
+It has a lot of great R-related features including "syntax highlighting, R language service based on code analysis, interacting with R terminals, viewing data, plots, workspace variables, help pages, managing packages, and working with R Markdown documents" via [REditorSupport](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r), is awesome for viewing (and sometime editing) CSV files (and other delimited files) with [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv), and has an [Atom teletype](https://teletype.atom.io)-like feature called [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare). It also provide [Python integration](https://marketplace.visualstudio.com/items?itemName=ms-python.python)! 
+
+ - Download Microsoft Visual Studio Code [here](https://code.visualstudio.com/Download).
+ - Instructions to install Extensions are available [here](https://code.visualstudio.com/docs/editor/extension-marketplace).
+ - Explore the Extensions marketplace [here](https://marketplace.visualstudio.com/vscode).
 
 Commonly installed extensions:
+
+ - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
  - [Print](https://marketplace.visualstudio.com/items?itemName=pdconsec.vscode-print)
+ - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
  - [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
  - [REditorSupport](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)
  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)

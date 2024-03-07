@@ -1,6 +1,6 @@
 ---
 title: "EDW: SQL Snippets Library"
-date: "Updated 08/Mar/2023"
+date: "Updated 23/Oct/2023"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{EDW: SQL Snippets Library}

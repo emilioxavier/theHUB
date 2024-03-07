@@ -292,9 +292,11 @@ likert.barplot.stacked <- function(data,
   ## build the barplots ----
   likert.barplot.stacked <- ggplot(data=data, aes(x=Question, y=Percent, fill=Answer.txt)) +
     geom_bar(stat="identity", position=position_stack(reverse=TRUE)) +
-    scale_fill_manual(values=rev(msu.palette[1:5]), guide=guide_legend(reverse=FALSE)) +  ## CURRENT
+    # scale_fill_manual(values=rev(msu.palette[1:5]), guide=guide_legend(reverse=FALSE)) +  ## CURRENT
+    scale_fill_manual(values=rev(colour.palette), guide=guide_legend(reverse=FALSE)) +  ## CURRENT
     labs(x=NULL, y=NULL, title=NULL) +
-    geom_text(aes(y=pct.label.pos, label=.data[[label.col]]), color="white", family="Georgia", size=label.size, hjust="middle", vjust="middle") +
+    geom_text(aes(y=pct.label.pos, label=.data[[label.col]]), color="#FFCE34", family="Georgia", size=label.size, hjust="middle", vjust="middle") +
+    # geom_label(aes(y=pct.label.pos, label=.data[[label.col]]), fill="white", colour="grey25", family="Georgia", size=label.size, hjust="middle", vjust="middle") +
     coord_flip() +
     guides(fill=guide_legend(title.position="top",  ## place title on top of legend (not needed)
                              title.hjust=0.5,  ## center the title (not needed)

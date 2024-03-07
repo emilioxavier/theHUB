@@ -10,6 +10,7 @@ CONDUCT.md
 ^pkgdown$
 ^\.github$
 R/utilities_currency.R
+R/plots_SplitViolins.R
 vignettes/HowTo_DonutPlots.R
 vignettes/HowTo_DonutPlots.Rmd
 

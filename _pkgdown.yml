@@ -137,11 +137,11 @@ navbar:
      - text: EDW Navigation
        href: articles/EDW_Navigation.html
      - text: SQL Snippet Library (In Progress)
-       href: articles/EDW_R-SQLsnippetLibrary.html
+       href: articles/EDW_SQLsnippetLibrary.html
     news:
      text: News
      href: news/index.html
     twitter:
       icon: fa-twitter
-      href: http://twitter.com/exesposito
-      aria-label: Twitter
+      href: http://x.com/exesposito
+      aria-label: Twitter (X)
