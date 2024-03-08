@@ -120,7 +120,7 @@ find.duplicate.cols <- function(data, data.md5s) {
   ## single column
   data.pairs.summary <- sapply(data.pairs, names) |>
     t() |>
-    tibble::as_tibble() |>
+    tibble::as_tibble(.name_repair="minimal") |>
     t() |>
     as.data.frame() |>
     tibble::rownames_to_column(var="column.name") |>
