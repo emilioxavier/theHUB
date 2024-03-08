@@ -107,7 +107,7 @@ Application app_fin_aid_consideration_other,FinAid.consider.OTHER.TF,integer
 Application app_fin_proof_address,all.NA.16.DROP,character
 Application app_fin_proof_amount_per_year,all.NA.17.DROP,character
 Application app_fin_proof_name,all.NA.18.DROP,character
-Application app_fin_proof_num_of_years,FinAid.nYRS.TF,integeR
+Application app_fin_proof_num_of_years,FinAid.nYRS.TF,integer
 Application app_fin_proof_relationship,all.NA.19.DROP,character
 Application app_first_awaiting_decision_date,decisionAwaiting01.DATE,date
 Application app_first_gen,demo.firstGen.TF,integer
