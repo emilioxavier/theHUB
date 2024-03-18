@@ -265,7 +265,8 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ## write out to Excel ----
   WriteXLS::WriteXLS(x=ds.summary,
                      ExcelFileName=ExcelFileName,
-                     FreezeRow=1, FreezeCol=11)
+                     FreezeRow=1, FreezeCol=11,
+                     AutoFilter=TRUE, AdjWidth=TRUE, BoldHeaderRow=TRUE)
 
   ## return examples ----
   return(ds.summary)
