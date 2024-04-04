@@ -10,11 +10,13 @@
 #'   - `00_README.md`: Provide general information about the project, what is
 #'     being worked on, and what is completed.
 #'   - `./DATA`: Where files containing the data for the study reside.
-#'   - `./DOCUMENTS`: The location for reports, articles, and presentations
+#'   - `./DOCUMENTS`: A location for reports, articles, and presentations
 #'     related to the project and are often provided by colleagues.
 #'   - `./IMAGES`: Where all the images created within the scripts are written.
 #'   - `./PRESENTATIONS`: Where the presentations and other reports created for the
 #'     project from the performed analyses.
+#'   - `./REFERENCES`: A location for reports, articles, and presentations
+#'     related to the project and are often provided by colleagues.
 #'
 #' The `README` file can work as an extension of your notebook by containing links
 #' to websites and code snippets (short pieces of code to perform specific tasks).
@@ -26,13 +28,14 @@
 #'
 #' This function should be run after creating the R project.
 #'
-#' @return Nothing is returned to the R session. The following might be created
+#' @return Nothing is returned to the R session. The following _**might**_ be created
 #'   in the current working directory:
 #'   - `00_README.md`
 #'   - `./DATA`
 #'   - `./DOCUMENTS`
 #'   - `./IMAGES`
 #'   - `./PRESENTATIONS`
+#'   - `./REFERENCES`
 #'
 #' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -123,6 +126,20 @@ framework.project <- function() {
     dir.create("PRESENTATIONS")
     presentations.mess <- "NO PRESENTATIONS folder exist!!\n  -->> Created ./PRESENTATIONS"
     message(presentations.mess)
+  }
+
+  ## check for REFERENCES folder ----
+  references.dirs <- grep(pattern="reference", ignore.case=TRUE, x=curr.dirs, value=TRUE)
+  ##_ REFERENCES-like folders exists ----
+  if ( length(references.dirs) > 0 ) {
+    references.dirs.mess <- paste(references.dirs, collapse=", ")
+    references.mess <- paste0("The following REFERENCE folder(s) exist: ", references.dirs.mess, "\n  -->> No REFERENCES folder created\n")
+    message(references.mess)
+  ##_ create REFERENCES folder
+  } else {
+    dir.create("REFERENCES")
+    references.mess <- "NO REFERENCES folder exist!!\n  -->> Created ./REFERENCES"
+    message(references.mess)
   }
 
 

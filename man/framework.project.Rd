@@ -7,7 +7,7 @@
 framework.project()
 }
 \value{
-Nothing is returned to the R session. The following might be created
+Nothing is returned to the R session. The following \emph{\strong{might}} be created
 in the current working directory:
 \itemize{
 \item \verb{00_README.md}
@@ -15,6 +15,7 @@ in the current working directory:
 \item \code{./DOCUMENTS}
 \item \code{./IMAGES}
 \item \code{./PRESENTATIONS}
+\item \code{./REFERENCES}
 }
 }
 \description{
@@ -28,11 +29,13 @@ being created.
 \item \verb{00_README.md}: Provide general information about the project, what is
 being worked on, and what is completed.
 \item \code{./DATA}: Where files containing the data for the study reside.
-\item \code{./DOCUMENTS}: The location for reports, articles, and presentations
+\item \code{./DOCUMENTS}: A location for reports, articles, and presentations
 related to the project and are often provided by colleagues.
 \item \code{./IMAGES}: Where all the images created within the scripts are written.
 \item \code{./PRESENTATIONS}: Where the presentations and other reports created for the
 project from the performed analyses.
+\item \code{./REFERENCES}: A location for reports, articles, and presentations
+related to the project and are often provided by colleagues.
 }
 
 The \code{README} file can work as an extension of your notebook by containing links
