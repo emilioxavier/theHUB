@@ -28,6 +28,7 @@
 #'
 #' This function should be run after creating the R project.
 #'
+#' @export
 #' @return Nothing is returned to the R session. The following _**might**_ be created
 #'   in the current working directory:
 #'   - `00_README.md`
