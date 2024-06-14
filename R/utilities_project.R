@@ -48,7 +48,7 @@ framework.project <- function() {
   curr.files <- list.files()
   n.files <- length(curr.files)
   ##_ directories/folders ----
-  curr.dirs <- list.dirs() |>
+  curr.dirs <- list.dirs(recursive=FALSE) |>
     substr(start=3, stop=1000)
   curr.dirs <- curr.dirs[nchar(curr.dirs)>0]
   n.dirs <- length(curr.dirs)
