@@ -1,3 +1,63 @@
+#' @title Classification Check
+#'
+#' @description Identify when a new class in the list of **long** responses that
+#' need to be converted to their **short**ened forms.
+#'
+#' @param data `tibble` or `data.frame` of interest
+#' @param col.oi string indicating the column with classes of interest
+#' @param ct `tibble` or `data.frame` conversion table with a column with the
+#'   information to be converted and the information to be converted to
+#' @param ct.col string indicating the column to match to the classes in the `col.oi`
+#'
+#' @return Indicator of missing classifications. See Examples.
+#' @export
+#'
+#' @importFrom dplyr filter pull
+#'
+#' @examples
+#' \dontrun{
+#'  classification.check(data=data.oi, col.oi="Animal", ct=ToFrom.ct, ct.col="long")
+#'  # No new classes in the dataset of interest.
+#'
+#'  classification.check(data=data.oi, col.oi="Animal", ct=ToFrom.ct, ct.col="long")
+#'  # There are unmatched values in the data of interest:
+#'  #  -> Dogs
+#'  #  -> Cats
+#' }
+#'
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+classification.check <- function(data, col.oi, ct, ct.col) {
+
+  ## pull unique, sorted column of interest ----
+  col.oi.values <- dplyr::filter(data, !is.na({{col.oi}})) |>
+    dplyr::pull({{col.oi}}) |>
+    paste(collapse=", ") |>
+    strsplit(split=", ") |>
+    unlist() |>
+    unique() |>
+    sort()
+
+  ## conversion-table column ----
+  ct.values <- sort(ct[[ct.col]])
+
+  ## any new classes? ----
+  new.class <- col.oi.values[!col.oi.values %in% ct.values]
+
+  ## write out status ----
+  if ( any(!is.na(new.class)) ) {
+    new.class.list <- paste(" ->", new.class, collapse="\n")
+    mess <- paste("There are unmatched values in the data of interest:\n",
+                  new.class.list, sep="")
+    message(mess)
+  } else {
+    message("No new classes in the dataset of interest.")
+  }
+
+}
+
+
 #' @title Extract Unique Values from Each Column
 #'
 #' @description Given a `tibble` or `data.frame` extract unique examples for
