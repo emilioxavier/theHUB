@@ -89,9 +89,9 @@ extract.unique <- function(dataset, cell.blank.tf, cell.NA.tf, size=3) {
 
   ## construct empty tibble to populate ----
   CoI.report.df <- matrix(data=NA, nrow=(size+1), ncol=n.cols) |>
-    as.data.frame()
-  colnames(CoI.report.df) <- colnames(dataset)
-  CoI.report <- as_tibble(CoI.report.df)
+    as.data.frame() |>
+    setNames(nm=colnames(dataset))
+  CoI.report <- tibble::as_tibble(CoI.report.df)
 
   ## extract examples from each columns
   for (curr.col in seq_len(length.out=n.cols)) {
@@ -292,8 +292,8 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ## add columns indicating number of blanks and NAs ----
   ds.colTypes <- tibble::add_column(ds.colTypes,
                                     n.TOT=n.rows,
-                                    n.BLANK=col.NA.n,
-                                    n.NA=col.NA.n)
+                                    n.BLANK=as.integer(col.NA.n),
+                                    n.NA=as.integer(col.NA.n))
 
   ## extract examples ----
   ds.examples <- extract.unique(dataset=dataset,
@@ -305,7 +305,8 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ## create and apply example names ----
   example.names <- paste("example.", seq_len(length.out=n.examples), sep="")
   colnames(ds.examples) <- c("n.unique", example.names)
-  ds.examples <- tibble::as_tibble(ds.examples)
+  ds.examples <- tibble::as_tibble(ds.examples) |>
+    mutate(n.unique=as.integer(n.unique))
 
   ## create dataset for export ----
   ds.summary <- dplyr::bind_cols(ds.colTypes, ds.examples) |>
