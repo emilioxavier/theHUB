@@ -44,7 +44,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Emilio Xavier Esposito \email{emilio@msu.edu} (\href{https://orcid.org/0000-0002-6193-0485}{ORCID}) (GitHub: https://github.com/emilioxavier)
+\strong{Maintainer}: Emilio Xavier Esposito \email{emilio.esposito@gmail.com} (\href{https://orcid.org/0000-0002-6193-0485}{ORCID}) (GitHub: https://github.com/emilioxavier)
 
 }
 \keyword{internal}
