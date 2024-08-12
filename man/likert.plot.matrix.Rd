@@ -22,7 +22,7 @@ Use \verb{\\n} to denoted line breaks (aka carriage returns).}
 values represent. Use \verb{\\n} to denoted line breaks (aka carriage returns).}
 }
 \value{
-\link[ggplot2:ggplot2-package]{ggplot2::ggplot2} object constructed via \link[cowplot:cowplot]{cowplot::cowplot}
+\link[ggplot2:ggplot2-package]{ggplot2::ggplot2} object constructed via \link[cowplot:cowplot-package]{cowplot::cowplot}
 }
 \description{
 Graphical representation of pairwise interactions between Likert

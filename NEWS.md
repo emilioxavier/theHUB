@@ -6,6 +6,7 @@
 * Added [`replace.colNames()`](https://thehopefulbox.com/reference/replace.colNames.html)
 * Added EDW descriptions to [EDW: dBeaver Setup](https://thehopefulbox.com/articles/EDW_dBeaverSetup.html)
 * Added [`geom_split_violin`](https://thehopefulbox.com/reference/geom_split_violin.html); Issue #31
+* Added [`classification.check`](https://thehopefulbox.com/reference/classification.check.html)
 
 
 # theHUB 1.1.0
