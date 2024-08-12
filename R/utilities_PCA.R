@@ -33,7 +33,7 @@ extract.VarExplain <- function(PCAmodel, nDigits.label=1) {
 
 }
 
-#' @title Extract Variance Explained (PCA)
+#' @title Set Minimum Value Negative - Set Maximum Value Positive
 #'
 #' @description
 #'
