@@ -1,3 +1,38 @@
+#' @title Add X to Zero Values
+#'
+#' @description Sometimes you need to increase a zero value (0) to prevent `-Inf` and
+#'   `Inf` values due to an accidental divide by zero (0).
+#'
+#' @param x A numerical value; `NA`s and `Inf`s -- including `-Inf`s.
+#' @param amount numerical value (doubles, floats, and integers) to add to the
+#'   zero (0) values.
+#'
+#' @return numerical value
+#' @export
+#'
+#' @examples
+#' addToZero(x=0, amount=1L)
+#' # [1] 1
+#' addToZero(x=0, amount=0.001)
+#' # [1] 0.001
+#'
+#'
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+addToZero <- function(x, amount=1L) {
+
+  if ( !is.na(x) & (x==0) ) {
+    x <- x + amount
+  }
+
+  return(x)
+}
+
+
+
+
+
 #' @title Make Canonical Name
 #'
 #' @description Often there is a need to construct a name from several different
