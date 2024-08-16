@@ -237,6 +237,9 @@ likert.barplot <- function(data, QoI, value.range) {
 #' @param legend.position to legend's position; default: `"bottom"`
 #' @param label.col string with the column containing the labels. Setting to `NULL`
 #'   will result in no labels.
+#' @param label.colour string with label colour. Can accept colour name (`"black"`)
+#'   or hex code (`"#000000"`); default: `"black"`
+#' @param label.font string with font family; default: `"Helvetica"`
 #' @param label.size label sizes; default: `4`
 #' @param display.minimum numerical value indicating the small number of responses
 #'   to display a label; default: `3`. Thus, responses with 2 or less responses
@@ -271,6 +274,8 @@ likert.barplot.stacked <- function(data,
                                    colour.palette=msu.palette,
                                    legend.position="bottom",
                                    label.col="Label.long",
+                                   label.colour="black",
+                                   label.font="Helvetica",
                                    label.size=4,
                                    display.minimum=3) {
 
@@ -295,7 +300,7 @@ likert.barplot.stacked <- function(data,
     # scale_fill_manual(values=rev(msu.palette[1:5]), guide=guide_legend(reverse=FALSE)) +  ## CURRENT
     scale_fill_manual(values=rev(colour.palette), guide=guide_legend(reverse=FALSE)) +  ## CURRENT
     labs(x=NULL, y=NULL, title=NULL) +
-    geom_text(aes(y=pct.label.pos, label=.data[[label.col]]), color="#FFCE34", family="Georgia", size=label.size, hjust="middle", vjust="middle") +
+    geom_text(aes(y=pct.label.pos, label=.data[[label.col]]), color=label.colour, family=label.font, size=label.size, fontface="bold", hjust="middle", vjust="middle") +
     # geom_label(aes(y=pct.label.pos, label=.data[[label.col]]), fill="white", colour="grey25", family="Georgia", size=label.size, hjust="middle", vjust="middle") +
     coord_flip() +
     guides(fill=guide_legend(title.position="top",  ## place title on top of legend (not needed)

@@ -9,6 +9,8 @@ likert.barplot.stacked(
   colour.palette = msu.palette,
   legend.position = "bottom",
   label.col = "Label.long",
+  label.colour = "black",
+  label.font = "Helvetica",
   label.size = 4,
   display.minimum = 3
 )
@@ -24,6 +26,11 @@ Use the \code{\link[=convert.fromto]{convert.fromto()}} function to convert text
 
 \item{label.col}{string with the column containing the labels. Setting to \code{NULL}
 will result in no labels.}
+
+\item{label.colour}{string with label colour. Can accept colour name (\code{"black"})
+or hex code (\code{"#000000"}); default: \code{"black"}}
+
+\item{label.font}{string with font family; default: \code{"Helvetica"}}
 
 \item{label.size}{label sizes; default: \code{4}}
 
