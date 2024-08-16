@@ -1,288 +1,106 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/404.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation_questions.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation_setup.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/Datasets_CountryCurrency.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/Datasets_PubliclyAvailable.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/EDW_Navigation.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/EDW_R-SQLsetup.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/EDW_SQLsnippetLibrary.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/EDW_dBeaverSetup.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/GeoCoding_DownloadShapeFiles.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/HowTo_ClearinghouseData.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/HowTo_DonutPlots.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/HowTo_Software.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_About.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GroupMeetings.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GuidelinesAndPolicies.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_HowILikeToBeMentored.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_Onboarding.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_ProfessionalDevelopment.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/index.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/ACT.2.SAT.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/ID.convert.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/ID.random.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/LatLonDistances.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/MSUpeers.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/SubjectCourse.codes.FS20.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/Tanimoto.Dist.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/Tanimoto.Idx.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/canonical.name.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/clean.DATE.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/clean.DoB.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/clean.OStype.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/clean.OSversion.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/clean.YoB.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/clean.cntrl.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/clean.comment.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/combinations.t.test.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/comment.summary.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/compare.dataset.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/convert.ACT2SAT.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/convert.SAT2ACT.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/convert.YN2TF.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/convert.fps2binary.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/convert.fromto.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/convert.spaces.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/convert.termCode.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/convert.toASCII.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/country.currency.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/course.type.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/create.search.string.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/crossover.pseudo.grades.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/dataset.summary.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/deg2rad.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/extract.emails.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/extract.unique.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/filename-times.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/find.duplicate.cols.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/get.bigrams.oi.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/get.unique.terms.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/has.keywords.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/is.BLANK.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/is.honours.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/is.none.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/is.prep.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/keywords.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/keywords.plot.data.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/likert.barplot.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/likert.barplot.stacked.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/likert.heatmap.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/likert.plot.matrix.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.2.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/make.assignment.params.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/make.bins.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/make.crsesect.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/make.donut.data.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/make.donut.plot.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/make.fps.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/make.likert.barplot.data.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/make.likert.heatmap.data.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/make.pseudo.grades.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/msu.darkGreen.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/term.translation.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/theHUB-package.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/unified.terms.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/values.t.test.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.html</loc>
-  </url>
-  <url>
-    <loc>https://emilioxavier.github.io/theHUB/reference/word.count.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://emilioxavier.github.io/theHUB/404.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/CONDUCT.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/LICENSE-text.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation_questions.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation_setup.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/Datasets_CountryCurrency.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/Datasets_PubliclyAvailable.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/EDW_Navigation.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/EDW_R-SQLsetup.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/EDW_SQLsnippetLibrary.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/EDW_dBeaverSetup.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/EDW_eARM-Request.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/GeoCoding_DownloadShapeFiles.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/HowTo_ClearinghouseData.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/HowTo_DonutPlots.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/HowTo_Software.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/index.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_About.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GroupMeetings.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GuidelinesAndPolicies.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_HowILikeToBeMentored.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_Onboarding.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/articles/web_only/PAG_ProfessionalDevelopment.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/authors.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/index.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/news/index.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/ACT.2.SAT.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/ID.convert.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/ID.random.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/LatLonDistances.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/MSUpeers.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/SubjectCourse.codes.FS20.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/Tanimoto.Dist.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/Tanimoto.Idx.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/addToZero.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/canonical.name.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/classification.check.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/clean.DATE.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/clean.DoB.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/clean.OStype.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/clean.OSversion.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/clean.YoB.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/clean.cntrl.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/clean.comment.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/combinations.t.test.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/comment.summary.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/compare.dataset.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/convert.ACT2SAT.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/convert.SAT2ACT.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/convert.YN2TF.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/convert.fps2binary.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/convert.fromto.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/convert.spaces.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/convert.termCode.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/convert.toASCII.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/country.currency.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/course.type.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/create.search.string.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/crossover.pseudo.grades.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/dataset.summary.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/deg2rad.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/extract.VarExplain.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/extract.emails.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/extract.unique.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/filename-times.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/find.duplicate.cols.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/framework.project.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/get.bigrams.oi.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/get.unique.terms.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/has.keywords.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/index.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/is.BLANK.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/is.honours.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/is.none.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/is.prep.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/keywords.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/keywords.plot.data.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/likert.barplot.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/likert.barplot.stacked.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/likert.heatmap.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/likert.plot.matrix.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.2.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.PCAplot.DATA.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.assignment.params.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.bins.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.crsesect.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.donut.data.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.donut.plot.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.fps.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.likert.barplot.data.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.likert.heatmap.data.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make.pseudo.grades.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/msu.darkGreen.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/negMin.posMax.range.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/replace.colNames.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/term.translation.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/theHUB-package.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/unified.terms.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/values.t.test.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/word.count.html</loc></url>
 </urlset>
+
