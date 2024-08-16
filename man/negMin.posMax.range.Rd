@@ -2,10 +2,10 @@
 % Please edit documentation in R/utilities_PCA.R
 \name{negMin.posMax.range}
 \alias{negMin.posMax.range}
-\title{Extract Variance Explained (PCA)}
+\title{Set Minimum Value Negative - Set Maximum Value Positive}
 \usage{
 negMin.posMax.range(x)
 }
 \description{
-Extract Variance Explained (PCA)
+Set Minimum Value Negative - Set Maximum Value Positive
 }
