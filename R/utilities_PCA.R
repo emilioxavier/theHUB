@@ -99,8 +99,9 @@ make.PCAplot.DATA <- function(PCAmodel, PCs.oi, scale=1, expand=1) {
   ##_ final scaling of loading values ----
   loadings.lambda <- (loadings.lambda / arrow.ratio) |>
     tibble::as_tibble() |>
+    # dplyr::mutate(impact=(sqrt((PC1-0)^2+(PC2-0)^2))) |> ## loadings impact
+    dplyr::mutate(impact=(sqrt(PC1^2+PC2^2))) |> ## loadings' impact
     tibble::add_column(feature=loadings$feature, .before=1)
-
 
   ## return data ----
   return(list(biplot.scores=scores.lambda,
