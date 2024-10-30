@@ -9,7 +9,8 @@ combinations.t.test(
   alternative = "two.sided",
   paired = FALSE,
   conf.level = 0.99,
-  na.rm = TRUE
+  na.rm = TRUE,
+  CER = 0.2
 )
 }
 \arguments{
@@ -24,6 +25,8 @@ sample; default: \code{FALSE}}
 \item{conf.level}{The confidence level; default: \code{0.99}}
 
 \item{na.rm}{\code{logical} indicating if \code{NA} values are removed; default: \code{TRUE}}
+
+\item{CER}{\code{numerical} value indicating the control event rate (CER); default: \code{0.20}}
 }
 \value{
 A \code{data.frame} or \code{tibble} with the \code{t-value}, degrees of freedom

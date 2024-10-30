@@ -2,7 +2,7 @@
 % Please edit documentation in R/utilities_ttest.R
 \name{values.t.test}
 \alias{values.t.test}
-\title{t-test Values}
+\title{t-test & Cohen's d Values}
 \usage{
 values.t.test(
   x,
@@ -10,7 +10,8 @@ values.t.test(
   alternative = "two.sided",
   paired = FALSE,
   conf.level = 0.99,
-  na.rm = TRUE
+  na.rm = TRUE,
+  CER = 0.2
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ sample; default: \code{FALSE}}
 \item{conf.level}{The confidence level; default: \code{0.99}}
 
 \item{na.rm}{\code{logical} indicating if \code{NA} values are removed; default: \code{TRUE}}
+
+\item{CER}{\code{numerical} value indicating the control event rate (CER); default: \code{0.20}}
 }
 \value{
 t.value The t-test value
@@ -35,12 +38,16 @@ t.value The t-test value
 df The degrees of freedom
 
 p.value The p-value
+
+Cohens.d The Cohen's d value
+
+Cohens.U3 The Cohen's U3 value
 }
 \description{
-Calculate t-test and Return Key Values
+Calculate t-test, Cohen's d, and Return Key Values
 }
 \details{
-Calculate t-test and return the key values.
+Calculate t-test, Cohen's d, and return the key values.
 }
 \author{
 Emilio Xavier Esposito \email{emilio@exeResearch.com}
