@@ -174,19 +174,39 @@ find.duplicate.cols <- function(data, data.md5s) {
   ## retain only columns with duplicates ----
   data.pairs <- pairwise.dup[sapply(pairwise.dup, length) > 1]
 
+  dup.collection.n <- data.md5s[sapply(pairwise.dup, length) > 1] |>
+    unique() |>
+    length()
+
+  data.pairs.summary.colNames <- sapply(data.pairs, names) |>
+    colnames()
+
+
   ## construct the summary ----
   ## i am not really sure how it works, but the transpose |> as_tibble |> transpose |> as.data.frame
   ## results in a data.frame with the duplicate column names as a string in a
   ## single column
-  data.pairs.summary <- sapply(data.pairs, names) |>
-    t() |>
-    tibble::as_tibble(.name_repair="minimal") |>
-    t() |>
-    as.data.frame() |>
-    tibble::rownames_to_column(var="column.name") |>
-    dplyr::mutate(duplicate.tf=TRUE) |>
-    dplyr::rename("duplicate.colNames"="V1") |>
-    dplyr::select(column.name, duplicate.tf, duplicate.colNames)
+  if (dup.collection.n == 1) {
+    data.pairs.summary <- sapply(data.pairs, names) |>
+      tibble::as_tibble(.name_repair="minimal") |>
+      # tibble::add_column("column.name"=data.pairs.summary.colNames, .before=1) |>
+      pivot_longer(cols={{data.pairs.summary.colNames}}, names_to="column.name", values_to="match") |>
+      arrange(column.name) |>
+      group_by(column.name) |>
+      nest(duplicate.colNames=match) |>
+      ungroup() |>
+      dplyr::mutate(duplicate.tf=TRUE)
+  } else {
+    data.pairs.summary <- sapply(data.pairs, names) |>
+      t() |>
+      tibble::as_tibble(.name_repair="minimal") |>
+      t() |>
+      as.data.frame() |>
+      tibble::rownames_to_column(var="column.name") |>
+      dplyr::mutate(duplicate.tf=TRUE) |>
+      dplyr::rename("duplicate.colNames"="V1") |>
+      dplyr::select(column.name, duplicate.tf, duplicate.colNames)
+  }
 
   ## return results ----
   return(data.pairs.summary)
@@ -194,17 +214,20 @@ find.duplicate.cols <- function(data, data.md5s) {
 }
 
 
-#' @title Dataset Summary
+#' @title Dataset Metadata Summary
 #'
 #' @description When working with new datasets it is helpful to know what type
-#'  of data is included and easily retype the columns and provide new column
+#'  of data (aka metadata) is included and easily retype the columns and provide new column
 #'  names. This function identifies the type of data in each column and provides
 #'  unique examples data within each column. The results are written to an Excel
-#'  workbook. The new column names and re-defined column types can easily be added
-#'  to the Excel workbook, imported into R, and assigned to the original dataset.
-#'  The goal is to reduce the logistical burden of the user.
+#'  workbook. Adding new column names and types to the Excel workbook allows the
+#'  _easy-ish_ ability to import the new column names into R, and assign them to the
+#'  original dataset. The goal is to reduce the logistical burden of the user.
 #'
 #'  This function will likely evolve overtime.
+#'   - **Oct/2024**: Changed name from `dataset.summary()` to `dataset.meta()`
+#'   - **Oct/2024**: Removed the **new column names** and **re-defined column types**
+#'     from the output
 #'
 #'  _**Re-running this command will overwrite previous versions of the file!!**_
 #'
@@ -244,6 +267,7 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ## basic information ----
   ds.colNames <- colnames(dataset)
   n.rows <- nrow(dataset)
+  n.cols <- ncol(dataset)
 
   ## construct the md5 hashes ----
   dataset.md5s <- sapply(dataset, digest::digest)
@@ -252,37 +276,19 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ds.duplicate.cols <- find.duplicate.cols(data=dataset, data.md5s=dataset.md5s)
 
   ## determine column types ----
-  ds.colTypes <- dplyr::summarise_all(dataset, class) |>
-    t() |>
-    as.data.frame() |>
-    tibble::rownames_to_column(var="column.name") |>
-    dplyr::mutate(col.idx=row_number())
-
-  colName.V2.TF <- any(grepl(x=colnames(ds.colTypes), pattern="V2"))
-  if ( colName.V2.TF==TRUE ) {
-    ds.colTypes <- dplyr::rename(ds.colTypes,
-                                 "colType.1"="V1",
-                                 "colType.2"="V2") |>
-      dplyr::mutate(colType.diff=case_when(colType.1!=colType.2~"CHECK",
-                                           TRUE~""),
-                    col.idx=row_number() ) |>
-      tibble::as_tibble() |>
-      tibble::add_column(md5.hash=dataset.md5s) |>
-      select(column.name, col.idx,
-             colType.1, colType.2, colType.diff, md5.hash)
-
-  } else {
-    ds.colTypes <- dplyr::rename(ds.colTypes,
-                                 "colType.1"="V1") |>
-      dplyr::mutate(col.idx=row_number()) |>
-      tibble::as_tibble() |>
-      tibble::add_column(md5.hash=dataset.md5s) |>
-      select(column.name, col.idx,
-             colType.1, md5.hash)
-  }
+  ds.colTypes <- dplyr::reframe(dataset, across(everything(), ~base::class(.x))) |>
+    tidyr::pivot_longer(cols=everything(), names_to="column.name", values_to="type") |>
+    tibble::add_column(type.name=sort(rep_len(c("colType.1", "colType.2"), length.out=n.cols*2))) |>
+    tidyr::pivot_wider(id_cols="column.name", values_from="type", names_from="type.name") |>
+    dplyr::mutate(col.idx=row_number(),
+                  colType.diff=case_when(colType.1!=colType.2~"CHECK",
+                                         TRUE~NA),
+                  md5.hash=dataset.md5s) |>
+    select(column.name, col.idx,
+           colType.1, colType.2, colType.diff, md5.hash)
 
   ## is blank? ----
-  cell.blank.tf <- purrr::map_dfc(dataset, is.BLANK)
+  cell.blank.tf <- purrr::map_dfc(dataset, theHUB::is.BLANK)
   col.blank.n <- colSums(cell.blank.tf, na.rm=TRUE)
 
   ## is NA? ----
@@ -300,23 +306,20 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
                                 cell.blank.tf=cell.blank.tf,
                                 cell.NA.tf=cell.NA.tf,
                                 size=n.examples) |>
-    t()
+    t() |>
+    as.data.frame() |>
+    tibble::rownames_to_column(var="column.name") |>
+    tibble::as_tibble()
 
   ## create and apply example names ----
   example.names <- paste("example.", seq_len(length.out=n.examples), sep="")
-  colnames(ds.examples) <- c("n.unique", example.names)
-  ds.examples <- tibble::as_tibble(ds.examples) |>
+  ds.examples <- setNames(object=ds.examples, nm=c("column.name", "n.unique", example.names)) |>
     mutate(n.unique=as.integer(n.unique))
 
   ## create dataset for export ----
-  ds.summary <- dplyr::bind_cols(ds.colTypes, ds.examples) |>
-    tibble::add_column(colname.new=NA,
-                       coltype.new=NA)
-
-  ## add in duplicate column information ----
-  ds.summary <- dplyr::left_join(x=ds.summary, y=ds.duplicate.cols,
-                                 by=c("column.name")) |>
-    select(column.name:n.unique, duplicate.tf, duplicate.colNames, example.1:coltype.new)
+  ds.summary <- dplyr::full_join(x=ds.colTypes, y=ds.examples, by=c("column.name")) |>
+    dplyr::left_join(y=ds.duplicate.cols, by=c("column.name")) |>  ## add in duplicate column information
+    select(column.name:n.unique, duplicate.tf, duplicate.colNames, starts_with("example"))
 
   ## sort on md5s ----
   if (group.same.cols == TRUE) {
@@ -331,7 +334,6 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
 
   ## return examples ----
   return(ds.summary)
-
 }
 
 
@@ -441,3 +443,5 @@ replace.colNames <- function(data, conversion.tb, original, new, new.cols.only=F
 # set.seed(13)
 # sample_n(slate.column.names, 25) -> conversion.tb
 # replace.colNames(data=data, conversion.tb=conversion.tb, original="slate.original", new="slate.new", new.cols.only=TRUE, verbose=TRUE)
+
+

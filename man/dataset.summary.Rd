@@ -2,7 +2,7 @@
 % Please edit documentation in R/utilities_datasets.R
 \name{dataset.summary}
 \alias{dataset.summary}
-\title{Dataset Summary}
+\title{Dataset Meta Data Summary}
 \usage{
 dataset.summary(
   dataset,
@@ -32,14 +32,19 @@ tibble of column names, types, and examples
 }
 \description{
 When working with new datasets it is helpful to know what type
-of data is included and easily retype the columns and provide new column
+of data (aka metadata) is included and easily retype the columns and provide new column
 names. This function identifies the type of data in each column and provides
 unique examples data within each column. The results are written to an Excel
-workbook. The new column names and re-defined column types can easily be added
-to the Excel workbook, imported into R, and assigned to the original dataset.
-The goal is to reduce the logistical burden of the user.
+workbook. Adding new column names and types to the Excel workbook allows the
+\emph{easy-ish} ability to import the new column names into R, and assign them to the
+original dataset. The goal is to reduce the logistical burden of the user.
 
 This function will likely evolve overtime.
+\itemize{
+\item \strong{Oct/2024}: Changed name from \code{dataset.summary()} to \code{dataset.meta()}
+\item \strong{Oct/2024}: Removed the \strong{new column names} and \strong{re-defined column types}
+from the output
+}
 
 \emph{\strong{Re-running this command will overwrite previous versions of the file!!}}
 }
