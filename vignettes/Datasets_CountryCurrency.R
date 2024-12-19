@@ -38,7 +38,7 @@ library(dplyr)
 library(tidyr)
 
 ## ----theDataset, echo=FALSE---------------------------------------------------
-country.currency.DISPLAY <- select(theHUB::country.currency, -Common_name, -contains("SLATE")) |>
+country.currency.DISPLAY <- select(theHUB::country.currency, Alpha_2, Alpha_3, Numeric, Name, Official_name, Name.ISO, currency, currency.code) |>
   mutate(across(where(is.character), ~replace_na(.x, "")))
 col.names <- c("Alpha 2", "Alpha 3", "Numeric", "Name", "Official Name", "Name (ISO)", "Currency", "Currency Code")
 
