@@ -276,8 +276,11 @@ dataset.summary <- function(dataset, ExcelFileName, n.examples=4, overwriteXLS=F
   ds.duplicate.cols <- find.duplicate.cols(data=dataset, data.md5s=dataset.md5s)
 
   ## determine column types ----
-  ds.colTypes <- dplyr::reframe(dataset, across(everything(), ~base::class(.x))) |>
-    tidyr::pivot_longer(cols=everything(), names_to="column.name", values_to="type") |>
+  ds.classes <- dplyr::reframe(dataset, across(everything(), ~base::class(.x)))
+  if (nrow(ds.classes) == 1) {
+    ds.classes <- tibble::add_row(ds.classes, ds.classes)
+  }
+  ds.colTypes <- tidyr::pivot_longer(ds.classes, cols=everything(), names_to="column.name", values_to="type") |>
     tibble::add_column(type.name=sort(rep_len(c("colType.1", "colType.2"), length.out=n.cols*2))) |>
     tidyr::pivot_wider(id_cols="column.name", values_from="type", names_from="type.name") |>
     dplyr::mutate(col.idx=row_number(),
@@ -401,18 +404,22 @@ replace.colNames <- function(data, conversion.tb, original, new, new.cols.only=F
     mutate(index=row_number())
   conversion.original <- conversion.tb[[original]]
   conversion.new <- conversion.tb[[new]]
-  conversion.tb <- tibble::tibble(original=conversion.tb[[original]],
-                                  new=conversion.tb[[new]])
+  conversion.tb.reFMT <- tibble::as_tibble(conversion.tb) |>
+    select({{original}}, {{new}}) |>
+    setNames(nm=c("original.colNames", "new.colNames"))
+  # conversion.tb <- tibble::tibble(original=conversion.tb[[original]],
+  #                                 new=conversion.tb[[new]])
 
   ## match columns ----
-  match.tb <- left_join(x=colNames.ORIG.tb, y=conversion.tb,
-                        by=c("data.orig"="original"))
-  new.colNames.tb <- filter(match.tb, !is.na(new))
+  # match.tb <- left_join(x=colNames.ORIG.tb, y=conversion.tb,
+  match.tb <- left_join(x=colNames.ORIG.tb, y=conversion.tb.reFMT,
+                        by=c("data.orig"="original.colNames"))
+  new.colNames.tb <- filter(match.tb, !is.na(new.colNames))
 
   new.nCol <- nrow(new.colNames.tb)
 
   ## columns not in the data of interest ----
-  missing.colNames.tb <- filter(match.tb, is.na(new))
+  missing.colNames.tb <- filter(match.tb, is.na(new.colNames))
 
   ## non-matching column names ----
   non.matching.colNames <- paste0(missing.colNames.tb$data.orig, collapse=", ")
