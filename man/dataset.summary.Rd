@@ -2,7 +2,7 @@
 % Please edit documentation in R/utilities_datasets.R
 \name{dataset.summary}
 \alias{dataset.summary}
-\title{Dataset Meta Data Summary}
+\title{Dataset Metadata Summary}
 \usage{
 dataset.summary(
   dataset,
