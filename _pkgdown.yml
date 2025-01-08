@@ -104,6 +104,8 @@ navbar:
        href: articles/web_only/PAG_HowILikeToBeMentored.html
      - text: Onboarding
        href: articles/web_only/PAG_Onboarding.html
+     - text: Lexicon
+       href: articles/web_only/PAG_Lexicon.html
     articles:
      text: Articles
      menu:
