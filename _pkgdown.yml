@@ -145,6 +145,6 @@ navbar:
      text: News
      href: news/index.html
     bluesky:
-      icon: fa-bluesky
+      icon: fa-bsky
       href: https://bsky.app/profile/exesposito.bsky.social
       aria-label: Bluesky
