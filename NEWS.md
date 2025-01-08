@@ -1,4 +1,11 @@
 
+# theHUB 2025.01.08
+
+* Changed version numbering to a date format
+* Added [PAG Lexicon](https://thehopefulbox.com/articles/web_only/PAG_Lexicon.html) page
+* Update the [PAGroup Meeting](https://thehopefulbox.com/articles/web_only/PAG_GroupMeetings.html) page
+
+
 # theHUB 1.2.9
 
 * Rectified
