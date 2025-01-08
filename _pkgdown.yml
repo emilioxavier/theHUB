@@ -2,6 +2,7 @@ url: https://emilioxavier.github.io/theHUB/
 template:
   bootstrap: 5
   bootswatch: spacelab
+  light-switch: true
   includes:
     in_header:
        <!-- Google tag (gtag.js) -->
@@ -16,7 +17,7 @@ template:
 navbar:
   structure:
     left:  [intro, reference, PAGroup, articles, Datasets, MSUEDW, news]
-    right: [search, github, twitter]
+    right: [search, github, bluesky, lightswitch]
   development:
     mode: auto
   authors:
@@ -143,7 +144,7 @@ navbar:
     news:
      text: News
      href: news/index.html
-    twitter:
-      icon: fa-twitter
-      href: http://x.com/exesposito
-      aria-label: Twitter (X)
+    bluesky:
+      icon: fa-bluesky
+      href: https://bsky.app/profile/exesposito.bsky.social
+      aria-label: Bluesky
