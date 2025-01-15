@@ -439,7 +439,7 @@ replace.colNames <- function(data, conversion.tb, original, new, new.cols.only=F
   if (new.cols.only == TRUE) {
     data <- setNames(object=data[, new.colNames.tb$index], nm=new.colNames.tb$new)
   } else {
-    colnames(data)[new.colNames.tb$index] <- new.colNames.tb$new
+    colnames(data)[new.colNames.tb$index] <- new.colNames.tb$new.colNames
   }
 
   ## return data ----
