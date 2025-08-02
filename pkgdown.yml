@@ -1,5 +1,5 @@
 pandoc: 3.1.11
-pkgdown: 2.1.1
+pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   AdvancedCandidateEvaluation_questions: AdvancedCandidateEvaluation_questions.html
@@ -17,13 +17,14 @@ articles:
   HowTo_DonutPlots: HowTo_DonutPlots.html
   HowTo_Software: HowTo_Software.html
   web_only/PAG_About: web_only/PAG_About.html
+  web_only/PAG_AI: web_only/PAG_AI.html
   web_only/PAG_GroupMeetings: web_only/PAG_GroupMeetings.html
   web_only/PAG_GuidelinesAndPolicies: web_only/PAG_GuidelinesAndPolicies.html
   web_only/PAG_HowILikeToBeMentored: web_only/PAG_HowILikeToBeMentored.html
   web_only/PAG_Lexicon: web_only/PAG_Lexicon.html
   web_only/PAG_Onboarding: web_only/PAG_Onboarding.html
   web_only/PAG_ProfessionalDevelopment: web_only/PAG_ProfessionalDevelopment.html
-last_built: 2025-01-15T19:45Z
+last_built: 2025-08-02T16:36Z
 urls:
   reference: https://emilioxavier.github.io/theHUB/reference
   article: https://emilioxavier.github.io/theHUB/articles
