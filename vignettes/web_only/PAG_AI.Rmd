@@ -1,0 +1,10 @@
+---
+title: "PAG: Artificial Intelligence (AI)"
+date: "Updated 04/Aug/2025"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{PAG: Artificial Intelligence (AI)}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
