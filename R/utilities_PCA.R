@@ -9,7 +9,7 @@
 #' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
-extract.VarExplain <- function(PCAmodel, nDigits.label=1) {
+extract_VarExplain <- function(PCAmodel, nDigits.label=1) {
 
   ## extract standard deviation values ----
   sdev <- PCAmodel$sdev
@@ -33,6 +33,25 @@ extract.VarExplain <- function(PCAmodel, nDigits.label=1) {
 
 }
 
+#' @title Loadings Impact
+#'
+#' @description
+#'
+#' @export
+#' @return
+#'
+loading_impact <- function(data) {
+
+  impact <- data^2 |>
+    rowwise() |>
+    mutate(impact=sqrt(sum(c_across(where(is.numeric))))) |>
+    ungroup() |>
+    select(impact)
+
+  impact <- bind_cols(data, impact)
+}
+
+
 #' @title Set Minimum Value Negative - Set Maximum Value Positive
 #'
 #' @description
@@ -41,7 +60,7 @@ extract.VarExplain <- function(PCAmodel, nDigits.label=1) {
 #' @return
 #'
 ## taken from base-R's biplot.R
-negMin.posMax.range <- function(x) {
+negMin_posMax_range <- function(x) {
   c(-abs(min(x, na.rm=TRUE)), abs(max(x, na.rm=TRUE)))
 }
 
@@ -56,16 +75,16 @@ negMin.posMax.range <- function(x) {
 #' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
 #'
-make.PCAplot.DATA <- function(PCAmodel, PCs.oi, scale=1, expand=1) {
+make_PCAplot_DATA <- function(PCAmodel, PCs.oi, scale=1, expand=1) {
 
   ## checks ----
   if(inherits(PCAmodel, "prcomp")) message("Using prcomp!! :D") else stop("Please use prcomp to perform your PCAnalysis.")
   if(length(PCs.oi) != 2L) stop("Please provide two (2) PCs.oi!")
-  if(scale<0 || scale>1) warning("The provided 'scale' value is outsid [0,1].")
+  if(scale<0 || scale>1) warning("The provided 'scale' value is outside [0,1].")
 
   ## extract variance explained ----
   PCs.oi <- as.integer(PCs.oi) |> sort()
-  VarExplained <- extract.VarExplain(PCAmodel=PCAmodel, nDigits.label=1)
+  VarExplained <- extract_VarExplain(PCAmodel=PCAmodel, nDigits.label=1)
   VarExpl.PCs.oi <- dplyr::filter(VarExplained, PC %in% PCs.oi)
 
   ## extract tables ----
@@ -89,18 +108,20 @@ make.PCAplot.DATA <- function(PCAmodel, PCs.oi, scale=1, expand=1) {
     tibble::as_tibble()
 
   ##_ find optimal scaling value ----
-  scores.range.1 <- negMin.posMax.range(scores.lambda[, 1L])
-  scores.range.2 <- negMin.posMax.range(scores.lambda[, 2L])
+  scores.range.1 <- negMin_posMax_range(scores.lambda[, 1L])
+  scores.range.2 <- negMin_posMax_range(scores.lambda[, 2L])
   scores.range <- range(scores.range.1, scores.range.2)
-  loadings.range.1 <- negMin.posMax.range(loadings.lambda[, 1L])
-  loadings.range.2 <- negMin.posMax.range(loadings.lambda[, 2L])
+  loadings.range.1 <- negMin_posMax_range(loadings.lambda[, 1L])
+  loadings.range.2 <- negMin_posMax_range(loadings.lambda[, 2L])
   arrow.ratio <- max(loadings.range.1/scores.range, loadings.range.2/scores.range)/expand
 
   ##_ final scaling of loading values ----
   loadings.lambda <- (loadings.lambda / arrow.ratio) |>
+  # (loadings.lambda / arrow.ratio) |>
     tibble::as_tibble() |>
     # dplyr::mutate(impact=(sqrt((PC1-0)^2+(PC2-0)^2))) |> ## loadings impact
-    dplyr::mutate(impact=(sqrt(PC1^2+PC2^2))) |> ## loadings' impact
+    # dplyr::mutate(impact=(sqrt(PC1^2+PC2^2))) |> ## loadings' impact
+    loading_impact() |> ## loadings' impact
     tibble::add_column(feature=loadings$feature, .before=1)
 
   ## return data ----
