@@ -1,6 +1,6 @@
 ---
 title: "PAG: Group Meetings"
-date: "Updated 08/Jan/2025"
+date: "Updated 05/Aug/2025"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Group Meetings}
@@ -8,7 +8,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-While we focus on answering questions related to enrollment, we know an implied mission is assisting in the development of those that want to do similar work. To this end, we hold twice-a-week group meetings where we discuss
+While we focus on answering questions related to enrollment, we know an implied mission is assisting in the development of those who want to do similar work. To this end, we hold group meetings where we discuss
 
  - Relevant research articles
  - Application of function-specific applications
@@ -20,21 +20,23 @@ We invite and welcome those outside of our group to join our meetings. Please co
 
 ## Group Meeting Schedule
 
-Group Meeting are on Tuesdays and Thursdays and we start at 10:30a and end between by noon. Our Group Meeting schedule is loose. Each meeting starts with a quick "stand-up" where everyone briefly talks about...
+Group Meeting are every couple of weeks where the current and past members come together to share updates about current and past work. Our Group Meeting schedule and agenda is loose. Each meeting starts with a quick "stand-up" where everyone briefly talks about...
 
   - what they are working on
   - one thing causing grief
   - one victory
+
+_**The meetings are informal discussions on current projects and help overcoming coding and research obstacles.**_ 
   
-_**The meetings are informal discussions on current projects and help overcoming coding obstacles.**_ 
+Everyone is welcome to attend! Please contact [Emilio](mailto:emilio@msu.edu?subject=I%20want%20to%20attend%20PAG%20group%20meetings!) for day, time and location (usually a local coffee shop). Sometimes we meet on Zoom; email Emilio for the link.
 
-We meet on campus in the [College of Agriculture and Natural Resources](http://www.canr.msu.edu/) building.
+<!-- We meet on campus in the [College of Agriculture and Natural Resources](http://www.canr.msu.edu/) building. -->
 
-```{=html}
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848.9459386054282!2d-84.47977596428866!3d42.73127061221654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8822c259da888d63%3A0x1b8394537e6a634d!2sCollege%20of%20Agriculture%20and%20Natural%20Resources!5e0!3m2!1sen!2sus!4v1736345894281!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-```
+<!-- ```{=html} -->
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848.9459386054282!2d-84.47977596428866!3d42.73127061221654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8822c259da888d63%3A0x1b8394537e6a634d!2sCollege%20of%20Agriculture%20and%20Natural%20Resources!5e0!3m2!1sen!2sus!4v1736345894281!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+<!-- ``` -->
 
-If the Google Map is not displayed above, please click this Google Map link [https://maps.app.goo.gl/eUDqMPjrewApFh8T8](https://maps.app.goo.gl/eUDqMPjrewApFh8T8). Alternatively, the Google Plus Code is "PGJC+86 East Lansing, Michigan"
+<!-- If the Google Map is not displayed above, please click this Google Map link [https://maps.app.goo.gl/eUDqMPjrewApFh8T8](https://maps.app.goo.gl/eUDqMPjrewApFh8T8). Alternatively, the Google Plus Code is "PGJC+86 East Lansing, Michigan" -->
 
 <!-- | Week of the Month | Tuesday | Thursday | -->
 <!-- |:-----------------:|:-------:|:--------:| -->
