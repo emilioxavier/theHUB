@@ -42,9 +42,8 @@ _**Survey Connections**_: _Analyze survey responses to gain a better understandi
 ```{r, eval=FALSE}
 # Install from GitHub:
 install.packages("devtools")
-remove.packages("theHUB")
 install.packages(c("tidyr","tidyselect","tibble","lubridate","dplyr","ggplot2","purrr","stringr","ggrepel","cowplot","rlang","sf","digest","WriteXLS"))
-devtools::install_github("emilioxavier/theHUB")
+devtools::install_github("emilioxavier/theHUB", force=TRUE)
 ```
 
  - You will need [`devtools`](https://devtools.r-lib.org/) or [`remote`](https://remotes.r-lib.org/) or another package that allows installation from remote sources, such as [GitHub](https://github.com), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/), to install `theHUB` from [GitHub](https://github.com/emilioxavier/theHUB/).
