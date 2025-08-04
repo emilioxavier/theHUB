@@ -1,5 +1,15 @@
 
-# theHUB 2025.01.08
+# theHUB 2025.08
+
+* Added [PAG AI](https://thehopefulbox.com/articles/web_only/PAG_AI.html) page
+* Update the [PAGroup Meeting](https://thehopefulbox.com/articles/web_only/PAG_GroupMeetings.html) page
+* Update the [PAGroup About](https://thehopefulbox.com/articles/web_only/PAG_About.html) page
+* Added PCA biplot functions [`extract_VarExplain()`](https://thehopefulbox.com/reference/extract_VarExplain.html), [`loading_impact()`](https://thehopefulbox.com/reference/loading_impact.html), [`negMin_posMax_range()`](https://thehopefulbox.com/reference/negMin_posMax_range.html), and [`make_PCAplot_DATA()`](https://thehopefulbox.com/reference/make_PCAplot_DATA.html). Only the [`extract_VarExplain()`](https://thehopefulbox.com/reference/extract_VarExplain.html) and [`make_PCAplot_DATA()`](https://thehopefulbox.com/reference/make_PCAplot_DATA.html) are needed by the user. Need to add a biplot function
+* Updated [`framework.project()`](https://thehopefulbox.com/reference/framework.project.html) to include the creation of `REPORTS` and `RESULTS` folders
+
+
+
+# theHUB 2025.01.15
 
 * Changed version numbering to a date format
 * Added [PAG Lexicon](https://thehopefulbox.com/articles/web_only/PAG_Lexicon.html) page
