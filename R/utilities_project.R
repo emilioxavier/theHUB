@@ -17,6 +17,10 @@
 #'     project from the performed analyses.
 #'   - `./REFERENCES`: A location for reports, articles, and presentations
 #'     related to the project and are often provided by colleagues.
+#'   - `./REPORTS`: Where the presentations and other reports created for the
+#'     project from the performed analyses.
+#'   - `./RESULTS`: Where the presentations and other reports created for the
+#'     project from the performed analyses.
 #'
 #' The `README` file can work as an extension of your notebook by containing links
 #' to websites and code snippets (short pieces of code to perform specific tasks).
@@ -37,6 +41,8 @@
 #'   - `./IMAGES`
 #'   - `./PRESENTATIONS`
 #'   - `./REFERENCES`
+#'   - `./REPORTS`
+#'   - `./RESULTS`
 #'
 #' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
 #'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
@@ -141,6 +147,34 @@ framework.project <- function() {
     dir.create("REFERENCES")
     references.mess <- "NO REFERENCES folder exist!!\n  -->> Created ./REFERENCES"
     message(references.mess)
+  }
+
+  ## check for REPORTS folder ----
+  reports.dirs <- grep(pattern="reports", ignore.case=TRUE, x=curr.dirs, value=TRUE)
+  ##_ REPORTS-like folders exists ----
+  if ( length(reports.dirs) > 0 ) {
+    reports.dirs.mess <- paste(reports.dirs, collapse=", ")
+    reports.mess <- paste0("The following REPORTS folder(s) exist: ", reports.dirs.mess, "\n  -->> No REPORTS folder created\n")
+    message(reports.mess)
+  ##_ create REPORTS folder
+  } else {
+    dir.create("REPORTS")
+    reports.mess <- "NO REPORTS folder exist!!\n  -->> Created ./REPORTS"
+    message(reports.mess)
+  }
+
+  ## check for RESULTS folder ----
+  results.dirs <- grep(pattern="results", ignore.case=TRUE, x=curr.dirs, value=TRUE)
+  ##_ RESULTS-like folders exists ----
+  if ( length(results.dirs) > 0 ) {
+    results.dirs.mess <- paste(results.dirs, collapse=", ")
+    results.mess <- paste0("The following RESULTS folder(s) exist: ", results.dirs.mess, "\n  -->> No RESULTS folder created\n")
+    message(results.mess)
+  ##_ create RESULTS folder
+  } else {
+    dir.create("RESULTS")
+    results.mess <- "NO RESULTS folder exist!!\n  -->> Created ./RESULTS"
+    message(results.mess)
   }
 
 

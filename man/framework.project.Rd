@@ -16,6 +16,8 @@ in the current working directory:
 \item \code{./IMAGES}
 \item \code{./PRESENTATIONS}
 \item \code{./REFERENCES}
+\item \code{./REPORTS}
+\item \code{./RESULTS}
 }
 }
 \description{
@@ -36,6 +38,10 @@ related to the project and are often provided by colleagues.
 project from the performed analyses.
 \item \code{./REFERENCES}: A location for reports, articles, and presentations
 related to the project and are often provided by colleagues.
+\item \code{./REPORTS}: Where the presentations and other reports created for the
+project from the performed analyses.
+\item \code{./RESULTS}: Where the presentations and other reports created for the
+project from the performed analyses.
 }
 
 The \code{README} file can work as an extension of your notebook by containing links
