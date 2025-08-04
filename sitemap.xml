@@ -63,9 +63,9 @@
 <url><loc>https://emilioxavier.github.io/theHUB/reference/crossover.pseudo.grades.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/dataset.summary.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/deg2rad.html</loc></url>
-<url><loc>https://emilioxavier.github.io/theHUB/reference/extract.VarExplain.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/extract.emails.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/extract.unique.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/extract_VarExplain.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/filename-times.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/find.duplicate.cols.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/framework.project.html</loc></url>
@@ -83,9 +83,9 @@
 <url><loc>https://emilioxavier.github.io/theHUB/reference/likert.barplot.stacked.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/likert.heatmap.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/likert.plot.matrix.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/loading_impact.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.2.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/lonlat2region.html</loc></url>
-<url><loc>https://emilioxavier.github.io/theHUB/reference/make.PCAplot.DATA.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/make.assignment.params.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/make.bins.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/make.crsesect.html</loc></url>
@@ -95,8 +95,9 @@
 <url><loc>https://emilioxavier.github.io/theHUB/reference/make.likert.barplot.data.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/make.likert.heatmap.data.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/make.pseudo.grades.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/make_PCAplot_DATA.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/msu.darkGreen.html</loc></url>
-<url><loc>https://emilioxavier.github.io/theHUB/reference/negMin.posMax.range.html</loc></url>
+<url><loc>https://emilioxavier.github.io/theHUB/reference/negMin_posMax_range.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/replace.colNames.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/term.translation.html</loc></url>
 <url><loc>https://emilioxavier.github.io/theHUB/reference/theHUB-package.html</loc></url>
