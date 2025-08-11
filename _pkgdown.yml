@@ -97,6 +97,8 @@ navbar:
        href: articles/web_only/PAG_About.html
      - text: Group Meetings
        href: articles/web_only/PAG_GroupMeetings.html
+     - text: Artificial Intelligence (AI) Office Hours & Tea
+       href: articles/web_only/PAG_AI.html
      - text: Guidelines & Policies
        href: articles/web_only/PAG_GuidelinesAndPolicies.html
      - text: Professional Development
