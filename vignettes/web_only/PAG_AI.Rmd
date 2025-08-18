@@ -1,6 +1,6 @@
 ---
 title: "PAG: Artificial Intelligence (AI)"
-date: "Updated 04/Aug/2025"
+date: "Updated 18/Aug/2025"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Artificial Intelligence (AI)}
@@ -16,7 +16,7 @@ The goal of AI Office Hours and AI Tea is to help everyone keep up with the rapi
 
 > Disclaimer: This document is subject to change without notice. The inclusion of podcasts, genAI Bots, newsletters, applications, and products does not imply support or endorsement of any particular content or service.
 
-## AI Office Hours (Starting Thursday, August 14, 2025\!)
+## AI Office Hours
 
 Bring your questions, share your challenges, or just come to learn more about integrating AI into your work. The goal is to help those interested in utilizing AI to enhance their workflow. Office hours are twice a week on Microsoft Teams.
 
@@ -169,6 +169,7 @@ The following is a growing list of AI applications and tools to assist various a
 #### Writing Assistance
 
 * [Grammarly](https://www.grammarly.com/) is an excellent writing assistant that helps you write a wide range of documents.
+* [Scribe](https://scribehow.com/) allows you to quickly document and share processes.
 
 #### Coding/Programming Assistants
 
