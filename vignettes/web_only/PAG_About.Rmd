@@ -1,6 +1,6 @@
 ---
 title: "PAG: About"
-date: "Updated 05/Aug/2025"
+date: "Updated 20/Aug/2025"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: About}
@@ -29,7 +29,7 @@ Emilio is forever grateful for the opportunity to work with Seth and Steve. Thei
 
 ## Past Members
 
-**Seth Tanner Walker**: Seth is a Graduate Student in the [Department of Economics](https://econ.msu.edu/) in the [College of Social Science](https://socialscience.msu.edu/) working towards a Ph.D. in Economics. Seth worked on the development of XGBoost models to predict the likelihood of applicants to deposit and feature engineering for those models. He also explored the impact of the [Spartan Advantage program](https://finaid.msu.edu/spad.asp). Seth earned dual Bachelors degrees from [James Madison University](https://www.jmu.edu) in Quantitative Economics & Mathematics and Music Performance. Seth is a huge [Chelsea FC](https://www.chelseafc.com/) fan and enjoys hiking in far away lands. [ [LinkedIn]() | [Website]() | [Social]() ]
+**Seth Tanner Walker**: Seth is a Graduate Student in the [Department of Economics](https://econ.msu.edu/) in the [College of Social Science](https://socialscience.msu.edu/) working towards a Ph.D. in Economics. Seth worked on the development of XGBoost models to predict the likelihood of applicants to deposit and feature engineering for those models. He also explored the impact of the [Spartan Advantage program](https://finaid.msu.edu/spad.asp). Seth earned dual Bachelors degrees from [James Madison University](https://www.jmu.edu) in Quantitative Economics & Mathematics and Music Performance. Seth is a huge [Chelsea FC](https://www.chelseafc.com/) fan and enjoys hiking in far away lands. [ [LinkedIn](https://www.linkedin.com/in/seth-walker-b5002237a/) | [Website](https://www.sethwalker.org/) ]
 
 **Steven R Miller**: Steve is an Assistant Professor in the [Department of Agricultural, Food, and Resource Economics](https://www.canr.msu.edu/afre/index) in the [College of Agriculture & Natural Resources](https://www.canr.msu.edu/) and specializes in applied economic methods for forecasting and impact analysis. Steve is also the Director of the [Center for Economic Analysis](https://www.canr.msu.edu/cea/). Steve explored the movement of college students within and from their home state and lead the development of community based features for the deposit likelihood models. Steve is an avid photographer and spends many nights chasing the Northern Lights and several early mornings photographing fields awakening after a night of sleep. [ [LinkedIn](https://www.linkedin.com/in/steven-miller-3b5a546) ]
 
