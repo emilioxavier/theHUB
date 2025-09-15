@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md) 
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-3.0-4baaaa.svg)](code_of_conduct.md) 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/theHUB)](https://cran.r-project.org/package=theHUB)
 <!-- badges: end -->
 
@@ -53,7 +53,7 @@ devtools::install_github("emilioxavier/theHUB", force=TRUE)
 
 ## How to use `theHUB`
 
-```{r}
+```{r eval=FALSE}
 library(theHUB)
 ```
 
