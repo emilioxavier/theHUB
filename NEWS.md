@@ -1,7 +1,8 @@
 
 # theHUB 2025.09
 
-* Updated the [Code of Conduct](https://github.com/emilioxavier/theHUB/blob/master/CONDUCT.md) to version 3.0.
+* Updated the [Code of Conduct](https://github.com/emilioxavier/theHUB/blob/master/CONDUCT.md) to version 3.0
+* Updated the resources of the [PAG AI](https://thehopefulbox.com/articles/web_only/PAG_AI.html) page
 
 
 # theHUB 2025.08
