@@ -1,8 +1,11 @@
 
-# theHUB 2025.09
+# theHUB 2.2025.09
 
 * Updated the [Code of Conduct](https://github.com/emilioxavier/theHUB/blob/master/CONDUCT.md) to version 3.0
 * Updated the resources of the [PAG AI](https://thehopefulbox.com/articles/web_only/PAG_AI.html) page
+* Added the [`origin2now()`] function to calculate the time since the UNIX epoch (01/January/1970)
+* `theHUB` now requires `R version 4.5.0` or later
+* Changed version numbering to a version number + number of minutes since the UNIX epoch
 
 
 # theHUB 2025.08
@@ -64,7 +67,7 @@
 
 # theHUB 0.2.6
 
-* Rectified 
+* Rectified
   - Issue #12
 * Added [PAG Onboarding](./vignettes/web_only/PAG_Onboarding.html) description
 * Added [PAG About](./vignettes/web_only/PAG_About.html) description

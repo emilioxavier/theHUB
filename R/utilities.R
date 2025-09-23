@@ -1090,3 +1090,47 @@ file.time <- function(date.time=NULL) {
 }
 
 
+#' @title Time Since UNIX Epoch
+#'
+#' @description Calculate time difference from UNIX epoch to current time
+#'
+#' This function calculates the time difference between the UNIX epoch
+#' (1970-01-01 00:00:00 UTC) and the current system time.
+#'
+#' @param units A character string specifying the time units for the result.
+#'   Valid options are "auto", "secs", "mins", "hours", "days", "weeks".
+#'   Default is "mins". Invalid units will be reset to "mins" with a warning.
+#'
+#' @return A difftime object representing the time elapsed since the UNIX epoch
+#'   in the specified units.
+#'
+#' @examples
+#' # Get time since epoch in minutes (default)
+#' origin2now()
+#'
+#' # Get time since epoch in hours
+#' origin2now("hours")
+#'
+#' # Get time since epoch in days
+#' origin2now("days")
+#'
+#' @export
+#' @author Emilio Xavier Esposito \email{emilio.esposito@@gmail.com}
+#'   ([https://github.com/emilioxavier](https://github.com/emilioxavier))
+#'
+origin2now <- function(units="mins") {
+
+  ## check units ----
+  units.opts <- c("auto", "secs", "mins", "hours", "days", "weeks")
+
+  if (!units %in% units.opts) {
+    message(" d(=__=)b  Invalid units. Setting to the default: 'mins'. In the future, please choose from: ", paste(units.opts, collapse=", "))
+    units <- "mins"
+  }
+
+  now <- as.numeric(Sys.time())
+  origin <- as.numeric(as.POSIXct("1970-01-01 00:00:00", tz="UTC"))
+  diff <- difftime(now, origin, units=units)
+
+  diff
+}

@@ -2,11 +2,11 @@ Package: theHUB
 Type: Package
 Title: the Haabefuld (Hopeful) Utility Box (theHUB)
 Description: The analytics utility box of the Predictive Analytics Group to aid the evaluation of student-related data and surveys.
-Version: 2025.08.11
-Depends: R (>= 4.3),
+Version: 2.29310579
+Depends: R (>= 4.4),
     mathjaxr,
     kableExtra
-Imports: 
+Imports:
     tidyr,
     tidyselect,
     tibble,
@@ -22,7 +22,7 @@ Imports:
     sf,
     digest,
     WriteXLS
-Suggests: 
+Suggests:
     knitr,
     rmarkdown
 Authors@R: person(given="Emilio Xavier",
@@ -36,10 +36,10 @@ URL: https://github.com/emilioxavier/theHUB/,
     https://theHopefulBox.com
 BugReports: https://github.com/emilioxavier/theHUB/issues/
 License: MIT + file LICENSE
-VignetteBuilder: 
+VignetteBuilder:
     knitr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 RdMacros: mathjaxr
