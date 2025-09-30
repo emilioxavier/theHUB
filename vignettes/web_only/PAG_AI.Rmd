@@ -1,6 +1,6 @@
 ---
 title: "PAG: Artificial Intelligence (AI)"
-date: "Updated 19/Sep/2025"
+date: "Updated 30/Sep/2025"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{PAG: Artificial Intelligence (AI)}
@@ -44,6 +44,13 @@ If the Google Map is not displayed above, please click this Google Map link [htt
 If you are on campus, use the [Wayfinder application to chart your path to the Administration Building](https://maps.msu.edu/interactive/index.php?location=IK5H).
 
 [Administration Building at 426 Auditorium Rd, East Lansing, MI 48824](https://maps.app.goo.gl/y4j4EJqX5bwNY4Ak6) -->
+
+## Microsoft Teams Team [AI Office Hours & Tea](https://teams.microsoft.com/l/team/19%3A7b839a58813647a4a08eab0da634453d%40thread.tacv2/conversations?groupId=dc5c23d4-d9a2-4037-987e-73c5b7fe79e3&tenantId=22177130-642f-41d9-9211-74237ad5687d)
+
+To streamline finding AI Office Hours & AI Tea, we have a Microsoft Teams Team with a community discussion board. The AI Tea demonstrations will be archived here too. The original [Teams link](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NjIyZTQzMDAtZTk4My00ZGMzLWFkNTEtZmRiOTIyZDc1NTUx%40thread.v2/0?context=%7b%22Tid%22%3a%2222177130-642f-41d9-9211-74237ad5687d%22%2c%22Oid%22%3a%227e319877-629a-4589-9513-0cbbef3dae0c%22%7d) works and take you directly to AI Office Hours and AI Tea.
+
+> Join the [AI Office Hours & AI Tea Microsoft Teams Team](https://teams.microsoft.com/l/team/19%3A7b839a58813647a4a08eab0da634453d%40thread.tacv2/conversations?groupId=dc5c23d4-d9a2-4037-987e-73c5b7fe79e3&tenantId=22177130-642f-41d9-9211-74237ad5687d) here!
+
 
 ### Past Topics
 All sessions are recorded and available for viewing using an MSU NetID and password.
@@ -191,6 +198,11 @@ The following is a growing list of AI applications and tools to assist various a
 
 * [Grammarly](https://www.grammarly.com/) is an excellent writing assistant that helps you write a wide range of documents.
 * [Scribe](https://scribehow.com/) allows you to quickly document and share processes.
+
+#### Office Assistance
+
+* [Comet Browser by Perplexity](https://www.perplexity.ai/comet) is a web browser that is more assistant than web portal connecting search, social, and email.
+* [Synthesia](https://www.synthesia.io/) converts text into video using "AI avatars and voiceovers in 140+ languages." Try converting a slide deck with notes into a video.
 
 #### Coding/Programming Assistants
 
