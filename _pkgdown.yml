@@ -16,7 +16,7 @@ template:
       </script>
 navbar:
   structure:
-    left:  [intro, reference, PAGroup, articles, Datasets, MSUEDW, news]
+    left:  [intro, reference, PAGroup, articles, Datasets, news]
     right: [search, github, bluesky, lightswitch]
   development:
     mode: auto
@@ -132,17 +132,6 @@ navbar:
        href: articles/Datasets_PubliclyAvailable.html
      - text: Country and Currency Dataset
        href: articles/Datasets_CountryCurrency.html
-    MSUEDW:
-     text: MSUEDW
-     menu:
-     - text: dBeaver Setup
-       href: articles/EDW_dBeaverSetup.html
-     - text: R-SQL Setup
-       href: articles/EDW_R-SQLsetup.html
-     - text: EDW Navigation
-       href: articles/EDW_Navigation.html
-     - text: SQL Snippet Library (In Progress)
-       href: articles/EDW_SQLsnippetLibrary.html
     news:
      text: News
      href: news/index.html
