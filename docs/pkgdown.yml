@@ -7,10 +7,6 @@ articles:
   AdvancedCandidateEvaluation_setup: AdvancedCandidateEvaluation_setup.html
   Datasets_CountryCurrency: Datasets_CountryCurrency.html
   Datasets_PubliclyAvailable: Datasets_PubliclyAvailable.html
-  EDW_Navigation: EDW_Navigation.html
-  EDW_R-SQLsetup: EDW_R-SQLsetup.html
-  EDW_SQLsnippetLibrary: EDW_SQLsnippetLibrary.html
-  EDW_dBeaverSetup: EDW_dBeaverSetup.html
   GeoCoding_DownloadShapeFiles: GeoCoding_DownloadShapeFiles.html
   HowTo_ClearinghouseData: HowTo_ClearinghouseData.html
   HowTo_DonutPlots: HowTo_DonutPlots.html
