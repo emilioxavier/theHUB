@@ -1,0 +1,85 @@
+# How To: Creating Donut Plots
+
+Donut[^1] plots (also known as ring plots) are an efficient way to
+display data that represents proportions of things within a dataset.
+
+## Constructing the Donut Plot Data
+
+Using the [mpg
+dataset](https://ggplot2.tidyverse.org/reference/mpg.html) from
+[ggplot2](https://ggplot2.tidyverse.org/), we will explore the
+construction of the donut `data.frame`.
+
+The `class` column will be used for facets.
+
+## Custom Colour Palette
+
+When creating a collection of donut plots in a facet it is important to
+have the same colours assigned to the same segments for all donut plots.
+Often, each donut plot does not always include the same collection of
+segments. The following code ensures that the same segment-colour
+combination is used for each donut plot.
+
+    custom.palette <- msu.palette[1:9]
+    names(custom.palette) <- all.donut.DATA$Categories |> unique()
+
+If a “named colour palette” is not provided, one is created from the
+categories within the `donut.DATA` data.frame and the provided
+`colour.palette` to ensure a consistent colour palette is used for all
+donut plots.
+
+## Donut Plot
+
+library(tidyverse) library(theHUB)
+
+data=mpg; category=“cyl”; facetBy=NULL; category.order=“count”;
+category.count=NULL; r.inner=4; r.outer=6; levels.rev=FALSE;
+layerBy=NULL; layer.order \<- c(“4”, “r”, “f”)
+
+## !!! works !!!!
+
+donut.DATA \<- make.donut.data(data=mpg, category=“cyl”, facetBy=NULL,
+layerBy=NULL, category.order=“count”, category.count=NULL, r.inner=4,
+r.outer=6, levels.rev=FALSE) make.donut.plot(donut.DATA=donut.DATA,
+colour.palette=msu.palette, label.col=“Labels.short”, facet.ncol=3)
+
+## !!! works !!!!
+
+donut.DATA \<- make.donut.data(data=mpg, category=“cyl”,
+facetBy=“class”, layerBy=NULL, category.order=“count”,
+category.count=NULL, r.inner=4, r.outer=6, levels.rev=FALSE)
+make.donut.plot(donut.DATA=donut.DATA, colour.palette=msu.palette,
+label.col=“Labels.short”, facet.ncol=3)
+
+## !!! works !!!!
+
+donut.DATA \<- make.donut.data(data=mpg, category=“cyl”,
+facetBy=“class”, layerBy=“drv”, category.order=“category”,
+layer.order=“descend”, category.count=NULL, r.inner=4, r.outer=6,
+levels.rev=FALSE) make.donut.plot(donut.DATA=donut.DATA,
+colour.palette=msu.palette, label.col=“Labels.short”, facet.ncol=3)
+
+## !!! works !!!!
+
+donut.DATA \<- make.donut.data(data=mpg, category=“cyl”, facetBy=NULL,
+layerBy=“drv”, category.order=“category”, layer.order=“descend”,
+category.count=NULL, r.inner=4, r.outer=6, levels.rev=FALSE)
+make.donut.plot(donut.DATA=donut.DATA, colour.palette=msu.palette,
+label.col=“Labels.short”, facet.ncol=3)
+
+## A Donut Plot with Layers
+
+data=mpg; category=“cyl”; facetBy=NULL; layerBy=“drv”;
+category.order=“count”; layer.order=“descend”; category.count=NULL;
+r.inner=4; r.outer=6; levels.rev=FALSE
+
+## Faceted Donut Plots
+
+## Faceted Donut Plots with Layers
+
+[^1]: You can also spell donut as doughnut. Those unfamiliar with these
+    tasty concoctions, see the [Wikipedia
+    entry](https://en.wikipedia.org/wiki/Doughnut) or visit your nearest
+    [donut shop](https://emilioxavier.github.io/theHUB/articles/). If
+    you live in East Lansing, I highly recommend [Groovy
+    Donuts](https://www.groovydonuts.com/)!

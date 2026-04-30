@@ -1,0 +1,410 @@
+# theHUB: the Haabefuld Utility Box.
+
+***the Haabefuld[^1],[^2] Utility Box*** (***theHUB***), a collection of
+analysis tools composed of functions, scripts, electronic notebooks, and
+worked examples. *theHUB* is how we will share these tools with the MSU
+community to improve the analyses of student outcomes, student success,
+and survey responses. A standard set of processes and methods along with
+a defined lexicon enables reproducibility, reduces the time needed to
+complete analysis-based projects, and allows the quick addition of new
+methods while encouraging data exploration. Our desire is for theHUB’s
+functionality to grow over time, and for others at MSU to contribute new
+features and methods for the MSU community.
+
+Developed and implemented in R – an open-source application with a
+robust community (on campus and around the world) – *theHUB* removes the
+need for a software license while providing access to a myriad of
+statistical analysis and graphing options. *theHUB’s* documentation
+allows anyone to use and understand the tools. Initially, *theHUB* would
+contain three Learning Analytics v2.0 projects: the survey analysis
+package presented at the 2021 Spring Conference, *Survey Connections*,
+along with the *in Semester Analysis Aiding/Assisting Students* and
+*Unified Student Success and Outcomes Analysis Reports* applications.
+Currently, the *in Semester Analysis Aiding/Assisting Students* and
+*Unified Student Success and Outcomes Analysis Reports* applications are
+on hiatus due to a pivot in *theHUB*’s focus. We expect *theHUB* to grow
+as we add new, yet to be conceived, ideas and analysis methods from the
+literature, our conversations with others around campus, and conferences
+and seminars.
+
+***[Advanced Candidate
+Evaluation](https://emilioxavier.github.io/theHUB/vignettes/AdvancedCandidateEvaluation.md)***
+(***ACE***): *Analyze and summarize evaluations of candidates for
+positions.* A standardized interview candidate evaluation instrument
+containing a [collection of
+questions](https://emilioxavier.github.io/theHUB/vignettes/AdvancedCandidateEvaluation_questions.md)
+that can be augmented to include position-specific questions. The result
+is a set of bespoke reports; an individual report for each candidate
+along with a comparative executive summary comparing the candidates. The
+option to include a breakdown of the evaluators’ MAUs and job titles is
+being developed. *NB: All comments are confidential and the search
+committee never has access to the original Qualtrics data.*
+
+***Survey Connections***: *Analyze survey responses to gain a better
+understanding of the relationships between responses and respondents.*
+Traditionally, survey analysis returns a collection of response counts
+and comment summaries without considering important and insightful
+relationships between questions and responses. The *Survey Connections*
+package provides workflows for cleaning survey data and performing
+Likert and Likert-like, multi-response, and comment (text) analyses. The
+package’s goal is to easily allow the discovery of relationships between
+responses and the creation of cohorts for further exploration and
+analysis. See the [2021 Spring Conference
+presentation](https://docs.google.com/presentation/d/1w8LXtFxP5LtnXbGBH-ZROPJrU7pvXdxYwAk1nTHJgpM/edit?usp=sharing)
+demonstrating these abilities.
+
+## Installing `theHUB`
+
+`theHUB` is *only* available on
+[GitHub](https://github.com/emilioxavier/theHUB/). To install it:
+
+``` r
+
+# Install from GitHub:
+install.packages("devtools")
+install.packages(c("tidyr","tidyselect","tibble","lubridate","dplyr","ggplot2","purrr","stringr","ggrepel","cowplot","rlang","sf","digest","WriteXLS"))
+devtools::install_github("emilioxavier/theHUB", force=TRUE)
+```
+
+- You will need [`devtools`](https://devtools.r-lib.org/) or
+  [`remote`](https://remotes.r-lib.org/) or another package that allows
+  installation from remote sources, such as
+  [GitHub](https://github.com), [GitLab](https://about.gitlab.com/), or
+  [BitBucket](https://bitbucket.org/), to install `theHUB` from
+  [GitHub](https://github.com/emilioxavier/theHUB/).
+- We have found that it is beneficial to uninstall (aka remove) the
+  previous `theHUB` installation ***before*** installing an update.
+- For some reason you need to ensure the **imported** packages are
+  installed.
+
+## How to use `theHUB`
+
+``` r
+
+library(theHUB)
+```
+
+## Have a suggestion? Need help? Found a bug?
+
+- Contact [Emilio](https://github.com/emilioxavier/) at <emilio@msu.edu>
+  OR <emilio.esposito@gmail.com>
+- Submit a [request or issue via
+  GitHub](https://github.com/emilioxavier/theHUB/issues/)
+
+## Code of conduct
+
+Please note that this project is released with a [Contributor Code of
+Conduct](https://github.com/emilioxavier/theHUB/blob/master/CONDUCT.md).
+By participating in this project you agree to abide by its terms.
+
+## License
+
+MIT © [Emilio Xavier Esposito](https://github.com/emilioxavier/)
+
+## Footnotes
+
+[^1]: The word haabefuld is Danish for hopeful. The **aa** is really an
+    **å**, and thus, haabefuld is really håbefuld. The use of **aa**
+    makes typing ([Emilio](https://github.com/emilioxavier/) can never
+    remember the correct ASCII code for the å) and web searches easier.
+
+[^2]: The Haabefuld Utility Box was originally *the Hub Utility Box*,
+    *theHUB* for short. The original name – a [recursive
+    backronym](https://en.wikipedia.org/wiki/Recursive_acronym) – was a
+    way to include The Hub for Innovation in Learning and Technology
+    where this package’s development was started. Now, *theHUB* is used
+    to pay homage to the Hub.
+
+# Package index
+
+## All functions
+
+- [`ACT.2.SAT`](https://emilioxavier.github.io/theHUB/reference/ACT.2.SAT.md)
+  [`SAT.2.ACT`](https://emilioxavier.github.io/theHUB/reference/ACT.2.SAT.md)
+  [`SAT.ACT.PR`](https://emilioxavier.github.io/theHUB/reference/ACT.2.SAT.md)
+  : ACT Score Conversion Table
+
+- [`ID.convert()`](https://emilioxavier.github.io/theHUB/reference/ID.convert.md)
+  : Convert Collection of Numerical IDs
+
+- [`ID.random()`](https://emilioxavier.github.io/theHUB/reference/ID.random.md)
+  : Create Collection of Random IDs
+
+- [`LatLonDistances()`](https://emilioxavier.github.io/theHUB/reference/LatLonDistances.md)
+  : Latitude-Longitude Distances
+
+- [`MSUpeers`](https://emilioxavier.github.io/theHUB/reference/MSUpeers.md)
+  [`WMUpeers`](https://emilioxavier.github.io/theHUB/reference/MSUpeers.md)
+  : Michigan State University & Western Michigan University Peer
+  Institutions Datasets
+
+- [`SubjectCourse.codes.FS20`](https://emilioxavier.github.io/theHUB/reference/SubjectCourse.codes.FS20.md)
+  : Subject-Course Codes for Each College Since Fall 2020
+
+- [`Tanimoto.Dist()`](https://emilioxavier.github.io/theHUB/reference/Tanimoto.Dist.md)
+  : Tanimoto Distance
+
+- [`Tanimoto.Idx()`](https://emilioxavier.github.io/theHUB/reference/Tanimoto.Idx.md)
+  : Tanimoto Coefficient/Index
+
+- [`addToZero()`](https://emilioxavier.github.io/theHUB/reference/addToZero.md)
+  : Add X to Zero Values
+
+- [`canonical.name()`](https://emilioxavier.github.io/theHUB/reference/canonical.name.md)
+  : Make Canonical Name
+
+- [`classification.check()`](https://emilioxavier.github.io/theHUB/reference/classification.check.md)
+  : Classification Check
+
+- [`clean.DATE()`](https://emilioxavier.github.io/theHUB/reference/clean.DATE.md)
+  : Clean Date
+
+- [`clean.DoB()`](https://emilioxavier.github.io/theHUB/reference/clean.DoB.md)
+  : Clean Date of Birth
+
+- [`clean.OStype()`](https://emilioxavier.github.io/theHUB/reference/clean.OStype.md)
+  : Get Operating System Name
+
+- [`clean.OSversion()`](https://emilioxavier.github.io/theHUB/reference/clean.OSversion.md)
+  : Get Main Version Number
+
+- [`clean.YoB()`](https://emilioxavier.github.io/theHUB/reference/clean.YoB.md)
+  : Clean Year of Birth
+
+- [`clean.cntrl()`](https://emilioxavier.github.io/theHUB/reference/clean.cntrl.md)
+  : Convert Control Characters to Spaces
+
+- [`clean.comment()`](https://emilioxavier.github.io/theHUB/reference/clean.comment.md)
+  : Clean Comments
+
+- [`combinations.t.test()`](https://emilioxavier.github.io/theHUB/reference/combinations.t.test.md)
+  : t-test Combinations
+
+- [`comment.summary()`](https://emilioxavier.github.io/theHUB/reference/comment.summary.md)
+  : Comment Summary
+
+- [`compare.dataset()`](https://emilioxavier.github.io/theHUB/reference/compare.dataset.md)
+  : Compare Datasets
+
+- [`convert.ACT2SAT()`](https://emilioxavier.github.io/theHUB/reference/convert.ACT2SAT.md)
+  : Convert ACT Score to SAT Score
+
+- [`convert.SAT2ACT()`](https://emilioxavier.github.io/theHUB/reference/convert.SAT2ACT.md)
+  : Convert SAT Score to ACT Score
+
+- [`convert.YN2TF()`](https://emilioxavier.github.io/theHUB/reference/convert.YN2TF.md)
+  : Convert Yes-No indicators to TRUE-FALSE
+
+- [`convert.fps2binary()`](https://emilioxavier.github.io/theHUB/reference/convert.fps2binary.md)
+  : Convert Integer Fingerprints into Binary Representation
+
+- [`convert.fromto()`](https://emilioxavier.github.io/theHUB/reference/convert.fromto.md)
+  : Phrase/Integer Conversion
+
+- [`convert.spaces()`](https://emilioxavier.github.io/theHUB/reference/convert.spaces.md)
+  : Convert all Spaces to "Normal" Spaces
+
+- [`convert.termCode()`](https://emilioxavier.github.io/theHUB/reference/convert.termCode.md)
+  : Convert Four-Digit Term Codes
+
+- [`convert.toASCII()`](https://emilioxavier.github.io/theHUB/reference/convert.toASCII.md)
+  : Convert to ASCII
+
+- [`country.currency`](https://emilioxavier.github.io/theHUB/reference/country.currency.md)
+  : Country and Currency Dataset
+
+- [`course.type()`](https://emilioxavier.github.io/theHUB/reference/course.type.md)
+  : Determine the Course Type
+
+- [`create.search.string()`](https://emilioxavier.github.io/theHUB/reference/create.search.string.md)
+  : Construct the Search String
+
+- [`crossover.pseudo.grades()`](https://emilioxavier.github.io/theHUB/reference/crossover.pseudo.grades.md)
+  : Crossover Pseudo-Grade
+
+- [`dataset.summary()`](https://emilioxavier.github.io/theHUB/reference/dataset.summary.md)
+  : Dataset Metadata Summary
+
+- [`deg2rad`](https://emilioxavier.github.io/theHUB/reference/deg2rad.md)
+  [`earth.radius.miles`](https://emilioxavier.github.io/theHUB/reference/deg2rad.md)
+  [`earth.radius.km`](https://emilioxavier.github.io/theHUB/reference/deg2rad.md)
+  : Calculate Latitude-Longitude Distance Constants
+
+- [`extract.emails()`](https://emilioxavier.github.io/theHUB/reference/extract.emails.md)
+  : Extract Email Address(es) From String
+
+- [`extract.unique()`](https://emilioxavier.github.io/theHUB/reference/extract.unique.md)
+  : Extract Unique Values from Each Column
+
+- [`extract_VarExplain()`](https://emilioxavier.github.io/theHUB/reference/extract_VarExplain.md)
+  : Extract Variance Explained (PCA)
+
+- [`file.datetime()`](https://emilioxavier.github.io/theHUB/reference/filename-times.md)
+  [`file.date()`](https://emilioxavier.github.io/theHUB/reference/filename-times.md)
+  [`file.time()`](https://emilioxavier.github.io/theHUB/reference/filename-times.md)
+  : File Name Date and Time
+
+- [`find.duplicate.cols()`](https://emilioxavier.github.io/theHUB/reference/find.duplicate.cols.md)
+  : Find Duplicate Columns
+
+- [`framework.project()`](https://emilioxavier.github.io/theHUB/reference/framework.project.md)
+  : Create Project Framework
+
+- [`get.bigrams.oi()`](https://emilioxavier.github.io/theHUB/reference/get.bigrams.oi.md)
+  : Find n-grams with Keywords
+
+- [`get.unique.terms()`](https://emilioxavier.github.io/theHUB/reference/get.unique.terms.md)
+  : Get Unique Terms
+
+- [`has.keywords()`](https://emilioxavier.github.io/theHUB/reference/has.keywords.md)
+  : Keywords Present
+
+- [`is.BLANK()`](https://emilioxavier.github.io/theHUB/reference/is.BLANK.md)
+  : Is String Blanks?
+
+- [`is.honours()`](https://emilioxavier.github.io/theHUB/reference/is.honours.md)
+  : Honours (or Honors) Course?
+
+- [`is.none()`](https://emilioxavier.github.io/theHUB/reference/is.none.md)
+  : No Comment Present
+
+- [`is.prep()`](https://emilioxavier.github.io/theHUB/reference/is.prep.md)
+  : Course Prep?
+
+- [`keywords`](https://emilioxavier.github.io/theHUB/reference/keywords.md)
+  : Keywords and Areas of Interest
+
+- [`keywords.plot.data()`](https://emilioxavier.github.io/theHUB/reference/keywords.plot.data.md)
+  : Construct Keyword Similarity Plots
+
+- [`likert.barplot()`](https://emilioxavier.github.io/theHUB/reference/likert.barplot.md)
+  : Likert (and Likert-like) Barplot
+
+- [`likert.barplot.stacked()`](https://emilioxavier.github.io/theHUB/reference/likert.barplot.stacked.md)
+  : Likert (and Likert-like) Stacked Barplot
+
+- [`likert.heatmap()`](https://emilioxavier.github.io/theHUB/reference/likert.heatmap.md)
+  : Construct Likert (and Likert-like) Pairwise Heatmap
+
+- [`likert.plot.matrix()`](https://emilioxavier.github.io/theHUB/reference/likert.plot.matrix.md)
+  : Likert (and Likert-Like) Pairwise Analysis Plot
+
+- [`loading_impact()`](https://emilioxavier.github.io/theHUB/reference/loading_impact.md)
+  : Loadings Impact
+
+- [`lonlat2region.2()`](https://emilioxavier.github.io/theHUB/reference/lonlat2region.2.md)
+  : Longitude-Latitude to Region (version 2)
+
+- [`lonlat2region()`](https://emilioxavier.github.io/theHUB/reference/lonlat2region.md)
+  : Longitude-Latitude to Region
+
+- [`make.assignment.params()`](https://emilioxavier.github.io/theHUB/reference/make.assignment.params.md)
+  : Construct Assignment Parameters
+
+- [`make.bins()`](https://emilioxavier.github.io/theHUB/reference/make.bins.md)
+  : Bin Values
+
+- [`make.crsesect()`](https://emilioxavier.github.io/theHUB/reference/make.crsesect.md)
+  : Make Course-Section Designation
+
+- [`make.donut.data()`](https://emilioxavier.github.io/theHUB/reference/make.donut.data.md)
+  : Construct Donut Plot Data
+
+- [`make.donut.plot()`](https://emilioxavier.github.io/theHUB/reference/make.donut.plot.md)
+  : Construct Donut Plot
+
+- [`make.fps()`](https://emilioxavier.github.io/theHUB/reference/make.fps.md)
+  : Make Fingerprints
+
+- [`make.likert.barplot.data()`](https://emilioxavier.github.io/theHUB/reference/make.likert.barplot.data.md)
+  : Construct Likert Stacked, Barplot Data
+
+- [`make.likert.heatmap.data()`](https://emilioxavier.github.io/theHUB/reference/make.likert.heatmap.data.md)
+  : Construct Pairwise Heatmap Data
+
+- [`make.pseudo.grades()`](https://emilioxavier.github.io/theHUB/reference/make.pseudo.grades.md)
+  : Construct Pseudo-Grades
+
+- [`make_PCAplot_DATA()`](https://emilioxavier.github.io/theHUB/reference/make_PCAplot_DATA.md)
+  :
+
+  Make PCA Plot Data (`prcomp`)
+
+- [`msu.darkGreen`](https://emilioxavier.github.io/theHUB/reference/msu.darkGreen.md)
+  [`msu.darkGreenTints`](https://emilioxavier.github.io/theHUB/reference/msu.darkGreen.md)
+  [`msu.palette`](https://emilioxavier.github.io/theHUB/reference/msu.darkGreen.md)
+  [`msu.heatmap.20`](https://emilioxavier.github.io/theHUB/reference/msu.darkGreen.md)
+  [`msu.heatmap.100`](https://emilioxavier.github.io/theHUB/reference/msu.darkGreen.md)
+  : MSU Colour Palette
+
+- [`negMin_posMax_range()`](https://emilioxavier.github.io/theHUB/reference/negMin_posMax_range.md)
+  : Set Minimum Value Negative - Set Maximum Value Positive
+
+- [`origin2now()`](https://emilioxavier.github.io/theHUB/reference/origin2now.md)
+  : Time Since UNIX Epoch
+
+- [`replace.colNames()`](https://emilioxavier.github.io/theHUB/reference/replace.colNames.md)
+  : Replace Column Names
+
+- [`term.translation`](https://emilioxavier.github.io/theHUB/reference/term.translation.md)
+  : Term-Code Translation Table
+
+- [`unified.terms()`](https://emilioxavier.github.io/theHUB/reference/unified.terms.md)
+  : Construct Unified Terms
+
+- [`values.t.test()`](https://emilioxavier.github.io/theHUB/reference/values.t.test.md)
+  : t-test & Cohen's d Values
+
+- [`wisc.badgerRed`](https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.md)
+  [`wisc.white`](https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.md)
+  [`wisc.badgerRedTints`](https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.md)
+  [`wisc.secondary`](https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.md)
+  [`wisc.accent`](https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.md)
+  [`wisc.heatmap.20`](https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.md)
+  [`wisc.heatmap.100`](https://emilioxavier.github.io/theHUB/reference/wisc.badgerRed.md)
+  : University of Wisconsin Colour Palette
+
+- [`word.count()`](https://emilioxavier.github.io/theHUB/reference/word.count.md)
+  : Word Count
+
+# Articles
+
+### All vignettes
+
+- [Advanced Candidate Evaluation:
+  Questions](https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation_questions.md):
+- [Advanced Candidate Evaluation:
+  Setup](https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation_setup.md):
+- [Advanced Candidate Evaluation:
+  Overview](https://emilioxavier.github.io/theHUB/articles/AdvancedCandidateEvaluation.md):
+- [Dataset: Country and Currency
+  Dataset](https://emilioxavier.github.io/theHUB/articles/Datasets_CountryCurrency.md):
+- [Dataset: Public
+  Datasets](https://emilioxavier.github.io/theHUB/articles/Datasets_PubliclyAvailable.md):
+- [EDW:
+  Navigation](https://emilioxavier.github.io/theHUB/articles/EDW_Navigation.md):
+- [EDW: SQL Snippets
+  Library](https://emilioxavier.github.io/theHUB/articles/EDW_SQLsnippetLibrary.md):
+- [GeoCoding: Downloading Shape
+  Files](https://emilioxavier.github.io/theHUB/articles/GeoCoding_DownloadShapeFiles.md):
+- [How To: Requesting Clearinghouse
+  Data](https://emilioxavier.github.io/theHUB/articles/HowTo_ClearinghouseData.md):
+- [How To: Creating Donut
+  Plots](https://emilioxavier.github.io/theHUB/articles/HowTo_DonutPlots.md):
+- [Software](https://emilioxavier.github.io/theHUB/articles/HowTo_Software.md):
+- [PAG:
+  About](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_About.md):
+- [PAG: Artificial Intelligence
+  (AI)](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_AI.md):
+- [PAG: Group
+  Meetings](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GroupMeetings.md):
+- [PAG: Guidelines &
+  Policies](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GuidelinesAndPolicies.md):
+- [PAG: How I like to be
+  Mentored](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_HowILikeToBeMentored.md):
+- [PAG:
+  Lexicon](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_Lexicon.md):
+- [PAG:
+  Onboarding](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_Onboarding.md):
+- [PAG: Professional
+  Development](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_ProfessionalDevelopment.md):

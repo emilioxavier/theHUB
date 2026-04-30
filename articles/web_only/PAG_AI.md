@@ -1,0 +1,379 @@
+# PAG: Artificial Intelligence (AI)
+
+Artificial Intelligence (AI), sometimes referred to as generative
+Artificial Intelligence (gAI or genAI), has become a crucial component
+of my analytics workflow. From helping with coding to being a colleague,
+AI makes several parts of my life easier; this should be the case for
+everyone.
+
+There are a couple of problems with AI making your life easier. First,
+there are numerous ethical concerns about using AI, including potential
+copyright infringements (cases are currently under review in the US
+legal system) and concerns about replacing workers with cheaper, less
+knowledgeable Bots in an attempt to reduce costs. Second, not all Bots
+are the same. Depending on your use case, a collection of specific
+services is likely optimal for your particular goals.
+
+The goal of AI Office Hours and AI Tea is to help everyone keep up with
+the rapidly evolving implementation of AI. While it will not be a
+comprehensive resource, it does provide everyone with the ability to
+learn from one another and share AI experiences and wisdom.
+
+> Disclaimer: This document is subject to change without notice. The
+> inclusion of podcasts, genAI Bots, newsletters, applications, and
+> products does not imply support or endorsement of any particular
+> content or service.
+
+## AI Office Hours
+
+Bring your questions, share your challenges, or just come to learn more
+about integrating AI into your work. The goal is to help those
+interested in utilizing AI to enhance their workflow. Office hours are
+twice a week on Microsoft Teams.
+
+- Mondays @ 10-11:30a
+- Thursday @ 2-3:30p
+
+[Teams
+link](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NjIyZTQzMDAtZTk4My00ZGMzLWFkNTEtZmRiOTIyZDc1NTUx%40thread.v2/0?context=%7b%22Tid%22%3a%2222177130-642f-41d9-9211-74237ad5687d%22%2c%22Oid%22%3a%227e319877-629a-4589-9513-0cbbef3dae0c%22%7d)
+
+> The AI Office Hours are a safe space for asking questions, sharing
+> challenges, and discussing successes.
+
+## AI Tea
+
+Discover how your colleagues are innovating with AI and draw inspiration
+for your projects! Join us once a month to share your AI projects. Show
+and tell us how you are using AI in your project. AI Tea sessions are
+the third Thursday of each month at 10 a.m.
+
+> AI Tea is a safe space where you can ask questions, share challenges,
+> and celebrate successes.
+
+To embrace the work from anywhere culture, AI Tea sessions are virtual
+via Microsoft Teams. [Teams
+link](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NjIyZTQzMDAtZTk4My00ZGMzLWFkNTEtZmRiOTIyZDc1NTUx%40thread.v2/0?context=%7b%22Tid%22%3a%2222177130-642f-41d9-9211-74237ad5687d%22%2c%22Oid%22%3a%227e319877-629a-4589-9513-0cbbef3dae0c%22%7d)
+
+## Microsoft Teams Team [AI Office Hours & Tea](https://teams.microsoft.com/l/team/19%3A7b839a58813647a4a08eab0da634453d%40thread.tacv2/conversations?groupId=dc5c23d4-d9a2-4037-987e-73c5b7fe79e3&tenantId=22177130-642f-41d9-9211-74237ad5687d)
+
+To streamline finding AI Office Hours & AI Tea, we have a Microsoft
+Teams Team with a community discussion board. The AI Tea demonstrations
+will be archived here too. The original [Teams
+link](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NjIyZTQzMDAtZTk4My00ZGMzLWFkNTEtZmRiOTIyZDc1NTUx%40thread.v2/0?context=%7b%22Tid%22%3a%2222177130-642f-41d9-9211-74237ad5687d%22%2c%22Oid%22%3a%227e319877-629a-4589-9513-0cbbef3dae0c%22%7d)
+works and take you directly to AI Office Hours and AI Tea.
+
+> Join the [AI Office Hours & AI Tea Microsoft Teams
+> Team](https://teams.microsoft.com/l/team/19%3A7b839a58813647a4a08eab0da634453d%40thread.tacv2/conversations?groupId=dc5c23d4-d9a2-4037-987e-73c5b7fe79e3&tenantId=22177130-642f-41d9-9211-74237ad5687d)
+> here!
+
+### Past Topics
+
+All sessions are recorded and available for viewing using an MSU NetID
+and password.
+
+- **October 16, 2025**: TBD
+- **September 18, 2025**: Creating Applicant Personas with Microsoft
+  Copilot
+  - [Recording](https://teams.microsoft.com/l/meetingrecap?driveId=b%21pAKdt0MYDEauKXDco_ktR2mWQUKMgvVImCAU59qbI1lklQsosE3cR6CcRizhRITz&driveItemId=015P5TJF6J7UULYA5RGFE2B2HZDGVPHVRR&sitePath=https%3A%2F%2Fmichiganstate-my.sharepoint.com%2F%3Av%3A%2Fg%2Fpersonal%2Femilio_msu_edu%2FEcn9KLwDsTFJoOj5Garz1jEBCyjLbRCYvy7ulSBTwecuug&fileUrl=https%3A%2F%2Fmichiganstate-my.sharepoint.com%2F%3Av%3A%2Fg%2Fpersonal%2Femilio_msu_edu%2FEcn9KLwDsTFJoOj5Garz1jEBCyjLbRCYvy7ulSBTwecuug&iCalUid=040000008200e00074c5b7101a82e0080000000086d5711ec80adc01000000000000000010000000200b88c6e6a8334caeb2a5f6835589ae&threadId=19%3Ameeting_NjIyZTQzMDAtZTk4My00ZGMzLWFkNTEtZmRiOTIyZDc1NTUx%40thread.v2&organizerId=7e319877-629a-4589-9513-0cbbef3dae0c&tenantId=22177130-642f-41d9-9211-74237ad5687d&callId=d7332caf-b224-4382-983a-70584fb655c6&threadType=Meeting&meetingType=Scheduled&subType=RecapSharingLink_RecapChiclet)
+
+## Lexicon
+
+The field of generative AI has several specific terms, and understanding
+them will enhance your journey.
+
+- **Large Language Model (aka LLM)**: The underlying technology for
+  generative AI that is the basis for the Bot built from a large corpus
+  of data.
+- **Generative Artificial Intelligence (aka genAI or gAI)**: AI systems
+  built on LLMs that can create new content (text, code, images, etc.)
+  by predicting what should come next based on patterns learned from
+  training data and the provided prompt.
+- **Bot**: An LLM instance with an interface. All Bots are slightly
+  different with varying specialties.
+- **Prompt**: The statement or question you provide to the Bot.
+- **Hallucination (aka confabulation)**: When the Bot makes up facts and
+  presents them as truths. Examples include citing references that do
+  not exist, reading documents and indicating text is present when it is
+  not, and providing code that does not function as intended.
+
+## First Steps
+
+Getting started is often the most challenging part. Here are a few
+examples to help you explore how the Bots can augment your workflow.
+
+- **Summarize and query a document**. You receive a large, dense
+  document. After reading a paragraph or two, you are getting a
+  headache.
+  - Copy the text, head to your favorite Bot, give it the prompt:
+  - Please summarize this document, “\<\<pasted text\>\>”
+  - After reading the summary, ask specific questions related to your
+    needs. Maybe ask, “What are the key points of the document related
+    to *\<\<your area of interest\>\>*?” Or “How does the document
+    impact *\<\<your area of interest\>\>*?” Use the Bot’s responses to
+    develop additional questions.
+  - ***Note***: The Bot is not perfect, and you should remember that you
+    are the subject matter expert. When the Bot makes a statement that
+    doesn’t sound right, question it.
+- **Editing a document**. We all make mistakes. We write in inconsistent
+  tenses, miss punctuation marks, and are sometimes unclear. Enlist the
+  help of a Bot to copyedit your document.
+  - Upload your document to your favorite Bot, give it the prompt:
+  - Please help me make this document concise and grammatically correct.
+  - ***Note***: Please be aware that the Bot will not always be
+    accurate. Sometimes, the recommended changes will change the meaning
+    of your statement.
+- **Q&A with a colleague**. Sometimes, you have a question and no one is
+  available to serve as a sounding board.
+  - Ponder your question for a moment. Consider taking a walk and
+    thinking about the question from various perspectives.
+  - Write out (aka type out) your question in a document, trying to
+    capture all aspects and concerns accurately. It is essential to
+    provide as much detail as possible. The Bot is not a mindreader, and
+    you know significantly more about the implied understanding of your
+    question.
+  - Once you feel the text matches your initial question with the
+    required background, go to your favorite Bot and paste your
+    question, then press the Submit button.
+  - Treat the Bot like a colleague and ask questions.
+  - ***Note***: Ask questions and challenge ideas you believe are
+    incorrect or not fully developed. Remember, you are also an expert.
+
+## Human gAI (aka Bot) Relationship
+
+These are from Ethan Mollick’s book *Co-Intelligence: Living and Working
+with AI*.
+
+1.  **Always invite the Bot to the table**. When working on a project,
+    include the Bot and treat it like a colleague. Ask it for its
+    opinion and perspective.
+2.  **Be the human in the loop**. Continue to be the expert. Challenge
+    the Bot.
+3.  **Treat the Bot like a person, but tell it what kind of person it
+    is**. Assign the Bot roles based on your needs. I routinely tell the
+    Bot it is a copy editor, coding partner, or research colleague.
+4.  **Assume this is the worst Bot you will ever use**. The Bots are
+    continually improving, and each version and revision brings new
+    features and capabilities.
+
+## Prompting Tips
+
+These prompting tips are from [Plain Language Prompting: Four Tips for
+Writing Effective
+Prompts​](https://drive.google.com/file/d/1fMbLrto2Vt-Mj8M1wh1VApJIYINrwMHP/view)
+at the [Office of Online & Digital
+Education](https://www.umflint.edu/ode/) at the [University of
+Michigan - Flint](https://www.umflint.edu/).
+
+- Be specific to minimize the assumptions the AI must make about what
+  you want it to generate. Start by considering the following: Author,
+  Audience, and Purpose.​
+- Start a new chat with a revised prompt if the AI outputs aren’t
+  meeting your expectations.​
+- Complex tasks require detailed prompts, but increasing the specificity
+  and outputs can be improved using plain language.​
+- Proactively request inclusivity in prompts, such as age, gender, race,
+  culture, and ability.​
+
+## Prompt Literacy
+
+The [Generative Artificial Intelligence](https://genai.umich.edu/)
+office at the [University of Michigan](https://www.umich.edu) provides
+an excellent and detailed overview of interacting and working with AI
+Bots to leverage your knowledge to achieve the desired outcomes. While
+the document is titled “[Prompt Literacy in
+Academics](https://genai.umich.edu/resources/prompt-literacy)”, its
+focus is on using genAI for education, research, and self-guided
+learning. They also provide a [prompt
+library](https://genai.umich.edu/resources/prompt-library).
+
+- [Prompt Literacy in
+  Academics](https://genai.umich.edu/resources/prompt-literacy)
+- [Prompt Library](https://genai.umich.edu/resources/prompt-library)
+
+## AI Resources
+
+### Books
+
+*Co-Intelligence: Living and Working with AI* by Ethan Mollick Published
+in April 2024, the author provides a comprehensive overview of the
+development of generative AI (LLMs), their evolution, and recommends
+best practices for incorporating AI into your workflow.
+[Bookshop](https://bookshop.org/p/books/co-intelligence-living-and-working-with-ai-ethan-mollick/20812081?ean=9780593716717&next=t)
+\|
+[Amazon](https://www.amazon.com/Co-Intelligence-Living-Working-Ethan-Mollick/dp/059371671X)
+\| [Barnes &
+Noble](https://www.barnesandnoble.com/w/co-intelligence-ethan-mollick/1144159618)
+
+*AI Superpowers: China, Silicon Valley, and the New World Order* by
+Kai-Fu Lee Published in September 2018, the author offers an insightful
+(for the time) view of today’s AI landscape.
+[Bookshop](https://bookshop.org/p/books/ai-superpowers-china-silicon-valley-and-the-new-world-order-kai-fu-lee/6960836?ean=9780358105589&next=t)
+\|
+[Amazon](https://www.amazon.com/AI-Superpowers-China-Silicon-Valley/dp/0358105587/ref=tmm_pap_swatch_0)
+\| [Barnes &
+Noble](https://www.barnesandnoble.com/w/ai-superpowers-kai-fu-lee/1127870920)
+
+*The Scaling Era: An Oral History of AI, 2019–2025* by Dwarkesh Patel
+with Gavin Leech Eagerly awaiting my copy. This book is a historical
+description of AI and LLMs. [Stripe
+Press](https://press.stripe.com/scaling) \|
+[Bookshop](https://bookshop.org/p/books/an-oral-history-of-the-scaling-era/94c88049d240f97b?ean=9781953953551&next=t)
+\|
+[Amazon](https://www.amazon.com/Scaling-Era-Oral-History-2019-2025/dp/1953953557/)
+\| [Barnes &
+Noble](https://www.barnesandnoble.com/w/the-scaling-era-dwarkesh-patel/1146825188)
+
+*If Anyone Builds It, Everyone Dies: Why Superhuman AI Would Kill Us
+All* by Eliezer Yudkowsky & Nate Soares An excellent counter-point to
+the desire to build Superhuman AI.
+[Bookshop](https://bookshop.org/p/books/if-anyone-builds-it-everyone-dies-why-superhuman-ai-would-kill-us-all-eliezer-yudkowsky/2da88520a671d222)
+\|
+[Amazon](https://www.amazon.com/Anyone-Builds-Everyone-Dies-Superhuman/dp/0316595640/)
+\| [Barnes &
+Noble](https://www.barnesandnoble.com/w/if-anyone-builds-it-everyone-dies-eliezer-yudkowsky/1147242101)
+
+### Podcasts
+
+- [**Hard Fork**](https://www.nytimes.com/column/hard-fork): Each week,
+  journalists [Kevin Roose](https://www.kevinroose.com/) and [Casey
+  Newton](https://www.platformer.news/) delve into and make sense of the
+  rapidly evolving world of tech.
+- [**Me, Myself, and
+  AI**](https://sloanreview.mit.edu/audio-series/me-myself-and-ai/): Why
+  do only 10% of companies succeed with AI? [Sam
+  Ransbotham](https://www.samransbotham.com/) ([Boston
+  College](https://www.bc.edu/bc-web/schools/carroll-school/faculty-research/faculty-directory/sam-ransbotham.html))
+  and [Shervin
+  Khodabandeh](https://www.linkedin.com/in/shervinkhodabandeh/) ([Boston
+  Consulting Group;
+  GCG](https://www.bcg.com/about/people/experts/shervin-khodabandeh))
+  are on a mission to figure it out. On “Me, Myself, and AI,” they speak
+  with individuals who are achieving significant successes with AI.
+- [**Dwarkesh Podcast**](https://www.dwarkesh.com): Deeply researched
+  interviews
+- [**The Neuron: AI Explained**](https://www.theneuron.ai/): The Neuron
+  covers the latest AI developments, trends, and research, hosted by
+  Grant Harvey and Corey Noles. Digestible, informative, and
+  authoritative takes on AI that get you up to speed and help you become
+  an authority in your circles. Available every Tuesday on all
+  podcasting platforms and YouTube.
+- [**ChinaTalk**](https://www.chinatalk.media/): Deep coverage of
+  technology, China, and US policy. We feature original analysis
+  alongside interviews with leading thinkers and policymakers. Search
+  your podcast app for “ChinaTalk”; all one word.
+
+### AI Newsletters
+
+The newsletters associated with podcasts likely provide more in-depth
+discussions of topics and are great for staying up-to-date with daily or
+weekly insights.
+
+- [AI at
+  Work](https://app.e2ma.net/app2/audience/signup/2007440/1726691.1028389091/)
+  The link goes to a non-descript webpage where you can sign-up for the
+  [AI at
+  Work](https://mitsloan.mit.edu/ideas-made-to-matter/topics/artificial-intelligence)
+  newsletter. Alternatively, you can see articles in the [MIT Sloan
+  School of Management on
+  AI](https://mitsloan.mit.edu/ideas-made-to-matter/topics/artificial-intelligence)
+  [here](https://mitsloan.mit.edu/ideas-made-to-matter/topics/artificial-intelligence).
+- [ChinaTalk](https://www.chinatalk.media/)
+- [Deep Learning Weekly](https://www.deeplearningweekly.com/)
+- [Dwarkesh](https://www.dwarkesh.com/)
+- [One Useful Thing](https://www.oneusefulthing.org/): Trying to
+  understand the implications of AI for work, education, and life.
+- [Platformer](https://www.platformer.news/)
+- [The Neuron Daily](https://www.theneurondaily.com/subscribe)
+- [The Rundown AI](https://www.therundown.ai/)
+
+### Small Collection of Bots
+
+There are numerous AI Bots to interact with and work with. Here are a
+few that we use from time to time.
+
+- [Claude.ai](https://claude.ai) by
+  [Anthropic](https://www.anthropic.com/)
+- [Copilot](https://copilot.microsoft.com/)
+- [Google Gemini](https://gemini.google.com)
+- [Google NotebookLM](https://notebooklm.google.com)
+- [Llama](https://www.llama.com/) by [Meta](https://www.meta.com)
+- [Mistral](https://mistral.ai/)
+- [OpenAI](https://openai.com/)
+- [Perplexity AI](https://www.perplexity.ai/)
+
+### AI Counter Points
+
+The following collection of AI critics began with the 25 July 2025 Hard
+Fork episode (E146).
+
+- Brian Merchant [Blood in the
+  Machine](https://www.bloodinthemachine.com/about)
+- [Alison Gopnik](https://www.alisongopnik.com/)
+- [Ross Douthat](https://www.nytimes.com/column/ross-douthat)
+- [Claire Leibowicz](https://claireleibowicz.com/)
+- [Max Read](https://maxread.substack.com/)
+- [Machine Intelligence Research Institute
+  (MIRI)](https://intelligence.org/)
+
+### AI Applications and Tools of Interest
+
+The following is a growing list of AI applications and tools to assist
+various aspects of one’s workflow.
+
+#### Meeting Assistants
+
+- [Fathom](https://fathom.video) attends your meeting and takes notes on
+  your behalf.
+- [Granola](https://granola.ai) attends your meeting and combines your
+  notes with the meeting transcript to provide detailed notes.
+
+#### Writing Assistance
+
+- [Grammarly](https://www.grammarly.com/) is an excellent writing
+  assistant that helps you write a wide range of documents.
+- [Scribe](https://scribehow.com/) allows you to quickly document and
+  share processes.
+
+#### Office Assistance
+
+- [Comet Browser by Perplexity](https://www.perplexity.ai/comet) is a
+  web browser that is more assistant than web portal connecting search,
+  social, and email.
+- [Synthesia](https://www.synthesia.io/) converts text into video using
+  “AI avatars and voiceovers in 140+ languages.” Try converting a slide
+  deck with notes into a video.
+
+#### Coding/Programming Assistants
+
+- [Claude Code](https://www.anthropic.com/claude-code)
+- [Cursor AI](https://cursor.com/)
+- [GitHub Copilot](https://github.com/features/copilot)
+- [Windsurf AI](https://windsurf.com/)
+
+#### Personal Coaches
+
+- [MirrorTalk](https://mirrortalk.ai) is a reflection tool that helps
+  you deepen thinking.
+
+#### Graphics
+
+- [Napkin AI](https://www.napkin.ai) creates images from your text. Copy
+  your text and paste it into Napkin to make the initial image. From
+  there, you can modify and style the image to your liking.
+
+#### AI-Related Professional Advice
+
+- [Mirror.ai](https://www.mirror.ai) provides subject matter experts to
+  assist with your AI projects.
+
+------------------------------------------------------------------------
+
+## Use of Artificial Intelligence Statement
+
+This document underwent a grammatical and syntactical review using
+Grammarly to identify and correct potential grammatical and syntactical
+issues, ensuring a clear and concise analysis presentation. Anthropic’s
+Claude and Google Gemini were used as sounding boards to refine and
+enhance the content of this document. All AI-assisted content was
+thoroughly reviewed and approved, with all analytical judgments and
+conclusions representing our assessment of the data and results.

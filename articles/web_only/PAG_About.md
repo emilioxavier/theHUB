@@ -1,0 +1,92 @@
+# PAG: About
+
+Welcome to the official webpages of the ***unofficial*** Predictive
+Analytics Group (PAG)! We work within the [Associate Provost Office of
+Enrollment and Academic Strategic Planning](https://esp.msu.edu) at
+[Michigan State University](https://www.msu.edu).
+
+Our work is at the intersection of potential and current students’ data
+to ask and answer questions about potential students’ behaviors and
+outcomes. Using our combined expertise in economics, analytics, and
+predictive modelling, we provide a unique perspective on student-centric
+quandaries. Currently, we are studying economic mobility and gaining a
+deeper understanding of applicants.
+
+We believe in creating and fostering a supportive and inclusive
+environment for our members to thrive and advance their career. To
+support our efforts, we developed and adopted an evolving collection of
+[Guidelines &
+Policies](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GuidelinesAndPolicies.md)
+and [prompts about how each of us likes to be
+mentored](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_HowILikeToBeMentored.md).
+
+We have informal [group
+meetings](https://emilioxavier.github.io/theHUB/articles/web_only/PAG_GroupMeetings.md)
+every couple of weeks where the current and past members come together
+to share updates about current and past work. Everyone is welcome to
+attend! Please contact
+[Emilio](mailto:emilio@msu.edu?subject=I%20want%20to%20attend%20PAG%20group%20meetings!)
+for day, time and location (usually a local coffee shop). Sometimes we
+meet on Zoom; email Emilio for the link.
+
+## Current Members
+
+We believe that a small group with a diverse collection of viewpoints
+and experiences is the optimal approach to many types of research
+questions. In the three short years, PAG achieved extraordinary success.
+Building a deposit likelihood model capable of identifying applicants
+likely to deposit as early as the January before the deposit deadline.
+Additionally, they designed and implemented a modular feature pool
+creation application that significantly reduced the amount of time from
+feature concept to evaluation in a model.
+
+Emilio is forever grateful for the opportunity to work with Seth and
+Steve. Their diverse experiences and skills, coupled with their desire
+to solve complex problems and ask challenging questions, made working
+with them a joy. Unfortunately, in June/2025, due to budget cuts, Seth’s
+and Steve’s contracts were not renewed. Emilio is devastated.
+
+**Emilio Xavier Esposito**: Emilio is an Academic Specialist in the
+[Associate Provost Office of Enrollment and Academic Strategic
+Planning](https://esp.msu.edu) and explores novel ways student data
+relates to various outcomes. Emilio’s background in early stage drug
+discovery, specifically computational chemistry and biochemistry. Emilio
+leads the development of the deposit and cancellation likelihood
+modelling feature pools and models, identification of new recruitment
+communities using informatics-based approaches, and *ad hoc* case
+studies related to predictive analytics. Emilio enjoys reading, walks
+with his family, and day dreaming about working in the
+[WNBA](https://www.wnba.com/) or [NWSL](https://www.nwslsoccer.com/). \[
+[LinkedIn](https://www.linkedin.com/in/emilioxavieresposito) \|
+[Website](http://www.exeResearch.com) \|
+[Bluesky](https://bsky.app/profile/exesposito.bsky.social) \]
+
+## Past Members
+
+**Seth Tanner Walker**: Seth is a Graduate Student in the [Department of
+Economics](https://econ.msu.edu/) in the [College of Social
+Science](https://socialscience.msu.edu/) working towards a Ph.D. in
+Economics. Seth worked on the development of XGBoost models to predict
+the likelihood of applicants to deposit and feature engineering for
+those models. He also explored the impact of the [Spartan Advantage
+program](https://finaid.msu.edu/spad.asp). Seth earned dual Bachelors
+degrees from [James Madison University](https://www.jmu.edu) in
+Quantitative Economics & Mathematics and Music Performance. Seth is a
+huge [Chelsea FC](https://www.chelseafc.com/) fan and enjoys hiking in
+far away lands. \[
+[LinkedIn](https://www.linkedin.com/in/seth-walker-b5002237a/) \|
+[Website](https://www.sethwalker.org/) \]
+
+**Steven R Miller**: Steve is an Assistant Professor in the [Department
+of Agricultural, Food, and Resource
+Economics](https://www.canr.msu.edu/afre/index) in the [College of
+Agriculture & Natural Resources](https://www.canr.msu.edu/) and
+specializes in applied economic methods for forecasting and impact
+analysis. Steve is also the Director of the [Center for Economic
+Analysis](https://www.canr.msu.edu/cea/). Steve explored the movement of
+college students within and from their home state and lead the
+development of community based features for the deposit likelihood
+models. Steve is an avid photographer and spends many nights chasing the
+Northern Lights and several early mornings photographing fields
+awakening after a night of sleep. \[
+[LinkedIn](https://www.linkedin.com/in/steven-miller-3b5a546) \]
