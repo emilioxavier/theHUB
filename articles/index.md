@@ -12,10 +12,6 @@
   Dataset](https://emilioxavier.github.io/theHUB/articles/Datasets_CountryCurrency.md):
 - [Dataset: Public
   Datasets](https://emilioxavier.github.io/theHUB/articles/Datasets_PubliclyAvailable.md):
-- [EDW:
-  Navigation](https://emilioxavier.github.io/theHUB/articles/EDW_Navigation.md):
-- [EDW: SQL Snippets
-  Library](https://emilioxavier.github.io/theHUB/articles/EDW_SQLsnippetLibrary.md):
 - [GeoCoding: Downloading Shape
   Files](https://emilioxavier.github.io/theHUB/articles/GeoCoding_DownloadShapeFiles.md):
 - [How To: Requesting Clearinghouse
