@@ -34,11 +34,11 @@ Emilio Xavier Esposito <emilio.esposito@gmail.com>
 ``` r
 # Get time since epoch in minutes (default)
 origin2now()
-#> Time difference of 29626257 mins
+#> Time difference of 29626260 mins
 
 # Get time since epoch in hours
 origin2now("hours")
-#> Time difference of 493770.9 hours
+#> Time difference of 493771 hours
 
 # Get time since epoch in days
 origin2now("days")
